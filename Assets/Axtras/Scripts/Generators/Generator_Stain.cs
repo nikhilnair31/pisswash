@@ -2,6 +2,7 @@
 using UnityEditor;
 #endif
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Generator_Stain : MonoBehaviour 
 {
@@ -47,23 +48,24 @@ public class Generator_Stain : MonoBehaviour
                 if (currDecals < maxDecals) {
                     // Debug.DrawRay(hit.point, hit.normal * 1f, Color.green, 5f);
 
-                    GameObject decal = Instantiate(
+                    GameObject decalGO = Instantiate(
                         damageDecalObject, 
                         Vector3.zero, 
                         Quaternion.identity
                     );
 
-                    decal.transform.SetParent(transform);
+                    decalGO.transform.SetParent(transform);
 
                     Vector3 decalPosition = hit.point + hit.normal * decalPivotOffset;
-                    decal.transform.position = decalPosition;
+                    decalGO.transform.position = decalPosition;
                     
-                    decal.transform.forward = hit.normal;
+                    decalGO.transform.forward = hit.normal;
                     float randomRotation = Random.Range(0f, 360f);
-                    decal.transform.Rotate(Vector3.forward, randomRotation, Space.Self);
+                    decalGO.transform.Rotate(Vector3.forward, randomRotation, Space.Self);
 
+                    var decal = decalGO.GetComponent<DecalProjector>();
                     float randomScale = Random.Range(randomScaleRange.x, randomScaleRange.y);
-                    decal.transform.localScale = new Vector3(randomScale, randomScale, decal.transform.localScale.z);
+                    decal.size = new Vector3(randomScale, randomScale, decal.size.z);
 
                     currDecals++;
                 }
