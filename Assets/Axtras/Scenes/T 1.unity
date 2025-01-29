@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human Body
       objectReference: {fileID: 0}
+    - target: {fileID: 7927020251573364878, guid: a3b67ace1a354ba479d5cd9a9f15bda7, type: 3}
+      propertyPath: m_CastShadows
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -887,6 +891,62 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &342172215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342172216}
+  - component: {fileID: 342172217}
+  m_Layer: 0
+  m_Name: Stain Decal(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &342172216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342172215}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6148141, y: 0.34929037, z: 0.34929037, w: 0.614814}
+  m_LocalPosition: {x: -1.7232811, y: -2.8500009, z: -4.099841}
+  m_LocalScale: {x: 1.3689231, y: 1.3689231, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 660740984}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &342172217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342172215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 01244d1404ab4f64c818da352be4836a, type: 2}
+  m_DrawDistance: 100
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &352379474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1612,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525123700}
   m_CullTransparentMesh: 1
+--- !u!1 &540985868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 540985869}
+  m_Layer: 0
+  m_Name: Bottles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &540985869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540985868}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2102413580}
+  - {fileID: 1054911542}
+  - {fileID: 881949566}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &575956931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,6 +1874,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &632086577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632086578}
+  - component: {fileID: 632086579}
+  m_Layer: 0
+  m_Name: Stain Decal(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &632086578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632086577}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6357621, y: 0.30952653, z: 0.30952653, w: 0.635762}
+  m_LocalPosition: {x: -3.127091, y: -2.8499997, z: 2.6430643}
+  m_LocalScale: {x: 0.8454536, y: 0.8454536, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 660740984}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &632086579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632086577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 01244d1404ab4f64c818da352be4836a, type: 2}
+  m_DrawDistance: 100
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &649545323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +2066,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649545323}
   m_CullTransparentMesh: 1
+--- !u!1 &660740983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660740984}
+  - component: {fileID: 660740985}
+  m_Layer: 0
+  m_Name: Stainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &660740984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660740983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 2.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1835879946}
+  - {fileID: 1352972977}
+  - {fileID: 1926237759}
+  - {fileID: 632086578}
+  - {fileID: 342172216}
+  m_Father: {fileID: 669038576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660740985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660740983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnBloodDecals: 0
+  damageDecalObject: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  decalLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  randomScaleRange: {x: 0.5, y: 1.5}
+  rotationOffsetRange: 360
+  decalPivotOffset: 0.05
+  raycastLength: 15
+  numberOfRays: 50
+  maxDecals: 5
+--- !u!1 &669038575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669038576}
+  m_Layer: 0
+  m_Name: Stainers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669038576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669038575}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 660740984}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716024460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2362,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 540985869}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -2133,11 +2378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.999999
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2149,7 +2394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2217,6 +2462,11 @@ MonoBehaviour:
   increaseHydrationAmount: 10
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
+--- !u!4 &881949566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
+  m_PrefabInstance: {fileID: 881949561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &944027790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,7 +2810,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 540985869}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -2576,11 +2826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3
+      value: 0.4000001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.999999
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2592,7 +2842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2660,6 +2910,11 @@ MonoBehaviour:
   increaseHydrationAmount: 10
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
+--- !u!4 &1054911542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
+  m_PrefabInstance: {fileID: 1054911537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136181641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3546,7 @@ MonoBehaviour:
   peeFillRate: 0
   dehydrationThreshold: 20
   dehydrationAmount: 0.5
-  maxDehydration: 30
+  maxDehydration: 15
   kidneyStoneChance: 0.1
   maxKidneyStoneChance: 0.5
   isHydrating: 0
@@ -8472,6 +8727,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1352972976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352972977}
+  - component: {fileID: 1352972978}
+  m_Layer: 0
+  m_Name: Stain Decal(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352972977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352972976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.23809509, y: 0.6658159, z: 0.23809503, w: -0.6658159}
+  m_LocalPosition: {x: 4.949999, y: -2.315815, z: 2.4066691}
+  m_LocalScale: {x: 0.52726364, y: 0.52726364, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 660740984}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1352972978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352972976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 01244d1404ab4f64c818da352be4836a, type: 2}
+  m_DrawDistance: 100
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1353065433
 GameObject:
   m_ObjectHideFlags: 0
@@ -9517,6 +9828,118 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1835879945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835879946}
+  - component: {fileID: 1835879947}
+  m_Layer: 0
+  m_Name: Stain Decal(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835879946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835879945}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.502951, y: 0.4970316, z: 0.49703154, w: -0.5029509}
+  m_LocalPosition: {x: -6.7241936, y: -2.85, z: 1.0400653}
+  m_LocalScale: {x: 1.4806508, y: 1.4806508, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 660740984}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1835879947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835879945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 01244d1404ab4f64c818da352be4836a, type: 2}
+  m_DrawDistance: 100
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 1
+--- !u!1 &1926237758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926237759}
+  - component: {fileID: 1926237760}
+  m_Layer: 0
+  m_Name: Stain Decal(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926237759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926237758}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.42530322, y: 0.56490463, z: 0.56490463, w: -0.42530316}
+  m_LocalPosition: {x: -1.6975002, y: -2.850001, z: -5.238086}
+  m_LocalScale: {x: 1.273665, y: 1.273665, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 660740984}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1926237760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926237758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 01244d1404ab4f64c818da352be4836a, type: 2}
+  m_DrawDistance: 100
+  m_FadeScale: 1
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_DecalLayerMask: 4294967295
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1946079404
 GameObject:
   m_ObjectHideFlags: 0
@@ -9781,7 +10204,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 540985869}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalScale.x
@@ -9797,11 +10220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5026207
+      value: 0.19737935
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.999999
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9813,7 +10236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
       propertyPath: m_LocalRotation.y
@@ -9881,6 +10304,11 @@ MonoBehaviour:
   increaseHydrationAmount: 10
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
+--- !u!4 &2102413580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
+  m_PrefabInstance: {fileID: 2102413575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9898,9 +10326,8 @@ SceneRoots:
   - {fileID: 330585546}
   - {fileID: 1201024032}
   - {fileID: 988040658}
-  - {fileID: 2102413575}
-  - {fileID: 1054911537}
-  - {fileID: 881949561}
+  - {fileID: 540985869}
+  - {fileID: 669038576}
   - {fileID: 1353065434}
   - {fileID: 716024463}
   - {fileID: 352379477}

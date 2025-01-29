@@ -77,8 +77,7 @@ public class Controller_Pee : MonoBehaviour
         // Reset dehydration when pee amount is added
         if (currPeeAmount > 0f) {
             Debug.Log("Player is hydrated!");
-            Manager_UI.Instance.SetDehydrated(false);
-            dehydrationAmount = 0f;
+            ResetDehydration();
         }
     }
     public bool GetIsPeeFull() {
@@ -109,7 +108,7 @@ public class Controller_Pee : MonoBehaviour
             kidneyStoneChance += Time.deltaTime * kidneyStoneChance;
 
             // Clamp kidney stone chance to max value
-            kidneyStoneChance = Mathf.Clamp(kidneyStoneChance, 0f, maxKidneyStoneChance);
+            kidneyStoneChance = Mathf.Clamp(kidneyStoneChance, 0.1f, maxKidneyStoneChance);
 
             // Check if player gets a kidney stone
             if (Random.value <= kidneyStoneChance) {
@@ -124,6 +123,11 @@ public class Controller_Pee : MonoBehaviour
         // Increase dehydration up to maxDehydration
         dehydrationAmount += amount;
         dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0f, maxDehydration);
+    }
+    private void ResetDehydration() {
+        Manager_UI.Instance.SetDehydrated(false);
+        dehydrationAmount = 0.5f;
+        kidneyStoneChance = 0.1f;
     }
 
     private void UpdateUI() {
