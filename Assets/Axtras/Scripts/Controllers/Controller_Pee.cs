@@ -85,6 +85,8 @@ public class Controller_Pee : MonoBehaviour
     }
 
     public void SetIsPeeing(bool active) {
+        Debug.Log($"Peeing: {active}");
+
         isPeeing = active;
         
         if (isPeeing) {

@@ -127,11 +127,9 @@ public class Controller_Player : MonoBehaviour
         }
         
         if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("Started Peeing");
             peeController.SetIsPeeing(true);
         }
         if (Input.GetMouseButtonUp(0)) {
-            Debug.Log("Stopped Peeing");
             peeController.SetIsPeeing(false);
         }
     }
@@ -180,14 +178,8 @@ public class Controller_Player : MonoBehaviour
 
     private void CheckForInteractable() {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-            var interactable = hit.transform.GetComponent<Controller_Interactables>();
-
-            // If the object is interactable
-            if (interactable != null) {
-                // Get interaction info
-                var (text, duration) = interactable.ReturnInfo();
-                Debug.Log($"Showing text: {text} for {duration} seconds");
-                // Update text only if it has changed
+            if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
+                var (text, duration) = bottle.ReturnInfo();
                 if (text != showTextStr) {
                     showTextStr = text;
                     Manager_Thoughts.Instance.ShowText(
