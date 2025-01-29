@@ -118,9 +118,10 @@ public class Controller_Player : MonoBehaviour
                 Debug.Log($"Trying to interact with: {hit.transform.name}");
 
                 if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                    float hydrationAmount = bottle.GetHydrationAmount();
-                    peeController.AddPeeAmount(hydrationAmount);
                     bottle.BuyBottle();
+                }
+                else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
+                    fountain.ControlDrinking();
                 }
             }
         }

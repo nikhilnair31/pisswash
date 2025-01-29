@@ -11,14 +11,12 @@ public class Controller_Bottle : Controller_Interactables
     #endregion
 
     public void BuyBottle() {
+        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
         Manager_Money.Instance.UpdateMoney(-buyCost);
         gameObject.SetActive(false);
     }
     public void StealBottle() {
         Manager_Money.Instance.UpdateMoney(0);
         gameObject.SetActive(false);
-    }
-    public float GetHydrationAmount() {
-        return increaseHydrationAmount;
     }
 }

@@ -13,6 +13,9 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float peeEmptyRate = 1f;
     [SerializeField] private float peeFillRate = 2f;
 
+    [Header("Fill Settings")]
+    [SerializeField] private bool isFilling = false;
+
     [Header("Particle Settings")]
     [SerializeField] private ParticleSystem peePS;
 
@@ -40,16 +43,19 @@ public class Controller_Pee : MonoBehaviour
     }
     
     private void UpdatePeeAmount() {
-        if (isPeeing) {
+        if (isPeeing && !isFilling) {
             currPeeAmount -= Time.deltaTime * peeEmptyRate;
         }
-        else {
+        else if (!isPeeing && !isFilling) {
             currPeeAmount += Time.deltaTime * peeFillRate;
         }
         currPeeAmount = Mathf.Clamp(currPeeAmount, 0f, maxPeeAmount);
     }
     public void AddPeeAmount(float amount) {
         currPeeAmount += amount;
+    }
+    public float GetPeeAmount() {
+        return currPeeAmount;
     }
 
     private void UpdateUI() {
