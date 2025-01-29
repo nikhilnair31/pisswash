@@ -19,6 +19,8 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float maxDehydration = 30f;       // Maximum dehydration before increasing kidney stone chance
     [SerializeField] private float kidneyStoneChance = 0.1f;    // Base chance of getting a kidney stone
     [SerializeField] private float maxKidneyStoneChance = 0.5f; // Maximum chance of getting a kidney stone
+    [SerializeField] private float speedReductionFactor = 0.5f;
+    [SerializeField] private bool isDehydrated = false;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -115,6 +117,7 @@ public class Controller_Pee : MonoBehaviour
             // Check if player gets a kidney stone
             if (Random.value <= kidneyStoneChance) {
                 Debug.Log("Player got a kidney stone!");
+                isDehydrated = true;
                 SetIsPeeing(false);
                 Manager_UI.Instance.SetDehydrated(true);
                 // Implement logic for dealing with kidney stone (e.g., pain, effects on gameplay)
@@ -127,9 +130,13 @@ public class Controller_Pee : MonoBehaviour
         dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0f, maxDehydration);
     }
     private void ResetDehydration() {
+        isDehydrated = false;
         Manager_UI.Instance.SetDehydrated(false);
         dehydrationAmount = 0.5f;
         kidneyStoneChance = 0.1f;
+    }
+    public float GetDehydrationFactor() {
+        return isDehydrated ? speedReductionFactor : 1f;
     }
 
     private void UpdateUI() {

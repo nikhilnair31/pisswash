@@ -4,7 +4,6 @@
 
 - [ ] Add screen shake
 - [ ] Add drunken haze effect to screen
-- [ ] Slow movement speed and add screen flashes on kidney stone
 - [ ] Add water fountain, water bottle, beer, shots and more with each different feature
 - [ ] Add characters doing dumb dances and standing around drinking
 - [ ] Add scoring system
@@ -20,6 +19,7 @@
 
 ## Done
 
+- [x] Slow movement speed on kidney stone
 - [x] Add tutorial level, menu button and modal based explainers
 - [x] Add a timer manager
 - [x] Create render texture painting/erasing effect with pee stream
