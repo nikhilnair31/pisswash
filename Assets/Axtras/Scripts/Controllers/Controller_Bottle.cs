@@ -1,8 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller_Bottle : Controller_Interactables 
 {
     #region Vars
+    [Header("Owner Settings")]
+    [SerializeField] List<Controller_Drinker> ownerDrinkers = new ();
+
     [Header("Hydration Settings")]
     [SerializeField] private float increaseHydrationAmount = 10f;
 
@@ -28,7 +32,19 @@ public class Controller_Bottle : Controller_Interactables
         }
     }
     public void StealBottle() {
+        CheckIfOwnersSees();
         Manager_Money.Instance.UpdateMoney(0);
         gameObject.SetActive(false);
+    }
+
+    private void CheckIfOwnersSees() {
+        foreach (Controller_Drinker cd in ownerDrinkers) {
+            if (cd.GetCanSeePlayerStealing()) {
+                Debug.Log($"SEEN! Slap and stun player");
+            }
+        }
+    }
+    public void AddOwner(Controller_Drinker cd) {
+        ownerDrinkers.Add(cd);
     }
 }

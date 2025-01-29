@@ -128,13 +128,22 @@ public class Controller_Player : MonoBehaviour
     private void HandleInteractable() {
         if (Input.GetKeyDown(KeyCode.E)) {
             if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-                Debug.Log($"Trying to interact with: {hit.transform.name}");
+                Debug.Log($"Trying to interact: {hit.transform.name}");
 
                 if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
                     bottle.BuyBottle();
                 }
                 else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
                     fountain.ControlDrinking();
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.F)) {
+            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
+                Debug.Log($"Trying to steal : {hit.transform.name}");
+
+                if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
+                    bottle.StealBottle();
                 }
             }
         }

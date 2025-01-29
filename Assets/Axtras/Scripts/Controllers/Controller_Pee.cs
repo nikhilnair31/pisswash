@@ -67,7 +67,7 @@ public class Controller_Pee : MonoBehaviour
             
             if (currPeeAmount >= maxPeeAmount) {
                 currPeeAmount = maxPeeAmount;
-                Debug.Log("Player's bladder is full!");
+                // Debug.Log("Player's bladder is full!");
             }
         }
 
@@ -107,16 +107,13 @@ public class Controller_Pee : MonoBehaviour
     }
     
     private void CheckDehydration() {
-        // If dehydration reaches max, increase kidney stone chance
         if (dehydrationAmount >= maxDehydration) {
             kidneyStoneChance += Time.deltaTime * kidneyStoneChance;
-
-            // Clamp kidney stone chance to max value
             kidneyStoneChance = Mathf.Clamp(kidneyStoneChance, 0.1f, maxKidneyStoneChance);
 
-            // Check if player gets a kidney stone
             if (Random.value <= kidneyStoneChance) {
                 Debug.Log("Player got a kidney stone!");
+
                 isDehydrated = true;
                 SetIsPeeing(false);
                 Manager_UI.Instance.SetDehydrated(true);
