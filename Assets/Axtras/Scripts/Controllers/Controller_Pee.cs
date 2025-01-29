@@ -153,8 +153,10 @@ public class Controller_Pee : MonoBehaviour
             }
         }
         else {
-            dehydrationAmount += dehydrationAmount * Time.deltaTime;
-            dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0f, maxDehydration);
+            if (currPeeAmount <= 0f ) {
+                dehydrationAmount += dehydrationAmount * Time.deltaTime;
+                dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0f, maxDehydration);
+            }
         }
     }
     private void UpdateDehydrationEffects() {
