@@ -3288,7 +3288,7 @@ MonoBehaviour:
   maxPeeAmount: 100
   currPeeAmount: 0
   peeEmptyRate: 20
-  peeFillRate: 5
+  peeFillRate: 0
   dehydrationThreshold: 20
   dehydrationAmount: 0.5
   maxDehydration: 30
@@ -8383,7 +8383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1349819414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9355,7 +9355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1763677629
 RectTransform:
   m_ObjectHideFlags: 0

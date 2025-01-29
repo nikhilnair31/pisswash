@@ -76,6 +76,8 @@ public class Controller_Pee : MonoBehaviour
 
         // Reset dehydration when pee amount is added
         if (currPeeAmount > 0f) {
+            Debug.Log("Player is hydrated!");
+            Manager_UI.Instance.SetDehydrated(false);
             dehydrationAmount = 0f;
         }
     }
@@ -112,6 +114,8 @@ public class Controller_Pee : MonoBehaviour
             // Check if player gets a kidney stone
             if (Random.value <= kidneyStoneChance) {
                 Debug.Log("Player got a kidney stone!");
+                SetIsPeeing(false);
+                Manager_UI.Instance.SetDehydrated(true);
                 // Implement logic for dealing with kidney stone (e.g., pain, effects on gameplay)
             }
         }

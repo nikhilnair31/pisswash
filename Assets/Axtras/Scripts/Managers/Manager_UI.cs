@@ -108,8 +108,8 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetDehydrated() {
-        dehydratedImageGO.SetActive(true);
+    public void SetDehydrated(bool active) {
+        dehydratedImageGO.SetActive(active);
     }
 
     public void SetShowText(string text) {
