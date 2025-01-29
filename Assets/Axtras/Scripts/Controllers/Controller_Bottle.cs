@@ -11,14 +11,15 @@ public class Controller_Bottle : Controller_Interactables
     [SerializeField] private float increaseHydrationAmount = 10f;
 
     [Header("Money Settings")]
+    [SerializeField] private bool canBeBought = true;
     [SerializeField] private int buyCost = 5;
 
     [Header("UI Settings")]
-    [SerializeField] private string notEnoughMoneyStr = "Not enough money!";
+    [SerializeField] private string notEnoughMoneyStr = "Can't buy!";
     #endregion
 
     public void BuyBottle() {
-        if (Manager_Money.Instance.GetCanBuy()) {
+        if (Manager_Money.Instance.GetCanBuy() && canBeBought) {
             Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
             Manager_Money.Instance.UpdateMoney(-buyCost);
             gameObject.SetActive(false);
@@ -46,6 +47,7 @@ public class Controller_Bottle : Controller_Interactables
         }
     }
     public void AddOwner(Controller_Drinker cd) {
+        canBeBought = false;
         ownerDrinkers.Add(cd);
     }
 }
