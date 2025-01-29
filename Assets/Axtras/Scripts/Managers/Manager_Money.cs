@@ -31,6 +31,10 @@ public class Manager_Money : MonoBehaviour
 
     public void UpdateMoney(int amount) {
         currMoney += amount;
-        moneyText.text = $"${currMoney.ToString()}";
+        moneyText.text = $"${currMoney}";
+    }
+
+    public bool GetCanBuy() {
+        return currMoney > 0;
     }
 }
