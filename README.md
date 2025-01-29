@@ -3,12 +3,10 @@
 ## Todo
 
 - [ ] Add actual stun on slap
-- [ ] Add characters doing dumb dances
 - [ ] Add screen shake
 - [ ] Add drunken haze effect to screen
 - [ ] Add water fountain, water bottle, beer, shots and more with each different feature
 - [ ] Add scoring system
-- [ ] Fix PSX effects
 - [ ] Add a sub particle system on collision
 - [ ] Add a stain manager to check if all cleaned
 - [ ] Add QTE when getting kidney stone
@@ -17,6 +15,8 @@
 
 ## Done
 
+- [x] Add characters doing dumb dances
+- [x] Fix PSX effects
 - [x] Make screen fade out to a Game Over when you get kidney stone
 - [x] Add standing around drinking
 - [x] Add slap when caught stealing

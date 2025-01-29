@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class Controller_Drinker : MonoBehaviour 
 {
+    #region Variables
     [SerializeField] private float canSeeInAngle = 110f;
     private List<Controller_Bottle> theirBottles = new ();
     private GameObject player;
+    #endregion
 
     private void Start() {
         player = GameObject.FindWithTag("Player");

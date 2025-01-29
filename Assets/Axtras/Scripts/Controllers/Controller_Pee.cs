@@ -107,7 +107,6 @@ public class Controller_Pee : MonoBehaviour
 
         // Reset dehydration when pee amount is added
         if (currPeeAmount > 0f) {
-            Debug.Log("Player is hydrated!");
             ResetDehydration();
         }
     }
@@ -172,6 +171,8 @@ public class Controller_Pee : MonoBehaviour
         dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0f, maxDehydration);
     }
     private void ResetDehydration() {
+        Debug.Log("Player is no longer dehydrated.");
+
         isDehydrated = false;
         Manager_UI.Instance.SetDehydrated(false);
         dehydrationAmount = 0.5f;

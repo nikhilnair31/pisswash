@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a17da147615463497e4bd9e04f0dce1, type: 3}
   m_Name: Dithering
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,9 +52,9 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: 2606515335583478340}
+  - {fileID: -5677514569700259782}
   - {fileID: 6965443398785072023}
   - {fileID: -1925210268287778290}
-  - {fileID: -5677514569700259782}
   - {fileID: 8907521939798794118}
   m_RendererFeatureMap: 3a48e961946a35b1869fb49a02e09d7b
   m_UseNativeRenderPass: 0
