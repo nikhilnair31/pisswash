@@ -17,6 +17,7 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
+    [SerializeField] private GameObject dehydratedImageGO;
     [SerializeField] private TMP_Text lookedAt_Text;
     private bool inGame = true;
 
@@ -105,6 +106,10 @@ public class Manager_UI : MonoBehaviour
     }
     public void ExitGame() {
         Application.Quit();
+    }
+
+    public void SetDehydrated() {
+        dehydratedImageGO.SetActive(true);
     }
 
     public void SetShowText(string text) {
