@@ -10,7 +10,7 @@ public class Controller_Fountain : Controller_Interactables
 
     private void Update() {
         if (isOn) {
-            if (Controller_Pee.Instance.GetPeeAmount() > 0) {
+            if (!Controller_Pee.Instance.GetIsPeeFull()) {
                 Controller_Pee.Instance.AddPeeAmount(increaseHydrationRate * Time.deltaTime);
             }
             else {

@@ -54,8 +54,8 @@ public class Controller_Pee : MonoBehaviour
     public void AddPeeAmount(float amount) {
         currPeeAmount += amount;
     }
-    public float GetPeeAmount() {
-        return currPeeAmount;
+    public bool GetIsPeeFull() {
+        return currPeeAmount == maxPeeAmount;
     }
 
     private void UpdateUI() {
