@@ -1066,7 +1066,7 @@ MonoBehaviour:
   startTutorial_Menu_Button: {fileID: 1924978628}
   exitGame_Menu_Button: {fileID: 1154882626}
   gameCanvasGO: {fileID: 1349819413}
-  dehydratedImageGO: {fileID: 1465286011}
+  dehydratedImage: {fileID: 1465286013}
   lookedAt_Text: {fileID: 1142077243}
   timer_Text: {fileID: 118866724}
   pauseCanvasGO: {fileID: 389876923}
@@ -7287,7 +7287,7 @@ MonoBehaviour:
   isPeeing: 0
   maxPeeAmount: 100
   currPeeAmount: 0
-  peeEmptyRate: 20
+  peeEmptyRate: 40
   peeFillRate: 0
   isDehydrated: 0
   dehydrationTimer: 0
@@ -7297,8 +7297,11 @@ MonoBehaviour:
   maxDehydration: 15
   kidneyStoneChance: 0.1
   maxKidneyStoneChance: 0.5
-  speedReductionFactor: 0.1
   isHydrating: 0
+  qtePressCount: 0
+  qteRequiredPresses: 10
+  isQTEActive: 0
+  qteKey: 120
   peePS: {fileID: 1248450993}
   audioSource: {fileID: 1201024036}
   peeClips:
@@ -7877,7 +7880,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1248450990}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 2
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -13597,7 +13600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1465286012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13624,13 +13627,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465286011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.47358483, b: 0.47358483, a: 0.5019608}
+  m_Color: {r: 1, g: 0.854902, b: 0.4431373, a: 0.5019608}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17564,7 +17567,7 @@ ParticleSystem:
   m_GameObject: {fileID: 2469808900362119746}
   serializedVersion: 8
   lengthInSec: 0.2
-  simulationSpeed: 2
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0

@@ -20,7 +20,7 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
-    [SerializeField] private GameObject dehydratedImageGO;
+    [SerializeField] private Image dehydratedImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text timer_Text;
     private bool inGame = false;
@@ -149,7 +149,7 @@ public class Manager_UI : MonoBehaviour
         timer_Text.text = time.ToString("F0");
     }
     public void SetDehydrated(bool active) {
-        dehydratedImageGO.SetActive(active);
+        dehydratedImage.enabled = active;
     }
 
     #region Interaction Text

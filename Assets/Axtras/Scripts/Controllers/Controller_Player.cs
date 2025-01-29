@@ -96,30 +96,29 @@ public class Controller_Player : MonoBehaviour
         moveDirection = transform.right * x + transform.forward * z;
 
         isMoving = moveDirection.magnitude > 0;
-        var dehydrationFactor = peeController.GetDehydrationFactor();
 
         if (Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
-                moveDirection.x * crouchSpeed * dehydrationFactor, 
+                moveDirection.x * crouchSpeed, 
                 rb.linearVelocity.y, 
-                moveDirection.z * crouchSpeed * dehydrationFactor
+                moveDirection.z * crouchSpeed
             );
             playerCamera.DOMoveY(camLocalY - crouchHeight, 0.2f);
         } 
         else {
             rb.linearVelocity = new (
-                moveDirection.x * moveSpeed * dehydrationFactor, 
+                moveDirection.x * moveSpeed, 
                 rb.linearVelocity.y, 
-                moveDirection.z * moveSpeed * dehydrationFactor
+                moveDirection.z * moveSpeed
             );
             playerCamera.DOMoveY(camLocalY, 0.2f);
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
-                moveDirection.x * sprintSpeed * dehydrationFactor, 
+                moveDirection.x * sprintSpeed, 
                 rb.linearVelocity.y, 
-                moveDirection.z * sprintSpeed * dehydrationFactor
+                moveDirection.z * sprintSpeed
             );
         }
 
