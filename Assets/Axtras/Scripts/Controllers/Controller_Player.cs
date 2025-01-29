@@ -38,6 +38,10 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private float zoomFOV = 40f;
     private float currFOV;
 
+    [Header("Mouse Settings")]
+    [SerializeField] private float slapShakeDuration = 2f;
+    [SerializeField] private float slapDelayDuration = 0f;
+
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] footstepClips;
@@ -218,6 +222,18 @@ public class Controller_Player : MonoBehaviour
         Manager_Thoughts.Instance.ClearThoughtText(
             Manager_Thoughts.TextPriority.Item
         );
+    }
+
+    public void GotSlapped() {
+        DOTween.Sequence()
+            .OnStart(() => {
+                ControlCanMoveAndLook(false);
+            })
+            .Append(playerCamera.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true))
+            .AppendInterval(slapDelayDuration)
+            .OnComplete(() => {
+                ControlCanMoveAndLook(true);
+            });
     }
 
     public void ControlCanMoveAndLook(bool active) {
