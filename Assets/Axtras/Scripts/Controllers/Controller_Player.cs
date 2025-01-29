@@ -200,8 +200,8 @@ public class Controller_Player : MonoBehaviour
 
     private void CheckForInteractable() {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-            if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                var (text, duration) = bottle.ReturnInfo();
+            if (hit.transform.TryGetComponent(out Controller_Interactables interactable)) {
+                var (text, duration) = interactable.ReturnInfo();
                 if (text != showTextStr) {
                     showTextStr = text;
                     Manager_Thoughts.Instance.ShowText(
