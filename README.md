@@ -4,7 +4,6 @@
 
 - [ ] Add actual stun on slap
 - [ ] Add screen shake
-- [ ] Add drunken haze effect to screen
 - [ ] Add water fountain, water bottle, beer, shots and more with each different feature
 - [ ] Add scoring system
 - [ ] Add a stain manager to check if all cleaned
@@ -12,6 +11,7 @@
 
 ## Done
 
+- [x] Add drunken haze effect to screen
 - [x] Decide if getting kidney stone stops pee or makes you pee blood
 - [x] Add QTE when getting kidney stone
 - [x] Add a sub particle system on collision

@@ -56,7 +56,8 @@ MonoBehaviour:
   - {fileID: 6965443398785072023}
   - {fileID: -1925210268287778290}
   - {fileID: 8907521939798794118}
-  m_RendererFeatureMap: 3a48e961946a35b1869fb49a02e09d7b
+  - {fileID: 6752565554754774080}
+  m_RendererFeatureMap: 3a48e961946a35b1869fb49a02e09d7b4064b26d98eeb55d
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -95,6 +96,26 @@ MonoBehaviour:
   m_Name: Fog
   m_EditorClassIdentifier: 
   m_Active: 0
+--- !u!114 &6752565554754774080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPass
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  injectionPoint: 600
+  fetchColorBuffer: 1
+  requirements: 4
+  passMaterial: {fileID: 2100000, guid: 53651c41970d31442a59c120a2f59eff, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
 --- !u!114 &6965443398785072023
 MonoBehaviour:
   m_ObjectHideFlags: 0
