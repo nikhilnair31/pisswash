@@ -7,7 +7,6 @@
 - [ ] Add drunken haze effect to screen
 - [ ] Add water fountain, water bottle, beer, shots and more with each different feature
 - [ ] Add scoring system
-- [ ] Add a sub particle system on collision
 - [ ] Add a stain manager to check if all cleaned
 - [ ] Add QTE when getting kidney stone
 - [ ] Decide if getting kidney stone stops pee or makes you pee blood
@@ -15,6 +14,7 @@
 
 ## Done
 
+- [x] Add a sub particle system on collision
 - [x] Add characters doing dumb dances
 - [x] Fix PSX effects
 - [x] Make screen fade out to a Game Over when you get kidney stone
