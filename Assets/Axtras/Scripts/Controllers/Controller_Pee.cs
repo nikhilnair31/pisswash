@@ -140,7 +140,6 @@ public class Controller_Pee : MonoBehaviour
 
                 isDehydrated = true;
                 Manager_UI.Instance.SetDehydrated(true);
-                Controller_Player.Instance.ControlCanMoveAndLook(false);
                 SetIsPeeing(false);
                 
                 if (!passedKidneyStone) {
@@ -174,7 +173,6 @@ public class Controller_Pee : MonoBehaviour
         isDehydrated = false;
         passedKidneyStone = false;
         Manager_UI.Instance.SetDehydrated(false);
-        Controller_Player.Instance.ControlCanMoveAndLook(true);
         dehydrationAmount = 0.5f;
         kidneyStoneChance = 0.1f;
         dehydrationTimer = 0f;
@@ -188,6 +186,7 @@ public class Controller_Pee : MonoBehaviour
 
         isQTEActive = true;
         qtePressCount = 0;
+        Controller_Player.Instance.ControlCanMoveAndLook(false);
         Manager_Thoughts.Instance.ShowText(
             "[X] to pass kidney stone", 
             -1f,

@@ -8,12 +8,12 @@
 - [ ] Add water fountain, water bottle, beer, shots and more with each different feature
 - [ ] Add scoring system
 - [ ] Add a stain manager to check if all cleaned
-- [ ] Add QTE when getting kidney stone
-- [ ] Decide if getting kidney stone stops pee or makes you pee blood
 - [ ] Change the fountain thing to fill only while holding down E key
 
 ## Done
 
+- [x] Decide if getting kidney stone stops pee or makes you pee blood
+- [x] Add QTE when getting kidney stone
 - [x] Add a sub particle system on collision
 - [x] Add characters doing dumb dances
 - [x] Fix PSX effects
