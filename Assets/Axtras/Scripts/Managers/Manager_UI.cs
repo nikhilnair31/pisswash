@@ -16,13 +16,14 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Button startGame_Menu_Button;
     [SerializeField] private Button startTutorial_Menu_Button;
     [SerializeField] private Button exitGame_Menu_Button;
+    private bool inMenu = true;
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
     [SerializeField] private GameObject dehydratedImageGO;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text timer_Text;
-    private bool inGame = true;
+    private bool inGame = false;
 
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseCanvasGO;
@@ -55,17 +56,22 @@ public class Manager_UI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
+        inMenu = true;
+
         Time.timeScale = 0f;
     }
     
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOver && !inMenu) {
             PauseGame();
         }
     }
     
     public void StartGame() {
         Debug.Log($"StartGame");
+
+        inGame = true;
+        inMenu = false;
         
         menuCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
@@ -80,6 +86,9 @@ public class Manager_UI : MonoBehaviour
     }
     public void StartTutorial() {
         Debug.Log($"StartTutorial");
+
+        inGame = true;
+        inMenu = false;
         
         menuCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
@@ -113,11 +122,18 @@ public class Manager_UI : MonoBehaviour
     }
 
     public void GameOver() {
+        Debug.Log($"GameOver");
+
         gameOver = true;
+        inGame = false;
+        inMenu = false;
+
         gameCanvasGO.SetActive(false);
         pauseCanvasGO.SetActive(false);
         gameoverCanvasGO.SetActive(true);
+        
         Time.timeScale = 0f;
+        
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }

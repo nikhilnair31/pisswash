@@ -5016,6 +5016,7 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  ownerDrinkers: []
   increaseHydrationAmount: 25
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
@@ -5710,6 +5711,7 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  ownerDrinkers: []
   increaseHydrationAmount: 25
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
@@ -7083,13 +7085,15 @@ MonoBehaviour:
   currPeeAmount: 0
   peeEmptyRate: 20
   peeFillRate: 0
+  isDehydrated: 0
+  dehydrationTimer: 0
+  maxDehydrationTime: 10
   dehydrationThreshold: 20
   dehydrationAmount: 0.5
   maxDehydration: 15
   kidneyStoneChance: 0.1
   maxKidneyStoneChance: 0.5
   speedReductionFactor: 0.1
-  isDehydrated: 0
   isHydrating: 0
   peePS: {fileID: 1248450993}
   audioSource: {fileID: 1201024036}
@@ -7097,6 +7101,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 31c43732968140b41b5da1a7a75eebc2, type: 3}
   - {fileID: 8300000, guid: af97d7853836c4749b7cce69740302de, type: 3}
   peeImage: {fileID: 1807882478}
+  postProcessVolume: {fileID: 1215206143}
 --- !u!1 &1215206140
 GameObject:
   m_ObjectHideFlags: 0
@@ -15631,6 +15636,7 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  ownerDrinkers: []
   increaseHydrationAmount: 25
   buyCost: 5
   notEnoughMoneyStr: Not enough money!
@@ -16857,6 +16863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8f5a7492c7d4f4fa775c0c2bd50d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canSeeInAngle: 110
 --- !u!136 &2096927492
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17041,6 +17048,7 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  ownerDrinkers: []
   increaseHydrationAmount: 25
   buyCost: 5
   notEnoughMoneyStr: Not enough money!

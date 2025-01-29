@@ -1,4 +1,6 @@
+using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Controller_Pee : MonoBehaviour 
@@ -14,13 +16,15 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float peeFillRate = 2f;
 
     [Header("Dehydration Settings")]
+    [SerializeField] private bool isDehydrated = false;
+    [SerializeField] private float dehydrationTimer = 0f;
+    [SerializeField] private float maxDehydrationTime = 10f;
     [SerializeField] private float dehydrationThreshold = 20f; // Pee meter value where dehydration starts
     [SerializeField] private float dehydrationAmount = 0.5f;    // Amount of dehydration per second after pee meter is empty
     [SerializeField] private float maxDehydration = 30f;       // Maximum dehydration before increasing kidney stone chance
     [SerializeField] private float kidneyStoneChance = 0.1f;    // Base chance of getting a kidney stone
     [SerializeField] private float maxKidneyStoneChance = 0.5f; // Maximum chance of getting a kidney stone
     [SerializeField] private float speedReductionFactor = 0.5f;
-    [SerializeField] private bool isDehydrated = false;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -34,6 +38,12 @@ public class Controller_Pee : MonoBehaviour
 
     [Header("UI Settings")]
     [SerializeField] private Image peeImage;
+
+    [Header("Effect Settings")]
+    [SerializeField] private CinemachineVolumeSettings postProcessVolume;
+    private Vignette vignette;
+    private LensDistortion lensDistortion;
+    private SplitToning splitToning;
     #endregion
 
     private void Awake() {
@@ -45,12 +55,31 @@ public class Controller_Pee : MonoBehaviour
     
     private void Start() {
         currPeeAmount = maxPeeAmount;
+        GetVolumeEffects();
+    }
+    private void GetVolumeEffects() {
+        if (postProcessVolume.Profile.TryGet(out vignette)) {
+            vignette.intensity.value = 0f;
+        } else {
+            Debug.LogError("Vignette not found.");
+        }
+        if (postProcessVolume.Profile.TryGet(out lensDistortion)) {
+            lensDistortion.intensity.value = 0f;
+        } else {
+            Debug.LogError("LensDistortion not found.");
+        }
+        if (postProcessVolume.Profile.TryGet(out splitToning)) {
+            splitToning.balance.value = -100f;
+        } else {
+            Debug.LogError("SplitToning not found.");
+        }
     }
     
     private void Update() {
         UpdatePeeAmount();
         UpdateUI();
         CheckDehydration();
+        UpdateDehydrationEffects();
     }
     
     private void UpdatePeeAmount() {
@@ -119,7 +148,23 @@ public class Controller_Pee : MonoBehaviour
                 Manager_UI.Instance.SetDehydrated(true);
                 // Implement logic for dealing with kidney stone (e.g., pain, effects on gameplay)
             }
+
+            // If maximum dehydration time is reached, trigger game over
+            dehydrationTimer += Time.deltaTime;
+            if (dehydrationTimer >= maxDehydrationTime) {
+                Manager_UI.Instance.GameOver();
+            }
         }
+    }
+    private void UpdateDehydrationEffects() {
+        if (vignette != null) 
+            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, dehydrationTimer / maxDehydrationTime);
+        
+        if (lensDistortion != null) 
+            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, dehydrationTimer / maxDehydrationTime);
+        
+        if (splitToning != null) 
+            splitToning.balance.value = Mathf.Lerp(-100f, 100f, dehydrationTimer / maxDehydrationTime);
     }
     private void IncreaseDehydration(float amount) {
         // Increase dehydration up to maxDehydration
@@ -131,6 +176,7 @@ public class Controller_Pee : MonoBehaviour
         Manager_UI.Instance.SetDehydrated(false);
         dehydrationAmount = 0.5f;
         kidneyStoneChance = 0.1f;
+        dehydrationTimer = 0f;
     }
     public float GetDehydrationFactor() {
         return isDehydrated ? speedReductionFactor : 1f;
