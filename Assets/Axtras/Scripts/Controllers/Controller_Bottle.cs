@@ -33,19 +33,19 @@ public class Controller_Bottle : Controller_Interactables
         }
     }
     public void StealBottle() {
-        CheckIfOwnersSees();
-        Manager_Money.Instance.UpdateMoney(0);
-        gameObject.SetActive(false);
-    }
-
-    private void CheckIfOwnersSees() {
+        // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
                 Debug.Log($"SEEN! Slap and stun player");
                 Controller_Player.Instance.GotSlapped();
             }
         }
+
+        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+        Manager_Money.Instance.UpdateMoney(0);
+        gameObject.SetActive(false);
     }
+
     public void AddOwner(Controller_Drinker cd) {
         canBeBought = false;
         ownerDrinkers.Add(cd);

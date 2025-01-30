@@ -5120,9 +5120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeProfile: {fileID: 11400000, guid: 7bbe35cdf5d69e14abbb03eccedaa5bd, type: 2}
   isEnabled: 1
-  widthPixelation: 160
-  heightPixelation: 120
-  colorPrecision: 64
+  widthPixelation: 320
+  heightPixelation: 240
+  colorPrecision: 16
 --- !u!1 &867487352
 GameObject:
   m_ObjectHideFlags: 0
