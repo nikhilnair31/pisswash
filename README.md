@@ -2,7 +2,6 @@
 
 ## Todo
 
-- [ ] Reset effects on game over
 - [ ] Stop fountain working when not in range
 - [ ] Add scoring system
 - [ ] Add a stain manager to check if all cleaned
@@ -12,6 +11,7 @@
 
 ## Done
 
+- [x] Reset effects on game over
 - [x] Add screen shake
 - [x] Add actual stun on slap
 - [x] Add drunken haze effect to screen

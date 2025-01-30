@@ -16,23 +16,23 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Button startGame_Menu_Button;
     [SerializeField] private Button startTutorial_Menu_Button;
     [SerializeField] private Button exitGame_Menu_Button;
-    private bool inMenu = true;
+    [SerializeField] public bool inMenu = true;
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
     [SerializeField] private Image dehydratedImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text timer_Text;
-    private bool inGame = false;
-
-    [Header("Pause UI")]
-    [SerializeField] private GameObject pauseCanvasGO;
+    [SerializeField] public bool inGame = false;
 
     [Header("Game Over UI")]
     [SerializeField] private GameObject gameoverCanvasGO;
     [SerializeField] private Button restartGame_GameOver_Button;
     [SerializeField] private Button exitGame_GameOver_Button;
-    private bool gameOver = false;
+    [SerializeField] public bool gameOver = false;
+
+    [Header("Pause UI")]
+    [SerializeField] private GameObject pauseCanvasGO;
 
     [Header("Modals")]
     [SerializeField] private GameObject modalPrefab;
@@ -150,6 +150,16 @@ public class Manager_UI : MonoBehaviour
     }
     public void SetDehydratedUI(bool active) {
         dehydratedImage.enabled = active;
+    }
+
+    public bool GetInGame() {
+        return inGame;
+    }
+    public bool GetInMenu() {
+        return inMenu;
+    }
+    public bool GetGameOver() {
+        return gameOver;
     }
 
     #region Interaction Text

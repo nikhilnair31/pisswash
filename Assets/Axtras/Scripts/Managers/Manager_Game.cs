@@ -11,5 +11,5 @@ public class Manager_Game : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-    }    
+    }
 }

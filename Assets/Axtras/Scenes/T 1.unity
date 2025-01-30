@@ -1687,6 +1687,7 @@ GameObject:
   - component: {fileID: 164719272}
   - component: {fileID: 164719267}
   - component: {fileID: 164719269}
+  - component: {fileID: 164719273}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1741,14 +1742,17 @@ MonoBehaviour:
   startGame_Menu_Button: {fileID: 385185996}
   startTutorial_Menu_Button: {fileID: 1924978628}
   exitGame_Menu_Button: {fileID: 1154882626}
+  inMenu: 1
   gameCanvasGO: {fileID: 1349819413}
   dehydratedImage: {fileID: 1465286013}
   lookedAt_Text: {fileID: 1142077243}
   timer_Text: {fileID: 118866724}
-  pauseCanvasGO: {fileID: 389876923}
+  inGame: 0
   gameoverCanvasGO: {fileID: 1722411385}
   restartGame_GameOver_Button: {fileID: 944027792}
   exitGame_GameOver_Button: {fileID: 1946079406}
+  gameOver: 0
+  pauseCanvasGO: {fileID: 389876923}
   modalPrefab: {fileID: 8929907945440621439, guid: 7d2d99cdb55ea6246970b848ccb14bf7, type: 3}
 --- !u!114 &164719269
 MonoBehaviour:
@@ -1809,6 +1813,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 60
+--- !u!114 &164719273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164719265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4ecb263b2b93b48bddc814b0d0389f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1215206141}
+  postProcessVolume: {fileID: 1215206143}
+  slapShakeDuration: 4
+  slapDelayDuration: 0
 --- !u!1 &169626572
 GameObject:
   m_ObjectHideFlags: 0
@@ -9161,8 +9181,6 @@ MonoBehaviour:
   volume: {fileID: 1215206143}
   cam: {fileID: 1215206141}
   zoomFOV: 40
-  slapShakeDuration: 2
-  slapDelayDuration: 0
   audioSource: {fileID: 1201024036}
   footstepClips:
   - {fileID: 8300000, guid: 5d3b7b5c4c495c845b9e93157bb4cbe2, type: 3}
@@ -9353,7 +9371,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 31c43732968140b41b5da1a7a75eebc2, type: 3}
   - {fileID: 8300000, guid: af97d7853836c4749b7cce69740302de, type: 3}
   peeImage: {fileID: 1807882478}
-  postProcessVolume: {fileID: 1215206143}
 --- !u!1 &1204407532
 GameObject:
   m_ObjectHideFlags: 0
@@ -16895,10 +16912,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1628491262}
     m_Modifications:
-    - target: {fileID: 3365172273078290497, guid: 14a00ee16423f9f43a37a9b5ab560cb2, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8e640642aaf747240809824fc148b119, type: 2}
     - target: {fileID: 4718933494843922324, guid: 14a00ee16423f9f43a37a9b5ab560cb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.323618

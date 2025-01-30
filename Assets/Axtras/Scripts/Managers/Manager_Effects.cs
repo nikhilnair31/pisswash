@@ -44,12 +44,12 @@ public class Manager_Effects : MonoBehaviour
     }
 
     public void UpdateDehydrationEffects(float dehydration) {
+        if (Manager_UI.Instance.inMenu || Manager_UI.Instance.gameOver) return;
+
         if (vignette != null) 
             vignette.intensity.value = Mathf.Lerp(0f, 0.5f, dehydration);
-        
         if (lensDistortion != null) 
             lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, dehydration);
-        
         if (splitToning != null) 
             splitToning.balance.value = Mathf.Lerp(-100f, 100f, dehydration);
     }
