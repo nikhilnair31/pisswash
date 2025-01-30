@@ -2,6 +2,8 @@
 
 ## Todo
 
+- [ ] Reset effects on game over
+- [ ] Stop fountain working when not in range
 - [ ] Add scoring system
 - [ ] Add a stain manager to check if all cleaned
 - [ ] Add screen color flash red on slap

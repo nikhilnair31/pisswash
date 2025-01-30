@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeFromTransform: {fileID: 7582972772823129458}
-  canSeeInRange: 3
+  canSeeInRange: 2.5
   canSeeInAngle: 80
 --- !u!1001 &2958700379354183945
 PrefabInstance:

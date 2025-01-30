@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2936154363686212793
+--- !u!1 &5050730152026755781
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1213664651231594048}
-  - component: {fileID: 4607255904430376590}
-  - component: {fileID: 1905355548168655438}
-  - component: {fileID: 1599493772267286498}
-  m_Layer: 6
-  m_Name: sodaBottle
+  - component: {fileID: 3025121394813321515}
+  - component: {fileID: 343812608614916889}
+  - component: {fileID: 530424383943162611}
+  - component: {fileID: 1654178885824424194}
+  m_Layer: 0
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &1213664651231594048
+--- !u!4 &3025121394813321515
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936154363686212793}
+  m_GameObject: {fileID: 5050730152026755781}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5026212, y: -0.14700007, z: -3.259081}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: -0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4607255904430376590
+--- !u!33 &343812608614916889
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936154363686212793}
-  m_Mesh: {fileID: 4698154072597918306, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
---- !u!23 &1905355548168655438
+  m_GameObject: {fileID: 5050730152026755781}
+  m_Mesh: {fileID: -6692290496178104961, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+--- !u!23 &530424383943162611
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936154363686212793}
+  m_GameObject: {fileID: 5050730152026755781}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,8 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3092847324252717431, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
-  - {fileID: 7211448773848044386, guid: 7816e9ec0e6e76e48a63b24d6d567fbd, type: 3}
+  - {fileID: 2100000, guid: da9782102d9e5194389bfe851149b3e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,26 +87,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1599493772267286498
-MonoBehaviour:
+--- !u!65 &1654178885824424194
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2936154363686212793}
+  m_GameObject: {fileID: 5050730152026755781}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b66d49ed1ced949a5243bff3870590, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addAudioSource: 1
-  addRigidbody: 1
-  addMeshCollider: 0
-  addBoxCollider: 1
-  showThisText: '[E] drink - [F] steal'
-  showForTime: -1
-  ownerDrinkers: []
-  increaseHydrationAmount: 35
-  canBeBought: 1
-  buyCost: 3
-  notEnoughMoneyStr: Not enough money!
+  serializedVersion: 3
+  m_Size: {x: 1.9835393, y: 1.983539, z: 2.4429328}
+  m_Center: {x: -0.000000029802322, y: 0.00000047683716, z: 0.22146657}
