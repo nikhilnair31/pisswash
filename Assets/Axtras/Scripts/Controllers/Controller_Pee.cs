@@ -1,6 +1,4 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class Controller_Pee : MonoBehaviour 
@@ -44,12 +42,6 @@ public class Controller_Pee : MonoBehaviour
 
     [Header("UI Settings")]
     [SerializeField] private Image peeImage;
-
-    [Header("Effect Settings")]
-    [SerializeField] private CinemachineVolumeSettings postProcessVolume;
-    private Vignette vignette;
-    private LensDistortion lensDistortion;
-    private SplitToning splitToning;
     #endregion
 
     private void Awake() {
@@ -61,32 +53,15 @@ public class Controller_Pee : MonoBehaviour
     
     private void Start() {
         currPeeAmount = maxPeeAmount;
-        GetVolumeEffects();
-    }
-    private void GetVolumeEffects() {
-        if (postProcessVolume.Profile.TryGet(out vignette)) {
-            vignette.intensity.value = 0f;
-        } else {
-            Debug.LogError("Vignette not found.");
-        }
-        if (postProcessVolume.Profile.TryGet(out lensDistortion)) {
-            lensDistortion.intensity.value = 0f;
-        } else {
-            Debug.LogError("LensDistortion not found.");
-        }
-        if (postProcessVolume.Profile.TryGet(out splitToning)) {
-            splitToning.balance.value = -100f;
-        } else {
-            Debug.LogError("SplitToning not found.");
-        }
     }
     
     private void Update() {
         UpdatePeeAmount();
         CheckDehydration();
-        UpdateDehydrationEffects();
         UpdateQTE();
         UpdateUI();
+
+        Manager_Effects.Instance.UpdateDehydrationEffects(dehydrationTimer/maxDehydrationTime);
     }
     
     private void UpdatePeeAmount() {
@@ -139,7 +114,7 @@ public class Controller_Pee : MonoBehaviour
                 Debug.Log("Player got a kidney stone!");
 
                 isDehydrated = true;
-                Manager_UI.Instance.SetDehydrated(true);
+                Manager_UI.Instance.SetDehydratedUI(true);
                 SetIsPeeing(false);
                 
                 if (!passedKidneyStone) {
@@ -149,6 +124,8 @@ public class Controller_Pee : MonoBehaviour
 
             dehydrationTimer += Time.deltaTime;
             if (dehydrationTimer >= maxDehydrationTime) {
+                Manager_Effects.Instance.ResetDehydratedEffects();
+                Manager_UI.Instance.SetDehydratedUI(false);
                 Manager_UI.Instance.GameOver();
             }
         }
@@ -159,22 +136,13 @@ public class Controller_Pee : MonoBehaviour
             }
         }
     }
-    private void UpdateDehydrationEffects() {
-        if (vignette != null) 
-            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, dehydrationTimer / maxDehydrationTime);
-        
-        if (lensDistortion != null) 
-            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, dehydrationTimer / maxDehydrationTime);
-        
-        if (splitToning != null) 
-            splitToning.balance.value = Mathf.Lerp(-100f, 100f, dehydrationTimer / maxDehydrationTime);
-    }
     private void ResetDehydration() {
         Debug.Log("Player is no longer dehydrated.");
 
         isDehydrated = false;
         passedKidneyStone = false;
-        Manager_UI.Instance.SetDehydrated(false);
+        Manager_UI.Instance.SetDehydratedUI(false);
+        Manager_Effects.Instance.ResetDehydratedEffects();
         dehydrationAmount = 0.5f;
         kidneyStoneChance = 0.1f;
         dehydrationTimer = 0f;

@@ -24,7 +24,7 @@ public class Manager_Timer : MonoBehaviour
     private void Update() {
         if (isRunning) {
             timer -= Time.deltaTime;
-            Manager_UI.Instance.SetTimer(timer);
+            Manager_UI.Instance.SetTimerUI(timer);
         }
     }
 

@@ -145,10 +145,10 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetTimer(float time) {
+    public void SetTimerUI(float time) {
         timer_Text.text = time.ToString("F0");
     }
-    public void SetDehydrated(bool active) {
+    public void SetDehydratedUI(bool active) {
         dehydratedImage.enabled = active;
     }
 

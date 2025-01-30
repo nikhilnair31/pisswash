@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Controller_Bottle : Controller_Interactables 
 {
@@ -37,7 +37,7 @@ public class Controller_Bottle : Controller_Interactables
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
                 Debug.Log($"SEEN! Slap and stun player");
-                Controller_Player.Instance.GotSlapped();
+                Manager_Effects.Instance.GotSlapped();
             }
         }
 
