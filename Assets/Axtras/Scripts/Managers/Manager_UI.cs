@@ -23,6 +23,7 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Image dehydratedImage;
     [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
+    [SerializeField] private TMP_Text qteKey_Text;
     [SerializeField] private TMP_Text timer_Text;
     [SerializeField] private TMP_Text money_Text;
     [SerializeField] public bool inGame = false;
@@ -222,6 +223,9 @@ public class Manager_UI : MonoBehaviour
     }
     public void SetDehydratedUI(bool active) {
         dehydratedImage.enabled = active;
+    }
+    public void SetQTEKeyUI(string key) {
+        qteKey_Text.text = key;
     }
 
     #region Interaction Text

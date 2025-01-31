@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +25,8 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private int stonesPassedCount = 0;
     [SerializeField] private float timeToKidneyStone = 0f;
     [SerializeField] private float maxTimeToKidneyStone = 10f;
+    private Coroutine kidneyStoneEffectCoroutine;
+    private Coroutine kidneyStonePassBoostCoroutine;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -31,7 +35,7 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private int qtePressCount = 0;
     [SerializeField] private int qteRequiredPresses = 30;
     [SerializeField] private bool allowQTE = false;
-    [SerializeField] private KeyCode qteKey = KeyCode.E;
+    private KeyCode qteKey;
 
     [Header("Particle Settings")]
     [SerializeField] private ParticleSystem peePS;
@@ -117,16 +121,15 @@ public class Controller_Pee : MonoBehaviour
                 Debug.Log("Player got a kidney stone!");
 
                 allowQTE = true;
+                GetRandKey();
+
                 qtePressCount = 0;
                 timeToKidneyStone = 0f;
                 stonesCurrentCount++;
                 stonesAcquiredCount++;
 
-                // Kidney stone effects - speed reduction, pee slower, etc.
-                maxPeeAmount -= 15f;
-                Controller_Player.Instance.ControlSpeedMoveAndLook(0.8f);
-                var emission = peePS.emission;
-                emission.rateOverTime = peePS.emission.rateOverTime.constant * 0.8f;
+                // Kidney stone getting perm effects
+                ApplyKidneyStoneEffects();
             }
 
             // Start game over timer if player is dehydrated
@@ -160,13 +163,62 @@ public class Controller_Pee : MonoBehaviour
         // Allow QTE to pass kidney stone again
         if (stonesCurrentCount <= 0) {
             allowQTE = false;
+            Manager_UI.Instance.SetQTEKeyUI("");
         }
 
-        // Kidney stone passing temp boosts - speed, pee, etc.
-        maxPeeAmount += 5f;
-        Controller_Player.Instance.ControlSpeedMoveAndLook(1.4f);
+        // Kidney stone passing temp boost
+        ApplyKidneyStonePassingBoost();
+    }
+
+    private KeyCode GetRandKey() {
+        KeyCode[] keyCodes = (KeyCode[])System.Enum.GetValues(typeof(KeyCode));
+        List<KeyCode> validKeyCodes = new ();
+        foreach (KeyCode keyCode in keyCodes) {
+            if (
+                (keyCode >= KeyCode.A && keyCode <= KeyCode.Z) || 
+                (keyCode >= KeyCode.Alpha0 && keyCode <= KeyCode.Alpha9) || 
+                (keyCode >= KeyCode.F1 && keyCode <= KeyCode.F12)
+            ) {
+                validKeyCodes.Add(keyCode);
+            }
+        }
+
+        qteKey = validKeyCodes[Random.Range(0, validKeyCodes.Count)];
+        Manager_UI.Instance.SetQTEKeyUI(qteKey.ToString());
+
+        return qteKey;
+    }
+
+    void ApplyKidneyStoneEffects() {
+        if (kidneyStoneEffectCoroutine != null) 
+            StopCoroutine(kidneyStoneEffectCoroutine);
+        
+        kidneyStoneEffectCoroutine = StartCoroutine(TemporaryEffect(-15f, 0.8f, 0.8f, -1f));
+    }
+    void ApplyKidneyStonePassingBoost() {
+        if (kidneyStonePassBoostCoroutine != null) 
+            StopCoroutine(kidneyStonePassBoostCoroutine);
+        
+        kidneyStonePassBoostCoroutine = StartCoroutine(TemporaryEffect(5f, 1.4f, 1.4f, 3f));
+    }
+    private IEnumerator TemporaryEffect(float peeAmountChange, float speedMultiplier, float peeRateMultiplier, float duration) {
+        // Apply changes and clamp values
+        maxPeeAmount = Mathf.Clamp(maxPeeAmount + peeAmountChange, 0f, 150f);
+        Controller_Player.Instance.ControlSpeedMoveAndLook(Mathf.Clamp(speedMultiplier, 0.1f, 1.3f));
+
         var emission = peePS.emission;
-        emission.rateOverTime = peePS.emission.rateOverTime.constant * 1.4f;
+        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant * peeRateMultiplier, 10, 150);
+
+        if (duration == -1f) yield break;
+
+        yield return new WaitForSeconds(duration);
+
+        // Revert changes after duration
+        maxPeeAmount = Mathf.Clamp(maxPeeAmount - peeAmountChange, 0f, 150f);
+        Controller_Player.Instance.ControlSpeedMoveAndLook(Mathf.Clamp(1 / speedMultiplier, 0.1f, 1.3f));
+
+        emission = peePS.emission;
+        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / peeRateMultiplier, 10, 150);
     }
     
     public int GetStonesPassedCount() {

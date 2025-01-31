@@ -2,11 +2,8 @@
 
 ## Todo
 
-- [ ] Update kidney stone and dehydration logic
-- [ ] Add speed boost, pee force and small bit of pee on passing kidney stone 
 - [ ] Add booze, puke and blood for stains; each with different effects
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
-- [ ] Add variety for QTEs (maybe different keys to mash each time?)
 - [ ] Stop fountain working when not in range
 - [ ] Change the fountain thing to fill only while holding down E key
 - [ ] Polish UI
@@ -14,6 +11,9 @@
 
 ## Done
 
+- [x] Add variety for QTEs (maybe different keys to mash each time?)
+- [x] Update kidney stone and dehydration logic
+- [x] Add speed boost, pee force and small bit of pee on passing kidney stone 
 - [x] Add hazards and damage health
 - [x] Fix updated score system
 - [x] Add scoring system
