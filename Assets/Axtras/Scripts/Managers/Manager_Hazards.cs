@@ -18,6 +18,7 @@ public class Manager_Hazards : MonoBehaviour
 
     public void AddDamage() {
         damageCount++;
+        Manager_Effects.Instance.ImpactEffects();
     }
 
     public int GetDamageCount() {

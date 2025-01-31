@@ -39,15 +39,14 @@ public class Controller_Bottle : Controller_Interactables
             );
         }
     }
+    
     public void StealBottle() {
         stolen = true;
 
         // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
-                Debug.Log($"SEEN! Slap and stun player");
                 Manager_Hazards.Instance.AddDamage();
-                Manager_Effects.Instance.GotSlapped();
             }
         }
 

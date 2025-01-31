@@ -10,16 +10,13 @@ public class Manager_Effects : MonoBehaviour
 
     [Header("General Settings")]
     [SerializeField] private CinemachineCamera cam;
-
-    [Header("Effect Settings")]
-    [SerializeField] private CinemachineVolumeSettings postProcessVolume;
+    private CinemachineVolumeSettings postProcessVolume;
     private Vignette vignette;
     private LensDistortion lensDistortion;
     private SplitToning splitToning;
 
     [Header("Mouse Settings")]
     [SerializeField] private float slapShakeDuration = 2f;
-    [SerializeField] private float slapDelayDuration = 0f;
     #endregion
 
     private void Awake() {
@@ -56,16 +53,21 @@ public class Manager_Effects : MonoBehaviour
         if (splitToning != null) splitToning.balance.value = -100f;
     }
     
-    public void GotSlapped() {
+    public void ImpactEffects() {
         DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(false);
             })
-            .Append(
+            .Join(
                 cam.transform.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true)
             )
-            .AppendInterval(
-                slapDelayDuration
+            .Insert(
+                0f,
+                Manager_UI.Instance.GetEffectsImageUI().DOFade(1f, 0.1f)
+            )
+            .Insert(
+                0f,
+                Manager_UI.Instance.GetEffectsImageUI().DOFade(0f, slapShakeDuration)
             )
             .OnComplete(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(true);

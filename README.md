@@ -4,10 +4,10 @@
 
 - [ ] Add booze, puke and blood for stains; each with different effects
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
-- [ ] Add screen color flash red on slap
 
 ## Done
 
+- [x] Add screen color flash red on slap
 - [x] Polish UI
 - [x] See why meter wopn't reduce on pee
 - [x] Stop fountain working when not in range
