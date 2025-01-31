@@ -26,6 +26,12 @@ public class Manager_Timer : MonoBehaviour
         if (isRunning) {
             timer -= Time.deltaTime;
             Manager_UI.Instance.SetTimerUI(timer);
+
+            if (timer <= 0f) {
+                StopTimer();
+                Manager_UI.Instance.SetTimerUI(0f);
+                Manager_UI.Instance.GameOver();
+            }
         }
     }
 
