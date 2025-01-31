@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stain
   - Drinker
+  - Bottle
   layers:
   - Default
   - TransparentFX

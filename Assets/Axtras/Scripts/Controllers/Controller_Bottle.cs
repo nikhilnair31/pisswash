@@ -4,6 +4,10 @@ using System.Collections.Generic;
 public class Controller_Bottle : Controller_Interactables 
 {
     #region Vars
+    [Header("Status Settings")]
+    [SerializeField] public bool bought = false;
+    [SerializeField] public bool stolen = false;
+
     [Header("Owner Settings")]
     [SerializeField] List<Controller_Drinker> ownerDrinkers = new ();
 
@@ -19,7 +23,8 @@ public class Controller_Bottle : Controller_Interactables
     #endregion
 
     public void BuyBottle() {
-        if (Manager_Money.Instance.GetCanBuy() && canBeBought) {
+        if (Manager_Money.Instance.GetHasMoneyToBuy() && canBeBought) {
+            bought = true;
             Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
             Manager_Money.Instance.UpdateMoney(-buyCost);
             gameObject.SetActive(false);
@@ -33,6 +38,8 @@ public class Controller_Bottle : Controller_Interactables
         }
     }
     public void StealBottle() {
+        stolen = true;
+
         // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {

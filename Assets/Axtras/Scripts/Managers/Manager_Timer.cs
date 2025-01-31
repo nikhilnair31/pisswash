@@ -5,6 +5,7 @@ public class Manager_Timer : MonoBehaviour
     #region Vars
     public static Manager_Timer Instance { get; private set; }
     
+    [Header("Timer Settings")]
     [SerializeField] private float maxTime = 60f;
     private float timer = 0f;
     private bool isRunning = false;
@@ -36,5 +37,9 @@ public class Manager_Timer : MonoBehaviour
     }
     public void ResetTimer() {
         timer = 0f;
-    }   
+    }
+    
+    public float GetTimePerc() {
+        return (timer / maxTime) * 100f;
+    }
 }

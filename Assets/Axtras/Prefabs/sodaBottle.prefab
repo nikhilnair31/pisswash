@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1599493772267286498}
   m_Layer: 6
   m_Name: sodaBottle
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,8 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  bought: 0
+  stolen: 0
   ownerDrinkers: []
   increaseHydrationAmount: 35
   canBeBought: 1

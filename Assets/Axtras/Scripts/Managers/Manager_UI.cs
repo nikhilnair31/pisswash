@@ -29,6 +29,7 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Finished Round UI")]
     [SerializeField] private GameObject finishedRoundCanvasGO;
+    [SerializeField] private TMP_Text score_FinishedRound_Text;
     [SerializeField] private Button next_FinishedRound_Button;
     [SerializeField] private Button menu_FinishedRound_Button;
     [SerializeField] public bool finishedRound = false;
@@ -163,16 +164,16 @@ public class Manager_UI : MonoBehaviour
 
         finishedRound = true;
         inGame = false;
-        inMenu = false;
 
+        SetScoreUI();
+        
         finishedRoundCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
-        pauseCanvasGO.SetActive(false);
-        
-        Time.timeScale = 0f;
         
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+        
+        Time.timeScale = 0f;
     }
     public void NextRound() {
         Debug.Log($"NextRound");
@@ -207,6 +208,9 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
+    public void SetScoreUI() {
+        score_FinishedRound_Text.text = Manager_Game.Instance.CalculateScoreLetter();
+    }
     public void SetPeeAmountUI(float peeAmount) {
         peeImage.fillAmount = peeAmount;
     }

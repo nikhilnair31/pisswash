@@ -34,7 +34,7 @@ public class Manager_Money : MonoBehaviour
         Manager_UI.Instance.SetMoneyUI(currMoney);
     }
 
-    public bool GetCanBuy() {
+    public bool GetHasMoneyToBuy() {
         return currMoney > 0;
     }
 }

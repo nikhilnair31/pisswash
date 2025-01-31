@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 2738905555718318350}
   - component: {fileID: 8873614650648273250}
   - component: {fileID: 7133829187341604206}
+  - component: {fileID: 4530509171315579223}
+  - component: {fileID: 3572735086778757656}
+  - component: {fileID: 8742985393100667556}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -142,3 +145,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSceneName: T 1
+--- !u!114 &4530509171315579223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313998068107604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8068f74313b244e49b8c55f7a91851de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3572735086778757656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313998068107604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e671f52ce4005b4996aed90fa3ea9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allBottles: []
+--- !u!114 &8742985393100667556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313998068107604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d490e69ab7004e45b8ab909f9968aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allStains: []
