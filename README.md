@@ -11,6 +11,7 @@
 
 ## Done
 
+- [x] Add UI for kidney stone count
 - [x] Add variety for QTEs (maybe different keys to mash each time?)
 - [x] Update kidney stone and dehydration logic
 - [x] Add speed boost, pee force and small bit of pee on passing kidney stone 

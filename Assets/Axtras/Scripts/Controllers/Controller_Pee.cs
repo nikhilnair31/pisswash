@@ -127,6 +127,7 @@ public class Controller_Pee : MonoBehaviour
                 timeToKidneyStone = 0f;
                 stonesCurrentCount++;
                 stonesAcquiredCount++;
+                Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
 
                 // Kidney stone getting perm effects
                 ApplyKidneyStoneEffects();
@@ -159,6 +160,8 @@ public class Controller_Pee : MonoBehaviour
         qtePressCount = 0;
         stonesCurrentCount--;
         stonesPassedCount++;
+        
+        Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
 
         // Allow QTE to pass kidney stone again
         if (stonesCurrentCount <= 0) {

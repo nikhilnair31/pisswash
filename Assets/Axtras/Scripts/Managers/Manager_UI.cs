@@ -24,6 +24,7 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text qteKey_Text;
+    [SerializeField] private TMP_Text kidneyStone_Text;
     [SerializeField] private TMP_Text timer_Text;
     [SerializeField] private TMP_Text money_Text;
     [SerializeField] public bool inGame = false;
@@ -226,6 +227,9 @@ public class Manager_UI : MonoBehaviour
     }
     public void SetQTEKeyUI(string key) {
         qteKey_Text.text = key;
+    }
+    public void SetKidneyStoneUI(int stoneCnt) {
+        kidneyStone_Text.text = stoneCnt.ToString();
     }
 
     #region Interaction Text

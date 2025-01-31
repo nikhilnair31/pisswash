@@ -17,6 +17,7 @@ public class Controller_Player : MonoBehaviour
     private Rigidbody rb;
     private Vector3 previousPosition;
     private Vector3 moveDirection;
+    private bool isMoving = false;
     private float speedMul = 1f;
     private float camLocalY;
 
@@ -26,18 +27,11 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private Transform playerCamera;
     private float xRotation = 0f;
 
-    [Header("Interactable Settings")]
-    [SerializeField] private float maxDistance = 10f;
-    [SerializeField] private LayerMask interactableLayer;
-    private string showTextStr;
-    private RaycastHit hit;
-
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] footstepClips;
     [SerializeField] private float footstepInterval = 0.5f;
     private float footstepTimer = 0f;
-    private bool isMoving = false;
     #endregion
 
     private void Awake() {
@@ -59,9 +53,7 @@ public class Controller_Player : MonoBehaviour
     private void Update() {
         HandleMouseLook();
         HandleMovement();
-        HandleInteractable();
         PlayFootsteps();
-        CheckForInteractable();
     }
 
     private void HandleMouseLook() {
@@ -113,38 +105,6 @@ public class Controller_Player : MonoBehaviour
 
         rb.AddForce(Vector3.up * gravity);
     }
-    private void HandleInteractable() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-                Debug.Log($"Trying to interact: {hit.transform.name}");
-
-                if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                    bottle.BuyBottle();
-                }
-                else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
-                    fountain.ControlDrinking();
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F)) {
-            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-                Debug.Log($"Trying to steal : {hit.transform.name}");
-
-                if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                    bottle.StealBottle();
-                }
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F)) {
-            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-                Debug.Log($"Trying to end game : {hit.transform.name}");
-
-                if (hit.transform.TryGetComponent(out Controller_Boss boss)) {
-                    boss.FinshRound();
-                }
-            }
-        }
-    }
 
     private void PlayFootsteps() {
         bool hasMoved = Vector3.Distance(transform.position, previousPosition) > 0.01f;
@@ -162,47 +122,11 @@ public class Controller_Player : MonoBehaviour
         previousPosition = transform.position;
     }
 
-    private void CheckForInteractable() {
-        if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
-            if (hit.transform.TryGetComponent(out Controller_Interactables interactable)) {
-                var (text, duration) = interactable.ReturnInfo();
-                if (text != showTextStr) {
-                    showTextStr = text;
-                    Manager_Thoughts.Instance.ShowText(
-                        text, 
-                        duration,
-                        Manager_Thoughts.TextPriority.Item
-                    );
-                }
-                return;
-            }
-        }
-
-        // If no interactable is detected or conditions aren't met, clear text
-        showTextStr = null;
-        Manager_Thoughts.Instance.ClearThoughtText(
-            Manager_Thoughts.TextPriority.Item
-        );
-    }
-
     public void ControlCanMoveAndLook(bool active) {
         canMove = active;
         canLook = active;
     }
     public void ControlSpeedMoveAndLook(float mul) {
         speedMul *= mul;
-    }
-
-    private void OnDrawGizmos() {
-        // Only draw the Gizmos if the ray has hit something
-        if (hit.collider != null) {
-            // Draw the ray as a line
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(hit.point - hit.normal * 0.5f, hit.point);
-
-            // Draw a sphere at the hit point
-            Gizmos.color = Color.green;
-            Gizmos.DrawSphere(hit.point, 0.1f);
-        }
     }
 }
