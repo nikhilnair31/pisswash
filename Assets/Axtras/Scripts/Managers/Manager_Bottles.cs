@@ -38,7 +38,4 @@ public class Manager_Bottles : MonoBehaviour
 
         return stolenBottlesCnt;
     } 
-    public int GetMaxBottlesPerLevel() {
-        return allBottles.Count;
-    } 
 }

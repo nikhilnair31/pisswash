@@ -51,8 +51,9 @@ public class Controller_Bottle : Controller_Interactables
             }
         }
 
-        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
         Manager_Money.Instance.UpdateMoney(0);
+        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+
         gameObject.SetActive(false);
     }
 

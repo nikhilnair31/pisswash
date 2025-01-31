@@ -125,7 +125,9 @@ public class Controller_Pee : MonoBehaviour
 
                 // Kidney stone effects - speed reduction, pee slower, etc.
                 maxPeeAmount -= 15f;
-                Controller_Player.Instance.ControlSpeedMoveAndLook(0.2f);
+                Controller_Player.Instance.ControlSpeedMoveAndLook(0.8f);
+                var emission = peePS.emission;
+                emission.rateOverTime = peePS.emission.rateOverTime.constant * 0.8f;
             }
 
             // Start game over timer if player is dehydrated
@@ -163,7 +165,9 @@ public class Controller_Pee : MonoBehaviour
 
         // Kidney stone passing temp boosts - speed, pee, etc.
         maxPeeAmount += 5f;
-        Controller_Player.Instance.ControlSpeedMoveAndLook(1.2f);
+        Controller_Player.Instance.ControlSpeedMoveAndLook(1.4f);
+        var emission = peePS.emission;
+        emission.rateOverTime = peePS.emission.rateOverTime.constant * 1.4f;
     }
     
     public int GetStonesPassedCount() {

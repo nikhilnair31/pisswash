@@ -18,6 +18,7 @@ public class Controller_Player : MonoBehaviour
     private Rigidbody rb;
     private Vector3 previousPosition;
     private Vector3 moveDirection;
+    private float speedMul = 1f;
     private float camLocalY;
 
     [Header("Mouse Settings")]
@@ -78,8 +79,8 @@ public class Controller_Player : MonoBehaviour
     private void HandleMouseLook() {
         if (!canLook) return;
 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * speedMul * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * speedMul * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
@@ -99,26 +100,26 @@ public class Controller_Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
-                moveDirection.x * crouchSpeed, 
+                moveDirection.x * crouchSpeed * speedMul, 
                 rb.linearVelocity.y, 
-                moveDirection.z * crouchSpeed
+                moveDirection.z * crouchSpeed * speedMul
             );
             playerCamera.DOMoveY(camLocalY - crouchHeight, 0.2f);
         } 
         else {
             rb.linearVelocity = new (
-                moveDirection.x * moveSpeed, 
+                moveDirection.x * moveSpeed * speedMul, 
                 rb.linearVelocity.y, 
-                moveDirection.z * moveSpeed
+                moveDirection.z * moveSpeed * speedMul
             );
             playerCamera.DOMoveY(camLocalY, 0.2f);
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
-                moveDirection.x * sprintSpeed, 
+                moveDirection.x * sprintSpeed * speedMul, 
                 rb.linearVelocity.y, 
-                moveDirection.z * sprintSpeed
+                moveDirection.z * sprintSpeed * speedMul
             );
         }
 
@@ -226,7 +227,8 @@ public class Controller_Player : MonoBehaviour
         canMove = active;
         canLook = active;
     }
-    public void ControlSpeedMoveAndLook(float speedMul) {
+    public void ControlSpeedMoveAndLook(float mul) {
+        speedMul *= mul;
     }
 
     private void OnDrawGizmos() {

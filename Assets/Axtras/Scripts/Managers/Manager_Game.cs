@@ -17,7 +17,6 @@ public class Manager_Game : MonoBehaviour
         // Base Metrics
         float timeScore = Manager_Timer.Instance.GetTimeRemainingPerc(); // % of time left
         float stainScore = Manager_Stains.Instance.GetStainCleanedPerc();
-        float healthScore = Controller_Health.Instance.GetHealthPerc();
         
         // Risk Metrics
         int stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
@@ -26,10 +25,9 @@ public class Manager_Game : MonoBehaviour
         
         // Stealing Metrics
         int stolenDrinks = Manager_Bottles.Instance.GetBottlesStolenCount();
-        int maxPossibleSteals = Manager_Bottles.Instance.GetMaxBottlesPerLevel();
 
         // Calculations
-        float baseScore = (timeScore * 0.25f) + (stainScore * 0.5f) + (healthScore * 0.25f);
+        float baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);
         
         // Penalties
         float stonePenalty = stonesAcquired * 2f; // -2% per stone risked

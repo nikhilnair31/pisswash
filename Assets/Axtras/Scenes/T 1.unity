@@ -7609,7 +7609,6 @@ GameObject:
   - component: {fileID: 1201024034}
   - component: {fileID: 1201024036}
   - component: {fileID: 1201024033}
-  - component: {fileID: 1201024038}
   - component: {fileID: 1201024037}
   m_Layer: 7
   m_Name: Player
@@ -7834,7 +7833,7 @@ MonoBehaviour:
   peeEmptyRate: 50
   isDehydrated: 0
   gameOverInTime: 0
-  maxGameOverInTime: 30
+  maxGameOverInTime: 100
   stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0
@@ -7845,26 +7844,11 @@ MonoBehaviour:
   qteRequiredPresses: 5
   allowQTE: 0
   qteKey: 120
-  passedKidneyStone: 0
   peePS: {fileID: 1248450993}
   audioSource: {fileID: 1201024036}
   peeClips:
   - {fileID: 8300000, guid: 31c43732968140b41b5da1a7a75eebc2, type: 3}
   - {fileID: 8300000, guid: af97d7853836c4749b7cce69740302de, type: 3}
---- !u!114 &1201024038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201024031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de63e2b4a7428d84a8efaab0e7d0e987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  currHealth: 0
 --- !u!1 &1204407532
 GameObject:
   m_ObjectHideFlags: 0
