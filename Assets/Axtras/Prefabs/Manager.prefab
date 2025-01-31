@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4530509171315579223}
   - component: {fileID: 3572735086778757656}
   - component: {fileID: 8742985393100667556}
+  - component: {fileID: 2674905942562452776}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -183,3 +184,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allStains: []
+--- !u!114 &2674905942562452776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313998068107604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede4392d5fa199347805964fe6c25dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 0

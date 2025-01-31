@@ -116,7 +116,6 @@ public class Controller_Pee : MonoBehaviour
             if (timeToKidneyStone >= maxTimeToKidneyStone) {
                 Debug.Log("Player got a kidney stone!");
 
-                peePS.Stop();
                 allowQTE = true;
                 qtePressCount = 0;
                 timeToKidneyStone = 0f;

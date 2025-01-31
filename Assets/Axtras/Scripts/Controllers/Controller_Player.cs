@@ -6,7 +6,6 @@ public class Controller_Player : MonoBehaviour
 {
     #region Vars
     public static Controller_Player Instance { get; private set; }
-    private Controller_Pee peeController;
 
     [Header("Movement Settings")]
     [SerializeField] private bool canMove = true;
@@ -33,12 +32,6 @@ public class Controller_Player : MonoBehaviour
     private string showTextStr;
     private RaycastHit hit;
 
-    [Header("Zoom Settings")]
-    [SerializeField] private CinemachineVolumeSettings volume;
-    [SerializeField] private CinemachineCamera cam;
-    [SerializeField] private float zoomFOV = 40f;
-    private float currFOV;
-
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] footstepClips;
@@ -58,12 +51,8 @@ public class Controller_Player : MonoBehaviour
         if (transform.TryGetComponent(out Rigidbody rgb)) {
             rb = rgb;
         }
-        if (transform.TryGetComponent(out Controller_Pee pc)) {
-            peeController = pc;
-        }
 
         rb.freezeRotation = true;
-        currFOV = cam.Lens.FieldOfView;
         camLocalY = playerCamera.transform.position.y;
     }
 
@@ -71,7 +60,6 @@ public class Controller_Player : MonoBehaviour
         HandleMouseLook();
         HandleMovement();
         HandleInteractable();
-        HandleZoom();
         PlayFootsteps();
         CheckForInteractable();
     }
@@ -155,32 +143,6 @@ public class Controller_Player : MonoBehaviour
                     boss.FinshRound();
                 }
             }
-        }
-    }
-    private void HandleZoom() {
-        if (Input.GetMouseButtonDown(1)) {
-            DOTween.To(
-                () => cam.Lens.FieldOfView,
-                x => {
-                    var lens = cam.Lens;
-                    lens.FieldOfView = x;
-                    cam.Lens = lens;
-                },
-                zoomFOV,
-                0.5f
-            );
-        }
-        else if (Input.GetMouseButtonUp(1)) {
-            DOTween.To(
-                () => cam.Lens.FieldOfView,
-                x => {
-                    var lens = cam.Lens;
-                    lens.FieldOfView = x;
-                    cam.Lens = lens;
-                },
-                currFOV,
-                0.5f
-            );
         }
     }
 
