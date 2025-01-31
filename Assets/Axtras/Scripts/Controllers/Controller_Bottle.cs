@@ -25,8 +25,10 @@ public class Controller_Bottle : Controller_Interactables
     public void BuyBottle() {
         if (Manager_Money.Instance.GetHasMoneyToBuy() && canBeBought) {
             bought = true;
-            Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+            
             Manager_Money.Instance.UpdateMoney(-buyCost);
+            Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+            
             gameObject.SetActive(false);
         }
         else {

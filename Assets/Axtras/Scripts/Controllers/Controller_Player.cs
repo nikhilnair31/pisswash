@@ -155,13 +155,6 @@ public class Controller_Player : MonoBehaviour
                 }
             }
         }
-        
-        if (Input.GetMouseButtonDown(0)) {
-            peeController.SetIsPeeing(true);
-        }
-        if (Input.GetMouseButtonUp(0)) {
-            peeController.SetIsPeeing(false);
-        }
     }
     private void HandleZoom() {
         if (Input.GetMouseButtonDown(1)) {
@@ -232,6 +225,8 @@ public class Controller_Player : MonoBehaviour
     public void ControlCanMoveAndLook(bool active) {
         canMove = active;
         canLook = active;
+    }
+    public void ControlSpeedMoveAndLook(float speedMul) {
     }
 
     private void OnDrawGizmos() {

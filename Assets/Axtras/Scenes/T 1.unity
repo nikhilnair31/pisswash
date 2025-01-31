@@ -7831,22 +7831,19 @@ MonoBehaviour:
   isPeeing: 0
   maxPeeAmount: 100
   currPeeAmount: 0
-  peeEmptyRate: 10
-  peeFillRate: 0
+  peeEmptyRate: 50
   isDehydrated: 0
-  dehydratedForTimer: 0
-  maxDehydratedForTime: 10
-  dehydrationThreshold: 15
-  dehydrationAmount: 0.5
-  maxDehydration: 15
-  kidneyStoneChance: 0.01
-  maxKidneyStoneChance: 0.3
+  gameOverInTime: 0
+  maxGameOverInTime: 30
+  stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0
+  timeToKidneyStone: 0
+  maxTimeToKidneyStone: 5
   isHydrating: 0
   qtePressCount: 0
   qteRequiredPresses: 5
-  isQTEActive: 0
+  allowQTE: 0
   qteKey: 120
   passedKidneyStone: 0
   peePS: {fileID: 1248450993}

@@ -11,21 +11,18 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float maxPeeAmount = 100f;
     [SerializeField] private float currPeeAmount;
     [SerializeField] private float peeEmptyRate = 1f;
-    [SerializeField] private float peeFillRate = 2f;
 
     [Header("Dehydration Settings")]
     [SerializeField] private bool isDehydrated = false;
-    [SerializeField] private float dehydratedForTimer = 0f;
-    [SerializeField] private float maxDehydratedForTime = 10f;
-    [SerializeField] private float dehydrationThreshold = 20f; // Pee meter value where dehydration starts
-    [SerializeField] private float dehydrationAmount = 0.5f;    // Amount of dehydration per second after pee meter is empty
-    [SerializeField] private float maxDehydration = 30f;       // Maximum dehydration before increasing kidney stone chance
-    [SerializeField] private float kidneyStoneChance = 0.1f;    // Base chance of getting a kidney stone
-    [SerializeField] private float maxKidneyStoneChance = 0.5f; // Maximum chance of getting a kidney stone
+    [SerializeField] private float gameOverInTime = 0f;
+    [SerializeField] private float maxGameOverInTime = 10f;
 
     [Header("Stones Settings")]
+    [SerializeField] private int stonesCurrentCount = 0;
     [SerializeField] private int stonesAcquiredCount = 0;
     [SerializeField] private int stonesPassedCount = 0;
+    [SerializeField] private float timeToKidneyStone = 0f;
+    [SerializeField] private float maxTimeToKidneyStone = 10f;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -33,9 +30,8 @@ public class Controller_Pee : MonoBehaviour
     [Header("QTE Settings")]
     [SerializeField] private int qtePressCount = 0;
     [SerializeField] private int qteRequiredPresses = 30;
-    [SerializeField] private bool isQTEActive = false;
+    [SerializeField] private bool allowQTE = false;
     [SerializeField] private KeyCode qteKey = KeyCode.E;
-    [SerializeField] private bool passedKidneyStone = false;
 
     [Header("Particle Settings")]
     [SerializeField] private ParticleSystem peePS;
@@ -57,20 +53,44 @@ public class Controller_Pee : MonoBehaviour
     }
     
     private void Update() {
-        UpdatePeeAmount();
-        CheckDehydration();
-        UpdateQTE();
+        HandleControls();
+        PeeLoop();
+        DehydrationLoop();
     }
     
-    private void UpdatePeeAmount() {
-        if (isPeeing && !isHydrating) {
-            currPeeAmount -= Time.deltaTime * peeEmptyRate;
+    private void HandleControls() {
+        if (Input.GetMouseButtonDown(0)) {
+            isPeeing = true;
+            peePS.Play();
         }
-        else if (!isPeeing && !isHydrating) {
-            currPeeAmount += Time.deltaTime * peeFillRate;
+        else if (Input.GetMouseButtonUp(0)) {
+            isPeeing = false;
+            peePS.Stop();
         }
-        currPeeAmount = Mathf.Clamp(currPeeAmount, 0f, maxPeeAmount);
-        
+
+        if (allowQTE && Input.GetKeyDown(qteKey)) {
+            qtePressCount++;
+            if (qtePressCount >= qteRequiredPresses) {
+                PassKidneyStone();
+            }
+        }
+    }
+
+    private void PeeLoop() {
+        if (isPeeing) {
+            if (currPeeAmount > 0f) {
+                currPeeAmount -= Time.deltaTime * peeEmptyRate;
+
+                Helper.Instance.PlayRandAudio(audioSource, peeClips);
+            }
+            else if (currPeeAmount <= 0f) {
+                currPeeAmount = 0f;
+                isDehydrated = true;
+                Manager_UI.Instance.SetDehydratedUI(true);
+                // Add dehydration effects - speed reduction, pee slower, etc.
+            }
+        }
+
         Manager_UI.Instance.SetPeeAmountUI(currPeeAmount/maxPeeAmount);
     }
     public void AddPeeAmount(float amount) {
@@ -84,60 +104,36 @@ public class Controller_Pee : MonoBehaviour
     public bool GetIsPeeFull() {
         return currPeeAmount == maxPeeAmount;
     }
-
-    public void SetIsPeeing(bool active) {
-        Debug.Log($"Peeing: {active}");
-
-        isPeeing = active;
-        
-        if (isPeeing) {
-            StartPee();
-        }
-        else {
-            StopPee();
-        }
-    }
-    private void StartPee() {
-        peePS.Play();
-        Helper.Instance.PlayRandAudio(audioSource, peeClips);
-    }
-    private void StopPee() {
-        peePS.Stop();
-    }
     
-    private void CheckDehydration() {
-        if (dehydrationAmount >= maxDehydration) {
-            // Add dehydration effects - speed reduction, pee slower, etc.
+    private void DehydrationLoop() {
+        if (isDehydrated) {
+            // Start kidney stone timer if player is dehydrated and still peeing
+            if (isPeeing) {
+                timeToKidneyStone += timeToKidneyStone * Time.deltaTime;
+                timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
+            }
             
-            // Increase dehydratedfor timer
-            dehydratedForTimer += Time.deltaTime;
-            if (dehydratedForTimer >= maxDehydratedForTime) {
+            if (timeToKidneyStone >= maxTimeToKidneyStone) {
+                Debug.Log("Player got a kidney stone!");
+
+                peePS.Stop();
+                allowQTE = true;
+                qtePressCount = 0;
+                timeToKidneyStone = 0f;
+                stonesCurrentCount++;
+                stonesAcquiredCount++;
+
+                // Kidney stone effects - speed reduction, pee slower, etc.
+                maxPeeAmount -= 15f;
+                Controller_Player.Instance.ControlSpeedMoveAndLook(0.2f);
+            }
+
+            // Start game over timer if player is dehydrated
+            gameOverInTime += Time.deltaTime;
+            if (gameOverInTime >= maxGameOverInTime) {
                 Manager_Effects.Instance.ResetDehydratedEffects();
                 Manager_UI.Instance.SetDehydratedUI(false);
                 Manager_UI.Instance.GameOver();
-            }
-
-            // Increase kidney stone chance
-            kidneyStoneChance += Time.deltaTime * kidneyStoneChance;
-            kidneyStoneChance = Mathf.Clamp(kidneyStoneChance, 0.1f, maxKidneyStoneChance);
-            if (Random.value <= kidneyStoneChance) {
-                Debug.Log("Player got a kidney stone!");
-
-                stonesAcquiredCount++;
-                isDehydrated = true;
-                Manager_UI.Instance.SetDehydratedUI(true);
-                SetIsPeeing(false);
-                
-                if (!passedKidneyStone) {
-                    StartQTE();
-                }
-            }
-        }
-        else {
-            if (currPeeAmount <= 0f ) {
-                // Increase dehydration
-                dehydrationAmount += dehydrationAmount * Time.deltaTime;
-                dehydrationAmount = Mathf.Clamp(dehydrationAmount, 0.5f, maxDehydration);
             }
         }
     }
@@ -145,46 +141,29 @@ public class Controller_Pee : MonoBehaviour
         Debug.Log("Player is no longer dehydrated.");
 
         isDehydrated = false;
-        passedKidneyStone = false;
+
         Manager_UI.Instance.SetDehydratedUI(false);
         Manager_Effects.Instance.ResetDehydratedEffects();
-        dehydrationAmount = 0.5f;
-        kidneyStoneChance = 0.1f;
-        dehydratedForTimer = 0f;
-    }
-
-    private void StartQTE() {
-        if (isQTEActive) return;
-
-        isQTEActive = true;
-        qtePressCount = 0;
-        Controller_Player.Instance.ControlCanMoveAndLook(false);
-        Manager_Thoughts.Instance.ShowText(
-            "[X] to pass kidney stone", 
-            -1f,
-            Manager_Thoughts.TextPriority.Player
-        );
-    }
-    private void UpdateQTE() {
-        if (isQTEActive && Input.GetKeyDown(qteKey)) {
-            qtePressCount++;
-            if (qtePressCount >= qteRequiredPresses) {
-                CompleteQTE();
-            }
-        }
-    }
-    private void CompleteQTE() {
-        Debug.Log("Kidney stone passed!");
         
-        isQTEActive = false;
-        passedKidneyStone = true;
+        timeToKidneyStone = 0f;
+        gameOverInTime = 0f;
+    }
 
+    private void PassKidneyStone() {
+        Debug.Log("PassKidneyStone");
+                         
+        qtePressCount = 0;
+        stonesCurrentCount--;
         stonesPassedCount++;
 
-        Controller_Player.Instance.ControlCanMoveAndLook(true);
-        Manager_Thoughts.Instance.ClearThoughtText(
-            Manager_Thoughts.TextPriority.Player
-        );
+        // Allow QTE to pass kidney stone again
+        if (stonesCurrentCount <= 0) {
+            allowQTE = false;
+        }
+
+        // Kidney stone passing temp boosts - speed, pee, etc.
+        maxPeeAmount += 5f;
+        Controller_Player.Instance.ControlSpeedMoveAndLook(1.2f);
     }
     
     public int GetStonesPassedCount() {
