@@ -39,7 +39,7 @@ public class Manager_Timer : MonoBehaviour
         timer = 0f;
     }
     
-    public float GetTimePerc() {
+    public float GetTimeRemainingPerc() {
         return (timer / maxTime) * 100f;
     }
 }

@@ -28,8 +28,7 @@ public class Manager_Bottles : MonoBehaviour
         }
     }
 
-    public float GetBottlesStolenPerc() {
-        int allBottlesCnt = allBottles.Count;
+    public int GetBottlesStolenCount() {
         int stolenBottlesCnt = 0;
         
         foreach (var bottle in allBottles) {
@@ -37,6 +36,9 @@ public class Manager_Bottles : MonoBehaviour
                 stolenBottlesCnt++;
         }
 
-        return (stolenBottlesCnt / allBottlesCnt) * 100f;
+        return stolenBottlesCnt;
+    } 
+    public int GetMaxBottlesPerLevel() {
+        return allBottles.Count;
     } 
 }
