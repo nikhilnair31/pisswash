@@ -146,6 +146,15 @@ public class Controller_Player : MonoBehaviour
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.F)) {
+            if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
+                Debug.Log($"Trying to end game : {hit.transform.name}");
+
+                if (hit.transform.TryGetComponent(out Controller_Boss boss)) {
+                    boss.FinshRound();
+                }
+            }
+        }
         
         if (Input.GetMouseButtonDown(0)) {
             peeController.SetIsPeeing(true);

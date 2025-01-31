@@ -25,6 +25,12 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private TMP_Text timer_Text;
     [SerializeField] public bool inGame = false;
 
+    [Header("Finished Round UI")]
+    [SerializeField] private GameObject finishedRoundCanvasGO;
+    [SerializeField] private Button next_FinishedRound_Button;
+    [SerializeField] private Button menu_FinishedRound_Button;
+    [SerializeField] public bool finishedRound = false;
+
     [Header("Game Over UI")]
     [SerializeField] private GameObject gameoverCanvasGO;
     [SerializeField] private Button restartGame_GameOver_Button;
@@ -49,6 +55,9 @@ public class Manager_UI : MonoBehaviour
         startGame_Menu_Button?.onClick.AddListener(StartGame);
         startTutorial_Menu_Button?.onClick.AddListener(StartTutorial);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
+
+        next_FinishedRound_Button?.onClick.AddListener(NextRound);
+        menu_FinishedRound_Button?.onClick.AddListener(ToMenu);
 
         restartGame_GameOver_Button?.onClick.AddListener(RestartGame);
         exitGame_GameOver_Button?.onClick.AddListener(ExitGame);
@@ -77,10 +86,11 @@ public class Manager_UI : MonoBehaviour
         gameCanvasGO.SetActive(true);
         pauseCanvasGO.SetActive(false);
         
+        Manager_Timer.Instance.StartTimer();
+        // Manager_Timeline.Instance.PlayCutscene_GameStart();
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        // Manager_Timeline.Instance.PlayCutscene_GameStart();
 
         Time.timeScale = 1f;
     }
@@ -95,6 +105,7 @@ public class Manager_UI : MonoBehaviour
         pauseCanvasGO.SetActive(false);
 
         Manager_Timer.Instance.StartTimer();
+        // Manager_Timeline.Instance.PlayCutscene_GameStart();
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -121,6 +132,29 @@ public class Manager_UI : MonoBehaviour
         }
     }
 
+    public void FinishRound() {
+        Debug.Log($"FinishRound");
+
+        finishedRound = true;
+        inGame = false;
+        inMenu = false;
+
+        finishedRoundCanvasGO.SetActive(true);
+        gameCanvasGO.SetActive(false);
+        pauseCanvasGO.SetActive(false);
+        
+        Time.timeScale = 0f;
+        
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+    public void NextRound() {
+        Debug.Log($"NextRound");
+    }
+    public void ToMenu() {
+        Debug.Log($"ToMenu");
+    }
+
     public void GameOver() {
         Debug.Log($"GameOver");
 
@@ -128,9 +162,9 @@ public class Manager_UI : MonoBehaviour
         inGame = false;
         inMenu = false;
 
+        gameoverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
         pauseCanvasGO.SetActive(false);
-        gameoverCanvasGO.SetActive(true);
         
         Time.timeScale = 0f;
         

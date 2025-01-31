@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5013124922185268079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53134644103202896}
+  - component: {fileID: 3988923721150504122}
+  - component: {fileID: 2105766887016054636}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53134644103202896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013124922185268079}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3988923721150504122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013124922185268079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eeec1c9b58614543844ef58aa7a078b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2105766887016054636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013124922185268079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ceb4c081704cce4480d5892176c2808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuCanvasGO: {fileID: 0}
+  startGame_Menu_Button: {fileID: 0}
+  startTutorial_Menu_Button: {fileID: 0}
+  exitGame_Menu_Button: {fileID: 0}
+  inMenu: 1
+  gameCanvasGO: {fileID: 0}
+  dehydratedImage: {fileID: 0}
+  lookedAt_Text: {fileID: 0}
+  timer_Text: {fileID: 0}
+  inGame: 0
+  finishedRoundCanvasGO: {fileID: 0}
+  next_FinishedRound_Button: {fileID: 0}
+  menu_FinishedRound_Button: {fileID: 0}
+  finishedRound: 0
+  gameoverCanvasGO: {fileID: 0}
+  restartGame_GameOver_Button: {fileID: 0}
+  exitGame_GameOver_Button: {fileID: 0}
+  gameOver: 0
+  pauseCanvasGO: {fileID: 0}
+  modalPrefab: {fileID: 8929907945440621439, guid: 7d2d99cdb55ea6246970b848ccb14bf7, type: 3}
