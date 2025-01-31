@@ -30,22 +30,18 @@ public class Manager_Effects : MonoBehaviour
     }
     
     private void Start() {
+        GetVolumeEffects();
+        ResetDehydratedEffects();
+    }
+    private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);
         
-        GetVolumeEffects();
-    }  
-    private void GetVolumeEffects() {
-        if (postProcessVolume?.Profile.TryGet(out vignette) ?? false) 
-            vignette.intensity.value = 0f;
-        if (postProcessVolume?.Profile.TryGet(out lensDistortion) ?? false) 
-            lensDistortion.intensity.value = 0f;
-        if (postProcessVolume?.Profile.TryGet(out splitToning) ?? false) 
-            splitToning.balance.value = -100f;
+        postProcessVolume?.Profile.TryGet(out vignette);
+        postProcessVolume?.Profile.TryGet(out lensDistortion);
+        postProcessVolume?.Profile.TryGet(out splitToning);
     }
 
     public void UpdateDehydrationEffects(float dehydration) {
-        if (Manager_UI.Instance.inMenu || Manager_UI.Instance.gameOver) return;
-
         if (vignette != null) 
             vignette.intensity.value = Mathf.Lerp(0f, 0.5f, dehydration);
         if (lensDistortion != null) 
@@ -53,13 +49,11 @@ public class Manager_Effects : MonoBehaviour
         if (splitToning != null) 
             splitToning.balance.value = Mathf.Lerp(-100f, 100f, dehydration);
     }
+
     public void ResetDehydratedEffects() {
-        if (vignette != null) 
-            vignette.intensity.value = 0f;
-        if (lensDistortion != null) 
-            lensDistortion.intensity.value = 0f;
-        if (splitToning != null) 
-            splitToning.balance.value = -100f;
+        if (vignette != null) vignette.intensity.value = 0f;
+        if (lensDistortion != null) lensDistortion.intensity.value = 0f;
+        if (splitToning != null) splitToning.balance.value = -100f;
     }
     
     public void GotSlapped() {

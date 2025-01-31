@@ -55,10 +55,9 @@ public class Controller_Pee : MonoBehaviour
     private void Update() {
         UpdatePeeAmount();
         CheckDehydration();
+        UpdateEffects();
         UpdateQTE();
-
-        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount/maxPeeAmount);
-        Manager_Effects.Instance.UpdateDehydrationEffects(dehydrationTimer/maxDehydrationTime);
+        UpdateUI();
     }
     
     private void UpdatePeeAmount() {
@@ -177,5 +176,18 @@ public class Controller_Pee : MonoBehaviour
         Manager_Thoughts.Instance.ClearThoughtText(
             Manager_Thoughts.TextPriority.Player
         );
+    }
+
+    private void UpdateEffects() {
+        if (Manager_UI.Instance.inMenu || Manager_UI.Instance.gameOver || Manager_UI.Instance.inPause)
+            return;
+
+        Manager_Effects.Instance.UpdateDehydrationEffects(dehydrationTimer/maxDehydrationTime);
+    }
+    private void UpdateUI() {
+        if (Manager_UI.Instance.inMenu || Manager_UI.Instance.gameOver || Manager_UI.Instance.inPause)
+            return;
+
+        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount/maxPeeAmount);
     }
 }

@@ -202,6 +202,8 @@ public class Manager_UI : MonoBehaviour
         Time.timeScale = 1f;
     }
     public void ExitGame() {
+        Debug.Log($"ExitGame");
+
         Application.Quit();
     }
 
@@ -216,16 +218,6 @@ public class Manager_UI : MonoBehaviour
     }
     public void SetDehydratedUI(bool active) {
         dehydratedImage.enabled = active;
-    }
-
-    public bool GetInGame() {
-        return inGame;
-    }
-    public bool GetInMenu() {
-        return inMenu;
-    }
-    public bool GetGameOver() {
-        return gameOver;
     }
 
     #region Interaction Text
