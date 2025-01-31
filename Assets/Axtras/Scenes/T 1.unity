@@ -7648,6 +7648,7 @@ GameObject:
   - component: {fileID: 1201024034}
   - component: {fileID: 1201024036}
   - component: {fileID: 1201024033}
+  - component: {fileID: 1201024038}
   - component: {fileID: 1201024037}
   m_Layer: 7
   m_Name: Player
@@ -7694,10 +7695,6 @@ MonoBehaviour:
   canLook: 1
   mouseSensitivity: 100
   playerCamera: {fileID: 1215206142}
-  maxDistance: 6
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 64
   audioSource: {fileID: 1201024036}
   footstepClips:
   - {fileID: 8300000, guid: 211f07d8def4de44683433990c74d27e, type: 3}
@@ -7882,6 +7879,26 @@ MonoBehaviour:
   peeClips:
   - {fileID: 8300000, guid: 31c43732968140b41b5da1a7a75eebc2, type: 3}
   - {fileID: 8300000, guid: af97d7853836c4749b7cce69740302de, type: 3}
+--- !u!114 &1201024038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201024031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3278b73e362b241b4ff1c8616ccef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 1215206142}
+  maxDistance: 5
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  interactKey: 101
+  stealKey: 102
+  endRoundKey: 103
 --- !u!1 &1204407532
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,14 @@
 
 - [ ] Add booze, puke and blood for stains; each with different effects
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
-- [ ] Stop fountain working when not in range
-- [ ] Change the fountain thing to fill only while holding down E key
-- [ ] Polish UI
 - [ ] Add screen color flash red on slap
 
 ## Done
 
+- [x] Polish UI
+- [x] See why meter wopn't reduce on pee
+- [x] Stop fountain working when not in range
+- [x] Change the fountain thing to fill only while holding down E key
 - [x] Add UI for kidney stone count
 - [x] Add variety for QTEs (maybe different keys to mash each time?)
 - [x] Update kidney stone and dehydration logic

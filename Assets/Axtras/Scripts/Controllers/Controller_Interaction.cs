@@ -1,16 +1,28 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class Controller_Interaction : MonoBehaviour 
 {
     #region Vars
     public static Controller_Interaction Instance { get; private set; }
 
-    [Header("Interactable Settings")]
+    [Header("General Settings")]
     [SerializeField] private Transform playerCamera;
     [SerializeField] private float maxDistance = 10f;
     [SerializeField] private LayerMask interactableLayer;
     private string showTextStr;
     private RaycastHit hit;
+
+    [Header("Interaction Settings")]
+    [SerializeField] private KeyCode interactKey = KeyCode.E;
+    private Controller_Bottle currentBottle;
+    private Controller_Fountain currentFountain;
+
+    [Header("Stealing Settings")]
+    [SerializeField] private KeyCode stealKey = KeyCode.F;
+
+    [Header("Round End Settings")]
+    [SerializeField] private KeyCode endRoundKey = KeyCode.G;
     #endregion
 
     private void Awake() {
@@ -20,32 +32,46 @@ public class Controller_Interaction : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start() {
+        if (playerCamera == null)
+            playerCamera = GetComponentInChildren<CinemachineCamera>().transform;
+    }
+
     private void Update() {  
         HandleInteractable();
         CheckForInteractable();
     }
 
     private void HandleInteractable() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            Debug.Log($"Trying to interact: {hit.transform.name}");
-
+        // Interacting key
+        if (Input.GetKeyDown(interactKey)) {
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                bottle.BuyBottle();
+                currentBottle = bottle;
+                currentBottle.BuyBottle();
             }
             else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
-                fountain.ControlDrinking();
+                currentFountain = fountain;
+                currentFountain.ControlDrinking();
             }
         }
-        if (Input.GetKeyDown(KeyCode.F)) {
-            Debug.Log($"Trying to steal : {hit.transform.name}");
+        else if (Input.GetKeyUp(interactKey)) {
+            if (currentBottle != null) {
+            }
+            if (currentFountain != null) {
+                currentFountain.ControlDrinking();
+                currentFountain = null;
+            }
+        }
 
+        // Stealing key
+        if (Input.GetKeyDown(stealKey)) {
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
                 bottle.StealBottle();
             }
         }
-        if (Input.GetKeyDown(KeyCode.F)) {
-            Debug.Log($"Trying to end game : {hit.transform.name}");
-
+        
+        // Ending game key
+        if (Input.GetKeyDown(endRoundKey)) {
             if (hit.transform.TryGetComponent(out Controller_Boss boss)) {
                 boss.FinshRound();
             }
