@@ -21,8 +21,10 @@ public class Manager_UI : MonoBehaviour
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
     [SerializeField] private Image dehydratedImage;
+    [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text timer_Text;
+    [SerializeField] private TMP_Text money_Text;
     [SerializeField] public bool inGame = false;
 
     [Header("Finished Round UI")]
@@ -39,19 +41,29 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseCanvasGO;
+    [SerializeField] public bool inPause = false;
+
+    [Header("Loading UI")]
+    [SerializeField] private GameObject loadingCanvasGO;
 
     [Header("Modals")]
     [SerializeField] private GameObject modalPrefab;
     #endregion
 
     private void Awake() {
-        if (Instance == null)
+        if (Instance == null){
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
             Destroy(gameObject);
     }
     
     private void Start() {
+        SetupButtons();
+        InitMenu();
+    }
+    private void SetupButtons() {
         startGame_Menu_Button?.onClick.AddListener(StartGame);
         startTutorial_Menu_Button?.onClick.AddListener(StartTutorial);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
@@ -61,48 +73,54 @@ public class Manager_UI : MonoBehaviour
 
         restartGame_GameOver_Button?.onClick.AddListener(RestartGame);
         exitGame_GameOver_Button?.onClick.AddListener(ExitGame);
-        
+    }
+    private void InitMenu() {
+        inMenu = true;
+
+        menuCanvasGO.SetActive(true);
+        gameCanvasGO.SetActive(false);
+        pauseCanvasGO.SetActive(false);
+        finishedRoundCanvasGO.SetActive(false);
+        gameoverCanvasGO.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-
-        inMenu = true;
 
         Time.timeScale = 0f;
     }
     
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameOver && !inMenu) {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
         }
     }
     
     public void StartGame() {
-        Debug.Log($"StartGame");
+        Debug.Log("StartGame");
 
-        inGame = true;
-        inMenu = false;
-        
-        menuCanvasGO.SetActive(false);
-        gameCanvasGO.SetActive(true);
-        pauseCanvasGO.SetActive(false);
-        
-        Manager_Timer.Instance.StartTimer();
-        // Manager_Timeline.Instance.PlayCutscene_GameStart();
-        
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        Time.timeScale = 1f;
+        StartCoroutine(StartGameCoroutine());
     }
     public void StartTutorial() {
         Debug.Log($"StartTutorial");
 
-        inGame = true;
+        StartCoroutine(StartGameCoroutine());
+    }
+    private IEnumerator StartGameCoroutine() {
+        Debug.Log("StartGameCoroutine");
+
         inMenu = false;
-        
+
         menuCanvasGO.SetActive(false);
+        loadingCanvasGO.SetActive(true);
+
+        Manager_Scene.Instance.LoadCurrentScene();
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        inGame = true;
+
+        loadingCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
-        pauseCanvasGO.SetActive(false);
 
         Manager_Timer.Instance.StartTimer();
         // Manager_Timeline.Instance.PlayCutscene_GameStart();
@@ -114,21 +132,29 @@ public class Manager_UI : MonoBehaviour
     }
 
     public void PauseGame() {
-        if (inGame) {
+        if (inGame && !inPause) {
             inGame = false;
+            inPause = true;
+
             gameCanvasGO.SetActive(false);
             pauseCanvasGO.SetActive(true);
-            Time.timeScale = 0f;
+            
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+
+            Time.timeScale = 0f;
         }
-        else {
+        else if (!inGame && inPause) {
+            inPause = false;
             inGame = true;
+
             gameCanvasGO.SetActive(true);
             pauseCanvasGO.SetActive(false);
-            Time.timeScale = 1f;
+            
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            Time.timeScale = 1f;
         }
     }
 
@@ -179,6 +205,12 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
+    public void SetPeeAmountUI(float peeAmount) {
+        peeImage.fillAmount = peeAmount;
+    }
+    public void SetMoneyUI(int currMoney) {
+        money_Text.text = $"${currMoney}";
+    }
     public void SetTimerUI(float time) {
         timer_Text.text = time.ToString("F0");
     }

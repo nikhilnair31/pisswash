@@ -31,7 +31,7 @@ public class Manager_Money : MonoBehaviour
 
     public void UpdateMoney(int amount) {
         currMoney += amount;
-        moneyText.text = $"${currMoney}";
+        Manager_UI.Instance.SetMoneyUI(currMoney);
     }
 
     public bool GetCanBuy() {

@@ -39,9 +39,6 @@ public class Controller_Pee : MonoBehaviour
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] peeClips;
-
-    [Header("UI Settings")]
-    [SerializeField] private Image peeImage;
     #endregion
 
     private void Awake() {
@@ -59,8 +56,8 @@ public class Controller_Pee : MonoBehaviour
         UpdatePeeAmount();
         CheckDehydration();
         UpdateQTE();
-        UpdateUI();
 
+        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount/maxPeeAmount);
         Manager_Effects.Instance.UpdateDehydrationEffects(dehydrationTimer/maxDehydrationTime);
     }
     
@@ -180,9 +177,5 @@ public class Controller_Pee : MonoBehaviour
         Manager_Thoughts.Instance.ClearThoughtText(
             Manager_Thoughts.TextPriority.Player
         );
-    }
-
-    private void UpdateUI() {
-        peeImage.fillAmount = currPeeAmount / maxPeeAmount;
     }
 }

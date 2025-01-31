@@ -30,16 +30,16 @@ public class Manager_Effects : MonoBehaviour
     }
     
     private void Start() {
-        postProcessVolume = cam.GetComponent<CinemachineVolumeSettings>();
+        cam?.TryGetComponent(out postProcessVolume);
         
         GetVolumeEffects();
     }  
     private void GetVolumeEffects() {
-        if (postProcessVolume.Profile.TryGet(out vignette)) 
+        if (postProcessVolume?.Profile.TryGet(out vignette) ?? false) 
             vignette.intensity.value = 0f;
-        if (postProcessVolume.Profile.TryGet(out lensDistortion)) 
+        if (postProcessVolume?.Profile.TryGet(out lensDistortion) ?? false) 
             lensDistortion.intensity.value = 0f;
-        if (postProcessVolume.Profile.TryGet(out splitToning)) 
+        if (postProcessVolume?.Profile.TryGet(out splitToning) ?? false) 
             splitToning.balance.value = -100f;
     }
 
