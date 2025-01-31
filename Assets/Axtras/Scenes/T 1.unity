@@ -7698,14 +7698,9 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
-  volume: {fileID: 1215206143}
-  cam: {fileID: 1215206141}
-  zoomFOV: 40
   audioSource: {fileID: 1201024036}
   footstepClips:
-  - {fileID: 8300000, guid: 5d3b7b5c4c495c845b9e93157bb4cbe2, type: 3}
   - {fileID: 8300000, guid: 211f07d8def4de44683433990c74d27e, type: 3}
-  - {fileID: 8300000, guid: d78588678b7ff0f40991a40aa8414767, type: 3}
   footstepInterval: 0.5
 --- !u!136 &1201024034
 CapsuleCollider:
@@ -7882,7 +7877,6 @@ MonoBehaviour:
   qtePressCount: 0
   qteRequiredPresses: 5
   allowQTE: 0
-  qteKey: 120
   peePS: {fileID: 1248450993}
   audioSource: {fileID: 1201024036}
   peeClips:

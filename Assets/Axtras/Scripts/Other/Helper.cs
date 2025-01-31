@@ -13,9 +13,12 @@ public class Helper : MonoBehaviour
     }
 
     #region Audio Related
-    public void PlayRandAudio(AudioSource source, AudioClip[] clips) {
-        var clip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        source.PlayOneShot(clip);
+    public void PlayRandAudio(AudioSource source, AudioClip[] clips, bool randPitch = true) {
+        var clip = clips[Random.Range(0, clips.Length)];
+        source.clip = clip;
+        if (randPitch)
+            source.pitch = Random.Range(0.9f, 1.1f);
+        source.Play();
     }
     #endregion
 }
