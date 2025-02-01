@@ -28,7 +28,7 @@ public class Manager_Effects : MonoBehaviour
     
     private void Start() {
         GetVolumeEffects();
-        ResetDehydratedEffects();
+        ResetGameOverEffects();
     }
     private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);
@@ -38,32 +38,43 @@ public class Manager_Effects : MonoBehaviour
         postProcessVolume?.Profile.TryGet(out splitToning);
     }
 
-    public void UpdateDehydrationEffects(float dehydration) {
+    public void UpdateGameOverEffects(float over) {
         if (vignette != null) 
-            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, dehydration);
+            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
         if (lensDistortion != null) 
-            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, dehydration);
+            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, over);
         if (splitToning != null) 
-            splitToning.balance.value = Mathf.Lerp(-100f, 100f, dehydration);
+            splitToning.balance.value = Mathf.Lerp(-100f, 100f, over);
+    }
+    public void ResetGameOverEffects() {
+        if (vignette != null)
+            vignette.intensity.value = 0f;
+        if (lensDistortion != null)
+            lensDistortion.intensity.value = 0f;
+        if (splitToning != null)
+            splitToning.balance.value = -100f;
     }
 
-    public void ResetDehydratedEffects() {
-        if (vignette != null) vignette.intensity.value = 0f;
-        if (lensDistortion != null) lensDistortion.intensity.value = 0f;
-        if (splitToning != null) splitToning.balance.value = -100f;
+    public void DehydrationEffects(float dehydration) {
+        Color tempColor = Color.yellow;
+        tempColor.a = Mathf.Lerp(0f, 0.5f, dehydration);
+        
+        var img = Manager_UI.Instance.GetEffectsImageUI();
+        img.color = tempColor;
     }
-    
+
     public void ImpactEffects() {
         DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(false);
+                Manager_UI.Instance.GetEffectsImageUI().color = Color.red;
             })
             .Join(
                 cam.transform.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetEffectsImageUI().DOFade(1f, 0.1f)
+                Manager_UI.Instance.GetEffectsImageUI().DOFade(1f, 0.05f)
             )
             .Insert(
                 0f,

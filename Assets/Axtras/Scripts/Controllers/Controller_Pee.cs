@@ -1,7 +1,6 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 
 public class Controller_Pee : MonoBehaviour 
 {
@@ -81,6 +80,8 @@ public class Controller_Pee : MonoBehaviour
     }
 
     private void PeeLoop() {
+        var peePerc = currPeeAmount / maxPeeAmount;
+
         if (isPeeing) {
             if (currPeeAmount > 0f) {
                 currPeeAmount -= Time.deltaTime * peeEmptyRate;
@@ -90,12 +91,10 @@ public class Controller_Pee : MonoBehaviour
             else if (currPeeAmount <= 0f) {
                 currPeeAmount = 0f;
                 isDehydrated = true;
-                Manager_UI.Instance.SetDehydratedUI(true);
-                // Add dehydration effects - speed reduction, pee slower, etc.
             }
         }
 
-        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount/maxPeeAmount);
+        Manager_UI.Instance.SetPeeAmountUI(peePerc);
     }
     public void AddPeeAmount(float amount) {
         currPeeAmount += amount;
@@ -115,6 +114,7 @@ public class Controller_Pee : MonoBehaviour
             if (isPeeing) {
                 timeToKidneyStone += timeToKidneyStone * Time.deltaTime;
                 timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
+                Manager_Effects.Instance.DehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
             }
             
             if (timeToKidneyStone >= maxTimeToKidneyStone) {
@@ -135,9 +135,14 @@ public class Controller_Pee : MonoBehaviour
 
             // Start game over timer if player is dehydrated
             gameOverInTime += Time.deltaTime;
+            Manager_Effects.Instance.UpdateGameOverEffects(gameOverInTime/maxGameOverInTime);
             if (gameOverInTime >= maxGameOverInTime) {
-                Manager_Effects.Instance.ResetDehydratedEffects();
-                Manager_UI.Instance.SetDehydratedUI(false);
+                gameOverInTime = maxGameOverInTime;
+                timeToKidneyStone = 0f;
+
+                Manager_Effects.Instance.DehydrationEffects(0f);
+                Manager_Effects.Instance.ResetGameOverEffects();
+
                 Manager_UI.Instance.GameOver();
             }
         }
@@ -146,12 +151,12 @@ public class Controller_Pee : MonoBehaviour
         Debug.Log("Player is no longer dehydrated.");
 
         isDehydrated = false;
-
-        Manager_UI.Instance.SetDehydratedUI(false);
-        Manager_Effects.Instance.ResetDehydratedEffects();
         
-        timeToKidneyStone = 0f;
         gameOverInTime = 0f;
+        timeToKidneyStone = 0f;
+
+        Manager_Effects.Instance.ResetGameOverEffects();
+        Manager_Effects.Instance.DehydrationEffects(0f);
     }
 
     private void PassKidneyStone() {
@@ -192,13 +197,13 @@ public class Controller_Pee : MonoBehaviour
         return qteKey;
     }
 
-    void ApplyKidneyStoneEffects() {
+    private void ApplyKidneyStoneEffects() {
         if (kidneyStoneEffectCoroutine != null) 
             StopCoroutine(kidneyStoneEffectCoroutine);
         
         kidneyStoneEffectCoroutine = StartCoroutine(TemporaryEffect(-15f, 0.8f, 0.8f, -1f));
     }
-    void ApplyKidneyStonePassingBoost() {
+    private void ApplyKidneyStonePassingBoost() {
         if (kidneyStonePassBoostCoroutine != null) 
             StopCoroutine(kidneyStonePassBoostCoroutine);
         

@@ -20,7 +20,6 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
-    [SerializeField] private Image dehydratedImage;
     [SerializeField] private Image effectsImage;
     [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
@@ -226,9 +225,6 @@ public class Manager_UI : MonoBehaviour
     }
     public void SetTimerUI(float time) {
         timer_Text.text = time.ToString("F0");
-    }
-    public void SetDehydratedUI(bool active) {
-        dehydratedImage.enabled = active;
     }
     public void SetQTEKeyUI(string key) {
         qteKey_Text.text = key;

@@ -7,6 +7,7 @@
 
 ## Done
 
+- [x] Fix dehyd yellow alpha
 - [x] Add screen color flash red on slap
 - [x] Polish UI
 - [x] See why meter wopn't reduce on pee
