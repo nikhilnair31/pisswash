@@ -59,7 +59,7 @@ public class Manager_Effects : MonoBehaviour
         Color tempColor = Color.yellow;
         tempColor.a = Mathf.Lerp(0f, 0.5f, dehydration);
         
-        var img = Manager_UI.Instance.GetEffectsImageUI();
+        var img = Manager_UI.Instance.GetDehydrationImageUI();
         img.color = tempColor;
     }
 
@@ -67,18 +67,18 @@ public class Manager_Effects : MonoBehaviour
         DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(false);
-                Manager_UI.Instance.GetEffectsImageUI().color = Color.red;
+                Manager_UI.Instance.GetDamageImageUI().color = Color.red;
             })
             .Join(
                 cam.transform.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetEffectsImageUI().DOFade(1f, 0.05f)
+                Manager_UI.Instance.GetDamageImageUI().DOFade(1f, 0.05f)
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetEffectsImageUI().DOFade(0f, slapShakeDuration)
+                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, slapShakeDuration)
             )
             .OnComplete(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(true);

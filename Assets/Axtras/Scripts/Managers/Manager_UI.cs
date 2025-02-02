@@ -20,7 +20,8 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Game UI")]
     [SerializeField] private GameObject gameCanvasGO;
-    [SerializeField] private Image effectsImage;
+    [SerializeField] private Image dehydrationImage;
+    [SerializeField] private Image damageImage;
     [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text qteKey_Text;
@@ -210,8 +211,11 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
-    public Image GetEffectsImageUI() {
-        return effectsImage;
+    public Image GetDehydrationImageUI() {
+        return dehydrationImage;
+    }
+    public Image GetDamageImageUI() {
+        return damageImage;
     }
 
     public void SetScoreUI() {

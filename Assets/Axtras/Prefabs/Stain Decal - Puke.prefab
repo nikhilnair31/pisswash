@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2799575166558985156}
   - component: {fileID: 883633998796723281}
   - component: {fileID: -3990259750403475720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stain Decal - Puke
   m_TagString: Stain
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -93,3 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   fadeAmountPerCollision: 0.2
+  speedReductionMul: 0.3
+  speedIncreaseMul: 3
+  scaleAmount: 1.1
+  scaleTime: 15

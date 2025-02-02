@@ -130,9 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  postProcessVolume: {fileID: 0}
   slapShakeDuration: 4
-  slapDelayDuration: 0
 --- !u!114 &7133829187341604206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78daeb2487a8fa948bf9dc833dc5d8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSceneName: T 1
+  currentSceneName: L 1
 --- !u!114 &4530509171315579223
 MonoBehaviour:
   m_ObjectHideFlags: 0
