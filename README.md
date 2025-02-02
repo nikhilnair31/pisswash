@@ -6,6 +6,7 @@
 
 ## Done
 
+- [x] Moved stain and kidney stone effects into Effect script
 - [x] Box out more levels
 - [x] Create stains when slapped
 - [x] Add booze, puke and blood for stains; each with different effects

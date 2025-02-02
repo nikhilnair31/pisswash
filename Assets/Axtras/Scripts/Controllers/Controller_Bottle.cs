@@ -26,8 +26,9 @@ public class Controller_Bottle : Controller_Interactables
         if (Manager_Money.Instance.GetHasMoneyToBuy() && canBeBought) {
             bought = true;
             
+            if (!Controller_Pee.Instance.GetIsPeeFull())
+                Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
             Manager_Money.Instance.UpdateMoney(-buyCost);
-            Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
             
             gameObject.SetActive(false);
         }
@@ -58,8 +59,9 @@ public class Controller_Bottle : Controller_Interactables
             }
         }
 
+        if (!Controller_Pee.Instance.GetIsPeeFull())
+            Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
         Manager_Money.Instance.UpdateMoney(0);
-        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
 
         gameObject.SetActive(false);
     }

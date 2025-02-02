@@ -2588,7 +2588,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -462981019419857548, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+  m_Mesh: {fileID: -8742959927314323455, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
 --- !u!1001 &362469292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24095,6 +24095,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1215206141}
+    - target: {fileID: 8873614650648273250, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
+      propertyPath: peePS
+      value: 
+      objectReference: {fileID: 1248450993}
     - target: {fileID: 8873614650648273250, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
       propertyPath: postProcessVolume
       value: 

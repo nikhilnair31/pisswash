@@ -122,11 +122,11 @@ public class Controller_Player : MonoBehaviour
         previousPosition = transform.position;
     }
 
-    public void ControlCanMoveAndLook(bool active) {
+    public void SetCanMoveAndLook(bool active) {
         canMove = active;
         canLook = active;
     }
-    public void ControlSpeedMoveAndLook(float mul) {
+    public void SetSpeedMoveAndLook(float mul) {
         speedMul *= mul;
     }
 }

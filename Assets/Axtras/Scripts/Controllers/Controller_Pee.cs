@@ -24,8 +24,6 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private int stonesPassedCount = 0;
     [SerializeField] private float timeToKidneyStone = 0f;
     [SerializeField] private float maxTimeToKidneyStone = 10f;
-    private Coroutine kidneyStoneEffectCoroutine;
-    private Coroutine kidneyStonePassBoostCoroutine;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -99,6 +97,11 @@ public class Controller_Pee : MonoBehaviour
     public void AddPeeAmount(float amount) {
         currPeeAmount += amount;
 
+        // Clamp pee amount
+        if (currPeeAmount > maxPeeAmount) {
+            currPeeAmount = maxPeeAmount;
+        }
+
         // Reset dehydration when pee amount is added
         if (currPeeAmount > 0f) {
             ResetDehydration();
@@ -130,7 +133,7 @@ public class Controller_Pee : MonoBehaviour
                 Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
 
                 // Kidney stone getting perm effects
-                ApplyKidneyStoneEffects();
+                Manager_Effects.Instance.SetGotStoneEffect();
             }
 
             // Start game over timer if player is dehydrated
@@ -175,7 +178,7 @@ public class Controller_Pee : MonoBehaviour
         }
 
         // Kidney stone passing temp boost
-        ApplyKidneyStonePassingBoost();
+        Manager_Effects.Instance.SetPassStoneEffect();
     }
 
     private KeyCode GetRandKey() {
@@ -196,43 +199,17 @@ public class Controller_Pee : MonoBehaviour
 
         return qteKey;
     }
-
-    private void ApplyKidneyStoneEffects() {
-        if (kidneyStoneEffectCoroutine != null) 
-            StopCoroutine(kidneyStoneEffectCoroutine);
-        
-        kidneyStoneEffectCoroutine = StartCoroutine(TemporaryEffect(-15f, 0.8f, 0.8f, -1f));
+    public float GetMaxPeeAmount() {
+        return maxPeeAmount;
     }
-    private void ApplyKidneyStonePassingBoost() {
-        if (kidneyStonePassBoostCoroutine != null) 
-            StopCoroutine(kidneyStonePassBoostCoroutine);
-        
-        kidneyStonePassBoostCoroutine = StartCoroutine(TemporaryEffect(5f, 1.4f, 1.4f, 3f));
-    }
-    private IEnumerator TemporaryEffect(float peeAmountChange, float speedMultiplier, float peeRateMultiplier, float duration) {
-        // Apply changes and clamp values
-        maxPeeAmount = Mathf.Clamp(maxPeeAmount + peeAmountChange, 0f, 150f);
-        Controller_Player.Instance.ControlSpeedMoveAndLook(Mathf.Clamp(speedMultiplier, 0.1f, 1.3f));
-
-        var emission = peePS.emission;
-        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant * peeRateMultiplier, 10, 150);
-
-        if (duration == -1f) yield break;
-
-        yield return new WaitForSeconds(duration);
-
-        // Revert changes after duration
-        maxPeeAmount = Mathf.Clamp(maxPeeAmount - peeAmountChange, 0f, 150f);
-        Controller_Player.Instance.ControlSpeedMoveAndLook(Mathf.Clamp(1 / speedMultiplier, 0.1f, 1.3f));
-
-        emission = peePS.emission;
-        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / peeRateMultiplier, 10, 150);
-    }
-    
     public int GetStonesPassedCount() {
         return stonesPassedCount;
     }
     public int GetStonesAcquiredCount() {
         return stonesAcquiredCount;
+    }
+    
+    public void SetMaxPeeAmount(float amount) {
+        maxPeeAmount = amount;
     }
 }

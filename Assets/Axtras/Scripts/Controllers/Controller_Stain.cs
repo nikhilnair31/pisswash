@@ -8,15 +8,15 @@ public class Controller_Stain : MonoBehaviour
 
     #region Vars
     [Header("Control Properties")]
-    [SerializeField] private StainType stainType;
+    [SerializeField] public StainType stainType;
     [SerializeField] private float fadeAmountPerCollision = 0.01f;
     private DecalProjector decalProjector;
     
     [Header("Acid Properties")]
     
     [Header("Booze Properties")]
-    [SerializeField] private float speedReductionMul = 0.5f;
-    [SerializeField] private float speedIncreaseMul = 2f;
+    [SerializeField] public float speedReductionMul = 0.5f;
+    [SerializeField] public float speedIncreaseMul = 2f;
     
     [Header("Puke Properties")]
     [SerializeField] private float scaleAmount = 1.2f;
@@ -50,23 +50,9 @@ public class Controller_Stain : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        ApplyEffect(other, speedReductionMul);
+        Manager_Effects.Instance.ApplyEffect(other, this);
     }
     private void OnTriggerExit(Collider other) {
-        ApplyEffect(other, speedIncreaseMul);
-    }
-    private void ApplyEffect(Collider other, float speedMul) {
-        if (other.CompareTag("Player")) {
-            switch (stainType) {
-                case StainType.Acid:
-                    Manager_Hazards.Instance.AddDamage();
-                    break;
-                case StainType.Booze:
-                    Controller_Player.Instance.ControlSpeedMoveAndLook(speedMul);
-                    break;
-                case StainType.Puke:
-                    break;
-            }
-        }
+        Manager_Effects.Instance.ApplyEffect(other, this);
     }
 }
