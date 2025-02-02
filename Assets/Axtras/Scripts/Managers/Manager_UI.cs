@@ -33,6 +33,7 @@ public class Manager_UI : MonoBehaviour
     [Header("Finished Round UI")]
     [SerializeField] private GameObject finishedRoundCanvasGO;
     [SerializeField] private TMP_Text score_FinishedRound_Text;
+    [SerializeField] private Button retry_FinishedRound_Button;
     [SerializeField] private Button next_FinishedRound_Button;
     [SerializeField] private Button menu_FinishedRound_Button;
     [SerializeField] public bool finishedRound = false;
@@ -178,11 +179,20 @@ public class Manager_UI : MonoBehaviour
         
         Time.timeScale = 0f;
     }
+    public void RetryRound() {
+        Debug.Log($"RetryRound");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
+    }
     public void NextRound() {
         Debug.Log($"NextRound");
     }
     public void ToMenu() {
         Debug.Log($"ToMenu");
+
+        SceneManager.LoadScene("M");
+        Time.timeScale = 1f;
     }
 
     public void GameOver() {

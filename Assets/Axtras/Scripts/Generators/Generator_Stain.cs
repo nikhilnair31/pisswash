@@ -30,7 +30,7 @@ public class Generator_Stain : MonoBehaviour
             spawnDecals = false;
             SpawnDecalsWithSphereRaycasts(
                 source: transform,
-                spawnAsChild: false,
+                spawnAsChild: true,
                 castlength: raycastLength
             );
         }

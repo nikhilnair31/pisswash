@@ -30,7 +30,7 @@ public class Manager_Timer : MonoBehaviour
             if (timer <= 0f) {
                 StopTimer();
                 Manager_UI.Instance.SetTimerUI(0f);
-                Manager_UI.Instance.GameOver();
+                Manager_UI.Instance.FinishRound();
             }
         }
     }

@@ -3,10 +3,10 @@
 ## Todo
 
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
-- [ ] Box out more levels
 
 ## Done
 
+- [x] Box out more levels
 - [x] Create stains when slapped
 - [x] Add booze, puke and blood for stains; each with different effects
 - [x] Fix dehyd yellow alpha
