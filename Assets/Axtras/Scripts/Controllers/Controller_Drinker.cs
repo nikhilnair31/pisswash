@@ -37,6 +37,9 @@ public class Controller_Drinker : MonoBehaviour
 
         return angle <= canSeeInAngle;
     }
+    public Transform GetPlayerSeeSource() {
+        return seeFromTransform;
+    }
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;

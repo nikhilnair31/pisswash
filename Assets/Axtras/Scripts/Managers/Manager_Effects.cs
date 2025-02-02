@@ -63,7 +63,7 @@ public class Manager_Effects : MonoBehaviour
         img.color = tempColor;
     }
 
-    public void ImpactEffects() {
+    public void DamageEffects() {
         DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.ControlCanMoveAndLook(false);

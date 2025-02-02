@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7523589548157558435}
   - component: {fileID: 4514115420387784829}
   - component: {fileID: 8853245921192244604}
+  - component: {fileID: 5804706505664357103}
   m_Layer: 8
   m_Name: Drinker
   m_TagString: Drinker
@@ -132,6 +133,33 @@ MonoBehaviour:
   seeFromTransform: {fileID: 7582972772823129458}
   canSeeInRange: 2.5
   canSeeInAngle: 80
+--- !u!114 &5804706505664357103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777673943551029953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad86983015bc0234c952f9042339dea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDecals: 0
+  clearDecals: 0
+  damageDecalObject: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  decalLayerMask:
+    serializedVersion: 2
+    m_Bits: 9
+  randomScaleRange: {x: 2, y: 3}
+  rotationOffsetRange: 360
+  decalPivotOffset: 0.05
+  raycastLength: 3
+  numberOfRays: 20
+  maxDecals: 2
 --- !u!1001 &2958700379354183945
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -47,6 +47,14 @@ public class Controller_Bottle : Controller_Interactables
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
                 Manager_Hazards.Instance.AddDamage();
+
+                if (cd.transform.TryGetComponent(out Generator_Stain gen)) {
+                    gen.SpawnDecalsWithConeRaycasts(
+                        source: cd.GetPlayerSeeSource(),
+                        spawnAsChild: false,
+                        coneAngle: 60f
+                    );
+                }
             }
         }
 

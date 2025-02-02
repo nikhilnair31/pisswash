@@ -28,7 +28,11 @@ public class Generator_Stain : MonoBehaviour
     private void OnValidate() {
         if (spawnDecals) {
             spawnDecals = false;
-            SpawnDecalsWithSphereRaycasts();
+            SpawnDecalsWithSphereRaycasts(
+                source: transform,
+                spawnAsChild: false,
+                castlength: raycastLength
+            );
         }
         if (clearDecals) {
             clearDecals = false;
@@ -37,14 +41,15 @@ public class Generator_Stain : MonoBehaviour
     }
     #endif
 
-    private void SpawnDecalsWithSphereRaycasts() {
+    private void SpawnDecalsWithSphereRaycasts(Transform source, bool spawnAsChild = true, float castlength = 3f) {
+        GameObject decalParent = null;
         for (int i = 0; i < numberOfRays; i++) {
             Vector3 randomDirection = Random.onUnitSphere;
-            Ray ray = new (transform.position, randomDirection);
+            Ray ray = new (source.position, randomDirection);
             
-            Debug.DrawRay(transform.position, randomDirection * raycastLength, Color.red, 0.1f);
+            Debug.DrawRay(source.position, randomDirection * castlength, Color.red, 0.1f);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, raycastLength, decalLayerMask)) {
+            if (Physics.Raycast(ray, out RaycastHit hit, castlength, decalLayerMask)) {
                 if (currDecals < maxDecals) {
                     // Debug.DrawRay(hit.point, hit.normal * 1f, Color.green, 5f);
 
@@ -54,7 +59,13 @@ public class Generator_Stain : MonoBehaviour
                         Quaternion.identity
                     );
 
-                    decalGO.transform.SetParent(transform);
+                    if (spawnAsChild) {
+                        decalGO.transform.SetParent(source);
+                    }
+                    else {
+                        decalParent ??= new ("DrinkerDecals");
+                        decalGO.transform.SetParent(decalParent.transform);
+                    }
 
                     Vector3 decalPosition = hit.point + hit.normal * decalPivotOffset;
                     decalGO.transform.position = decalPosition;
@@ -75,8 +86,56 @@ public class Generator_Stain : MonoBehaviour
             }
         }
     } 
+    public void SpawnDecalsWithConeRaycasts(Transform source, bool spawnAsChild = false, float coneAngle = 45f) {
+        GameObject decalParent = null;
+        for (int i = 0; i < numberOfRays; i++) {
+            Vector3 randomDirection = Random.insideUnitSphere;
+            randomDirection = Vector3.Slerp(-source.up, randomDirection, Random.Range(0f, 1f));
+            if (Vector3.Angle(-source.up, randomDirection) > coneAngle / 2) {
+                randomDirection = Vector3.Slerp(-source.up, randomDirection, coneAngle / Vector3.Angle(-source.up, randomDirection));
+            }
+
+            Ray ray = new (source.position, randomDirection);
+            Debug.DrawRay(source.position, randomDirection * raycastLength, Color.blue, 0.1f);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, raycastLength, decalLayerMask)) {
+                if (currDecals < maxDecals) {
+                    GameObject decalGO = Instantiate(
+                        damageDecalObject, 
+                        Vector3.zero, 
+                        Quaternion.identity
+                    );
+
+                    if (spawnAsChild) {
+                        decalGO.transform.SetParent(source);
+                    }
+                    else {
+                        decalParent ??= new ("DrinkerDecals");
+                        decalGO.transform.SetParent(decalParent.transform);
+                    }
+
+                    Vector3 decalPosition = hit.point + hit.normal * decalPivotOffset;
+                    decalGO.transform.position = decalPosition;
+                    
+                    decalGO.transform.forward = hit.normal;
+                    float randomRotation = Random.Range(0f, 360f);
+                    decalGO.transform.Rotate(Vector3.forward, randomRotation, Space.Self);
+
+                    var decal = decalGO.GetComponent<DecalProjector>();
+                    float randomScale = Random.Range(randomScaleRange.x, randomScaleRange.y);
+                    decal.size = new Vector3(randomScale, randomScale, decal.size.z);
+                    
+                    var coll = decalGO.GetComponent<BoxCollider>();
+                    coll.size = new Vector3(randomScale, randomScale, coll.size.z);
+
+                    currDecals++;
+                }
+            }
+        }
+    }
     private void ClearDecals() {
-        foreach (Transform child in transform) {
+        while (transform.childCount > 0) {
+            Transform child = transform.GetChild(0);
             #if UNITY_EDITOR
             DestroyImmediate(child.gameObject);
             #else
@@ -85,10 +144,5 @@ public class Generator_Stain : MonoBehaviour
         }
 
         currDecals = 0;
-    }
-
-    private void OnDrawGizmosSelected() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, raycastLength);
     }
 }
