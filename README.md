@@ -2,11 +2,11 @@
 
 ## Todo
 
-- [ ] Add booze, puke and blood for stains; each with different effects
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 
 ## Done
 
+- [x] Add booze, puke and blood for stains; each with different effects
 - [x] Fix dehyd yellow alpha
 - [x] Add screen color flash red on slap
 - [x] Polish UI
@@ -16,7 +16,7 @@
 - [x] Add UI for kidney stone count
 - [x] Add variety for QTEs (maybe different keys to mash each time?)
 - [x] Update kidney stone and dehydration logic
-- [x] Add speed boost, pee force and small bit of pee on passing kidney stone 
+- [x] Add speed boost, pee force and small bit of pee on passing kidney stone
 - [x] Add hazards and damage health
 - [x] Fix updated score system
 - [x] Add scoring system

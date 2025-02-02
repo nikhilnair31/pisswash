@@ -29,7 +29,7 @@ public class Manager_Stains : MonoBehaviour
         FindAllStains();
     }  
     private void FindAllStains() {
-        var stains = FindObjectsOfType<DecalProjector>();
+        var stains = FindObjectsByType<DecalProjector>(FindObjectsSortMode.None);
         foreach (var stain in stains) {
             if (stain.gameObject.CompareTag("Stain"))
                 allStains.Add(new Stain { stain = stain, opacity = stain.fadeFactor });

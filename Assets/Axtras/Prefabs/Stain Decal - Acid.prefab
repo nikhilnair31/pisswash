@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 883633998796723281}
   - component: {fileID: -3990259750403475720}
   m_Layer: 0
-  m_Name: Stain 2 Decal
+  m_Name: Stain Decal - Acid
   m_TagString: Stain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
+  m_Material: {fileID: 2100000, guid: 8df4a04bb98938d44a43d8177c786310, type: 2}
   m_DrawDistance: 100
   m_FadeScale: 1
   m_StartAngleFade: 180
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_UVScale: {x: 1, y: 1}
   m_UVBias: {x: 0, y: 0}
   m_DecalLayerMask: 4294967295
-  m_ScaleMode: 0
+  m_ScaleMode: 1
   m_Offset: {x: 0, y: 0, z: 0}
   m_Size: {x: 1, y: 1, z: 0.2}
   m_FadeFactor: 1
@@ -71,9 +71,9 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -91,4 +91,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stainType: 0
   fadeAmountPerCollision: 0.2

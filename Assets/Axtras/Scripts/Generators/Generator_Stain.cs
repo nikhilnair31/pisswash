@@ -66,6 +66,9 @@ public class Generator_Stain : MonoBehaviour
                     var decal = decalGO.GetComponent<DecalProjector>();
                     float randomScale = Random.Range(randomScaleRange.x, randomScaleRange.y);
                     decal.size = new Vector3(randomScale, randomScale, decal.size.z);
+                    
+                    var coll = decalGO.GetComponent<BoxCollider>();
+                    coll.size = new Vector3(randomScale, randomScale, coll.size.z);
 
                     currDecals++;
                 }
