@@ -47,7 +47,7 @@ public class Controller_Interaction : MonoBehaviour
         if (Input.GetKeyDown(interactKey)) {
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
                 currentBottle = bottle;
-                currentBottle.BuyBottle();
+                currentBottle.ConsumeBottle(buyOrSteal: "buy");
             }
             else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
                 currentFountain = fountain;
@@ -66,7 +66,7 @@ public class Controller_Interaction : MonoBehaviour
         // Stealing key
         if (Input.GetKeyDown(stealKey)) {
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                bottle.StealBottle();
+                bottle.ConsumeBottle(buyOrSteal: "steal");
             }
         }
         

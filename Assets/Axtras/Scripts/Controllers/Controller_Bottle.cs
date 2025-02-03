@@ -4,6 +4,8 @@ using System.Collections.Generic;
 public class Controller_Bottle : Controller_Interactables 
 {
     #region Vars
+    public enum BottleType { Beer, Whiskey, Mystery }
+
     [Header("Status Settings")]
     [SerializeField] public bool bought = false;
     [SerializeField] public bool stolen = false;
@@ -12,6 +14,7 @@ public class Controller_Bottle : Controller_Interactables
     [SerializeField] List<Controller_Drinker> ownerDrinkers = new ();
 
     [Header("Hydration Settings")]
+    [SerializeField] private BottleType bottleType;
     [SerializeField] private float increaseHydrationAmount = 10f;
 
     [Header("Money Settings")]
@@ -22,17 +25,45 @@ public class Controller_Bottle : Controller_Interactables
     [SerializeField] private string notEnoughMoneyStr = "Can't buy!";
     #endregion
 
-    public void BuyBottle() {
-        if (Manager_Money.Instance.GetHasMoneyToBuy() && canBeBought) {
+    private void Start() {
+        InitBottle();
+    }
+    private void InitBottle() {
+        switch (bottleType) {
+            case BottleType.Beer:
+                break;
+            case BottleType.Whiskey:
+                break;
+            case BottleType.Mystery:
+                break;
+        }
+    }
+
+    public void ConsumeBottle(string buyOrSteal) {
+        if (buyOrSteal == "buy")
+            BuyBottle();
+        else if (buyOrSteal == "steal")
+            StealBottle();
+    }
+    private void BuyBottle() {
+        var hasMoney = Manager_Money.Instance.GetHasMoneyToBuy();
+        var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
+        var canBuy = canBeBought;
+
+        if (hasMoney && canBuy) {
             bought = true;
             
-            if (!Controller_Pee.Instance.GetIsPeeFull())
+            // Increase hydration
+            if (!isPeeFull)
                 Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+
+            // Update money
             Manager_Money.Instance.UpdateMoney(-buyCost);
             
             gameObject.SetActive(false);
         }
         else {
+            // Show not enough money text
             Manager_Thoughts.Instance.ShowText(
                 notEnoughMoneyStr, 
                 1f,
@@ -40,9 +71,9 @@ public class Controller_Bottle : Controller_Interactables
             );
         }
     }
-    
-    public void StealBottle() {
+    private void StealBottle() {
         stolen = true;
+        var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
 
         // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
@@ -59,8 +90,11 @@ public class Controller_Bottle : Controller_Interactables
             }
         }
 
-        if (!Controller_Pee.Instance.GetIsPeeFull())
+        // Increase hydration
+        if (!isPeeFull)
             Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+        
+        // Update money
         Manager_Money.Instance.UpdateMoney(0);
 
         gameObject.SetActive(false);
