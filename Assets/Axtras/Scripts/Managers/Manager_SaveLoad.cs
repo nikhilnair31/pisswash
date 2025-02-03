@@ -1,3 +1,7 @@
+using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using UnityEngine;
 
 public class Manager_SaveLoad : MonoBehaviour 

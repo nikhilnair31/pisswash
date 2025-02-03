@@ -13,6 +13,8 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Menu UI")]
     [SerializeField] private GameObject menuCanvasGO;
+    [SerializeField] private GameObject titleScreenCanvasGO;
+    [SerializeField] private GameObject selectionScreenCanvasGO;
     [SerializeField] private Button startGame_Menu_Button;
     [SerializeField] private Button startTutorial_Menu_Button;
     [SerializeField] private Button exitGame_Menu_Button;
