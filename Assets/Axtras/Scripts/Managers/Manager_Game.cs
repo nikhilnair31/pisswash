@@ -26,6 +26,8 @@ public class Manager_Game : MonoBehaviour
             string newSaveData = GenerateGameSaveFile();
             Manager_SaveLoad.Instance.Save(progressionFilePath, newSaveData);
         }
+        
+        Manager_UI.Instance.ShowMenu();
     }
 
     private string GenerateGameSaveFile() {

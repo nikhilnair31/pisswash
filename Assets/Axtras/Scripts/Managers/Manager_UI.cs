@@ -68,7 +68,6 @@ public class Manager_UI : MonoBehaviour
     
     private void Start() {
         SetupButtons();
-        InitMenu();
     }
     private void SetupButtons() {
         startGame_Menu_Button?.onClick.AddListener(StartGame);
@@ -81,7 +80,14 @@ public class Manager_UI : MonoBehaviour
         restartGame_GameOver_Button?.onClick.AddListener(RestartGame);
         exitGame_GameOver_Button?.onClick.AddListener(ExitGame);
     }
-    private void InitMenu() {
+     
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            PauseGame();
+        }
+    }
+    
+    public void ShowMenu() {
         inMenu = true;
 
         menuCanvasGO.SetActive(true);
@@ -95,13 +101,7 @@ public class Manager_UI : MonoBehaviour
 
         Time.timeScale = 0f;
     }
-    
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            PauseGame();
-        }
-    }
-    
+   
     public void StartGame() {
         Debug.Log("StartGame");
 

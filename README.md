@@ -2,6 +2,9 @@
 
 ## Todo
 
+- [ ] Work on selection screen UI
+- [ ] Create prefab for scenes to be clickable, have scene name and previous score etc.
+- [ ] Add back button in seelction screen
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 
 ## Done
