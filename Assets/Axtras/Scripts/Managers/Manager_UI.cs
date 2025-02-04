@@ -196,7 +196,9 @@ public class Manager_UI : MonoBehaviour
         levelOver = true;
         inGame = false;
 
-        SetScoreUI();
+        var rating = Manager_Game.Instance.CalculateScoreLetter();
+        SetNextLevelEnabledUI(rating);
+        SetScoreUI(rating);
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
@@ -242,8 +244,16 @@ public class Manager_UI : MonoBehaviour
         return damageImage;
     }
 
-    public void SetScoreUI() {
-        score_LevelOver_Text.text = Manager_Game.Instance.CalculateScoreLetter();
+    public void SetNextLevelEnabledUI(string score) {
+        if (score == "S+" || score == "S" || score == "A" || score == "B") {
+            next_LevelOver_Button.interactable = true;
+        }
+        else if (score == "C" || score == "D" || score == "F") {
+            next_LevelOver_Button.interactable = false;
+        }
+    }
+    public void SetScoreUI(string score) {
+        score_LevelOver_Text.text = score;
     }
     public void SetPeeAmountUI(float peeAmount) {
         peeImage.fillAmount = peeAmount;

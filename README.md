@@ -2,12 +2,12 @@
 
 ## Todo
 
-- [ ] Show unlocking of next level text when score is beyond a threshold
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 
 ## Done
 
+- [x] Show unlocking of next level text when score is beyond a threshold
 - [x] Make retry work in round over canvas
 - [x] Make next level work in round over canvas
 - [x] Combine round over and game over canvas into one
