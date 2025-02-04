@@ -1,8 +1,10 @@
 using System;
 using System.IO;
-using System.Security.Cryptography;
 using System.Text;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using SimpleJSON;
 
 public class Manager_SaveLoad : MonoBehaviour 
 {
@@ -84,5 +86,37 @@ public class Manager_SaveLoad : MonoBehaviour
         // Debug.Log($"Key length: {keyBytes32.Length}");
 
         return keyBytes32;
+    }
+
+    public string GenerateGameSaveFile() {
+        // Get list of all scenes in build settings
+        var sceneNameList = Manager_Scene.Instance.GetSceneStrArr();
+
+        // Create new scene data
+        var sceneDataList = new List<Data_Scene>();
+        for (int i = 0; i < sceneNameList.Length; i++) {
+            sceneDataList.Add(new Data_Scene {
+                name = sceneNameList[i]
+            });
+        }
+        Debug.Log($"sceneDataList: {string.Join(", ", sceneDataList)}");
+
+        // Unlock 1st and 2nd scene
+        sceneDataList[0].unlocked = true;
+        sceneDataList[0].playable = false;
+        sceneDataList[1].unlocked = true;
+
+        // Create new game data
+        Data_Game gameData = new() {
+            sceneDataList = sceneDataList
+        };
+
+        return JsonUtility.ToJson(gameData);
+    }
+    public string LoadGameSaveFile(string data) {
+        JSONObject loadedGameData = JSON.Parse(data) as JSONObject;
+        Debug.Log($"loadedGameData: {loadedGameData}");
+
+        return loadedGameData;
     }
 }

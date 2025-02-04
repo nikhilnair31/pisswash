@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using System.Collections.Generic;
+using SimpleJSON;
 
 public class Manager_Game : MonoBehaviour 
 {
@@ -19,56 +20,26 @@ public class Manager_Game : MonoBehaviour
     private void Start() {
         string progressionFilePath = Application.persistentDataPath + "/game.json";
         string saveDatStr = Manager_SaveLoad.Instance.Load(progressionFilePath);
-        Debug.Log($"Save Data: {saveDatStr}");
+        Debug.Log($"saveDatStr: {saveDatStr}");
 
+        string saveData;
         if (string.IsNullOrEmpty(saveDatStr)) {
-            Debug.Log("No save data found. Creating new save file...");
-            string newSaveData = GenerateGameSaveFile();
-            Manager_SaveLoad.Instance.Save(progressionFilePath, newSaveData);
+            Debug.LogWarning("No save data found. Creating new save file...");
+            saveData = Manager_SaveLoad.Instance.GenerateGameSaveFile();
+            Manager_SaveLoad.Instance.Save(progressionFilePath, saveData);
         }
+        else {
+            Debug.Log("Save data found. Loading save file...");
+            saveData = saveDatStr;
+        }
+        Debug.Log($"saveData: {saveData}");
         
+        JSONObject loadedGameData = JSON.Parse(saveData) as JSONObject;
+        var sceneDataList = loadedGameData["sceneDataList"].AsArray;
+        Debug.Log($"sceneDataList: {sceneDataList}");
+        
+        Manager_UI.Instance.SpawnLevelPanels(sceneDataList);
         Manager_UI.Instance.ShowMenu();
-    }
-
-    private string GenerateGameSaveFile() {
-        // Get list of all scenes
-        // var sceneCount = SceneManager.sceneCount;
-        var sceneCountInBuildSettings = SceneManager.sceneCountInBuildSettings;
-        Debug.Log($"Scene Count: {sceneCountInBuildSettings}");
-
-        var sceneList = new List<string>();
-        for (int i = 0; i < sceneCountInBuildSettings; i++) {
-            sceneList.Add(SceneManager.GetSceneByBuildIndex(i).name);
-        }
-        Debug.Log($"Scenes: {string.Join(", ", sceneList)}");
-
-        // Get list of all scenes in build settings
-        var sceneNumber = SceneManager.sceneCountInBuildSettings;
-        var sceneNameList = new string[sceneNumber];
-        for (int i = 0; i < sceneNumber; i++) {
-            sceneNameList[i] = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
-        }
-        Debug.Log($"sceneNameList: {string.Join(", ", sceneNameList)}");
-
-        // Create new scene data
-        var sceneDataList = new List<Data_Scene>();
-        for (int i = 0; i < sceneCountInBuildSettings; i++) {
-            sceneDataList.Add(new Data_Scene {
-                sceneName = sceneNameList[i]
-            });
-        }
-
-        // Unlock 1st and 2nd scene
-        sceneDataList[0].unlocked = true;
-        sceneDataList[0].playable = false;
-        sceneDataList[1].unlocked = true;
-
-        // Create new game data
-        Data_Game gameData = new() {
-            sceneDataList = sceneDataList
-        };
-
-        return JsonUtility.ToJson(gameData);
     }
 
     public string CalculateScoreLetter() {

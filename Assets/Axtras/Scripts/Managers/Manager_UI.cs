@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 using System;
+using SimpleJSON;
 
 public class Manager_UI : MonoBehaviour 
 {
@@ -13,10 +14,11 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Menu UI")]
     [SerializeField] private GameObject menuCanvasGO;
-    [SerializeField] private GameObject titleScreenCanvasGO;
-    [SerializeField] private GameObject selectionScreenCanvasGO;
+    [SerializeField] private GameObject titleScreenGO;
+    [SerializeField] private GameObject selectionScreenGO;
+    [SerializeField] private GameObject selectionPanelGO;
     [SerializeField] private Button startGame_Menu_Button;
-    [SerializeField] private Button startTutorial_Menu_Button;
+    [SerializeField] private Button backToMenu_Menu_Button;
     [SerializeField] private Button exitGame_Menu_Button;
     [SerializeField] public bool inMenu = true;
 
@@ -55,6 +57,13 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Modals")]
     [SerializeField] private GameObject modalPrefab;
+
+    [Header("Level Panels")]
+    [SerializeField] private GameObject levelPanelPrefab;
+
+    [Header("Sprites")]
+    [SerializeField] private Sprite lockedSprite;
+    [SerializeField] private Sprite unlockedSprite;
     #endregion
 
     private void Awake() {
@@ -70,9 +79,9 @@ public class Manager_UI : MonoBehaviour
         SetupButtons();
     }
     private void SetupButtons() {
-        startGame_Menu_Button?.onClick.AddListener(StartGame);
-        startTutorial_Menu_Button?.onClick.AddListener(StartTutorial);
+        startGame_Menu_Button?.onClick.AddListener(ShowSelection);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
+        backToMenu_Menu_Button?.onClick.AddListener(ShowMenu);
 
         next_FinishedRound_Button?.onClick.AddListener(NextRound);
         menu_FinishedRound_Button?.onClick.AddListener(ToMenu);
@@ -87,10 +96,40 @@ public class Manager_UI : MonoBehaviour
         }
     }
     
+    public void SpawnLevelPanels(JSONArray dataJson) {
+        foreach (Transform child in selectionPanelGO.transform) {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < dataJson.Count; i++) {
+            JSONObject levelData = dataJson[i] as JSONObject;
+            GameObject levelPanelGO = Instantiate(levelPanelPrefab);
+            levelPanelGO.transform.SetParent(selectionPanelGO.transform);
+            levelPanelGO.GetComponent<Controller_LevelPanel>().Initialize(i, levelData);
+        }
+    }
     public void ShowMenu() {
         inMenu = true;
 
         menuCanvasGO.SetActive(true);
+        titleScreenGO.SetActive(true);
+        selectionScreenGO.SetActive(false);
+        gameCanvasGO.SetActive(false);
+        pauseCanvasGO.SetActive(false);
+        finishedRoundCanvasGO.SetActive(false);
+        gameoverCanvasGO.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
+    }
+    public void ShowSelection() {
+        inMenu = true;
+
+        menuCanvasGO.SetActive(true);
+        titleScreenGO.SetActive(false);
+        selectionScreenGO.SetActive(true);
         gameCanvasGO.SetActive(false);
         pauseCanvasGO.SetActive(false);
         finishedRoundCanvasGO.SetActive(false);
@@ -104,11 +143,6 @@ public class Manager_UI : MonoBehaviour
    
     public void StartGame() {
         Debug.Log("StartGame");
-
-        StartCoroutine(StartGameCoroutine());
-    }
-    public void StartTutorial() {
-        Debug.Log($"StartTutorial");
 
         StartCoroutine(StartGameCoroutine());
     }
@@ -223,6 +257,9 @@ public class Manager_UI : MonoBehaviour
         Application.Quit();
     }
 
+    public Sprite GetRatingSprite(bool playable, bool unlocked) {
+        return playable && unlocked ? unlockedSprite : lockedSprite;
+    }
     public Image GetDehydrationImageUI() {
         return dehydrationImage;
     }

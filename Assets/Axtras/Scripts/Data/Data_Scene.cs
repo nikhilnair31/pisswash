@@ -2,14 +2,14 @@ using System;
 
 [Serializable]
 public class Data_Scene {
-    public string sceneName;
-    public string scoreRating;
+    public string name;
+    public string rating;
     public bool playable;
     public bool unlocked;
 
     public Data_Scene() {
-        sceneName = "";
-        scoreRating = "";
+        name = "";
+        rating = "";
         playable = true;
         unlocked = false;
     }
