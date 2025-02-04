@@ -95,8 +95,8 @@ public class Manager_Effects : MonoBehaviour
         emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / rateMul, 5, 150);
     }
 
-    public void ApplyEffect(Collider other, Controller_Stain stain) {
-        if (other.CompareTag("Player")) {
+    public void ApplyEffect(Collision other, Controller_Stain stain) {
+        if (other.transform.CompareTag("Player")) {
             switch (stain.stainType) {
                 case Controller_Stain.StainType.Acid:
                     Manager_Hazards.Instance.AddDamage();
