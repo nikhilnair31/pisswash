@@ -2,7 +2,6 @@
 
 ## Todo
 
-- [ ] Combine round over and game over canvas into one
 - [ ] Make retry work in round over canvas
 - [ ] Make next level work in round over canvas
 - [ ] Show unlocking of next level text when score is beyond a threshold
@@ -12,6 +11,7 @@
 
 ## Done
 
+- [x] Combine round over and game over canvas into one
 - [x] Add back button in seelction screen
 - [x] Work on selection screen UI
 - [x] Create prefab for scenes to be clickable, have scene name and previous score etc.

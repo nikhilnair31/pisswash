@@ -146,7 +146,7 @@ public class Controller_Pee : MonoBehaviour
                 Manager_Effects.Instance.DehydrationEffects(0f);
                 Manager_Effects.Instance.ResetGameOverEffects();
 
-                Manager_UI.Instance.GameOver();
+                Manager_UI.Instance.LevelOver();
             }
         }
     }
