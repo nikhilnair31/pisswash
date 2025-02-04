@@ -21,9 +21,6 @@ public class Manager_Timeline : MonoBehaviour
     }
     
     private void Start() {
-        if (skipIntroCutscene) {
-            Manager_UI.Instance.StartGame();            
-        }
     }
 
     public void PlayCutscene_GameStart() {

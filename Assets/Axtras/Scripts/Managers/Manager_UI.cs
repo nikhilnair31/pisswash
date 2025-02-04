@@ -141,12 +141,12 @@ public class Manager_UI : MonoBehaviour
         Time.timeScale = 0f;
     }
    
-    public void StartGame() {
+    public void StartGame(string sceneName) {
         Debug.Log("StartGame");
 
-        StartCoroutine(StartGameCoroutine());
+        StartCoroutine(StartGameCoroutine(sceneName));
     }
-    private IEnumerator StartGameCoroutine() {
+    private IEnumerator StartGameCoroutine(string sceneName) {
         Debug.Log("StartGameCoroutine");
 
         inMenu = false;
@@ -154,7 +154,7 @@ public class Manager_UI : MonoBehaviour
         menuCanvasGO.SetActive(false);
         loadingCanvasGO.SetActive(true);
 
-        Manager_Scene.Instance.LoadCurrentScene();
+        Manager_Scene.Instance.LoadSceneByName(sceneName);
 
         yield return new WaitForSecondsRealtime(1f);
 

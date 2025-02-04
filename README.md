@@ -2,13 +2,13 @@
 
 ## Todo
 
-- [ ] Work on selection screen UI
-- [ ] Create prefab for scenes to be clickable, have scene name and previous score etc.
-- [ ] Add back button in seelction screen
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 
 ## Done
 
+- [x] Add back button in seelction screen
+- [x] Work on selection screen UI
+- [x] Create prefab for scenes to be clickable, have scene name and previous score etc.
 - [x] Moved stain and kidney stone effects into Effect script
 - [x] Box out more levels
 - [x] Create stains when slapped

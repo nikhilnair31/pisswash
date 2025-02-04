@@ -13,8 +13,10 @@ public class Manager_SaveLoad : MonoBehaviour
     #endregion
 
     private void Awake() {
-        if (Instance == null)
+        if (Instance == null){
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
             Destroy(gameObject);
 
@@ -103,8 +105,7 @@ public class Manager_SaveLoad : MonoBehaviour
 
         // Unlock 1st and 2nd scene
         sceneDataList[0].unlocked = true;
-        sceneDataList[0].playable = false;
-        sceneDataList[1].unlocked = true;
+        sceneDataList[0].playable = true;
 
         // Create new game data
         Data_Game gameData = new() {

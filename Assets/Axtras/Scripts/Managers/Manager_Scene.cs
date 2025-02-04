@@ -32,6 +32,7 @@ public class Manager_Scene : MonoBehaviour
         for (int i = 0; i < sceneNumber; i++) {
             sceneNameList[i] = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
         }
+        sceneNameList = sceneNameList[1..]; // Remove the first scene (main menu)
         Debug.Log($"sceneNameList: {string.Join(", ", sceneNameList)}");
 
         return sceneNameList;
