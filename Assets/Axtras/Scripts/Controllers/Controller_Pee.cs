@@ -151,7 +151,7 @@ public class Controller_Pee : MonoBehaviour
         }
     }
     private void ResetDehydration() {
-        Debug.Log("Player is no longer dehydrated.");
+        // Debug.Log("Player is no longer dehydrated.");
 
         isDehydrated = false;
         

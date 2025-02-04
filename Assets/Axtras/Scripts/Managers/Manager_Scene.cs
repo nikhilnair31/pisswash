@@ -25,6 +25,16 @@ public class Manager_Scene : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
     
+    public string GetCurrSceneName() {
+        return SceneManager.GetActiveScene().name;
+    }
+    public string GetNextSceneName(string currentSceneName) {
+        var sceneNameList = GetSceneStrArr();
+        var currentSceneIndex = System.Array.IndexOf(sceneNameList, currentSceneName);
+        var nextSceneIndex = currentSceneIndex + 1;
+        
+        return sceneNameList[nextSceneIndex];
+    }
     public string[] GetSceneStrArr() {
         // Get list of all scenes in build settings
         var sceneNumber = SceneManager.sceneCountInBuildSettings;

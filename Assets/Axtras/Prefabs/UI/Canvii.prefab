@@ -1868,10 +1868,6 @@ MonoBehaviour:
   next_LevelOver_Button: {fileID: 5018690036751944072}
   menu_LevelOver_Button: {fileID: 8854266608489864139}
   levelOver: 0
-  gameoverCanvasGO: {fileID: 0}
-  restartGame_GameOver_Button: {fileID: 0}
-  exitGame_GameOver_Button: {fileID: 0}
-  gameOver: 0
   pauseCanvasGO: {fileID: 3737618163730052990}
   inPause: 0
   loadingCanvasGO: {fileID: 2204788348710984529}
@@ -3805,7 +3801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2316500781831397848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4159,7 +4155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4873022703701498847
 RectTransform:
   m_ObjectHideFlags: 0

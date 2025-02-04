@@ -77,6 +77,7 @@ public class Manager_UI : MonoBehaviour
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
         backToMenu_Menu_Button?.onClick.AddListener(ShowMenu);
 
+        retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
         next_LevelOver_Button?.onClick.AddListener(NextLevel);
         menu_LevelOver_Button?.onClick.AddListener(ToMenu);
     }
@@ -141,6 +142,7 @@ public class Manager_UI : MonoBehaviour
         inMenu = false;
 
         menuCanvasGO.SetActive(false);
+        levelOverCanvasGO.SetActive(false);
         loadingCanvasGO.SetActive(true);
 
         Manager_Scene.Instance.LoadSceneByName(sceneName);
@@ -207,11 +209,15 @@ public class Manager_UI : MonoBehaviour
     public void RetryLevel() {
         Debug.Log($"RetryLevel");
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
+        var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
+        StartGame(currSceneName);
     }
     public void NextLevel() {
         Debug.Log($"NextLevel");
+
+        var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
+        var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
+        StartGame(nextSceneName);
     }
     public void ToMenu() {
         Debug.Log($"ToMenu");

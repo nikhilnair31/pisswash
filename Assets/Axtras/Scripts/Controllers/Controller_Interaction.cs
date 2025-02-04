@@ -45,6 +45,7 @@ public class Controller_Interaction : MonoBehaviour
     private void HandleInteractable() {
         // Interacting key
         if (Input.GetKeyDown(interactKey)) {
+            Debug.Log("Interacting");
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
                 currentBottle = bottle;
                 currentBottle.ConsumeBottle(buyOrSteal: "buy");
@@ -65,6 +66,7 @@ public class Controller_Interaction : MonoBehaviour
 
         // Stealing key
         if (Input.GetKeyDown(stealKey)) {
+            Debug.Log("Stealing bottle");
             if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
                 bottle.ConsumeBottle(buyOrSteal: "steal");
             }
@@ -72,6 +74,7 @@ public class Controller_Interaction : MonoBehaviour
         
         // Ending game key
         if (Input.GetKeyDown(endRoundKey)) {
+            Debug.Log("Ending round");
             if (hit.transform.TryGetComponent(out Controller_Boss boss)) {
                 boss.FinshRound();
             }
