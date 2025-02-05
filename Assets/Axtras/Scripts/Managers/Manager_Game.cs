@@ -23,7 +23,7 @@ public class Manager_Game : MonoBehaviour
         LoadLevelData();
     }
     
-    private void LoadLevelData() {
+    public void LoadLevelData() {
         string saveDatStr = Manager_SaveLoad.Instance.Load();
         // Debug.Log($"saveDatStr: {saveDatStr}");
 

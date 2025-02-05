@@ -36,6 +36,7 @@ public class Controller_LevelPanel : MonoBehaviour
         if (levelPlayable && levelunlocked) {
             Debug.Log($"Level {levelIndex} - {levelName} selected!");
             Manager_UI.Instance.StartGame(levelName);
+            Manager_SaveLoad.Instance.SaveStatData("toalShiftWorked", "add", 1);
         }
         else {
             Debug.LogWarning($"Level {levelIndex} - {levelName} is locked!");

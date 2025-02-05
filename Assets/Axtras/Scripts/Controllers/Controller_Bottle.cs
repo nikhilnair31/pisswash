@@ -59,6 +59,8 @@ public class Controller_Bottle : Controller_Interactables
 
             // Update money
             Manager_Money.Instance.UpdateMoney(-buyCost);
+            // Update bottles bought
+            Manager_SaveLoad.Instance.SaveStatData("bottlesBought", "add", 1);
             
             gameObject.SetActive(false);
         }
@@ -79,6 +81,7 @@ public class Controller_Bottle : Controller_Interactables
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
                 Manager_Hazards.Instance.AddDamage();
+                Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
 
                 if (cd.transform.TryGetComponent(out Generator_Stain gen)) {
                     gen.SpawnDecalsWithConeRaycasts(
@@ -96,6 +99,8 @@ public class Controller_Bottle : Controller_Interactables
         
         // Update money
         Manager_Money.Instance.UpdateMoney(0);
+        // Update bottles stolen
+        Manager_SaveLoad.Instance.SaveStatData("bottlesStolen", "add", 1);
 
         gameObject.SetActive(false);
     }

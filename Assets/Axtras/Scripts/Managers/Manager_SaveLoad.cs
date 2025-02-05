@@ -117,6 +117,7 @@ public class Manager_SaveLoad : MonoBehaviour
 
         return JsonUtility.ToJson(gameData);
     }
+
     public void SaveLevelUnlocked(string scenename, string rating = "") {
         var dataStr = Load();
         
@@ -140,6 +141,23 @@ public class Manager_SaveLoad : MonoBehaviour
 
         dataJson["sceneDataList"] = sceneDataList;
         Debug.Log($"SaveLevelUnlocked new dataJson: {dataJson}");
+
+        Save(dataJson.ToString());
+    }
+    public void SaveStatData(string statKey, string type = "set", int val = 1) {
+        Debug.Log($"SaveStatData");
+        
+        var dataJson = JSON.Parse(Load()) as JSONObject;
+        Debug.Log($"SaveStatData og dataJson: {dataJson}");
+        
+        Debug.Log($"SaveStatData og toalShiftWorkedInt: {dataJson[statKey]}");
+        if (type == "add") {
+            dataJson[statKey] += val;
+        }
+        else if (type == "set") {
+            dataJson[statKey] = val;
+        }
+        Debug.Log($"SaveStatData new toalShiftWorkedInt: {dataJson[statKey]}");
 
         Save(dataJson.ToString());
     }

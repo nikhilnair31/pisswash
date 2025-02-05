@@ -31,7 +31,12 @@ public class Manager_Money : MonoBehaviour
 
     public void UpdateMoney(int amount) {
         currMoney += amount;
+
+        // Update money amount in UI
         Manager_UI.Instance.SetMoneyUI(currMoney);
+        // Update current money and spent money
+        Manager_SaveLoad.Instance.SaveStatData("haveMoney", "set", currMoney);
+        Manager_SaveLoad.Instance.SaveStatData("spentMoney", "add", amount);
     }
 
     public bool GetHasMoneyToBuy() {

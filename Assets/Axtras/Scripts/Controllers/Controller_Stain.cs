@@ -45,6 +45,7 @@ public class Controller_Stain : MonoBehaviour
 
         if (decalProjector.fadeFactor <= 0f) {
             decalProjector.fadeFactor = 0f;
+            Manager_SaveLoad.Instance.SaveStatData("totalCleanedStains", "add", 1);
             gameObject.SetActive(false);
         }
     }

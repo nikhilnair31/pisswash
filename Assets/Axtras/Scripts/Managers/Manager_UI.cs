@@ -208,6 +208,7 @@ public class Manager_UI : MonoBehaviour
         SetScoreUI(rating);
         SetNextLevelEnabledUI(rating);
         Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, rating);
+        Manager_Game.Instance.LoadLevelData();
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
@@ -230,6 +231,7 @@ public class Manager_UI : MonoBehaviour
         var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
         StartGame(nextSceneName);
     }
+    
     public void ShowMenu() {
         Debug.Log($"ShowMenu");
         

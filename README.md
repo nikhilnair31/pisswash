@@ -2,13 +2,14 @@
 
 ## Todo
 
-- [ ] Add stat tracking
 - [ ] Add bonus objectives
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 
 ## Done
 
+- [x] Save, Set and Show rating when calculated
+- [x] Add stat tracking
 - [x] Reset effects images on level start
 - [x] Fixed UI navigation
 - [x] Tweak scoring to get B usually

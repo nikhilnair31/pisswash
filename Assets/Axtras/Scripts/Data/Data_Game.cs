@@ -9,21 +9,25 @@ public class Data_Game
     public List<Data_Scene> sceneDataList;
     
     [Header("Stats")]
-    public string toalShiftWorked;
-    public string totalCleanedStains;
-    public string totalSlaps;
-    public string totalKidneyStonesCreated;
-    public string totalKidneyStonesPassed;
-    public string timeSpentDrinking;
-    public string bottlesStolen;
+    public int toalShiftWorked;
+    public int totalCleanedStains;
+    public int totalKidneyStonesCreated;
+    public int totalKidneyStonesPassed;
+    public int totalSlaps;
+    public int bottlesBought;
+    public int bottlesStolen;
+    public int haveMoney;
+    public int spentMoney;
 
     public Data_Game() {
-        toalShiftWorked = "0";
-        totalCleanedStains = "0";
-        totalSlaps = "0";
-        totalKidneyStonesCreated = "0";
-        totalKidneyStonesPassed = "0";
-        timeSpentDrinking = "0";
-        bottlesStolen = "0";
+        toalShiftWorked = 0;
+        totalCleanedStains = 0;
+        totalKidneyStonesCreated = 0;
+        totalKidneyStonesPassed = 0;
+        totalSlaps = 0;
+        bottlesBought = 0;
+        bottlesStolen = 0;
+        haveMoney = 0;
+        spentMoney = 0;
     }
 }
