@@ -3,6 +3,9 @@
 ## Todo
 
 - [ ] Reset effects images on level start
+- [ ] Add stat tracking
+- [ ] Add bonus objectives
+- [ ] Tweak scoring to get B usually
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 

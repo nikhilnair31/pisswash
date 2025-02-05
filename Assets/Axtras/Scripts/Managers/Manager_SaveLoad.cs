@@ -108,7 +108,7 @@ public class Manager_SaveLoad : MonoBehaviour
 
         // Unlock 1st and 2nd scene
         sceneDataList[0].unlocked = true;
-        sceneDataList[0].playable = true;
+        sceneDataList[1].unlocked = true;
 
         // Create new game data
         Data_Game gameData = new() {
