@@ -154,6 +154,7 @@ public class Manager_UI : MonoBehaviour
         loadingCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
 
+        Manager_SaveLoad.Instance.SaveLevelUnlocked(sceneName);
         Manager_Timer.Instance.StartTimer();
         // Manager_Timeline.Instance.PlayCutscene_GameStart();
         
@@ -197,8 +198,10 @@ public class Manager_UI : MonoBehaviour
         inGame = false;
 
         var rating = Manager_Game.Instance.CalculateScoreLetter();
-        SetNextLevelEnabledUI(rating);
+        var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
         SetScoreUI(rating);
+        SetNextLevelEnabledUI(rating);
+        Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, rating);
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);

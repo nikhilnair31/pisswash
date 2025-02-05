@@ -10,6 +10,7 @@ public class Manager_SaveLoad : MonoBehaviour
 {
     #region Variables
     public static Manager_SaveLoad Instance { get; private set; }
+    string filePath;
     #endregion
 
     private void Awake() {
@@ -20,10 +21,11 @@ public class Manager_SaveLoad : MonoBehaviour
         else
             Destroy(gameObject);
 
-        Debug.Log(Application.persistentDataPath);
+        filePath = Application.persistentDataPath + "/game.json";
+        Debug.Log($"Awake filePath: {filePath}");
     }
 
-    public void Save(string filePath, string plainText) {
+    public void Save(string plainText) {
         if (string.IsNullOrEmpty(plainText)) {
             throw new ArgumentException("Plaintext cannot be null or empty.");
         }
@@ -36,6 +38,7 @@ public class Manager_SaveLoad : MonoBehaviour
             aes.GenerateIV(); // Ensure a new IV is generated
 
             // Save the IV first
+            Debug.Log($"Save filePath: {filePath}");
             using FileStream dataStream = new(filePath, FileMode.Create);
             dataStream.Write(aes.IV, 0, aes.IV.Length);
 
@@ -51,7 +54,7 @@ public class Manager_SaveLoad : MonoBehaviour
             Debug.LogError($"Stack Trace: {ex.StackTrace}");
         }
     }
-    public string Load(string filePath) {
+    public string Load() {
         if (!File.Exists(filePath)) {
             Debug.LogWarning("Load file not found!");
             return null;
@@ -114,10 +117,30 @@ public class Manager_SaveLoad : MonoBehaviour
 
         return JsonUtility.ToJson(gameData);
     }
-    public string LoadGameSaveFile(string data) {
-        JSONObject loadedGameData = JSON.Parse(data) as JSONObject;
-        Debug.Log($"loadedGameData: {loadedGameData}");
+    public void SaveLevelUnlocked(string scenename, string rating = "") {
+        var dataStr = Load();
+        
+        var dataJson = JSON.Parse(dataStr) as JSONObject;
+        Debug.Log($"SaveLevelUnlocked og dataJson: {dataJson}");
+        
+        var sceneDataList = dataJson["sceneDataList"].AsArray;
+        Debug.Log($"SaveLevelUnlocked og sceneDataList: {sceneDataList}");
 
-        return loadedGameData;
+        for (int i = 0; i < sceneDataList.Count; i++) {
+            JSONObject levelData = sceneDataList[i] as JSONObject;
+            Debug.Log($"levelData: {levelData}");
+
+            if (levelData["name"] == scenename) {
+                levelData["unlocked"] = true;
+                levelData["rating"] = rating;
+                break;
+            }
+        }
+        Debug.Log($"SaveLevelUnlocked new sceneDataList: {sceneDataList}");
+
+        dataJson["sceneDataList"] = sceneDataList;
+        Debug.Log($"SaveLevelUnlocked new dataJson: {dataJson}");
+
+        Save(dataJson.ToString());
     }
 }

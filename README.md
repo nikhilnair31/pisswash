@@ -2,6 +2,7 @@
 
 ## Todo
 
+- [ ] Reset effects images on level start
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 

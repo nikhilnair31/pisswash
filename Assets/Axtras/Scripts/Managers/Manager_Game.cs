@@ -20,25 +20,27 @@ public class Manager_Game : MonoBehaviour
     }
     
     private void Start() {
-        string progressionFilePath = Application.persistentDataPath + "/game.json";
-        string saveDatStr = Manager_SaveLoad.Instance.Load(progressionFilePath);
-        Debug.Log($"saveDatStr: {saveDatStr}");
+        LoadLevelData();
+    }
+    
+    private void LoadLevelData() {
+        string saveDatStr = Manager_SaveLoad.Instance.Load();
+        // Debug.Log($"saveDatStr: {saveDatStr}");
 
         string saveData;
         if (string.IsNullOrEmpty(saveDatStr)) {
             Debug.LogWarning("No save data found. Creating new save file...");
             saveData = Manager_SaveLoad.Instance.GenerateGameSaveFile();
-            Manager_SaveLoad.Instance.Save(progressionFilePath, saveData);
+            Manager_SaveLoad.Instance.Save(saveData);
         }
         else {
             Debug.Log("Save data found. Loading save file...");
             saveData = saveDatStr;
         }
-        Debug.Log($"saveData: {saveData}");
+        // Debug.Log($"saveData: {saveData}");
         
         JSONObject loadedGameData = JSON.Parse(saveData) as JSONObject;
         var sceneDataList = loadedGameData["sceneDataList"].AsArray;
-        Debug.Log($"sceneDataList: {sceneDataList}");
         
         Manager_UI.Instance.SpawnLevelPanels(sceneDataList);
         Manager_UI.Instance.ShowMenu();
