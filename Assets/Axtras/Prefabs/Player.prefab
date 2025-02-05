@@ -324,7 +324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   interactKey: 101
-  stealKey: 103
+  stealKey: 102
   endRoundKey: 120
 --- !u!114 &3175334696423965043
 MonoBehaviour:

@@ -36,7 +36,7 @@ public class Manager_Effects : MonoBehaviour
     
     private void Start() {
         GetVolumeEffects();
-        ResetGameOverEffects();
+        ResetLevelOverEffects();
     }
     private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);
@@ -110,7 +110,7 @@ public class Manager_Effects : MonoBehaviour
         }
     }
 
-    public void UpdateGameOverEffects(float over) {
+    public void UpdateLevelOverEffects(float over) {
         if (vignette != null) 
             vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
         if (lensDistortion != null) 
@@ -118,7 +118,7 @@ public class Manager_Effects : MonoBehaviour
         if (splitToning != null) 
             splitToning.balance.value = Mathf.Lerp(-100f, 100f, over);
     }
-    public void ResetGameOverEffects() {
+    public void ResetLevelOverEffects() {
         if (vignette != null)
             vignette.intensity.value = 0f;
         if (lensDistortion != null)
@@ -127,15 +127,22 @@ public class Manager_Effects : MonoBehaviour
             splitToning.balance.value = -100f;
     }
 
-    public void DehydrationEffects(float dehydration) {
+    public void UpdateDehydrationEffects(float dehydration) {
         Color tempColor = Color.yellow;
         tempColor.a = Mathf.Lerp(0f, 0.5f, dehydration);
         
         var img = Manager_UI.Instance.GetDehydrationImageUI();
         img.color = tempColor;
     }
+    public void ResetDehydrationEffects() {
+        Color tempColor = Color.black;
+        tempColor.a = 0f;
 
-    public void DamageEffects() {
+        var img = Manager_UI.Instance.GetDehydrationImageUI();
+        img.color = tempColor;
+    }
+
+    public void SeqDamageEffects() {
         DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);

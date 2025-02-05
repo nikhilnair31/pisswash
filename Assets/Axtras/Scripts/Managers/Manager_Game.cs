@@ -49,46 +49,48 @@ public class Manager_Game : MonoBehaviour
     public string CalculateScoreLetter() {
         // Base Metrics
         float timeScore = Manager_Timer.Instance.GetTimeRemainingPerc(); // % of time left
-        Debug.Log($"timeScore: {timeScore}");
         float stainScore = Manager_Stains.Instance.GetStainCleanedPerc();
-        Debug.Log($"stainScore: {stainScore}");
         
         // Risk Metrics
         int stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
-        Debug.Log($"stonesPassed: {stonesPassed}");
         int stonesAcquired = Controller_Pee.Instance.GetStonesAcquiredCount();
-        Debug.Log($"stonesAcquired: {stonesAcquired}");
         int damageTaken = Manager_Hazards.Instance.GetDamageCount();
-        Debug.Log($"damageTaken: {damageTaken}");
         
         // Stealing Metrics
         int stolenDrinks = Manager_Bottles.Instance.GetBottlesStolenCount();
-        Debug.Log($"stolenDrinks: {stolenDrinks}");
 
         // Calculations
         float baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);
-        Debug.Log($"baseScore: {baseScore}");
         
         // Penalties
         float stonePenalty = stonesAcquired * 2f; // -2% per stone risked
-        Debug.Log($"stonePenalty: {stonePenalty}");
         float damagePenalty = damageTaken * 5f; // -5% per electric shock
-        Debug.Log($"damagePenalty: {damagePenalty}");
         float totalPenalties = Mathf.Min(stonePenalty + damagePenalty, 30f); // Cap penalties
-        Debug.Log($"totalPenalties: {totalPenalties}");
 
         // Bonuses
         float stoneBonus = stonesPassed * 5f; // +5% per successfully passed stone
-        Debug.Log($"stoneBonus: {stoneBonus}");
         float stealMultiplier = 1f + (0.05f * stolenDrinks); // +5% multiplier per stolen drink
-        Debug.Log($"stealMultiplier: {stealMultiplier}");
         float perfectCleanBonus = (stainScore >= 99.9f) ? 10f : 0f;
-        Debug.Log($"perfectCleanBonus: {perfectCleanBonus}");
 
         // Final Score
         float finalScore = (baseScore - totalPenalties + stoneBonus + perfectCleanBonus) * stealMultiplier;
         finalScore = Mathf.Clamp(finalScore, 0f, 100f); // Keep within 0-100 range
-        Debug.Log($"finalScore: {finalScore}");
+        Debug.Log(
+            $"timeScore: {timeScore}\n" +
+            $"stainScore: {stainScore}\n\n" +
+            $"stonesPassed: {stonesPassed}\n" +
+            $"stonesAcquired: {stonesAcquired}\n" +
+            $"damageTaken: {damageTaken}\n\n" +
+            $"stolenDrinks: {stolenDrinks}\n\n" +
+            $"baseScore: {baseScore}\n\n" +
+            $"stonePenalty: {stonePenalty}\n" +
+            $"damagePenalty: {damagePenalty}\n" +
+            $"totalPenalties: {totalPenalties}\n\n" +
+            $"stoneBonus: {stoneBonus}\n" +
+            $"stealMultiplier: {stealMultiplier}\n" +
+            $"perfectCleanBonus: {perfectCleanBonus}\n\n" +
+            $"finalScore: {finalScore}"
+        );
 
         // Letter Grade
         string grade = finalScore switch {

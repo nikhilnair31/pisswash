@@ -2,15 +2,16 @@
 
 ## Todo
 
-- [ ] Reset effects images on level start
 - [ ] Add stat tracking
 - [ ] Add bonus objectives
-- [ ] Tweak scoring to get B usually
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 
 ## Done
 
+- [x] Reset effects images on level start
+- [x] Fixed UI navigation
+- [x] Tweak scoring to get B usually
 - [x] Show unlocking of next level text when score is beyond a threshold
 - [x] Make retry work in round over canvas
 - [x] Make next level work in round over canvas

@@ -51,6 +51,10 @@ public class Controller_Pee : MonoBehaviour
     
     private void Start() {
         currPeeAmount = maxPeeAmount;
+
+        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount / maxPeeAmount);
+        Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
+        Manager_UI.Instance.SetQTEKeyUI("");
     }
     
     private void Update() {
@@ -117,7 +121,7 @@ public class Controller_Pee : MonoBehaviour
             if (isPeeing) {
                 timeToKidneyStone += timeToKidneyStone * Time.deltaTime;
                 timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
-                Manager_Effects.Instance.DehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
+                Manager_Effects.Instance.UpdateDehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
             }
             
             if (timeToKidneyStone >= maxTimeToKidneyStone) {
@@ -138,13 +142,13 @@ public class Controller_Pee : MonoBehaviour
 
             // Start game over timer if player is dehydrated
             gameOverInTime += Time.deltaTime;
-            Manager_Effects.Instance.UpdateGameOverEffects(gameOverInTime/maxGameOverInTime);
+            Manager_Effects.Instance.UpdateLevelOverEffects(gameOverInTime/maxGameOverInTime);
             if (gameOverInTime >= maxGameOverInTime) {
                 gameOverInTime = maxGameOverInTime;
                 timeToKidneyStone = 0f;
 
-                Manager_Effects.Instance.DehydrationEffects(0f);
-                Manager_Effects.Instance.ResetGameOverEffects();
+                Manager_Effects.Instance.UpdateDehydrationEffects(0f);
+                Manager_Effects.Instance.ResetLevelOverEffects();
 
                 Manager_UI.Instance.LevelOver();
             }
@@ -158,8 +162,8 @@ public class Controller_Pee : MonoBehaviour
         gameOverInTime = 0f;
         timeToKidneyStone = 0f;
 
-        Manager_Effects.Instance.ResetGameOverEffects();
-        Manager_Effects.Instance.DehydrationEffects(0f);
+        Manager_Effects.Instance.ResetLevelOverEffects();
+        Manager_Effects.Instance.UpdateDehydrationEffects(0f);
     }
 
     private void PassKidneyStone() {

@@ -21,7 +21,7 @@ public class Manager_Bottles : MonoBehaviour
         FindAllBottles();
     }  
     private void FindAllBottles() {
-        var bottles = FindObjectsOfType<Controller_Bottle>();
+        var bottles = FindObjectsByType<Controller_Bottle>(FindObjectsSortMode.None);
         foreach (var bottle in bottles) {
             if (bottle.gameObject.CompareTag("Bottle"))
                 allBottles.Add(bottle);

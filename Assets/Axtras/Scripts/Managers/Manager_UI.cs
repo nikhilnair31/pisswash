@@ -74,12 +74,12 @@ public class Manager_UI : MonoBehaviour
     }
     private void SetupButtons() {
         startGame_Menu_Button?.onClick.AddListener(ShowSelection);
+        backToMenu_Menu_Button?.onClick.AddListener(HideSelection);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
-        backToMenu_Menu_Button?.onClick.AddListener(ShowMenu);
 
         retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
         next_LevelOver_Button?.onClick.AddListener(NextLevel);
-        menu_LevelOver_Button?.onClick.AddListener(ToMenu);
+        menu_LevelOver_Button?.onClick.AddListener(ShowMenu);
     }
      
     private void Update() {
@@ -100,21 +100,6 @@ public class Manager_UI : MonoBehaviour
             levelPanelGO.GetComponent<Controller_LevelPanel>().Initialize(i, levelData);
         }
     }
-    public void ShowMenu() {
-        inMenu = true;
-
-        menuCanvasGO.SetActive(true);
-        titleScreenGO.SetActive(true);
-        selectionScreenGO.SetActive(false);
-        gameCanvasGO.SetActive(false);
-        pauseCanvasGO.SetActive(false);
-        levelOverCanvasGO.SetActive(false);
-
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-
-        Time.timeScale = 0f;
-    }
     public void ShowSelection() {
         inMenu = true;
 
@@ -130,7 +115,27 @@ public class Manager_UI : MonoBehaviour
 
         Time.timeScale = 0f;
     }
-   
+    public void HideSelection() {
+        inMenu = true;
+
+        menuCanvasGO.SetActive(true);
+        titleScreenGO.SetActive(true);
+        selectionScreenGO.SetActive(false);
+        gameCanvasGO.SetActive(false);
+        pauseCanvasGO.SetActive(false);
+        levelOverCanvasGO.SetActive(false);
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
+    }   
+    public void ExitGame() {
+        Debug.Log($"ExitGame");
+
+        Application.Quit();
+    }
+
     public void StartGame(string sceneName) {
         Debug.Log("StartGame");
 
@@ -155,6 +160,7 @@ public class Manager_UI : MonoBehaviour
         gameCanvasGO.SetActive(true);
 
         Manager_SaveLoad.Instance.SaveLevelUnlocked(sceneName);
+        Manager_Effects.Instance.ResetDehydrationEffects();
         Manager_Timer.Instance.StartTimer();
         // Manager_Timeline.Instance.PlayCutscene_GameStart();
         
@@ -224,17 +230,34 @@ public class Manager_UI : MonoBehaviour
         var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
         StartGame(nextSceneName);
     }
-    public void ToMenu() {
-        Debug.Log($"ToMenu");
-
-        SceneManager.LoadScene("M");
-        Time.timeScale = 1f;
+    public void ShowMenu() {
+        Debug.Log($"ShowMenu");
+        
+        StartCoroutine(StartMenuCoroutine());
     }
+    private IEnumerator StartMenuCoroutine() {
+        Debug.Log($"StartMenuCoroutine");
 
-    public void ExitGame() {
-        Debug.Log($"ExitGame");
+        inGame = false;
 
-        Application.Quit();
+        loadingCanvasGO.SetActive(true);
+        gameCanvasGO.SetActive(false);
+        menuCanvasGO.SetActive(false);
+        levelOverCanvasGO.SetActive(false);
+
+        Manager_Scene.Instance.LoadSceneByName("M");
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        inMenu = true;
+
+        loadingCanvasGO.SetActive(false);
+        menuCanvasGO.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
     }
 
     public Sprite GetRatingSprite(bool playable, bool unlocked) {

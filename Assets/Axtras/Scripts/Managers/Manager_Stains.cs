@@ -5,8 +5,9 @@ using UnityEngine.Rendering.Universal;
 
 [Serializable]
 public class Stain {
-    public DecalProjector stain;
-    public float opacity;
+    public Transform stainTransform;
+    // public DecalProjector stainDecal;
+    // public float opacityVal;
 }
 
 public class Manager_Stains : MonoBehaviour 
@@ -32,7 +33,13 @@ public class Manager_Stains : MonoBehaviour
         var stains = FindObjectsByType<DecalProjector>(FindObjectsSortMode.None);
         foreach (var stain in stains) {
             if (stain.gameObject.CompareTag("Stain"))
-                allStains.Add(new Stain { stain = stain, opacity = stain.fadeFactor });
+                allStains.Add(
+                    new Stain { 
+                        stainTransform = stain.transform, 
+                        // stainDecal = stain, 
+                        // opacityVal = stain.fadeFactor 
+                    }
+                );
         }
     }
 
@@ -41,7 +48,7 @@ public class Manager_Stains : MonoBehaviour
         int cleanedStainCnt = 0;
         
         foreach (var stain in allStains) {
-            if (stain.opacity <= 0)
+            if (stain.stainTransform.GetComponent<DecalProjector>().fadeFactor <= 0)
                 cleanedStainCnt++;
         }
 
