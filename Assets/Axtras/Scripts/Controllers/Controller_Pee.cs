@@ -12,6 +12,7 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float maxPeeAmount = 100f;
     [SerializeField] private float currPeeAmount;
     [SerializeField] private float peeEmptyRate = 1f;
+    float peeStartTime;
 
     [Header("Dehydration Settings")]
     [SerializeField] private bool isDehydrated = false;
@@ -66,11 +67,13 @@ public class Controller_Pee : MonoBehaviour
     private void HandleControls() {
         if (Input.GetMouseButtonDown(0)) {
             isPeeing = true;
+            peeStartTime = Time.time;
             peePS.Play();
         }
         else if (Input.GetMouseButtonUp(0)) {
             isPeeing = false;
             peePS.Stop();
+            CalcPeeVol();
         }
 
         if (allowQTE && Input.GetKeyDown(qteKey)) {
@@ -185,6 +188,14 @@ public class Controller_Pee : MonoBehaviour
 
         // Kidney stone passing temp boost
         Manager_Effects.Instance.SetPassStoneEffect();
+    }
+
+    private void CalcPeeVol() {
+        var peedForTime = Time.time - peeStartTime;
+        var peeRate = peePS.emission.rateOverTime.constant;
+        var volOfPee = peedForTime * peeRate;
+
+        Manager_SaveLoad.Instance.SaveStatData("peedAmount", "set", (int)volOfPee);
     }
 
     private KeyCode GetRandKey() {

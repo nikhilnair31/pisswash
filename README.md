@@ -2,13 +2,13 @@
 
 ## Todo
 
-- [ ] Add bonus objectives
-- [ ] Add pee volume
+- [ ] Implement bonus objectives
 - [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
 - [ ] Update level designs to match AI suggestion
 
 ## Done
 
+- [x] Add pee volume
 - [x] Save, Set and Show rating when calculated
 - [x] Add stat tracking
 - [x] Reset effects images on level start
