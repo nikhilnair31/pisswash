@@ -25,6 +25,10 @@ public class Manager_SaveLoad : MonoBehaviour
         Debug.Log($"Awake filePath: {filePath}");
     }
 
+    private void Start() {
+        LoadLevelData();
+    }
+    
     public void Save(string plainText) {
         if (string.IsNullOrEmpty(plainText)) {
             throw new ArgumentException("Plaintext cannot be null or empty.");
@@ -160,5 +164,27 @@ public class Manager_SaveLoad : MonoBehaviour
         Debug.Log($"SaveStatData new toalShiftWorkedInt: {dataJson[statKey]}");
 
         Save(dataJson.ToString());
+    }
+    
+    public void LoadLevelData() {
+        string saveDatStr = Load();
+        // Debug.Log($"saveDatStr: {saveDatStr}");
+
+        string saveData;
+        if (string.IsNullOrEmpty(saveDatStr)) {
+            Debug.LogWarning("No save data found. Creating new save file...");
+            saveData = GenerateGameSaveFile();
+            Save(saveData);
+        }
+        else {
+            Debug.Log("Save data found. Loading save file...");
+            saveData = saveDatStr;
+        }
+        // Debug.Log($"saveData: {saveData}");
+        
+        JSONObject loadedGameData = JSON.Parse(saveData) as JSONObject;
+        var sceneDataList = loadedGameData["sceneDataList"].AsArray;
+        
+        Manager_UI.Instance.SpawnLevelPanels(sceneDataList);
     }
 }
