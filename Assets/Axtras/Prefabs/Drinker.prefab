@@ -130,6 +130,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8f5a7492c7d4f4fa775c0c2bd50d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 5119753551964508551}
+  anim: {fileID: 0}
+  player: {fileID: 0}
+  skinMats:
+  - {fileID: 2100000, guid: 8e640642aaf747240809824fc148b119, type: 2}
+  - {fileID: 2100000, guid: 258bef0101ccb0f44a7a1dfe8c69853d, type: 2}
+  - {fileID: 2100000, guid: 641ebb209c5b5a64c97e6152e25704eb, type: 2}
+  - {fileID: 2100000, guid: 85884bddcbeab7f4898a79d253160d27, type: 2}
   seeFromTransform: {fileID: 7582972772823129458}
   canSeeInRange: 2.5
   canSeeInAngle: 80
@@ -232,5 +240,10 @@ PrefabInstance:
 --- !u!4 &3352317686976962274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a3b67ace1a354ba479d5cd9a9f15bda7, type: 3}
+  m_PrefabInstance: {fileID: 2958700379354183945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &5119753551964508551 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7927020251573364878, guid: a3b67ace1a354ba479d5cd9a9f15bda7, type: 3}
   m_PrefabInstance: {fileID: 2958700379354183945}
   m_PrefabAsset: {fileID: 0}

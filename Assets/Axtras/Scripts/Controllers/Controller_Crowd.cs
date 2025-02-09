@@ -1,13 +1,14 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class Controller_Crowd : MonoBehaviour 
+public class Controller_Crowd : Controller_Person 
 {
     #region Variables
-    private Animator anim;
     #endregion
 
-    private void Start() {
+    protected override void Start() {
+        base.Start();
+        
         transform.localEulerAngles = new Vector3(0, Random.Range(0, 360), 0);
         
         transform
@@ -19,7 +20,6 @@ public class Controller_Crowd : MonoBehaviour
             .SetEase(Ease.OutBounce)
             .SetDelay(Random.Range(0f, 1f));
 
-        anim = GetComponent<Animator>();
         anim.SetBool("IsDancing", true);
     }
 }

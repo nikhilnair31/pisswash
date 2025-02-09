@@ -1,19 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller_Drinker : MonoBehaviour 
+public class Controller_Drinker : Controller_Person 
 {
     #region Variables
     [SerializeField] private Transform seeFromTransform;
     [SerializeField] private float canSeeInRange = 5f;
     [SerializeField] private float canSeeInAngle = 110f;
     private List<Controller_Bottle> theirBottles = new ();
-    private GameObject player;
     #endregion
 
-    private void Start() {
-        player = GameObject.FindWithTag("Player");
-
+    protected override void Start() {
+        base.Start();
+        
         CheckForNearbyBottles();
     }
 
