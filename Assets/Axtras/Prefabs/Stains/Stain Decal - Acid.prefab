@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  fadeAmountPerCollision: 0.05
-  speedReductionMul: 0.1
+  fadeAmountPerCollision: 0.025
+  speedReductionMul: 0.7
   speedIncreaseMul: 10
-  scaleAmount: 1.3
+  scaleAmount: 2
   scaleTime: 20

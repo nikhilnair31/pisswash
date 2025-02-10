@@ -45,13 +45,20 @@ public class Manager_Stains : MonoBehaviour
 
     public float GetStainCleanedPerc() {
         int allStainCnt = allStains.Count;
+        Debug.Log($"allStainCnt: {allStainCnt}");
         int cleanedStainCnt = 0;
         
         foreach (var stain in allStains) {
-            if (stain.stainTransform.GetComponent<DecalProjector>().fadeFactor <= 0)
+            var stainDecal = stain.stainTransform.GetComponent<DecalProjector>();
+            if (stainDecal.fadeFactor <= 0){
                 cleanedStainCnt++;
+            }
         }
+        Debug.Log($"cleanedStainCnt: {cleanedStainCnt}");
 
-        return (cleanedStainCnt / allStainCnt) * 100f;
+        var perc = (float)cleanedStainCnt / allStainCnt * 100f;
+        Debug.Log($"perc: {perc}");
+
+        return perc;
     }
 }

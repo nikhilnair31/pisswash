@@ -25,32 +25,32 @@ public class Manager_Game : MonoBehaviour
 
     public string CalculateScoreLetter() {
         // Base Metrics
-        float timeScore = Manager_Timer.Instance.GetTimeRemainingPerc(); // % of time left
-        float stainScore = Manager_Stains.Instance.GetStainCleanedPerc();
+        var timeScore = Manager_Timer.Instance.GetTimeRemainingPerc(); // % of time left
+        var stainScore = Manager_Stains.Instance.GetStainCleanedPerc();
         
         // Risk Metrics
-        int stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
-        int stonesAcquired = Controller_Pee.Instance.GetStonesAcquiredCount();
-        int damageTaken = Manager_Hazards.Instance.GetDamageCount();
+        var stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
+        var stonesAcquired = Controller_Pee.Instance.GetStonesAcquiredCount();
+        var damageTaken = Manager_Hazards.Instance.GetDamageCount();
         
         // Stealing Metrics
-        int stolenDrinks = Manager_Bottles.Instance.GetBottlesStolenCount();
+        var stolenDrinks = Manager_Bottles.Instance.GetBottlesStolenCount();
 
         // Calculations
-        float baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);
+        var baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);
         
         // Penalties
-        float stonePenalty = stonesAcquired * 2f; // -2% per stone risked
-        float damagePenalty = damageTaken * 5f; // -5% per electric shock
-        float totalPenalties = Mathf.Min(stonePenalty + damagePenalty, 30f); // Cap penalties
+        var stonePenalty = stonesAcquired * 2f; // -2% per stone risked
+        var damagePenalty = damageTaken * 5f; // -5% per electric shock
+        var totalPenalties = Mathf.Min(stonePenalty + damagePenalty, 30f); // Cap penalties
 
         // Bonuses
-        float stoneBonus = stonesPassed * 5f; // +5% per successfully passed stone
-        float stealMultiplier = 1f + (0.05f * stolenDrinks); // +5% multiplier per stolen drink
-        float perfectCleanBonus = (stainScore >= 99.9f) ? 10f : 0f;
+        var stoneBonus = stonesPassed * 5f; // +5% per successfully passed stone
+        var stealMultiplier = 1f + (0.05f * stolenDrinks); // +5% multiplier per stolen drink
+        var perfectCleanBonus = (stainScore >= 99.9f) ? 10f : 0f;
 
         // Final Score
-        float finalScore = (baseScore - totalPenalties + stoneBonus + perfectCleanBonus) * stealMultiplier;
+        var finalScore = (baseScore - totalPenalties + stoneBonus + perfectCleanBonus) * stealMultiplier;
         finalScore = Mathf.Clamp(finalScore, 0f, 100f); // Keep within 0-100 range
         Debug.Log(
             $"timeScore: {timeScore}\n" +
