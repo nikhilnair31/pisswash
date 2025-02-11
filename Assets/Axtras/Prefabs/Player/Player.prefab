@@ -341,7 +341,8 @@ MonoBehaviour:
   isPeeing: 0
   maxPeeAmount: 100
   currPeeAmount: 0
-  peeEmptyRate: 50
+  peeEmptyRate: 10
+  peeDurationForMaxEffect: 10
   isDehydrated: 0
   gameOverInTime: 0
   maxGameOverInTime: 100

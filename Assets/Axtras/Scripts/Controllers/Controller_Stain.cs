@@ -41,7 +41,9 @@ public class Controller_Stain : MonoBehaviour
     }
 
     public void FadeOutAndDisable() {
-        decalProjector.fadeFactor -= fadeAmountPerCollision;
+        var fadeMul = Controller_Pee.Instance.GetFadeMul();
+
+        decalProjector.fadeFactor -= fadeAmountPerCollision * fadeMul;
 
         if (decalProjector.fadeFactor <= 0f) {
             decalProjector.fadeFactor = 0f;

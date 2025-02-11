@@ -12,7 +12,14 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private float maxPeeAmount = 100f;
     [SerializeField] private float currPeeAmount;
     [SerializeField] private float peeEmptyRate = 1f;
+    [SerializeField] private float peeDurationForMaxEffect = 3f;
+    [SerializeField] private float minFadeMul = 0.1f;
+    [SerializeField] private float maxFadeMul = 1.5f;
     float peeStartTime;
+    float peeDuration; 
+    float peePerc; 
+    float fadePerc; 
+    float fadeMul; 
 
     [Header("Dehydration Settings")]
     [SerializeField] private bool isDehydrated = false;
@@ -85,11 +92,15 @@ public class Controller_Pee : MonoBehaviour
     }
 
     private void PeeLoop() {
-        var peePerc = currPeeAmount / maxPeeAmount;
+        peePerc = currPeeAmount / maxPeeAmount;
+        fadePerc = peeDuration / peeDurationForMaxEffect;
+        fadeMul = Mathf.Lerp(minFadeMul, maxFadeMul, fadePerc);
 
         if (isPeeing) {
             if (currPeeAmount > 0f) {
                 currPeeAmount -= Time.deltaTime * peeEmptyRate;
+
+                peeDuration += Time.deltaTime;
 
                 Helper.Instance.PlayRandAudio(audioSource, peeClips);
             }
@@ -97,6 +108,9 @@ public class Controller_Pee : MonoBehaviour
                 currPeeAmount = 0f;
                 isDehydrated = true;
             }
+        }
+        else {
+            peeDuration = 0f;
         }
 
         Manager_UI.Instance.SetPeeAmountUI(peePerc);
@@ -215,6 +229,9 @@ public class Controller_Pee : MonoBehaviour
         Manager_UI.Instance.SetQTEKeyUI(qteKey.ToString());
 
         return qteKey;
+    }
+    public float GetFadeMul() {
+        return fadeMul;
     }
     public float GetMaxPeeAmount() {
         return maxPeeAmount;
