@@ -28,7 +28,7 @@ public class Generator_Stain : MonoBehaviour
     private void OnValidate() {
         if (spawnDecals) {
             spawnDecals = false;
-            SpawnDecalsWithSphereRaycasts(
+            EditorApplication.delayCall += () => SpawnDecalsWithSphereRaycasts(
                 source: transform,
                 spawnAsChild: true,
                 castlength: raycastLength
@@ -82,9 +82,21 @@ public class Generator_Stain : MonoBehaviour
                     coll.size = new Vector3(randomScale, randomScale, coll.size.z);
 
                     currDecals++;
+
+                    #if UNITY_EDITOR
+                    Undo.RegisterCreatedObjectUndo(decalGO, "Spawn Decal"); // Allows Undo
+                    EditorUtility.SetDirty(decalGO); // Marks the object as dirty
+                    #endif
                 }
             }
         }
+
+        #if UNITY_EDITOR
+        if (decalParent != null) {
+            Undo.RegisterCreatedObjectUndo(decalParent, "Create Decal Parent");
+            EditorUtility.SetDirty(decalParent);
+        }
+        #endif
     } 
     public void SpawnDecalsWithConeRaycasts(Transform source, bool spawnAsChild = false, float coneAngle = 45f) {
         GameObject decalParent = null;

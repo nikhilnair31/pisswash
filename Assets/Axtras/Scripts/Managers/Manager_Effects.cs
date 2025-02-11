@@ -35,8 +35,13 @@ public class Manager_Effects : MonoBehaviour
     }
     
     private void Start() {
+        GetInitComponents();
         GetVolumeEffects();
         ResetLevelOverEffects();
+    }
+    private void GetInitComponents() {
+        if(cam == null) cam = GetComponentInChildren<CinemachineCamera>();
+        if(peePS == null) peePS = GetComponentInChildren<ParticleSystem>();
     }
     private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);

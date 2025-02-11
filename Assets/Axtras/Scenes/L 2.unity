@@ -4907,6 +4907,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920a5a60355817a4d978b1eaf5e286de, type: 3}
+--- !u!198 &1820567280 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7912719795841026379, guid: 920a5a60355817a4d978b1eaf5e286de, type: 3}
+  m_PrefabInstance: {fileID: 1820567279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1820567281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 271976695413295031, guid: 920a5a60355817a4d978b1eaf5e286de, type: 3}
+  m_PrefabInstance: {fileID: 1820567279}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1900129047
 GameObject:
   m_ObjectHideFlags: 0
@@ -5635,11 +5651,11 @@ PrefabInstance:
     - target: {fileID: 8873614650648273250, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820567281}
     - target: {fileID: 8873614650648273250, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
       propertyPath: peePS
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820567280}
     - target: {fileID: 8873614650648273250, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
       propertyPath: postProcessVolume
       value: 

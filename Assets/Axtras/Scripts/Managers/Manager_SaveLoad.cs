@@ -183,8 +183,8 @@ public class Manager_SaveLoad : MonoBehaviour
         // Debug.Log($"saveData: {saveData}");
         
         JSONObject loadedGameData = JSON.Parse(saveData) as JSONObject;
-        var sceneDataList = loadedGameData["sceneDataList"].AsArray;
         
-        Manager_UI.Instance.SpawnLevelPanels(sceneDataList);
+        Manager_UI.Instance.SetStatsText(loadedGameData);
+        Manager_UI.Instance.SpawnLevelPanels(loadedGameData);
     }
 }

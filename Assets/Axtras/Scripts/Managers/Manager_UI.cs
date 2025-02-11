@@ -16,9 +16,11 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private GameObject menuCanvasGO;
     [SerializeField] private GameObject titleScreenGO;
     [SerializeField] private GameObject selectionScreenGO;
-    [SerializeField] private GameObject selectionPanelGO;
+    [SerializeField] private GameObject levelContentPanelGO;
+    [SerializeField] private GameObject statsContentPanelGO;
     [SerializeField] private Button startGame_Menu_Button;
     [SerializeField] private Button backToMenu_Menu_Button;
+    [SerializeField] private Button stats_Menu_Button;
     [SerializeField] private Button exitGame_Menu_Button;
     [SerializeField] public bool inMenu = true;
 
@@ -75,6 +77,7 @@ public class Manager_UI : MonoBehaviour
     private void SetupButtons() {
         startGame_Menu_Button?.onClick.AddListener(ShowSelection);
         backToMenu_Menu_Button?.onClick.AddListener(HideSelection);
+        stats_Menu_Button?.onClick.AddListener(ShowStats);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
 
         retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
@@ -88,15 +91,39 @@ public class Manager_UI : MonoBehaviour
         }
     }
     
-    public void SpawnLevelPanels(JSONArray dataJson) {
-        foreach (Transform child in selectionPanelGO.transform) {
+    public void SetStatsText(JSONObject dataJson) {
+        var labelWidth = 25; // Adjust to fit your longest label
+
+        var statsStr =
+            $"{"Shifts Worked:".PadRight(labelWidth)} {dataJson["totalShiftWorked"] ?? 0}\n" +
+            $"{"Cleaned Stains:".PadRight(labelWidth)} {dataJson["totalCleanedStains"]}\n" +
+            $"{"Peed Amount:".PadRight(labelWidth)} {dataJson["peedAmount"]} fl oz\n" +
+            $"\n" +
+            $"{"Kidney Stones Created:".PadRight(labelWidth)} {dataJson["totalKidneyStonesCreated"]}\n" +
+            $"{"Kidney Stones Passed:".PadRight(labelWidth)} {dataJson["totalKidneyStonesPassed"]}\n" +
+            $"\n" +
+            $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"]}\n" +
+            $"\n" +
+            $"{"Bottles Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
+            $"{"Bottles Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
+            $"\n" +
+            $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"]}\n" +
+            $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"]}\n";
+
+        var statsText = statsContentPanelGO.GetComponent<TMP_Text>();
+        statsText.text = statsStr;
+    }
+    public void SpawnLevelPanels(JSONObject dataJson) {
+        var sceneDataList = dataJson["sceneDataList"].AsArray;
+
+        foreach (Transform child in levelContentPanelGO.transform) {
             Destroy(child.gameObject);
         }
 
-        for (int i = 0; i < dataJson.Count; i++) {
-            JSONObject levelData = dataJson[i] as JSONObject;
+        for (int i = 0; i < sceneDataList.Count; i++) {
+            JSONObject levelData = sceneDataList[i] as JSONObject;
             GameObject levelPanelGO = Instantiate(levelPanelPrefab);
-            levelPanelGO.transform.SetParent(selectionPanelGO.transform);
+            levelPanelGO.transform.SetParent(levelContentPanelGO.transform);
             levelPanelGO.GetComponent<Controller_LevelPanel>().Initialize(i, levelData);
         }
     }
@@ -130,6 +157,9 @@ public class Manager_UI : MonoBehaviour
 
         Time.timeScale = 0f;
     }   
+    public void ShowStats() {
+        statsContentPanelGO.SetActive(!statsContentPanelGO.activeSelf);
+    }
     public void ExitGame() {
         Debug.Log($"ExitGame");
 
