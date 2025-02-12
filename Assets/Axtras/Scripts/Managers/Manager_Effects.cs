@@ -19,6 +19,11 @@ public class Manager_Effects : MonoBehaviour
     private LensDistortion lensDistortion;
     private SplitToning splitToning;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] slapClips;
+    [SerializeField] private AudioClip[] earsRingingClips;
+
     [Header("Pee Settings")]
     [SerializeField] private ParticleSystem peePS;
 
@@ -152,6 +157,11 @@ public class Manager_Effects : MonoBehaviour
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
+                Helper.Instance.PlayRandAudio(audioSource, slapClips);
+            })
+            .AppendInterval(0.5f) // Adjust the interval as needed
+            .AppendCallback(() => {
+                Helper.Instance.PlayRandAudio(audioSource, earsRingingClips);
             })
             .Join(
                 cam.transform.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true)
@@ -166,6 +176,7 @@ public class Manager_Effects : MonoBehaviour
             )
             .OnComplete(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(true);
+                audioSource.Stop(); // Stop the ringing sound
             });
     }
 }
