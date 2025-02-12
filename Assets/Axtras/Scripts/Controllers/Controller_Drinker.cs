@@ -7,21 +7,21 @@ public class Controller_Drinker : Controller_Person
     [SerializeField] private Transform seeFromTransform;
     [SerializeField] private float canSeeInRange = 5f;
     [SerializeField] private float canSeeInAngle = 110f;
-    private List<Controller_Bottle> theirBottles = new ();
+    private List<Controller_Drink> theirDrinks = new ();
     #endregion
 
     protected override void Start() {
         base.Start();
         
-        CheckForNearbyBottles();
+        CheckForNearbyDrinks();
     }
 
-    private void CheckForNearbyBottles() {
+    private void CheckForNearbyDrinks() {
         Collider[] colliders = Physics.OverlapSphere(seeFromTransform.position, canSeeInRange, LayerMask.GetMask("Interactable"));
         foreach (Collider col in colliders) {
-            if (col.TryGetComponent(out Controller_Bottle bottle)) {
-                theirBottles.Add(bottle);
-                bottle.AddOwner(this);
+            if (col.TryGetComponent(out Controller_Drink Drink)) {
+                theirDrinks.Add(Drink);
+                Drink.AddOwner(this);
             }
         }
     }
@@ -42,8 +42,8 @@ public class Controller_Drinker : Controller_Person
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
-        foreach (Controller_Bottle bottle in theirBottles) {
-            Gizmos.DrawLine(seeFromTransform.position, bottle.transform.position);
+        foreach (Controller_Drink Drink in theirDrinks) {
+            Gizmos.DrawLine(seeFromTransform.position, Drink.transform.position);
         }
     }
 }

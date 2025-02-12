@@ -34,7 +34,7 @@ public class Manager_Game : MonoBehaviour
         var damageTaken = Manager_Hazards.Instance.GetDamageCount();
         
         // Stealing Metrics
-        var stolenDrinks = Manager_Bottles.Instance.GetBottlesStolenCount();
+        var stolenDrinks = Manager_Drinks.Instance.GetDrinksStolenCount();
 
         // Calculations
         var baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);

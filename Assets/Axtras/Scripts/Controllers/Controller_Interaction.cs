@@ -15,7 +15,7 @@ public class Controller_Interaction : MonoBehaviour
 
     [Header("Interaction Settings")]
     [SerializeField] private KeyCode interactKey = KeyCode.E;
-    private Controller_Bottle currentBottle;
+    private Controller_Drink currentDrink;
     private Controller_Fountain currentFountain;
 
     [Header("Stealing Settings")]
@@ -46,9 +46,9 @@ public class Controller_Interaction : MonoBehaviour
         // Interacting key
         if (Input.GetKeyDown(interactKey)) {
             Debug.Log("Interacting");
-            if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                currentBottle = bottle;
-                currentBottle.ConsumeBottle(buyOrSteal: "buy");
+            if (hit.transform.TryGetComponent(out Controller_Drink Drink)) {
+                currentDrink = Drink;
+                currentDrink.ConsumeDrink(buyOrSteal: "buy");
             }
             else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
                 currentFountain = fountain;
@@ -56,7 +56,7 @@ public class Controller_Interaction : MonoBehaviour
             }
         }
         else if (Input.GetKeyUp(interactKey)) {
-            if (currentBottle != null) {
+            if (currentDrink != null) {
             }
             if (currentFountain != null) {
                 currentFountain.ControlDrinking();
@@ -66,9 +66,9 @@ public class Controller_Interaction : MonoBehaviour
 
         // Stealing key
         if (Input.GetKeyDown(stealKey)) {
-            Debug.Log("Stealing bottle");
-            if (hit.transform.TryGetComponent(out Controller_Bottle bottle)) {
-                bottle.ConsumeBottle(buyOrSteal: "steal");
+            Debug.Log("Stealing Drink");
+            if (hit.transform.TryGetComponent(out Controller_Drink Drink)) {
+                Drink.ConsumeDrink(buyOrSteal: "steal");
             }
         }
         

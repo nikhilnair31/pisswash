@@ -3,7 +3,7 @@
 ## Todo
 
 - [ ] Update level designs to match AI suggestion
-- [ ] Add water bottle, beer, whiskey and mystery shots; each with different effects
+- [ ] Add water Drink, beer, whiskey and mystery shots; each with different effects
 - [ ] Implement bonus objectives
 
 ## Done

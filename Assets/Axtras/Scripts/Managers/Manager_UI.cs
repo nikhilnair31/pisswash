@@ -104,8 +104,8 @@ public class Manager_UI : MonoBehaviour
             $"\n" +
             $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"]}\n" +
             $"\n" +
-            $"{"Bottles Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
-            $"{"Bottles Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
+            $"{"Drinks Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
+            $"{"Drinks Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
             $"\n" +
             $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"]}\n" +
             $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"]}\n";
