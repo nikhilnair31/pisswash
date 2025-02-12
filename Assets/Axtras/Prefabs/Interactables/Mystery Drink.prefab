@@ -133,6 +133,8 @@ MonoBehaviour:
   bought: 0
   stolen: 0
   drinkType: 2
+  drinkClips:
+  - {fileID: 8300000, guid: d8b87e3a32979b34297af565a9b1cdce, type: 3}
 --- !u!114 &3159309622493875644
 MonoBehaviour:
   m_ObjectHideFlags: 0

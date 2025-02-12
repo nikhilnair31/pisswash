@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drinkTypesSO:
   - {fileID: 11400000, guid: bace946e7b0ac2042ac31f55a35bbc1a, type: 2}
-  - {fileID: 11400000, guid: 557bee7f9e27fc64b928a63731f1bc05, type: 2}
+  - {fileID: 11400000, guid: b1c248804cbdef2478a0bed43915ead4, type: 2}
   - {fileID: 11400000, guid: 36d2b37f3c62c224e96dd38acd9255e6, type: 2}
   allDrinks: []
 --- !u!114 &8742985393100667556

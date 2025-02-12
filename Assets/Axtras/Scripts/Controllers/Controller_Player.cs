@@ -15,7 +15,6 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float crouchHeight = 1f;
     private Rigidbody rb;
-    private Vector3 previousPosition;
     private Vector3 moveDirection;
     private bool isMoving = false;
     private float speedMul = 1f;
@@ -117,7 +116,10 @@ public class Controller_Player : MonoBehaviour
         else {
             footstepTimer = 0f;
         }
-        previousPosition = transform.position;
+    }
+    
+    public AudioSource GetAudioSource() {
+        return audioSource;
     }
 
     public void SetCanMoveAndLook(bool active) {

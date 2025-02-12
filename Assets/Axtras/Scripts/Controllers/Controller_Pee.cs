@@ -46,7 +46,7 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private ParticleSystem peePS;
 
     [Header("Audio Settings")]
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource peeAudioSource;
     [SerializeField] private AudioClip[] peeClips;
     #endregion
 
@@ -76,12 +76,12 @@ public class Controller_Pee : MonoBehaviour
             isPeeing = true;
             peeStartTime = Time.time;
             peePS.Play();
-            audioSource.Play();
+            peeAudioSource.Play();
         }
         else if (Input.GetMouseButtonUp(0)) {
             isPeeing = false;
             peePS.Stop();
-            audioSource.Stop();
+            peeAudioSource.Stop();
             CalcPeeVol();
         }
 

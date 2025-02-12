@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 
 public class Controller_Drink : Controller_Interactables 
 {
@@ -46,12 +47,12 @@ public class Controller_Drink : Controller_Interactables
     }
     private void TryBuyDrink() {
         var hasMoney = Manager_Money.Instance.GetHasMoneyToBuy();
-        var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
 
         if (hasMoney && canBeBought && !bought) {
             bought = true;
             
             // Increase hydration
+            var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
             if (!isPeeFull)
                 Controller_Pee.Instance.AddPeeAmount(selectedDrink.increaseHydrationAmount);
 
@@ -62,7 +63,7 @@ public class Controller_Drink : Controller_Interactables
 
             // Play the consumption effect
             selectedDrink.StartConsumptionEffect();
-            
+
             gameObject.SetActive(false);
         }
         else {
