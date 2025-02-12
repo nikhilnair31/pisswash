@@ -16,6 +16,7 @@ public class Manager_Stains : MonoBehaviour
     public static Manager_Stains Instance { get; private set; }
 
     [Header("Stains Settings")]
+    [SerializeField] public List<Type_Stain> stainTypesSO;
     [SerializeField] private List<Stain> allStains;
     #endregion
 

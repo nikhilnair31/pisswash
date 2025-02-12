@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e671f52ce4005b4996aed90fa3ea9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allBottles: []
+  drinkTypesSO:
+  - {fileID: 11400000, guid: bace946e7b0ac2042ac31f55a35bbc1a, type: 2}
+  - {fileID: 11400000, guid: 557bee7f9e27fc64b928a63731f1bc05, type: 2}
+  - {fileID: 11400000, guid: 36d2b37f3c62c224e96dd38acd9255e6, type: 2}
+  allDrinks: []
 --- !u!114 &8742985393100667556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d490e69ab7004e45b8ab909f9968aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stainTypesSO:
+  - {fileID: 11400000, guid: 30dc8e26e642f8949b3150fe4f4cc277, type: 2}
+  - {fileID: 11400000, guid: 0d2e595d495d470458f7ab1c78e58fe9, type: 2}
+  - {fileID: 11400000, guid: 1f82709a7d372fc4c9eaabadfd03d925, type: 2}
   allStains: []
 --- !u!114 &2674905942562452776
 MonoBehaviour:

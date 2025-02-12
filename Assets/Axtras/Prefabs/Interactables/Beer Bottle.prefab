@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6616973298235789724}
   m_Layer: 6
   m_Name: Beer Bottle
-  m_TagString: Bottle
+  m_TagString: Drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,10 +133,6 @@ MonoBehaviour:
   bought: 0
   stolen: 0
   drinkType: 0
-  typeDrinkSO:
-  - {fileID: 11400000, guid: bace946e7b0ac2042ac31f55a35bbc1a, type: 2}
-  - {fileID: 11400000, guid: 557bee7f9e27fc64b928a63731f1bc05, type: 2}
-  - {fileID: 11400000, guid: 36d2b37f3c62c224e96dd38acd9255e6, type: 2}
 --- !u!114 &6616973298235789724
 MonoBehaviour:
   m_ObjectHideFlags: 0

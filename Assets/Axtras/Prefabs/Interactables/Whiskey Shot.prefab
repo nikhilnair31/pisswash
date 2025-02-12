@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5602174831348440554}
   m_Layer: 6
   m_Name: Whiskey Shot
-  m_TagString: Bottle
+  m_TagString: Drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,14 +128,11 @@ MonoBehaviour:
   addBoxCollider: 0
   showThisText: '[E] drink - [F] steal'
   showForTime: -1
+  canBeBought: 1
+  canBeStolen: 1
   bought: 0
   stolen: 0
-  ownerDrinkers: []
-  bottleType: 1
-  increaseHydrationAmount: 35
-  canBeBought: 1
-  buyCost: 7
-  notEnoughMoneyStr: Not enough money!
+  drinkType: 1
 --- !u!114 &5602174831348440554
 MonoBehaviour:
   m_ObjectHideFlags: 0
