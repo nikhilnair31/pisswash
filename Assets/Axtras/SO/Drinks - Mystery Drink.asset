@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531d89f6d6a36574e9a53aea4e855944, type: 3}
+  m_Script: {fileID: 11500000, guid: 03aed3cc727345f478394aaee46c5450, type: 3}
   m_Name: Drinks - Mystery Drink
   m_EditorClassIdentifier: 
   type: 2
-  increaseHydrationAmount: 10
-  buyCost: 5
+  increaseHydrationAmount: 40
+  buyCost: 15

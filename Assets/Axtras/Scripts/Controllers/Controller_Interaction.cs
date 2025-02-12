@@ -45,14 +45,14 @@ public class Controller_Interaction : MonoBehaviour
     private void HandleInteractable() {
         // Interacting key
         if (Input.GetKeyDown(interactKey)) {
-            Debug.Log("Interacting");
-            if (hit.transform.TryGetComponent(out Controller_Drink Drink)) {
-                currentDrink = Drink;
-                currentDrink.ConsumeDrink(buyOrSteal: "buy");
+            Debug.Log($"Interacting: {hit.transform}");
+            if (hit.transform.TryGetComponent(out Controller_Drink drink)) {
+                currentDrink = drink;
+                drink.ConsumeDrink(buyOrSteal: "buy");
             }
             else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
                 currentFountain = fountain;
-                currentFountain.ControlDrinking();
+                fountain.ControlDrinking();
             }
         }
         else if (Input.GetKeyUp(interactKey)) {
@@ -67,8 +67,8 @@ public class Controller_Interaction : MonoBehaviour
         // Stealing key
         if (Input.GetKeyDown(stealKey)) {
             Debug.Log("Stealing Drink");
-            if (hit.transform.TryGetComponent(out Controller_Drink Drink)) {
-                Drink.ConsumeDrink(buyOrSteal: "steal");
+            if (hit.transform.TryGetComponent(out Controller_Drink drink)) {
+                drink.ConsumeDrink(buyOrSteal: "steal");
             }
         }
         

@@ -5,8 +5,6 @@ using System.Linq;
 public class Controller_Drink : Controller_Interactables 
 {
     #region Vars
-    public enum DrinkType { Beer, Whiskey, Mystery }
-
     [Header("Status Settings")]
     [SerializeField] private bool canBeBought = true;
     [SerializeField] private bool canBeStolen = true;
@@ -14,7 +12,7 @@ public class Controller_Drink : Controller_Interactables
     public bool stolen = false;
 
     [Header("Type Settings")]
-    [SerializeField] private DrinkType drinkType;
+    [SerializeField] private Manager_Drinks.DrinkType drinkType;
     private Type_Drink selectedDrink;
 
     private readonly List<Controller_Drinker> ownerDrinkers = new ();
@@ -27,30 +25,30 @@ public class Controller_Drink : Controller_Interactables
     private void InitDrink() {
         selectedDrink = null;
         switch (drinkType) {
-            case DrinkType.Beer:
-                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == DrinkType.Beer);
+            case Manager_Drinks.DrinkType.Beer:
+                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == Manager_Drinks.DrinkType.Beer);
                 break;
-            case DrinkType.Whiskey:
-                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == DrinkType.Whiskey);
+            case Manager_Drinks.DrinkType.Whiskey:
+                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == Manager_Drinks.DrinkType.Whiskey);
                 break;
-            case DrinkType.Mystery:
-                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == DrinkType.Mystery);
+            case Manager_Drinks.DrinkType.Mystery:
+                selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == Manager_Drinks.DrinkType.Mystery);
                 break;
         }
     }
 
     public void ConsumeDrink(string buyOrSteal) {
         if (buyOrSteal == "buy")
-            BuyDrink();
-        else if (buyOrSteal == "steal")
+            TryBuyDrink();
+        
+        if (buyOrSteal == "steal")
             StealDrink();
     }
-    private void BuyDrink() {
+    private void TryBuyDrink() {
         var hasMoney = Manager_Money.Instance.GetHasMoneyToBuy();
         var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
-        var canBuy = canBeBought;
 
-        if (hasMoney && canBuy) {
+        if (hasMoney && canBeBought && !bought) {
             bought = true;
             
             // Increase hydration
@@ -61,6 +59,9 @@ public class Controller_Drink : Controller_Interactables
             Manager_Money.Instance.UpdateMoney(-selectedDrink.buyCost);
             // Update drinks bought
             Manager_SaveLoad.Instance.SaveStatData("drinksBought", "add", 1);
+
+            // Play the consumption effect
+            selectedDrink.StartConsumptionEffect();
             
             gameObject.SetActive(false);
         }
@@ -75,7 +76,6 @@ public class Controller_Drink : Controller_Interactables
     }
     private void StealDrink() {
         stolen = true;
-        var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
 
         // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
@@ -94,6 +94,7 @@ public class Controller_Drink : Controller_Interactables
         }
 
         // Increase hydration
+        var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
         if (!isPeeFull)
             Controller_Pee.Instance.AddPeeAmount(selectedDrink.increaseHydrationAmount);
         
@@ -101,6 +102,9 @@ public class Controller_Drink : Controller_Interactables
         Manager_Money.Instance.UpdateMoney(0);
         // Update drinks stolen
         Manager_SaveLoad.Instance.SaveStatData("drinksStolen", "add", 1);
+
+        // Play the consumption effect
+        selectedDrink.StartConsumptionEffect();
 
         gameObject.SetActive(false);
     }

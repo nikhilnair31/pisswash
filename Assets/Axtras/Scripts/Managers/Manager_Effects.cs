@@ -103,13 +103,13 @@ public class Manager_Effects : MonoBehaviour
     public void ApplyEffect(Collision other, Controller_Stain stain) {
         if (other.transform.CompareTag("Player")) {
             switch (stain.stainType) {
-                case Controller_Stain.StainType.Acid:
+                case Manager_Stains.StainType.Acid:
                     Manager_Hazards.Instance.AddDamage();
                     break;
-                case Controller_Stain.StainType.Booze:
+                case Manager_Stains.StainType.Booze:
                     Controller_Player.Instance.SetSpeedMoveAndLook(stain.speedReductionMul);
                     break;
-                case Controller_Stain.StainType.Puke:
+                case Manager_Stains.StainType.Puke:
                     break;
             }
         }

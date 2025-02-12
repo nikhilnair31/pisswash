@@ -15,6 +15,8 @@ public class Manager_Stains : MonoBehaviour
     #region Vars
     public static Manager_Stains Instance { get; private set; }
 
+    public enum StainType { Acid, Booze, Puke }
+
     [Header("Stains Settings")]
     [SerializeField] public List<Type_Stain> stainTypesSO;
     [SerializeField] private List<Stain> allStains;

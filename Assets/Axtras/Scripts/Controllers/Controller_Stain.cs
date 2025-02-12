@@ -5,13 +5,11 @@ using System.Linq;
 
 public class Controller_Stain : MonoBehaviour 
 {
-    public enum StainType { Acid, Booze, Puke }
-
     #region Vars
     private DecalProjector decalProjector;
 
     [Header("Type Settings")]
-    [SerializeField] public StainType stainType;
+    [SerializeField] public Manager_Stains.StainType stainType;
     private Type_Stain selectedStain;
     
     [Header("Booze Properties")]
@@ -31,14 +29,14 @@ public class Controller_Stain : MonoBehaviour
     private void InitEffect() {
         selectedStain = null;
         switch (stainType) {
-            case StainType.Acid:
-                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == StainType.Acid);
+            case Manager_Stains.StainType.Acid:
+                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Acid);
                 break;
-            case StainType.Booze:
-                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == StainType.Booze);
+            case Manager_Stains.StainType.Booze:
+                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Booze);
                 break;
-            case StainType.Puke:
-                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == StainType.Puke);
+            case Manager_Stains.StainType.Puke:
+                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Puke);
                 transform.DOScale(transform.localScale * scaleAmount, scaleTime);
                 break;
         }

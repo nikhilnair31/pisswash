@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 531d89f6d6a36574e9a53aea4e855944, type: 3}
-  m_Name: Drinks - Whiskey Shots
+  m_Script: {fileID: 11500000, guid: 4d01fed161f96584bb33a9b8d3bda0db, type: 3}
+  m_Name: Drinks - Whiskey Shot
   m_EditorClassIdentifier: 
   type: 1
-  increaseHydrationAmount: 50
-  buyCost: 15
+  increaseHydrationAmount: 25
+  buyCost: 7

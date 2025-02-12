@@ -5,6 +5,8 @@ public class Manager_Drinks : MonoBehaviour
 {
     #region Vars
     public static Manager_Drinks Instance { get; private set; }
+    
+    public enum DrinkType { Beer, Whiskey, Mystery }
 
     [Header("Drinks Settings")]
     [SerializeField] public List<Type_Drink> drinkTypesSO;
