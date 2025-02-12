@@ -107,10 +107,8 @@ public class Controller_Player : MonoBehaviour
     }
 
     private void PlayFootsteps() {
-        bool hasMoved = Vector3.Distance(transform.position, previousPosition) > 0.01f;
-        if (isMoving && hasMoved && rb.linearVelocity.magnitude > 1f) {
+        if (isMoving) {
             footstepTimer += Time.deltaTime;
-
             if (footstepTimer >= footstepInterval) {
                 Helper.Instance.PlayRandAudio(audioSource, footstepClips);
                 footstepTimer = 0f;
