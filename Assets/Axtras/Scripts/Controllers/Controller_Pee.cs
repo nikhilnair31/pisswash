@@ -76,10 +76,12 @@ public class Controller_Pee : MonoBehaviour
             isPeeing = true;
             peeStartTime = Time.time;
             peePS.Play();
+            audioSource.Play();
         }
         else if (Input.GetMouseButtonUp(0)) {
             isPeeing = false;
             peePS.Stop();
+            audioSource.Stop();
             CalcPeeVol();
         }
 
@@ -101,8 +103,6 @@ public class Controller_Pee : MonoBehaviour
                 currPeeAmount -= Time.deltaTime * peeEmptyRate;
 
                 peeDuration += Time.deltaTime;
-
-                Helper.Instance.PlayRandAudio(audioSource, peeClips);
             }
             else if (currPeeAmount <= 0f) {
                 currPeeAmount = 0f;
