@@ -233,7 +233,7 @@ public class Manager_Effects : MonoBehaviour
         audioSource.Stop();
     }
     
-    public void StartSlipEffectsSeq() {
+    public void StartSlipEffectsSeq(float time = 1f) {
         if (slipSequence != null) return;
 
         slipSequence = DOTween.Sequence()
@@ -242,12 +242,11 @@ public class Manager_Effects : MonoBehaviour
                 Helper.Instance.PlayRandAudio(audioSource, slipClips);
             })
             .Join(
-                cam.transform.DOShakePosition(shakeTime, 1f, 10, 90, false, true)
+                cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Join(
-                Controller_Player.Instance.transform.DORotate(new Vector3(0, 360, 0), shakeTime, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Incremental)
+                Controller_Player.Instance.transform.DORotate(new Vector3(0, 360, 0), time, RotateMode.FastBeyond360).SetLoops(3, LoopType.Incremental)
             )
-            .AppendInterval(shakeTime)
             .OnComplete(() => {
                 StopSlipEffectsSeq();
             });
