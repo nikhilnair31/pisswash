@@ -31,7 +31,7 @@ public class Manager_Game : MonoBehaviour
         // Risk Metrics
         var stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
         var stonesAcquired = Controller_Pee.Instance.GetStonesAcquiredCount();
-        var damageTaken = Manager_Hazards.Instance.GetDamageCount();
+        var slapTaken = Manager_Drinks.Instance.GetStealSlap();
         
         // Stealing Metrics
         var stolenDrinks = Manager_Drinks.Instance.GetDrinksStolenCount();
@@ -41,8 +41,8 @@ public class Manager_Game : MonoBehaviour
         
         // Penalties
         var stonePenalty = stonesAcquired * 2f; // -2% per stone risked
-        var damagePenalty = damageTaken * 5f; // -5% per electric shock
-        var totalPenalties = Mathf.Min(stonePenalty + damagePenalty, 30f); // Cap penalties
+        var slapPenalty = slapTaken * 5f; // -5% per electric shock
+        var totalPenalties = Mathf.Min(stonePenalty + slapPenalty, 30f); // Cap penalties
 
         // Bonuses
         var stoneBonus = stonesPassed * 5f; // +5% per successfully passed stone
@@ -57,11 +57,11 @@ public class Manager_Game : MonoBehaviour
             $"stainScore: {stainScore}\n\n" +
             $"stonesPassed: {stonesPassed}\n" +
             $"stonesAcquired: {stonesAcquired}\n" +
-            $"damageTaken: {damageTaken}\n\n" +
+            $"slapTaken: {slapTaken}\n\n" +
             $"stolenDrinks: {stolenDrinks}\n\n" +
             $"baseScore: {baseScore}\n\n" +
             $"stonePenalty: {stonePenalty}\n" +
-            $"damagePenalty: {damagePenalty}\n" +
+            $"slapPenalty: {slapPenalty}\n" +
             $"totalPenalties: {totalPenalties}\n\n" +
             $"stoneBonus: {stoneBonus}\n" +
             $"stealMultiplier: {stealMultiplier}\n" +

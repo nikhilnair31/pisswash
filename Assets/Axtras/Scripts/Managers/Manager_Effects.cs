@@ -8,28 +8,29 @@ public class Manager_Effects : MonoBehaviour
 {
     #region Vars
     public static Manager_Effects Instance { get; private set; }
-
-    [Header("Mouse Settings")]
-    [SerializeField] private float slapShakeDuration = 2f;
-
-    [Header("Visuals Settings")]
-    [SerializeField] private CinemachineCamera cam;
+    
+    private GameObject playerGO;
+    private CinemachineCamera cam;
+    private ParticleSystem peePS;
     private CinemachineVolumeSettings postProcessVolume;
     private Vignette vignette;
     private LensDistortion lensDistortion;
     private SplitToning splitToning;
+    private Sequence stunSequence;
+    private Sequence slipSequence;
+    private Sequence damageSequence;
+    private Coroutine kidneyStoneEffectCoroutine;
+    private Coroutine kidneyStonePassBoostCoroutine;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] slapClips;
     [SerializeField] private AudioClip[] earsRingingClips;
+    [SerializeField] private AudioClip[] slipClips;
+    [SerializeField] private AudioClip[] damageClips;
 
-    [Header("Pee Settings")]
-    [SerializeField] private ParticleSystem peePS;
-
-    [Header("Kidney Stone Settings")]
-    private Coroutine kidneyStoneEffectCoroutine;
-    private Coroutine kidneyStonePassBoostCoroutine;
+    [Header("Stun Settings")]
+    [SerializeField] private float shakeTime = 2f;
     #endregion
 
     private void Awake() {
@@ -45,8 +46,12 @@ public class Manager_Effects : MonoBehaviour
         ResetLevelOverEffects();
     }
     private void GetInitComponents() {
-        if(cam == null) cam = GetComponentInChildren<CinemachineCamera>();
-        if(peePS == null) peePS = GetComponentInChildren<ParticleSystem>();
+        if(cam == null) 
+            cam = FindAnyObjectByType<CinemachineCamera>();
+        if(playerGO == null) 
+            playerGO = GameObject.FindWithTag("Player");
+        if(peePS == null) 
+            peePS = playerGO.GetComponentInChildren<ParticleSystem>();
     }
     private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);
@@ -109,7 +114,7 @@ public class Manager_Effects : MonoBehaviour
         if (other.transform.CompareTag("Player")) {
             switch (stain.stainType) {
                 case Manager_Stains.StainType.Acid:
-                    Manager_Hazards.Instance.AddDamage();
+                    StartDamageEffectsSeq();
                     break;
                 case Manager_Stains.StainType.Booze:
                     Controller_Player.Instance.SetSpeedMoveAndLook(stain.speedReductionMul);
@@ -152,19 +157,17 @@ public class Manager_Effects : MonoBehaviour
         img.color = tempColor;
     }
 
-    public void SeqDamageEffects() {
-        DOTween.Sequence()
+    public void StartDamageEffectsSeq(float time = 0.3f) {
+        if (damageSequence != null) return;
+
+        damageSequence = DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
-                Helper.Instance.PlayRandAudio(audioSource, slapClips);
-            })
-            .AppendInterval(0.5f) // Adjust the interval as needed
-            .AppendCallback(() => {
-                Helper.Instance.PlayRandAudio(audioSource, earsRingingClips);
+                Helper.Instance.PlayRandAudio(audioSource, damageClips);
             })
             .Join(
-                cam.transform.DOShakePosition(slapShakeDuration, 1f, 10, 90, false, true)
+                cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
@@ -172,11 +175,88 @@ public class Manager_Effects : MonoBehaviour
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, slapShakeDuration)
+                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, time)
             )
             .OnComplete(() => {
-                Controller_Player.Instance.SetCanMoveAndLook(true);
-                audioSource.Stop(); // Stop the ringing sound
+                StopDamageEffectsSeq();
             });
+    }
+    public void StopDamageEffectsSeq() {
+        damageSequence.Kill();
+        damageSequence = null;
+
+        var damageImageColor = Manager_UI.Instance.GetDamageImageUI().color;
+        damageImageColor.a = 0f;
+        Manager_UI.Instance.GetDamageImageUI().color = damageImageColor;
+
+        Controller_Player.Instance.SetCanMoveAndLook(true);
+        audioSource.Stop();
+    }
+    
+    public void StartStunEffectsSeq() {
+        if (stunSequence != null) return;
+
+        stunSequence = DOTween.Sequence()
+            .OnStart(() => {
+                Controller_Player.Instance.SetCanMoveAndLook(false);
+                Manager_UI.Instance.GetDamageImageUI().color = Color.red;
+                Helper.Instance.PlayRandAudio(audioSource, slapClips);
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() => {
+                Helper.Instance.PlayRandAudio(audioSource, earsRingingClips);
+            })
+            .Join(
+                cam.transform.DOShakePosition(shakeTime, 1f, 10, 90, false, true)
+            )
+            .Insert(
+                0f,
+                Manager_UI.Instance.GetDamageImageUI().DOFade(1f, 0.05f)
+            )
+            .Insert(
+                0f,
+                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, shakeTime)
+            )
+            .OnComplete(() => {
+                StopStunEffectsSeq();
+            });
+    }
+    public void StopStunEffectsSeq() {
+        stunSequence.Kill();
+        stunSequence = null;
+
+        var damageImageColor = Manager_UI.Instance.GetDamageImageUI().color;
+        damageImageColor.a = 0f;
+        Manager_UI.Instance.GetDamageImageUI().color = damageImageColor;
+
+        Controller_Player.Instance.SetCanMoveAndLook(true);
+        audioSource.Stop();
+    }
+    
+    public void StartSlipEffectsSeq() {
+        if (slipSequence != null) return;
+
+        slipSequence = DOTween.Sequence()
+            .OnStart(() => {
+                Controller_Player.Instance.SetCanMoveAndLook(false);
+                Helper.Instance.PlayRandAudio(audioSource, slipClips);
+            })
+            .Join(
+                cam.transform.DOShakePosition(shakeTime, 1f, 10, 90, false, true)
+            )
+            .Join(
+                Controller_Player.Instance.transform.DORotate(new Vector3(0, 360, 0), shakeTime, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Incremental)
+            )
+            .AppendInterval(shakeTime)
+            .OnComplete(() => {
+                StopSlipEffectsSeq();
+            });
+    }
+    public void StopSlipEffectsSeq() {
+        slipSequence.Kill();
+        slipSequence = null;
+
+        Controller_Player.Instance.SetCanMoveAndLook(true);
+        audioSource.Stop();
     }
 }

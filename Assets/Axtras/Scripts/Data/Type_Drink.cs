@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Drink", menuName = "Scriptable Objects/Drinks/Drink", order = 1)]
 public class Type_Drink : ScriptableObject 
 {
+    #region Vars
     [Header("Type Settings")]
     [SerializeField] public Manager_Drinks.DrinkType type;
 
@@ -14,6 +15,7 @@ public class Type_Drink : ScriptableObject
 
     [Header("Audio Settings")]
     [SerializeField] private AudioClip[] drinkClips;
+    #endregion
 
     public virtual void StartConsumptionEffect() {
         Debug.Log($"Drink StartConsumptionEffect");

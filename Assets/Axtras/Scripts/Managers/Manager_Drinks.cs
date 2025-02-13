@@ -11,6 +11,7 @@ public class Manager_Drinks : MonoBehaviour
     [Header("Drinks Settings")]
     [SerializeField] public List<Type_Drink> drinkTypesSO;
     [SerializeField] private List<Controller_Drink> allDrinks;
+    public int slapTaken = 0;
     #endregion
 
     private void Awake() {
@@ -41,4 +42,11 @@ public class Manager_Drinks : MonoBehaviour
 
         return stolenDrinksCnt;
     } 
+    public int GetStealSlap() {
+        return slapTaken;
+    }
+    
+    public void SetStealSlap() {
+        slapTaken++;
+    }
 }

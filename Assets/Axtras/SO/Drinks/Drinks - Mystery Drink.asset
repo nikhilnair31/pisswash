@@ -15,3 +15,5 @@ MonoBehaviour:
   type: 2
   increaseHydrationAmount: 40
   buyCost: 15
+  drinkClips:
+  - {fileID: 8300000, guid: d8b87e3a32979b34297af565a9b1cdce, type: 3}

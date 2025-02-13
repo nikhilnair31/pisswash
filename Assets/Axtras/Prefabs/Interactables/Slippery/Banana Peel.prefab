@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 594099337980939185}
   - component: {fileID: 2993607700206606893}
   - component: {fileID: 5918313588428660908}
+  - component: {fileID: -1775019574370705879}
   m_Layer: 0
   m_Name: Banana Peel
   m_TagString: Untagged
@@ -102,9 +103,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 25, y: 0.1, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1775019574370705879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119440555604627956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68beda8520ef46747ba09303fdcbaa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
