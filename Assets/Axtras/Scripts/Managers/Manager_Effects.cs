@@ -102,9 +102,9 @@ public class Manager_Effects : MonoBehaviour
             visionDistortionMaterial.SetFloat(DistortionProperty, 0.01f);
     }
     
-    public void ApplySaturationAndVignette(float saturationChange, float vignetteChange, float duration) {
-        currentSaturation = Mathf.Clamp(currentSaturation + saturationChange, minSaturation, maxSaturation);
-        currentVignette = Mathf.Clamp(currentVignette + vignetteChange, minVignette, maxVignette);
+    public void ApplySaturationAndVignette(float saturationMul, float vignetteMul, float duration) {
+        currentSaturation = Mathf.Clamp(currentSaturation * saturationMul, minSaturation, maxSaturation);
+        currentVignette = Mathf.Clamp(currentVignette * vignetteMul, minVignette, maxVignette);
 
         DOTween.Kill("SaturationVignette");
         DOTween.Sequence().SetId("SaturationVignette")

@@ -13,13 +13,13 @@ public class Type_Drink_Mystery : Type_Drink
 
     [Header("Movement Settings")]
     [SerializeField] private float movementChangeChance = 0.5f;
-    [SerializeField] private float speedReducMul = 10f;
+    [SerializeField] private float speedReducMul = 0.7f;
     
     [Header("Visuals Settings")]
     [SerializeField] private float visualsChangeChance = 0.5f;
-    [SerializeField] private float distortionMul = 1.1f;
-    [SerializeField] private float saturationAmt = 0.1f;
-    [SerializeField] private float vignetteAmt = 0.2f;
+    [SerializeField] private float distortionMul = 1.3f;
+    [SerializeField] private float saturationMul = 1.3f;
+    [SerializeField] private float vignetteMul = 1.3f;
     
     [Header("Audio Settings")]
     [SerializeField] private float audioChangeChance = 0.5f;
@@ -48,53 +48,53 @@ public class Type_Drink_Mystery : Type_Drink
         // small increase in hydration
         if (Helper.Instance.TriggerBool(hydrationChangeChance))
             Controller_Pee.Instance.AddPeeAmount(
-                Helper.Instance.RandShiftVal(incrHydrationAmt, randPerc)
+                Helper.Instance.RandShiftVal(incrHydrationAmt)
             );
         // small reduction in movement speed
         if (Helper.Instance.TriggerBool(movementChangeChance))
             Manager_Effects.Instance.ApplyMovementMultiplier(
-                Helper.Instance.RandShiftVal(speedReducMul, randPerc), 
-                Helper.Instance.RandShiftVal(duration, randPerc)
+                Helper.Instance.RandShiftVal(speedReducMul), 
+                Helper.Instance.RandShiftVal(duration)
             );
         // small vision distortion
         if (Helper.Instance.TriggerBool(visualsChangeChance))
             Manager_Effects.Instance.ApplyVisionDistortion(
-                Helper.Instance.RandShiftVal(distortionMul, randPerc), 
-                Helper.Instance.RandShiftVal(duration, randPerc)
+                Helper.Instance.RandShiftVal(distortionMul), 
+                Helper.Instance.RandShiftVal(duration)
             );
         
         // random reduction in all audio source's pitch
         if (Helper.Instance.TriggerBool(audioChangeChance))
             Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(
-                Helper.Instance.RandShiftVal(pitchShiftPerc, randPerc)
+                Helper.Instance.RandShiftVal(pitchShiftPerc)
             );
         // random visual values
         if (Helper.Instance.TriggerBool(visualsChangeChance))
             Manager_Effects.Instance.ApplySaturationAndVignette(
-                Helper.Instance.RandShiftVal(saturationAmt, randPerc),
-                Helper.Instance.RandShiftVal(vignetteAmt, randPerc),
-                Helper.Instance.RandShiftVal(duration, randPerc)
+                Helper.Instance.RandShiftVal(saturationMul),
+                Helper.Instance.RandShiftVal(vignetteMul),
+                Helper.Instance.RandShiftVal(duration)
             );
         
         // random chance of money increase/decrease
         if (Helper.Instance.TriggerBool(moneyChangeChance))
             Manager_Money.Instance.UpdateMoney(
-                Helper.Instance.RandShiftVal(moneyAmt, randPerc)
+                Helper.Instance.RandShiftVal(moneyAmt)
             );
         // random chance of timer increase/decrease
         if (Helper.Instance.TriggerBool(timeChangeChance))
             Manager_Timer.Instance.AddTimerAmt(
-                Helper.Instance.RandShiftVal(timeAmt, randPerc)
+                Helper.Instance.RandShiftVal(timeAmt)
             );
         // random chance of slipping
         if (Helper.Instance.TriggerBool(slipChangeChance))
             Manager_Effects.Instance.StartSlipEffectsSeq(
-                Helper.Instance.RandShiftVal(slipTimeAmt, randPerc)
+                Helper.Instance.RandShiftVal(slipTimeAmt)
             );
         // random chance of stun/damage
         if (Helper.Instance.TriggerBool(stunChangeChance))
             Manager_Effects.Instance.StartStunEffectsSeq(
-                Helper.Instance.RandShiftVal(stunTimeAmt, randPerc)
+                Helper.Instance.RandShiftVal(stunTimeAmt)
             );
         
         // random chance of spawning more stains
