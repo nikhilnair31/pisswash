@@ -242,10 +242,13 @@ public class Manager_Effects : MonoBehaviour
                 Helper.Instance.PlayRandAudio(audioSource, slipClips);
             })
             .Join(
-                cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
+                cam.transform
+                    .DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Join(
-                Controller_Player.Instance.transform.DORotate(new Vector3(0, 360, 0), time, RotateMode.FastBeyond360).SetLoops(3, LoopType.Incremental)
+                Controller_Player.Instance.transform
+                    .DORotate(new Vector3(0, 360, 0), time, RotateMode.FastBeyond360)
+                    .SetLoops(Mathf.CeilToInt(time / 0.9f), LoopType.Incremental)
             )
             .OnComplete(() => {
                 StopSlipEffectsSeq();
