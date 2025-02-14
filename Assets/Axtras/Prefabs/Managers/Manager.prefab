@@ -171,7 +171,10 @@ MonoBehaviour:
   slipClips:
   - {fileID: 8300000, guid: 5d62f5dfb1c8d794b8b1b28468c17af3, type: 3}
   damageClips: []
-  shakeTime: 2
+  visionDistortionMaterial: {fileID: 2100000, guid: 53651c41970d31442a59c120a2f59eff, type: 2}
+  currentDistortionIntensity: 0.01
+  minDistortion: 0
+  maxDistortion: 0.1
 --- !u!82 &3015770420369858612
 AudioSource:
   m_ObjectHideFlags: 0

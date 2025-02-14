@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 5725219954086246380}
-  maxDistance: 5
+  maxDistance: 7
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -346,8 +346,6 @@ MonoBehaviour:
   minFadeMul: 0.1
   maxFadeMul: 1.5
   isDehydrated: 0
-  gameOverInTime: 0
-  maxGameOverInTime: 100
   stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0

@@ -4,11 +4,23 @@ using UnityEngine;
 public class Type_Drink_Beer : Type_Drink 
 {
     #region Vars
+    [Header("Beer Settings")]
+    [SerializeField] private float hydrationAmount = 10f;
+    [SerializeField] private float speedReductionMultiplier = 10f;
+    [SerializeField] private float distortionIntensity = 10f;
+    [SerializeField] private float duration = 6f;
     #endregion
     
     public override void StartConsumptionEffect() {
         base.StartConsumptionEffect();
         
         Debug.Log($"Type_Drink_Beer StartConsumptionEffect");
+
+        // small reduction in movement speed
+        Controller_Player.Instance.SetSpeedMoveAndLook(speedReductionMultiplier);
+        // small increase in hydration
+        Controller_Pee.Instance.AddPeeAmount(hydrationAmount);
+        // small vision distortion
+        Manager_Effects.Instance.ApplyVisionDistortion(distortionIntensity, duration);
     }
 }

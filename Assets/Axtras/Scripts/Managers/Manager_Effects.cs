@@ -12,15 +12,12 @@ public class Manager_Effects : MonoBehaviour
     private GameObject playerGO;
     private CinemachineCamera cam;
     private ParticleSystem peePS;
-    private CinemachineVolumeSettings postProcessVolume;
-    private Vignette vignette;
-    private LensDistortion lensDistortion;
-    private SplitToning splitToning;
     private Sequence stunSequence;
     private Sequence slipSequence;
     private Sequence damageSequence;
     private Coroutine kidneyStoneEffectCoroutine;
     private Coroutine kidneyStonePassBoostCoroutine;
+    private Coroutine visionDistortionCoroutine;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
@@ -29,8 +26,17 @@ public class Manager_Effects : MonoBehaviour
     [SerializeField] private AudioClip[] slipClips;
     [SerializeField] private AudioClip[] damageClips;
 
-    [Header("Stun Settings")]
-    [SerializeField] private float shakeTime = 2f;
+    [Header("Visuals Settings")]
+    [SerializeField] private Material visionDistortionMaterial;
+    [SerializeField] private float currentDistortionIntensity;
+    [SerializeField] private float minDistortion;
+    [SerializeField] private float maxDistortion;
+    private int DistortionProperty = Shader.PropertyToID("_Blend");
+    private CinemachineVolumeSettings postProcessVolume;
+    private ColorAdjustments colorAdjustments;
+    private LensDistortion lensDistortion;
+    private SplitToning splitToning;
+    private Vignette vignette;
     #endregion
 
     private void Awake() {
@@ -56,11 +62,72 @@ public class Manager_Effects : MonoBehaviour
     private void GetVolumeEffects() {
         cam?.TryGetComponent(out postProcessVolume);
         
-        postProcessVolume?.Profile.TryGet(out vignette);
+        postProcessVolume?.Profile.TryGet(out colorAdjustments);
         postProcessVolume?.Profile.TryGet(out lensDistortion);
         postProcessVolume?.Profile.TryGet(out splitToning);
+        postProcessVolume?.Profile.TryGet(out vignette);
     }
 
+    #region Visual Effects
+    public void UpdateLevelOverEffects(float over) {
+        if (vignette != null) 
+            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
+        if (lensDistortion != null) 
+            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, over);
+        if (splitToning != null) 
+            splitToning.balance.value = Mathf.Lerp(-100f, 100f, over);
+    }
+    public void ResetLevelOverEffects() {
+        if (vignette != null)
+            vignette.intensity.value = 0f;
+        if (lensDistortion != null)
+            lensDistortion.intensity.value = 0f;
+        if (splitToning != null)
+            splitToning.balance.value = -100f;
+    }
+
+    public void ApplyVisionDistortion(float intensity, float duration) {
+        if (visionDistortionCoroutine != null) 
+            StopCoroutine(visionDistortionCoroutine);
+
+        // Update current intensity while ensuring it stays within limits
+        currentDistortionIntensity = Mathf.Clamp(currentDistortionIntensity + intensity, minDistortion, maxDistortion);
+
+        // Start the effect coroutine
+        visionDistortionCoroutine = StartCoroutine(VisionDistortionCoroutine(duration));
+    }
+    private IEnumerator VisionDistortionCoroutine(float duration) {
+        float elapsedTime = 0f;
+        float initialIntensity = visionDistortionMaterial.GetFloat(DistortionProperty);
+
+        // Smoothly transition to the new intensity
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            visionDistortionMaterial.SetFloat(DistortionProperty, Mathf.Lerp(initialIntensity, currentDistortionIntensity, t));
+            yield return null;
+        }
+
+        // Delay before reducing the effect
+        yield return new WaitForSeconds(duration * 0.5f);
+
+        // Smoothly fade the effect back down
+        elapsedTime = 0f;
+        float startIntensity = currentDistortionIntensity;
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            currentDistortionIntensity = Mathf.Lerp(startIntensity, 0f, t);
+            visionDistortionMaterial.SetFloat(DistortionProperty, currentDistortionIntensity);
+            yield return null;
+        }
+
+        // Ensure reset after full duration
+        currentDistortionIntensity = Mathf.Max(0f, currentDistortionIntensity);
+    }
+    #endregion
+
+    #region Kidney Stone Effects
     public void SetGotStoneEffect() {
         if (kidneyStoneEffectCoroutine != null) 
             StopCoroutine(kidneyStoneEffectCoroutine);
@@ -108,24 +175,6 @@ public class Manager_Effects : MonoBehaviour
 
         // main.gravityModifier = Mathf.Clamp(main.gravityModifier.constant / rateMul, 0.2f, 2.5f);
         emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / rateMul, 5, 150);
-    }
-
-    #region Visual Effects
-    public void UpdateLevelOverEffects(float over) {
-        if (vignette != null) 
-            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
-        if (lensDistortion != null) 
-            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, over);
-        if (splitToning != null) 
-            splitToning.balance.value = Mathf.Lerp(-100f, 100f, over);
-    }
-    public void ResetLevelOverEffects() {
-        if (vignette != null)
-            vignette.intensity.value = 0f;
-        if (lensDistortion != null)
-            lensDistortion.intensity.value = 0f;
-        if (splitToning != null)
-            splitToning.balance.value = -100f;
     }
     #endregion
 
