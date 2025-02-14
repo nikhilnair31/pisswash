@@ -18,8 +18,6 @@ public class Type_Drink : ScriptableObject
     #endregion
 
     public virtual void StartConsumptionEffect() {
-        Debug.Log($"Drink StartConsumptionEffect");
-            
         // Play drinking audio clip
         var peeAudioSource = Controller_Player.Instance.GetAudioSource();
         Helper.Instance.PlayRandAudio(peeAudioSource, drinkClips);

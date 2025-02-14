@@ -17,8 +17,6 @@ public class Type_Drink_Beer : Type_Drink
     public override void StartConsumptionEffect() {
         base.StartConsumptionEffect();
         
-        // Debug.Log($"Type_Drink_Beer StartConsumptionEffect");
-
         // small increase in hydration
         Controller_Pee.Instance.AddPeeAmount(incrHydrationAmt);
         // small reduction in movement speed

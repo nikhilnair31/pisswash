@@ -45,6 +45,10 @@ public class Manager_Timer : MonoBehaviour
         timer = 0f;
     }
     
+    public void AddTimerAmt(float val) {
+        timer += val;
+    }
+
     public float GetTimeRemainingPerc() {
         return (timer / maxTime) * 100f;
     }
