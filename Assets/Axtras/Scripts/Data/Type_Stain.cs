@@ -12,6 +12,5 @@ public class Type_Stain : ScriptableObject
     #endregion
 
     public virtual void StartInteractionEffect() {
-        Debug.Log($"Stain StartInteractionEffect");
     }
 }

@@ -5,14 +5,13 @@ public class Type_Stain_Booze : Type_Stain
 {
     #region Vars
     [Header("Booze Settings")]
-    [SerializeField] public float speedReductionMul = 0.8f;
+    [SerializeField] public float speedReducMul = 0.8f;
+    [SerializeField] public float speedReducTime = 1f;
     #endregion
     
     public override void StartInteractionEffect() {
         base.StartInteractionEffect();
         
-        Debug.Log($"Booze StartInteractionEffect");
-        
-        Controller_Player.Instance.SetSpeedMoveAndLook(speedReductionMul);
+        Manager_Effects.Instance.ApplyMovementMultiplier(speedReducMul, speedReducTime);
     }
 }

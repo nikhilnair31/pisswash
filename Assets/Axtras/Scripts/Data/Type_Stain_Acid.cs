@@ -4,13 +4,13 @@ using UnityEngine;
 public class Type_Stain_Acid : Type_Stain 
 {
     #region Vars
+    [Header("Acid Settings")]
+    [SerializeField] public float damageTime = 1f;
     #endregion
     
     public override void StartInteractionEffect() {
         base.StartInteractionEffect();
-        
-        Debug.Log($"Acid StartInteractionEffect");
 
-        Manager_Effects.Instance.StartDamageEffectsSeq();
+        Manager_Effects.Instance.StartDamageEffectsSeq(damageTime);
     }
 }

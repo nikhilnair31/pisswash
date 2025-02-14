@@ -8,7 +8,5 @@ public class Type_Stain_Puke : Type_Stain
     
     public override void StartInteractionEffect() {
         base.StartInteractionEffect();
-        
-        Debug.Log($"Puke StartInteractionEffect");
     }
 }

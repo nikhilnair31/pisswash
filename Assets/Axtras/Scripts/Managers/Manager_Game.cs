@@ -25,8 +25,8 @@ public class Manager_Game : MonoBehaviour
 
     public string CalculateScoreLetter() {
         // Base Metrics
-        var timeScore = Manager_Timer.Instance.GetTimeRemainingPerc(); // % of time left
-        var stainScore = Manager_Stains.Instance.GetStainCleanedPerc();
+        var timeLeftPerc = Manager_Timer.Instance.GetTimeRemainingPerc();
+        var stainPerc = Manager_Stains.Instance.GetStainCleanedPerc();
         
         // Risk Metrics
         var stonesPassed = Controller_Pee.Instance.GetStonesPassedCount();
@@ -37,37 +37,21 @@ public class Manager_Game : MonoBehaviour
         var stolenDrinks = Manager_Drinks.Instance.GetDrinksStolenCount();
 
         // Calculations
-        var baseScore = (timeScore * 0.5f) + (stainScore * 0.5f);
+        var baseScore = (timeLeftPerc * 0.4f) + (stainPerc * 0.6f);
         
         // Penalties
-        var stonePenalty = stonesAcquired * 2f; // -2% per stone risked
-        var slapPenalty = slapTaken * 5f; // -5% per electric shock
-        var totalPenalties = Mathf.Min(stonePenalty + slapPenalty, 30f); // Cap penalties
+        var stonePenalty = stonesAcquired * 2f; // -X% per stone risked
+        var slapPenalty = slapTaken * 3f; // -X% per slap
+        var totalPenalties = Mathf.Min(stonePenalty + slapPenalty, 20f); // Cap penalties
 
         // Bonuses
-        var stoneBonus = stonesPassed * 5f; // +5% per successfully passed stone
-        var stealMultiplier = 1f + (0.05f * stolenDrinks); // +5% multiplier per stolen drink
-        var perfectCleanBonus = (stainScore >= 99.9f) ? 10f : 0f;
+        var stoneBonus = stonesPassed * 7f; // +X% per successfully passed stone
+        var stealMultiplier = 1f + (0.1f * stolenDrinks); // +X% multiplier per stolen drink
+        var perfectCleanBonus = (stainPerc >= 99f) ? 10f : 0f;
 
         // Final Score
         var finalScore = (baseScore - totalPenalties + stoneBonus + perfectCleanBonus) * stealMultiplier;
         finalScore = Mathf.Clamp(finalScore, 0f, 100f); // Keep within 0-100 range
-        Debug.Log(
-            $"timeScore: {timeScore}\n" +
-            $"stainScore: {stainScore}\n\n" +
-            $"stonesPassed: {stonesPassed}\n" +
-            $"stonesAcquired: {stonesAcquired}\n" +
-            $"slapTaken: {slapTaken}\n\n" +
-            $"stolenDrinks: {stolenDrinks}\n\n" +
-            $"baseScore: {baseScore}\n\n" +
-            $"stonePenalty: {stonePenalty}\n" +
-            $"slapPenalty: {slapPenalty}\n" +
-            $"totalPenalties: {totalPenalties}\n\n" +
-            $"stoneBonus: {stoneBonus}\n" +
-            $"stealMultiplier: {stealMultiplier}\n" +
-            $"perfectCleanBonus: {perfectCleanBonus}\n\n" +
-            $"finalScore: {finalScore}"
-        );
 
         // Letter Grade
         string grade = finalScore switch {
@@ -79,6 +63,24 @@ public class Manager_Game : MonoBehaviour
             float n when n >= 50 => "D",
             _ => "F"
         };
+        
+        Debug.Log(
+            $"timeLeftPerc: {timeLeftPerc}\n" +
+            $"stainPerc: {stainPerc}\n\n" +
+            $"stonesPassed: {stonesPassed}\n" +
+            $"stonesAcquired: {stonesAcquired}\n" +
+            $"slapTaken: {slapTaken}\n\n" +
+            $"stolenDrinks: {stolenDrinks}\n\n" +
+            $"baseScore: {baseScore}\n\n" +
+            $"stonePenalty: {stonePenalty}\n" +
+            $"slapPenalty: {slapPenalty}\n" +
+            $"totalPenalties: {totalPenalties}\n\n" +
+            $"stoneBonus: {stoneBonus}\n" +
+            $"stealMultiplier: {stealMultiplier}\n" +
+            $"perfectCleanBonus: {perfectCleanBonus}\n\n" +
+            $"finalScore: {finalScore}" +
+            $"grade: {grade}"
+        );
 
         return grade;
     }

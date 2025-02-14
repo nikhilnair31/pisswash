@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Stains - Acid
   m_EditorClassIdentifier: 
   type: 0
-  fadeAmountPerCollision: 0.06
+  fadeAmountPerCollision: 0.04
