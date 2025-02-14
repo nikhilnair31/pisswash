@@ -18,6 +18,7 @@ public class Manager_Effects : MonoBehaviour
     private Coroutine kidneyStoneEffectCoroutine;
     private Coroutine kidneyStonePassBoostCoroutine;
     private Coroutine visionDistortionCoroutine;
+    private Coroutine saturationVignetteCoroutine;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
@@ -31,6 +32,12 @@ public class Manager_Effects : MonoBehaviour
     [SerializeField] private float currentDistortionIntensity;
     [SerializeField] private float minDistortion;
     [SerializeField] private float maxDistortion;
+    [SerializeField] private float currentSaturation;
+    [SerializeField] private float minSaturation;
+    [SerializeField] private float maxSaturation;
+    [SerializeField] private float currentVignette;
+    [SerializeField] private float minVignette;
+    [SerializeField] private float maxVignette;
     private int DistortionProperty = Shader.PropertyToID("_Blend");
     private CinemachineVolumeSettings postProcessVolume;
     private ColorAdjustments colorAdjustments;
@@ -68,6 +75,16 @@ public class Manager_Effects : MonoBehaviour
         postProcessVolume?.Profile.TryGet(out vignette);
     }
 
+    #region Audio Effects
+    public void ApplyAllAudioSourcePitchShift(float perc) {
+        var audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        foreach (var source in audioSources) {
+            source.pitch *= perc;
+            source.pitch = Mathf.Clamp(source.pitch, 0.6f, 1.1f);
+        }
+    }
+    #endregion
+
     #region Visual Effects
     public void UpdateLevelOverEffects(float over) {
         if (vignette != null) 
@@ -84,6 +101,59 @@ public class Manager_Effects : MonoBehaviour
             lensDistortion.intensity.value = 0f;
         if (splitToning != null)
             splitToning.balance.value = -100f;
+    }
+    
+    public void ApplySaturationAndVignette(float saturationChange, float vignetteChange, float duration) {
+        if (saturationVignetteCoroutine != null) 
+            StopCoroutine(saturationVignetteCoroutine);
+
+        // Update and clamp saturation and vignette values
+        currentSaturation = Mathf.Clamp(currentSaturation + saturationChange, minSaturation, maxSaturation);
+        currentVignette = Mathf.Clamp(currentVignette + vignetteChange, minVignette, maxVignette);
+
+        // Start the effect coroutine
+        saturationVignetteCoroutine = StartCoroutine(SaturationVignetteCoroutine(duration));
+    }
+    private IEnumerator SaturationVignetteCoroutine(float duration) {
+        float elapsedTime = 0f;
+        float startSaturation = colorAdjustments.saturation.value;
+        float startVignette = vignette.intensity.value;
+
+        // Smoothly transition to new intensity
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            colorAdjustments.saturation.value = Mathf.Lerp(startSaturation, currentSaturation, t);
+            vignette.intensity.value = Mathf.Lerp(startVignette, currentVignette, t);
+
+            yield return null;
+        }
+
+        // Delay before reducing effect
+        yield return new WaitForSeconds(duration * 0.5f);
+
+        // Smoothly fade back to normal
+        elapsedTime = 0f;
+        float fadeStartSaturation = currentSaturation;
+        float fadeStartVignette = currentVignette;
+        
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+
+            currentSaturation = Mathf.Lerp(fadeStartSaturation, 0f, t);
+            currentVignette = Mathf.Lerp(fadeStartVignette, 0f, t);
+
+            colorAdjustments.saturation.value = currentSaturation;
+            vignette.intensity.value = currentVignette;
+
+            yield return null;
+        }
+
+        // Ensure reset after full duration
+        currentSaturation = Mathf.Max(0f, currentSaturation);
+        currentVignette = Mathf.Max(0f, currentVignette);
     }
 
     public void ApplyVisionDistortion(float intensity, float duration) {

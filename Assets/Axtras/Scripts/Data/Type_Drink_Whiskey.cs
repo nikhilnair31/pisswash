@@ -9,6 +9,9 @@ public class Type_Drink_Whiskey : Type_Drink
     [SerializeField] private float hydrationAmount = 10f;
     [SerializeField] private float speedReductionMultiplier = 10f;
     [SerializeField] private float distortionIntensity = 10f;
+    [SerializeField] private float saturationIncrease = 0.1f;
+    [SerializeField] private float vignetteIncrease = 0.2f;
+    [SerializeField] private float pitchShiftPerc = 0.8f;
     #endregion
     
     public override void StartConsumptionEffect() {
@@ -16,14 +19,16 @@ public class Type_Drink_Whiskey : Type_Drink
         
         Debug.Log($"Type_Drink_Whiskey StartConsumptionEffect");
 
-        // small reduction in movement speed
+        // medium reduction in movement speed
         Controller_Player.Instance.SetSpeedMoveAndLook(speedReductionMultiplier);
-        // small increase in hydration
+        // medium increase in hydration
         Controller_Pee.Instance.AddPeeAmount(hydrationAmount);
-        // small vision distortion
+        // medium vision distortion
         Manager_Effects.Instance.ApplyVisionDistortion(distortionIntensity, duration);
 
         // medium reduction in all audio source's pitch
+        Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(pitchShiftPerc);
         // increased visual saturation and vignette
+        Manager_Effects.Instance.ApplySaturationAndVignette(saturationIncrease, vignetteIncrease, duration);
     }
 }
