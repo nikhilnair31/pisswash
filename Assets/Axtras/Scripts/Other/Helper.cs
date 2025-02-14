@@ -21,4 +21,20 @@ public class Helper : MonoBehaviour
         source.Play();
     }
     #endregion
+    
+    #region Random Related
+    public bool TriggerBool(float chance) {
+        return Random.Range(0f, 1f) >= chance;
+    }
+
+    public float RandShiftVal(float val, float randPerc = 0.2f) {
+        var percAmt = val * randPerc;
+        return val + Random.Range(-percAmt, percAmt);
+    }
+    public int RandShiftVal(int val, float randPerc = 0.2f) {
+        var percAmt = val * randPerc;
+        var newVal = val + Random.Range(-percAmt, percAmt);
+        return (int)newVal;
+    }
+    #endregion
 }

@@ -46,46 +46,58 @@ public class Type_Drink_Mystery : Type_Drink
         base.StartConsumptionEffect();
 
         // small increase in hydration
-        if (Random.Range(0f, 1f) >= hydrationChangeChance)
-            Controller_Pee.Instance.AddPeeAmount(RandShiftVal(incrHydrationAmt));
+        if (Helper.Instance.TriggerBool(hydrationChangeChance))
+            Controller_Pee.Instance.AddPeeAmount(
+                Helper.Instance.RandShiftVal(incrHydrationAmt, randPerc)
+            );
         // small reduction in movement speed
-        if (Random.Range(0f, 1f) >= movementChangeChance)
-            Manager_Effects.Instance.ApplyMovementMultiplier(speedReducMul, duration);
+        if (Helper.Instance.TriggerBool(movementChangeChance))
+            Manager_Effects.Instance.ApplyMovementMultiplier(
+                Helper.Instance.RandShiftVal(speedReducMul, randPerc), 
+                Helper.Instance.RandShiftVal(duration, randPerc)
+            );
         // small vision distortion
-        if (Random.Range(0f, 1f) >= visualsChangeChance)
-            Manager_Effects.Instance.ApplyVisionDistortion(RandShiftVal(distortionAmt), RandShiftVal(duration));
+        if (Helper.Instance.TriggerBool(visualsChangeChance))
+            Manager_Effects.Instance.ApplyVisionDistortion(
+                Helper.Instance.RandShiftVal(distortionAmt, randPerc), 
+                Helper.Instance.RandShiftVal(duration, randPerc)
+            );
         
         // random reduction in all audio source's pitch
-        if (Random.Range(0f, 1f) >= audioChangeChance)
-            Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(pitchShiftPerc);
+        if (Helper.Instance.TriggerBool(audioChangeChance))
+            Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(
+                Helper.Instance.RandShiftVal(pitchShiftPerc, randPerc)
+            );
         // random visual values
-        if (Random.Range(0f, 1f) >= visualsChangeChance)
-            Manager_Effects.Instance.ApplySaturationAndVignette(saturationAmt, vignetteAmt, duration);
+        if (Helper.Instance.TriggerBool(visualsChangeChance))
+            Manager_Effects.Instance.ApplySaturationAndVignette(
+                Helper.Instance.RandShiftVal(saturationAmt, randPerc),
+                Helper.Instance.RandShiftVal(vignetteAmt, randPerc),
+                Helper.Instance.RandShiftVal(duration, randPerc)
+            );
         
         // random chance of money increase/decrease
-        if (Random.Range(0f, 1f) >= moneyChangeChance)
-            Manager_Money.Instance.UpdateMoney(RandShiftVal(moneyAmt));
+        if (Helper.Instance.TriggerBool(moneyChangeChance))
+            Manager_Money.Instance.UpdateMoney(
+                Helper.Instance.RandShiftVal(moneyAmt, randPerc)
+            );
         // random chance of timer increase/decrease
-        if (Random.Range(0f, 1f) >= timeChangeChance)
-            Manager_Timer.Instance.AddTimerAmt(RandShiftVal(timeAmt));
+        if (Helper.Instance.TriggerBool(timeChangeChance))
+            Manager_Timer.Instance.AddTimerAmt(
+                Helper.Instance.RandShiftVal(timeAmt, randPerc)
+            );
         // random chance of slipping
-        if (Random.Range(0f, 1f) >= slipChangeChance)
-            Manager_Effects.Instance.StartSlipEffectsSeq(RandShiftVal(slipTimeAmt));
+        if (Helper.Instance.TriggerBool(slipChangeChance))
+            Manager_Effects.Instance.StartSlipEffectsSeq(
+                Helper.Instance.RandShiftVal(slipTimeAmt, randPerc)
+            );
         // random chance of stun/damage
-        if (Random.Range(0f, 1f) >= stunChangeChance)
-            Manager_Effects.Instance.StartStunEffectsSeq(RandShiftVal(stunTimeAmt));
+        if (Helper.Instance.TriggerBool(stunChangeChance))
+            Manager_Effects.Instance.StartStunEffectsSeq(
+                Helper.Instance.RandShiftVal(stunTimeAmt, randPerc)
+            );
         
         // random chance of spawning more stains
         // random chance of more fountains
-    }
-
-    private float RandShiftVal(float val) {
-        var percAmt = val * randPerc;
-        return val + Random.Range(-percAmt, percAmt);
-    }
-    private int RandShiftVal(int val) {
-        var percAmt = val * randPerc;
-        var newVal = val + Random.Range(-percAmt, percAmt);
-        return (int)newVal;
     }
 }
