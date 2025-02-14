@@ -175,6 +175,12 @@ MonoBehaviour:
   currentDistortionIntensity: 0.01
   minDistortion: 0
   maxDistortion: 0.1
+  currentSaturation: 0
+  minSaturation: 0
+  maxSaturation: 100
+  currentVignette: 0
+  minVignette: 0
+  maxVignette: 0.3
 --- !u!82 &3015770420369858612
 AudioSource:
   m_ObjectHideFlags: 0

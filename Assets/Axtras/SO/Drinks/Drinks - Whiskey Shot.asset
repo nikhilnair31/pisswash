@@ -17,3 +17,9 @@ MonoBehaviour:
   buyCost: 7
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
+  duration: 6
+  speedReductionMultiplier: 0.8
+  distortionIntensity: 0.01
+  saturationIncrease: 0.1
+  vignetteIncrease: 0.2
+  pitchShiftPerc: 0.8
