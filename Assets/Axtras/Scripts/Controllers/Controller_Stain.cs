@@ -55,9 +55,12 @@ public class Controller_Stain : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Manager_Effects.Instance.ApplyEffect(other, this);
+        StainEffect();
     }
     private void OnCollisionExit(Collision other) {
-        Manager_Effects.Instance.ApplyEffect(other, this);
+        StainEffect();
+    }
+    private void StainEffect() {
+        selectedStain.StartInteractionEffect();
     }
 }

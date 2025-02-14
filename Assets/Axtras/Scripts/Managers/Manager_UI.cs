@@ -182,7 +182,7 @@ public class Manager_UI : MonoBehaviour
 
         Manager_Scene.Instance.LoadSceneByName(sceneName);
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.2f);
 
         inGame = true;
 

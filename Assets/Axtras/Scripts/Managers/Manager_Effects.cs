@@ -110,21 +110,7 @@ public class Manager_Effects : MonoBehaviour
         emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / rateMul, 5, 150);
     }
 
-    public void ApplyEffect(Collision other, Controller_Stain stain) {
-        if (other.transform.CompareTag("Player")) {
-            switch (stain.stainType) {
-                case Manager_Stains.StainType.Acid:
-                    StartDamageEffectsSeq();
-                    break;
-                case Manager_Stains.StainType.Booze:
-                    Controller_Player.Instance.SetSpeedMoveAndLook(stain.speedReductionMul);
-                    break;
-                case Manager_Stains.StainType.Puke:
-                    break;
-            }
-        }
-    }
-
+    #region Visual Effects
     public void UpdateLevelOverEffects(float over) {
         if (vignette != null) 
             vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
@@ -141,7 +127,9 @@ public class Manager_Effects : MonoBehaviour
         if (splitToning != null)
             splitToning.balance.value = -100f;
     }
+    #endregion
 
+    #region Dehydration Effects
     public void UpdateDehydrationEffects(float dehydration) {
         Color tempColor = Color.yellow;
         tempColor.a = Mathf.Lerp(0f, 0.5f, dehydration);
@@ -156,7 +144,9 @@ public class Manager_Effects : MonoBehaviour
         var img = Manager_UI.Instance.GetDehydrationImageUI();
         img.color = tempColor;
     }
+    #endregion
 
+    #region Damage Effects
     public void StartDamageEffectsSeq(float time = 0.3f) {
         if (damageSequence != null) return;
 
@@ -192,8 +182,10 @@ public class Manager_Effects : MonoBehaviour
         Controller_Player.Instance.SetCanMoveAndLook(true);
         audioSource.Stop();
     }
-    
-    public void StartStunEffectsSeq() {
+    #endregion
+
+    #region Stun Effects
+    public void StartStunEffectsSeq(float time = 1.0f) {
         if (stunSequence != null) return;
 
         stunSequence = DOTween.Sequence()
@@ -207,7 +199,7 @@ public class Manager_Effects : MonoBehaviour
                 Helper.Instance.PlayRandAudio(audioSource, earsRingingClips);
             })
             .Join(
-                cam.transform.DOShakePosition(shakeTime, 1f, 10, 90, false, true)
+                cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
@@ -215,7 +207,7 @@ public class Manager_Effects : MonoBehaviour
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, shakeTime)
+                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, time)
             )
             .OnComplete(() => {
                 StopStunEffectsSeq();
@@ -232,8 +224,10 @@ public class Manager_Effects : MonoBehaviour
         Controller_Player.Instance.SetCanMoveAndLook(true);
         audioSource.Stop();
     }
-    
-    public void StartSlipEffectsSeq(float time = 1f) {
+    #endregion
+
+    #region Slippery Effects
+    public void StartSlipEffectsSeq(float time = 1.0f) {
         if (slipSequence != null) return;
 
         slipSequence = DOTween.Sequence()
@@ -261,4 +255,5 @@ public class Manager_Effects : MonoBehaviour
         Controller_Player.Instance.SetCanMoveAndLook(true);
         audioSource.Stop();
     }
+    #endregion
 }

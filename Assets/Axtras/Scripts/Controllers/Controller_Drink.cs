@@ -81,7 +81,7 @@ public class Controller_Drink : Controller_Interactables
         // Check if owner sees player stealing
         foreach (Controller_Drinker cd in ownerDrinkers) {
             if (cd.GetCanSeePlayerStealing()) {
-                Manager_Effects.Instance.StartStunEffectsSeq();
+                Manager_Effects.Instance.StartStunEffectsSeq(5f);
                 Manager_Drinks.Instance.SetStealSlap();
                 Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
 

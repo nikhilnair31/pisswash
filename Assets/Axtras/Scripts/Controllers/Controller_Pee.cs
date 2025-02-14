@@ -23,8 +23,6 @@ public class Controller_Pee : MonoBehaviour
 
     [Header("Dehydration Settings")]
     [SerializeField] private bool isDehydrated = false;
-    [SerializeField] private float gameOverInTime = 0f;
-    [SerializeField] private float maxGameOverInTime = 10f;
 
     [Header("Stones Settings")]
     [SerializeField] private int stonesCurrentCount = 0;
@@ -157,19 +155,6 @@ public class Controller_Pee : MonoBehaviour
                 // Kidney stone getting perm effects
                 Manager_Effects.Instance.SetGotStoneEffect();
             }
-
-            // Start game over timer if player is dehydrated
-            gameOverInTime += Time.deltaTime;
-            Manager_Effects.Instance.UpdateLevelOverEffects(gameOverInTime/maxGameOverInTime);
-            if (gameOverInTime >= maxGameOverInTime) {
-                gameOverInTime = maxGameOverInTime;
-                timeToKidneyStone = 0f;
-
-                Manager_Effects.Instance.UpdateDehydrationEffects(0f);
-                Manager_Effects.Instance.ResetLevelOverEffects();
-
-                Manager_UI.Instance.LevelOver();
-            }
         }
     }
     private void ResetDehydration() {
@@ -177,7 +162,6 @@ public class Controller_Pee : MonoBehaviour
 
         isDehydrated = false;
         
-        gameOverInTime = 0f;
         timeToKidneyStone = 0f;
 
         Manager_Effects.Instance.ResetLevelOverEffects();

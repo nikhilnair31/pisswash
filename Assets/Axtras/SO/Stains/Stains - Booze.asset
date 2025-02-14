@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Stains - Booze
   m_EditorClassIdentifier: 
   type: 1
-  fadeAmountPerCollision: 0.01
+  fadeAmountPerCollision: 0.04
