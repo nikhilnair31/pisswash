@@ -15,11 +15,8 @@ public class Manager_Effects : MonoBehaviour
     private Sequence stunSequence;
     private Sequence slipSequence;
     private Sequence damageSequence;
-    private Coroutine movementMultiplierCoroutine;
     private Coroutine kidneyStoneEffectCoroutine;
     private Coroutine kidneyStonePassBoostCoroutine;
-    private Coroutine visionDistortionCoroutine;
-    private Coroutine saturationVignetteCoroutine;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
@@ -99,136 +96,63 @@ public class Manager_Effects : MonoBehaviour
             lensDistortion.intensity.value = 0f;
         if (splitToning != null)
             splitToning.balance.value = -100f;
+        if (colorAdjustments != null)
+            colorAdjustments.saturation.value = 0f;
         if (visionDistortionMaterial != null)
             visionDistortionMaterial.SetFloat(DistortionProperty, 0.01f);
     }
     
     public void ApplySaturationAndVignette(float saturationChange, float vignetteChange, float duration) {
-        if (saturationVignetteCoroutine != null) 
-            StopCoroutine(saturationVignetteCoroutine);
-
-        // Update and clamp saturation and vignette values
         currentSaturation = Mathf.Clamp(currentSaturation + saturationChange, minSaturation, maxSaturation);
         currentVignette = Mathf.Clamp(currentVignette + vignetteChange, minVignette, maxVignette);
 
-        // Start the effect coroutine
-        saturationVignetteCoroutine = StartCoroutine(SaturationVignetteCoroutine(duration));
-    }
-    private IEnumerator SaturationVignetteCoroutine(float duration) {
-        float elapsedTime = 0f;
-        float startSaturation = colorAdjustments.saturation.value;
-        float startVignette = vignette.intensity.value;
-
-        // Smoothly transition to new intensity
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-
-            colorAdjustments.saturation.value = Mathf.Lerp(startSaturation, currentSaturation, t);
-            vignette.intensity.value = Mathf.Lerp(startVignette, currentVignette, t);
-
-            yield return null;
-        }
-
-        // Delay before reducing effect
-        yield return new WaitForSeconds(duration * 0.5f);
-
-        // Smoothly fade back to normal
-        elapsedTime = 0f;
-        float fadeStartSaturation = currentSaturation;
-        float fadeStartVignette = currentVignette;
-        
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-
-            currentSaturation = Mathf.Lerp(fadeStartSaturation, 0f, t);
-            currentVignette = Mathf.Lerp(fadeStartVignette, 0f, t);
-
-            colorAdjustments.saturation.value = currentSaturation;
-            vignette.intensity.value = currentVignette;
-
-            yield return null;
-        }
-
-        // Ensure reset after full duration
-        currentSaturation = Mathf.Max(0f, currentSaturation);
-        currentVignette = Mathf.Max(0f, currentVignette);
+        DOTween.Kill("SaturationVignette");
+        DOTween.Sequence().SetId("SaturationVignette")
+            .Append(
+                DOTween.To(() => colorAdjustments.saturation.value, x => colorAdjustments.saturation.value = x, currentSaturation, duration)
+            )
+            .Join(
+                DOTween.To(() => vignette.intensity.value, x => vignette.intensity.value = x, currentVignette, duration)
+            )
+            .AppendInterval(duration * 0.5f)
+            .Append(
+                DOTween.To(() => colorAdjustments.saturation.value, x => colorAdjustments.saturation.value = x, 0f, duration)
+            )
+            .Join(
+                DOTween.To(() => vignette.intensity.value, x => vignette.intensity.value = x, 0f, duration)
+            );
     }
 
     public void ApplyVisionDistortion(float mul, float duration) {
-        if (visionDistortionCoroutine != null) 
-            StopCoroutine(visionDistortionCoroutine);
-
-        // Update current intensity while ensuring it stays within limits
         currentDistortionIntensity = Mathf.Clamp(currentDistortionIntensity * mul, minDistortion, maxDistortion);
 
-        // Start the effect coroutine
-        visionDistortionCoroutine = StartCoroutine(VisionDistortionCoroutine(duration));
-    }
-    private IEnumerator VisionDistortionCoroutine(float duration) {
-        float elapsedTime = 0f;
-        float initialIntensity = visionDistortionMaterial.GetFloat(DistortionProperty);
-
-        // Smoothly transition to the new intensity
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-            visionDistortionMaterial.SetFloat(DistortionProperty, Mathf.Lerp(initialIntensity, currentDistortionIntensity, t));
-            yield return null;
-        }
-
-        // Delay before reducing the effect
-        yield return new WaitForSeconds(duration * 0.5f);
-
-        // Smoothly fade the effect back down
-        elapsedTime = 0f;
-        float startIntensity = currentDistortionIntensity;
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-            currentDistortionIntensity = Mathf.Lerp(startIntensity, 0.01f, t);
-            visionDistortionMaterial.SetFloat(DistortionProperty, currentDistortionIntensity);
-            yield return null;
-        }
-
-        // Ensure reset after full duration
-        currentDistortionIntensity = Mathf.Max(0.01f, currentDistortionIntensity);
+        DOTween.Kill("VisionDistortion");
+        DOTween.Sequence().SetId("VisionDistortion")
+            .Append(
+                DOTween.To(() => visionDistortionMaterial.GetFloat(DistortionProperty), x => visionDistortionMaterial.SetFloat(DistortionProperty, x), currentDistortionIntensity, duration)
+            )
+            .AppendInterval(duration * 0.5f)
+            .Append(
+                DOTween.To(() => visionDistortionMaterial.GetFloat(DistortionProperty), x => visionDistortionMaterial.SetFloat(DistortionProperty, x), 0.01f, duration)
+            );
     }
     #endregion
     
     #region Movement Effects
     public void ApplyMovementMultiplier(float mul, float duration) {
-        if (movementMultiplierCoroutine != null) 
-            StopCoroutine(movementMultiplierCoroutine);
-
-        // Update current movement mul while ensuring it stays within limits
         currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * mul, minMovementMultiplier, maxMovementMultiplier);
-
-        // Apply the movement change
         Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
 
-        // Start the effect coroutine
-        movementMultiplierCoroutine = StartCoroutine(MovementMultiplierCoroutine(duration));
-    }
-    private IEnumerator MovementMultiplierCoroutine(float duration) {
-        yield return new WaitForSeconds(duration);
-
-        // Gradually return to normal speed
-        float elapsedTime = 0f;
-        float startMultiplier = currentMovementMultiplier;
-
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-            currentMovementMultiplier = Mathf.Lerp(startMultiplier, 1f, t);
-            Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
-            yield return null;
-        }
-
-        // Ensure reset to normal speed
-        currentMovementMultiplier = 1f;
-        Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
+        DOTween.Kill("MovementMultiplier");
+        DOTween.Sequence().SetId("MovementMultiplier")
+            .AppendInterval(duration)
+            .Append(
+                DOTween.To(() => currentMovementMultiplier, 
+                x => {
+                    currentMovementMultiplier = x;
+                    Controller_Player.Instance.SetSpeedMoveAndLook(x);
+                }, 1f, duration)
+            );
     }
     #endregion
 
