@@ -5,10 +5,10 @@ public class Type_Drink_Beer : Type_Drink
 {
     #region Vars
     [Header("Beer Settings")]
+    [SerializeField] private float duration = 6f;
     [SerializeField] private float hydrationAmount = 10f;
     [SerializeField] private float speedReductionMultiplier = 10f;
     [SerializeField] private float distortionIntensity = 10f;
-    [SerializeField] private float duration = 6f;
     #endregion
     
     public override void StartConsumptionEffect() {
