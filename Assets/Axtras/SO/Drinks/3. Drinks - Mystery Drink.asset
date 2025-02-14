@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03aed3cc727345f478394aaee46c5450, type: 3}
-  m_Name: Drinks - Mystery Drink
+  m_Name: 3. Drinks - Mystery Drink
   m_EditorClassIdentifier: 
   type: 2
-  increaseHydrationAmount: 40
+  incrHydrationAmt: 10
   buyCost: 15
   drinkClips:
   - {fileID: 8300000, guid: d8b87e3a32979b34297af565a9b1cdce, type: 3}
   duration: 6
   randPerc: 0.2
-  speedReductionMultiplier: 0.6
-  distortionIntensity: 0.02
-  saturationIncrease: 0.3
-  vignetteIncrease: 0.5
+  speedReducMul: 0.7
+  distortionAmt: 0.03
+  saturationAmt: 30
+  vignetteAmt: 0.3
   pitchShiftPerc: 0.5

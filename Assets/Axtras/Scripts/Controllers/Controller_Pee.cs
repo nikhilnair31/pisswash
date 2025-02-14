@@ -164,7 +164,7 @@ public class Controller_Pee : MonoBehaviour
         
         timeToKidneyStone = 0f;
 
-        Manager_Effects.Instance.ResetLevelOverEffects();
+        Manager_Effects.Instance.ResetVisualEffects();
         Manager_Effects.Instance.UpdateDehydrationEffects(0f);
     }
 

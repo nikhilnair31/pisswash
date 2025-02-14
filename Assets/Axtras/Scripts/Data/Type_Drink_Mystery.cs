@@ -9,12 +9,12 @@ public class Type_Drink_Mystery : Type_Drink
     [SerializeField] private float randPerc = 0.2f;
 
     [Header("Movement Settings")]
-    [SerializeField] private float speedReductionMultiplier = 10f;
+    [SerializeField] private float speedReducMul = 10f;
     
     [Header("Visuals Settings")]
-    [SerializeField] private float distortionIntensity = 10f;
-    [SerializeField] private float saturationIncrease = 0.1f;
-    [SerializeField] private float vignetteIncrease = 0.2f;
+    [SerializeField] private float distortionAmt = 0.01f;
+    [SerializeField] private float saturationAmt = 0.1f;
+    [SerializeField] private float vignetteAmt = 0.2f;
     
     [Header("Audio Settings")]
     [SerializeField] private float pitchShiftPerc = 0.8f;
@@ -25,17 +25,17 @@ public class Type_Drink_Mystery : Type_Drink
         
         Debug.Log($"Type_Drink_Mystery StartConsumptionEffect");
 
-        // small reduction in movement speed
-        Controller_Player.Instance.SetSpeedMoveAndLook(RandShiftVal(speedReductionMultiplier));
         // small increase in hydration
-        Controller_Pee.Instance.AddPeeAmount(RandShiftVal(increaseHydrationAmount));
+        Controller_Pee.Instance.AddPeeAmount(RandShiftVal(incrHydrationAmt));
+        // small reduction in movement speed
+        Manager_Effects.Instance.ApplyMovementMultiplier(speedReducMul, duration);
         // small vision distortion
-        Manager_Effects.Instance.ApplyVisionDistortion(RandShiftVal(distortionIntensity), RandShiftVal(duration));
+        Manager_Effects.Instance.ApplyVisionDistortion(RandShiftVal(distortionAmt), RandShiftVal(duration));
         
         // random reduction in all audio source's pitch
         Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(pitchShiftPerc);
         // random visual values
-        Manager_Effects.Instance.ApplySaturationAndVignette(saturationIncrease, vignetteIncrease, duration);
+        Manager_Effects.Instance.ApplySaturationAndVignette(saturationAmt, vignetteAmt, duration);
         
         // random chance of money increase/decrease
         // random chance of slipping

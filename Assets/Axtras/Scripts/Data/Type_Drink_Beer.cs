@@ -8,10 +8,10 @@ public class Type_Drink_Beer : Type_Drink
     [SerializeField] private float duration = 6f;
 
     [Header("Movement Settings")]
-    [SerializeField] private float speedReductionMultiplier = 10f;
+    [SerializeField] private float speedReducMul = 0.9f;
     
     [Header("Visuals Settings")]
-    [SerializeField] private float distortionIntensity = 10f;
+    [SerializeField] private float distortionAmt = 0.01f;
     #endregion
     
     public override void StartConsumptionEffect() {
@@ -19,11 +19,11 @@ public class Type_Drink_Beer : Type_Drink
         
         // Debug.Log($"Type_Drink_Beer StartConsumptionEffect");
 
-        // small reduction in movement speed
-        Controller_Player.Instance.SetSpeedMoveAndLook(speedReductionMultiplier);
         // small increase in hydration
-        Controller_Pee.Instance.AddPeeAmount(increaseHydrationAmount);
+        Controller_Pee.Instance.AddPeeAmount(incrHydrationAmt);
+        // small reduction in movement speed
+        Manager_Effects.Instance.ApplyMovementMultiplier(speedReducMul, duration);
         // small vision distortion
-        Manager_Effects.Instance.ApplyVisionDistortion(distortionIntensity, duration);
+        Manager_Effects.Instance.ApplyVisionDistortion(distortionAmt, duration);
     }
 }

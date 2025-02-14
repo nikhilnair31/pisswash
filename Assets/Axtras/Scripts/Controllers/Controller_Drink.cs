@@ -54,7 +54,7 @@ public class Controller_Drink : Controller_Interactables
             // Increase hydration
             var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
             if (!isPeeFull)
-                Controller_Pee.Instance.AddPeeAmount(selectedDrink.increaseHydrationAmount);
+                Controller_Pee.Instance.AddPeeAmount(selectedDrink.incrHydrationAmt);
 
             // Update money
             Manager_Money.Instance.UpdateMoney(-selectedDrink.buyCost);
@@ -98,7 +98,7 @@ public class Controller_Drink : Controller_Interactables
         // Increase hydration
         var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
         if (!isPeeFull)
-            Controller_Pee.Instance.AddPeeAmount(selectedDrink.increaseHydrationAmount);
+            Controller_Pee.Instance.AddPeeAmount(selectedDrink.incrHydrationAmt);
         
         // Update money
         Manager_Money.Instance.UpdateMoney(0);

@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 531d89f6d6a36574e9a53aea4e855944, type: 3}
-  m_Name: Drinks - Beer Bottle
+  m_Name: 1. Drinks - Beer Bottle
   m_EditorClassIdentifier: 
   type: 0
-  increaseHydrationAmount: 15
+  incrHydrationAmt: 10
   buyCost: 3
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
-  hydrationAmount: 10
-  speedReductionMultiplier: 0.95
-  distortionIntensity: 0.005
   duration: 10
+  speedReducMul: 0.9
+  distortionAmt: 0.01

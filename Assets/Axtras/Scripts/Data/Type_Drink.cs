@@ -8,7 +8,7 @@ public class Type_Drink : ScriptableObject
     [SerializeField] public Manager_Drinks.DrinkType type;
 
     [Header("Hydration Settings")]
-    [SerializeField] public float increaseHydrationAmount = 10f;
+    [SerializeField] public float incrHydrationAmt = 10f;
 
     [Header("Money Settings")]
     [SerializeField] public int buyCost = 5;

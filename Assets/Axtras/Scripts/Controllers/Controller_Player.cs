@@ -127,6 +127,6 @@ public class Controller_Player : MonoBehaviour
         canLook = active;
     }
     public void SetSpeedMoveAndLook(float mul) {
-        speedMul *= mul;
+        speedMul = mul;
     }
 }

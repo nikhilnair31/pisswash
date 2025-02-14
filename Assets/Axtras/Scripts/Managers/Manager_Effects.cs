@@ -15,6 +15,7 @@ public class Manager_Effects : MonoBehaviour
     private Sequence stunSequence;
     private Sequence slipSequence;
     private Sequence damageSequence;
+    private Coroutine movementMultiplierCoroutine;
     private Coroutine kidneyStoneEffectCoroutine;
     private Coroutine kidneyStonePassBoostCoroutine;
     private Coroutine visionDistortionCoroutine;
@@ -44,6 +45,11 @@ public class Manager_Effects : MonoBehaviour
     private LensDistortion lensDistortion;
     private SplitToning splitToning;
     private Vignette vignette;
+
+    [Header("Movement Settings")]
+    [SerializeField] private float minMovementMultiplier = 0.5f;
+    [SerializeField] private float maxMovementMultiplier = 1.5f;
+    private float currentMovementMultiplier = 1f;
     #endregion
 
     private void Awake() {
@@ -56,7 +62,7 @@ public class Manager_Effects : MonoBehaviour
     private void Start() {
         GetInitComponents();
         GetVolumeEffects();
-        ResetLevelOverEffects();
+        ResetVisualEffects();
     }
     private void GetInitComponents() {
         if(cam == null) 
@@ -86,13 +92,15 @@ public class Manager_Effects : MonoBehaviour
     #endregion
 
     #region Visual Effects
-    public void ResetLevelOverEffects() {
+    public void ResetVisualEffects() {
         if (vignette != null)
             vignette.intensity.value = 0f;
         if (lensDistortion != null)
             lensDistortion.intensity.value = 0f;
         if (splitToning != null)
             splitToning.balance.value = -100f;
+        if (visionDistortionMaterial != null)
+            visionDistortionMaterial.SetFloat(DistortionProperty, 0.01f);
     }
     
     public void ApplySaturationAndVignette(float saturationChange, float vignetteChange, float duration) {
@@ -186,6 +194,41 @@ public class Manager_Effects : MonoBehaviour
 
         // Ensure reset after full duration
         currentDistortionIntensity = Mathf.Max(0f, currentDistortionIntensity);
+    }
+    #endregion
+    
+    #region Movement Effects
+    public void ApplyMovementMultiplier(float multiplier, float duration) {
+        if (movementMultiplierCoroutine != null) 
+            StopCoroutine(movementMultiplierCoroutine);
+
+        // Update current movement multiplier while ensuring it stays within limits
+        currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * multiplier, minMovementMultiplier, maxMovementMultiplier);
+
+        // Apply the movement change
+        Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
+
+        // Start the effect coroutine
+        movementMultiplierCoroutine = StartCoroutine(MovementMultiplierCoroutine(duration));
+    }
+    private IEnumerator MovementMultiplierCoroutine(float duration) {
+        yield return new WaitForSeconds(duration);
+
+        // Gradually return to normal speed
+        float elapsedTime = 0f;
+        float startMultiplier = currentMovementMultiplier;
+
+        while (elapsedTime < duration) {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            currentMovementMultiplier = Mathf.Lerp(startMultiplier, 1f, t);
+            Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
+            yield return null;
+        }
+
+        // Ensure reset to normal speed
+        currentMovementMultiplier = 1f;
+        Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
     }
     #endregion
 
