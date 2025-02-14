@@ -156,12 +156,12 @@ public class Manager_Effects : MonoBehaviour
         currentVignette = Mathf.Max(0f, currentVignette);
     }
 
-    public void ApplyVisionDistortion(float intensity, float duration) {
+    public void ApplyVisionDistortion(float mul, float duration) {
         if (visionDistortionCoroutine != null) 
             StopCoroutine(visionDistortionCoroutine);
 
         // Update current intensity while ensuring it stays within limits
-        currentDistortionIntensity = Mathf.Clamp(currentDistortionIntensity + intensity, minDistortion, maxDistortion);
+        currentDistortionIntensity = Mathf.Clamp(currentDistortionIntensity * mul, minDistortion, maxDistortion);
 
         // Start the effect coroutine
         visionDistortionCoroutine = StartCoroutine(VisionDistortionCoroutine(duration));
@@ -187,23 +187,23 @@ public class Manager_Effects : MonoBehaviour
         while (elapsedTime < duration) {
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
-            currentDistortionIntensity = Mathf.Lerp(startIntensity, 0f, t);
+            currentDistortionIntensity = Mathf.Lerp(startIntensity, 0.01f, t);
             visionDistortionMaterial.SetFloat(DistortionProperty, currentDistortionIntensity);
             yield return null;
         }
 
         // Ensure reset after full duration
-        currentDistortionIntensity = Mathf.Max(0f, currentDistortionIntensity);
+        currentDistortionIntensity = Mathf.Max(0.01f, currentDistortionIntensity);
     }
     #endregion
     
     #region Movement Effects
-    public void ApplyMovementMultiplier(float multiplier, float duration) {
+    public void ApplyMovementMultiplier(float mul, float duration) {
         if (movementMultiplierCoroutine != null) 
             StopCoroutine(movementMultiplierCoroutine);
 
-        // Update current movement multiplier while ensuring it stays within limits
-        currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * multiplier, minMovementMultiplier, maxMovementMultiplier);
+        // Update current movement mul while ensuring it stays within limits
+        currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * mul, minMovementMultiplier, maxMovementMultiplier);
 
         // Apply the movement change
         Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);

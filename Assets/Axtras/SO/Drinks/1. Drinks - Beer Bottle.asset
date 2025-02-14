@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
   duration: 10
   speedReducMul: 0.9
-  distortionAmt: 0.01
+  distortionMul: 2

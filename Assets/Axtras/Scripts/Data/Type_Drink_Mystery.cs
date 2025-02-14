@@ -17,7 +17,7 @@ public class Type_Drink_Mystery : Type_Drink
     
     [Header("Visuals Settings")]
     [SerializeField] private float visualsChangeChance = 0.5f;
-    [SerializeField] private float distortionAmt = 0.01f;
+    [SerializeField] private float distortionMul = 1.1f;
     [SerializeField] private float saturationAmt = 0.1f;
     [SerializeField] private float vignetteAmt = 0.2f;
     
@@ -59,7 +59,7 @@ public class Type_Drink_Mystery : Type_Drink
         // small vision distortion
         if (Helper.Instance.TriggerBool(visualsChangeChance))
             Manager_Effects.Instance.ApplyVisionDistortion(
-                Helper.Instance.RandShiftVal(distortionAmt, randPerc), 
+                Helper.Instance.RandShiftVal(distortionMul, randPerc), 
                 Helper.Instance.RandShiftVal(duration, randPerc)
             );
         
