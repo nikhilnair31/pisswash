@@ -4,13 +4,19 @@ using UnityEngine;
 public class Type_Drink_Mystery : Type_Drink 
 {
     #region Vars
-    [Header("Mystery Settings")]
+    [Header("Effect Settings")]
     [SerializeField] private float duration = 6f;
     [SerializeField] private float randPerc = 0.2f;
+
+    [Header("Movement Settings")]
     [SerializeField] private float speedReductionMultiplier = 10f;
+    
+    [Header("Visuals Settings")]
     [SerializeField] private float distortionIntensity = 10f;
     [SerializeField] private float saturationIncrease = 0.1f;
     [SerializeField] private float vignetteIncrease = 0.2f;
+    
+    [Header("Audio Settings")]
     [SerializeField] private float pitchShiftPerc = 0.8f;
     #endregion
     

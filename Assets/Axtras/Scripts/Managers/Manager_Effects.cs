@@ -86,14 +86,6 @@ public class Manager_Effects : MonoBehaviour
     #endregion
 
     #region Visual Effects
-    public void UpdateLevelOverEffects(float over) {
-        if (vignette != null) 
-            vignette.intensity.value = Mathf.Lerp(0f, 0.5f, over);
-        if (lensDistortion != null) 
-            lensDistortion.intensity.value = Mathf.Lerp(0f, 0.5f, over);
-        if (splitToning != null) 
-            splitToning.balance.value = Mathf.Lerp(-100f, 100f, over);
-    }
     public void ResetLevelOverEffects() {
         if (vignette != null)
             vignette.intensity.value = 0f;
