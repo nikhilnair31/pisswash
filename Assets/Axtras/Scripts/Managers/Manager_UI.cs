@@ -189,7 +189,7 @@ public class Manager_UI : MonoBehaviour
         loadingCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
 
-        Manager_SaveLoad.Instance.SaveLevelUnlocked(sceneName);
+        // Manager_SaveLoad.Instance.SaveLevelUnlocked(sceneName);
         Manager_Effects.Instance.ResetDehydrationEffects();
         Manager_Timer.Instance.StartTimer();
         // Manager_Timeline.Instance.PlayCutscene_GameStart();

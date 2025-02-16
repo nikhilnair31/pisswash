@@ -56,6 +56,7 @@ public class Manager_Effects : MonoBehaviour
             Destroy(gameObject);
     }
     
+    #region Init
     private void Start() {
         GetInitComponents();
         GetVolumeEffects();
@@ -66,7 +67,7 @@ public class Manager_Effects : MonoBehaviour
             cam = FindAnyObjectByType<CinemachineCamera>();
         if(playerGO == null) 
             playerGO = GameObject.FindWithTag("Player");
-        if(peePS == null) 
+        if(peePS == null && playerGO != null) 
             peePS = playerGO.GetComponentInChildren<ParticleSystem>();
     }
     private void GetVolumeEffects() {
@@ -77,6 +78,7 @@ public class Manager_Effects : MonoBehaviour
         postProcessVolume?.Profile.TryGet(out splitToning);
         postProcessVolume?.Profile.TryGet(out vignette);
     }
+    #endregion
 
     #region Audio Effects
     public void ApplyAllAudioSourcePitchShift(float perc) {

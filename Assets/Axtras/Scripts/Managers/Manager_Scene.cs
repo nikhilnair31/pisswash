@@ -7,8 +7,6 @@ public class Manager_Scene : MonoBehaviour
 {
     #region Vars
     public static Manager_Scene Instance { get; private set; }
-
-    [SerializeField] private string currentSceneName;
     #endregion
 
     private void Awake() {
@@ -18,9 +16,6 @@ public class Manager_Scene : MonoBehaviour
             Destroy(gameObject);
     }
     
-    public void LoadCurrentScene() {
-        SceneManager.LoadScene(currentSceneName);
-    }
     public void LoadSceneByName(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }

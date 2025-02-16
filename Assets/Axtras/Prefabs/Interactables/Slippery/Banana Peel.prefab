@@ -107,7 +107,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 25, y: 0.1, z: 25}
+  m_Size: {x: 15, y: 0.1, z: 15}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-1775019574370705879
 MonoBehaviour:
@@ -122,3 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMagnitude: 100
+  maxStayTime: 2

@@ -115,7 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78daeb2487a8fa948bf9dc833dc5d8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSceneName: L 1
 --- !u!114 &3572735086778757656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +180,8 @@ MonoBehaviour:
   currentVignette: 0
   minVignette: 0
   maxVignette: 0.3
+  minMovementMultiplier: 0.5
+  maxMovementMultiplier: 1.5
 --- !u!82 &3015770420369858612
 AudioSource:
   m_ObjectHideFlags: 0

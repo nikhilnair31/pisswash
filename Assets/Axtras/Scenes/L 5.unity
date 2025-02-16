@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -263,7 +262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -360,7 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -457,7 +454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -554,7 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -651,7 +646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -748,7 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -845,7 +838,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1051,7 +1043,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1148,7 +1139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1245,7 +1235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1411,7 +1400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1508,7 +1496,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1736,7 +1723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1833,7 +1819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -1930,7 +1915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2027,7 +2011,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2099,7 +2082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2107,7 +2090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2186,7 +2169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2404,7 +2386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2501,7 +2482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2598,6 +2578,11 @@ MeshRenderer:
   - {fileID: 2100000, guid: cc2fe3e139a2f1f438410bb4a994f542, type: 2}
   - {fileID: 2100000, guid: 1bc26f53dae93eb42bcad146992cf0b3, type: 2}
   - {fileID: 2100000, guid: cc2fe3e139a2f1f438410bb4a994f542, type: 2}
+  - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
+  - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
+  - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
+  - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
+  - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
   - {fileID: 2100000, guid: f81c061ad30d44e4ead476adf9d00b16, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2712,7 +2697,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2809,7 +2793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -2906,7 +2889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3035,7 +3017,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3315,7 +3296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3444,7 +3424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3603,7 +3582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3700,7 +3678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3797,7 +3774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -3968,7 +3944,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4065,7 +4040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4392,7 +4366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4489,7 +4462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4591,7 +4563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4688,7 +4659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -4911,7 +4881,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5146,7 +5115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5358,7 +5326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5529,7 +5496,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5626,7 +5592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5844,7 +5809,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -5941,7 +5905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6038,7 +6001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6135,7 +6097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6232,7 +6193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6329,7 +6289,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6426,7 +6385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6653,7 +6611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6750,7 +6707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6847,7 +6803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -6944,7 +6899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -7162,7 +7116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -7259,7 +7212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -7608,7 +7560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -7705,7 +7656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -7890,7 +7840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8066,7 +8015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8232,7 +8180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8329,7 +8276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8426,7 +8372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8523,7 +8468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8620,7 +8564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8692,7 +8635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8e597bed03f63d469795e61142a53b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.016613
+      value: -26.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8e597bed03f63d469795e61142a53b9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8700,7 +8643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8e597bed03f63d469795e61142a53b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.906567
+      value: 14.81
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8e597bed03f63d469795e61142a53b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8791,7 +8734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8888,7 +8830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -8985,7 +8926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9082,7 +9022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9310,7 +9249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9476,7 +9414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9573,7 +9510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9739,7 +9675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9836,7 +9771,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -9933,7 +9867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10030,7 +9963,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10127,7 +10059,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10224,7 +10155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10452,7 +10382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10616,7 +10545,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10713,7 +10641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10810,7 +10737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -10907,7 +10833,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11004,7 +10929,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11101,7 +11025,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11198,7 +11121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11295,7 +11217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11392,7 +11313,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11520,7 +11440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11679,7 +11598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11776,7 +11694,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11873,7 +11790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -11970,7 +11886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12124,7 +12039,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12404,7 +12318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12501,7 +12414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12598,7 +12510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12695,7 +12606,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12792,7 +12702,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12889,7 +12798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -12986,7 +12894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13145,7 +13052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13242,7 +13148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13339,7 +13244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13436,7 +13340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13533,7 +13436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13630,7 +13532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13727,7 +13628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -13824,7 +13724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14042,7 +13941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14290,7 +14188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14625,7 +14522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14722,7 +14618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14819,7 +14714,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -14916,7 +14810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15013,7 +14906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15110,7 +15002,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15207,7 +15098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15304,7 +15194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15438,7 +15327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.x
@@ -15446,7 +15335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.z
@@ -15587,7 +15476,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15684,7 +15572,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15781,7 +15668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15878,7 +15764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -15975,7 +15860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16072,7 +15956,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16169,7 +16052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16266,7 +16148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16363,7 +16244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16460,7 +16340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16557,7 +16436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16654,7 +16532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16751,7 +16628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16848,7 +16724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -16945,7 +16820,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17042,7 +16916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17139,7 +17012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17236,7 +17108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17333,7 +17204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17439,7 +17309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.x
@@ -17447,7 +17317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.z
@@ -17612,7 +17482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17823,7 +17692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -17920,7 +17788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18017,7 +17884,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18114,7 +17980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18244,7 +18109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18341,7 +18205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18550,7 +18413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18647,7 +18509,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18806,7 +18667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -18939,7 +18799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -19036,7 +18895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -19133,7 +18991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -19230,7 +19087,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -19396,7 +19252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  fadeAmountPerCollision: 0.05
   speedReductionMul: 0.7
   speedIncreaseMul: 10
   scaleAmount: 2
@@ -19721,7 +19576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.000002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.x
@@ -19729,7 +19584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.z
