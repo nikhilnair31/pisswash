@@ -176,102 +176,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb046d17b62e8e245a0e600f4b30d56a, type: 3}
---- !u!1 &130293281
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130293282}
-  - component: {fileID: 130293285}
-  - component: {fileID: 130293284}
-  - component: {fileID: 130293283}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &130293282
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130293281}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.33810547, y: -0.6210352, z: 0.3381054, w: 0.6210352}
-  m_LocalPosition: {x: 1.7499993, y: 0.8165188, z: -0.4142419}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &130293283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130293281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &130293284
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130293281}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &130293285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130293281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1001 &139899528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -361,6 +265,162 @@ Transform:
   - {fileID: 490399675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &187718827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.36432147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07663
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9923602
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000059149283
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000000073537008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.123374596
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &187718828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 187718827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &291616873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19400978
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.052216887
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9871351
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000058837845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000000095301
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.15988854
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &291616874 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 291616873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332607378
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +658,84 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2958708461180818928, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+--- !u!1001 &362700049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7499993
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.079034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4144186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2035871
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.677165
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.2035871
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.67716485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &362700050 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 362700049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,102 +966,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 542011051}
   m_LocalEulerAnglesHint: {x: -86.5, y: 90, z: 0}
---- !u!1 &486362396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 486362397}
-  - component: {fileID: 486362400}
-  - component: {fileID: 486362399}
-  - component: {fileID: 486362398}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &486362397
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486362396}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7070422, y: 0.009559452, z: 0.7070421, w: -0.009559452}
-  m_LocalPosition: {x: 1.7499993, y: 1.5819266, z: 1.4498119}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &486362398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486362396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &486362399
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486362396}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &486362400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486362396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1001 &490399674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -990,102 +1032,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1597525141297010425, guid: 324cb5e9ba979a047bad86257d9ff816, type: 3}
   m_PrefabInstance: {fileID: 490399674}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &522352306
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 522352307}
-  - component: {fileID: 522352310}
-  - component: {fileID: 522352309}
-  - component: {fileID: 522352308}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &522352307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522352306}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.4256446, y: -0.56464744, z: 0.4256445, w: 0.56464744}
-  m_LocalPosition: {x: 1.7499993, y: 0.455467, z: 1.329864}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &522352308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522352306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &522352309
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522352306}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &522352310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522352306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &536025921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,102 +1139,6 @@ Transform:
   - {fileID: 1957231493}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &557161319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 557161320}
-  - component: {fileID: 557161323}
-  - component: {fileID: 557161322}
-  - component: {fileID: 557161321}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &557161320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557161319}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.45927966, y: 0.53764516, z: 0.5376451, w: -0.4592796}
-  m_LocalPosition: {x: -1.3782532, y: -1.6500005, z: -0.62591016}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &557161321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557161319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &557161322
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557161319}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &557161323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557161319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &593220082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,102 +1170,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &650384619
-GameObject:
+--- !u!1001 &628966445
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 650384620}
-  - component: {fileID: 650384623}
-  - component: {fileID: 650384622}
-  - component: {fileID: 650384621}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &650384620
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650384619}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.49351636, y: 0.50640064, z: 0.50640064, w: 0.49351627}
-  m_LocalPosition: {x: -0.4971478, y: -1.6500003, z: 0.14995027}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &650384621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2158945
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6500007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.9069983
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.10899846
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.108998485
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.69865537
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.69865537
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &628966446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 628966445}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650384619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &650384622
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650384619}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &650384623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650384619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &660740983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,16 +1278,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 486362397}
-  - {fileID: 650384620}
-  - {fileID: 719282405}
-  - {fileID: 903027876}
-  - {fileID: 942687842}
-  - {fileID: 522352307}
-  - {fileID: 1096538373}
-  - {fileID: 557161320}
-  - {fileID: 130293282}
-  - {fileID: 1105455262}
+  - {fileID: 1995442562}
+  - {fileID: 291616874}
+  - {fileID: 187718828}
+  - {fileID: 1158175040}
+  - {fileID: 362700050}
+  - {fileID: 1631551115}
+  - {fileID: 774638415}
+  - {fileID: 1904486494}
+  - {fileID: 1250413127}
+  - {fileID: 628966446}
   m_Father: {fileID: 669038576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &660740985
@@ -1517,102 +1349,6 @@ Transform:
   - {fileID: 660740984}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &719282404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 719282405}
-  - component: {fileID: 719282408}
-  - component: {fileID: 719282407}
-  - component: {fileID: 719282406}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &719282405
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719282404}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.22155054, y: 0.67150235, z: 0.22155048, w: -0.67150235}
-  m_LocalPosition: {x: 1.7499993, y: 0.75921226, z: -1.3281924}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &719282406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719282404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &719282407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719282404}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &719282408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719282404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &734272037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,6 +2116,84 @@ Transform:
   - {fileID: 1581002091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &774638414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.877857
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.7641981
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.67214996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6721501
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.21957782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.21957779
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &774638415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 774638414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2479,102 +2293,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &903027875
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 903027876}
-  - component: {fileID: 903027879}
-  - component: {fileID: 903027878}
-  - component: {fileID: 903027877}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &903027876
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903027875}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.000000027055366, y: 0.000000053110462, z: 0.8910457, w: -0.45391366}
-  m_LocalPosition: {x: -1.0163989, y: 0.82631755, z: -1.8999997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &903027877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903027875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &903027878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903027875}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &903027879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903027875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &938063392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,102 +2326,6 @@ Transform:
   - {fileID: 1845928798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &942687841
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 942687842}
-  - component: {fileID: 942687845}
-  - component: {fileID: 942687844}
-  - component: {fileID: 942687843}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &942687842
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942687841}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.14536622, y: -0.6920034, z: 0.14536619, w: 0.6920034}
-  m_LocalPosition: {x: 1.7499993, y: -0.91018814, z: -0.018504262}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &942687843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942687841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &942687844
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942687841}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &942687845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942687841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!1 &988040657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,198 +2557,84 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1 &1096538372
-GameObject:
+--- !u!1001 &1158175039
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1096538373}
-  - component: {fileID: 1096538376}
-  - component: {fileID: 1096538375}
-  - component: {fileID: 1096538374}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1096538373
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096538372}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0885416, y: 0.7015414, z: 0.7015414, w: 0.08854158}
-  m_LocalPosition: {x: 0.777344, y: -1.6500002, z: 0.8633613}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1096538374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096538372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &1096538375
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096538372}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1096538376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096538372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
---- !u!1 &1105455261
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1105455262}
-  - component: {fileID: 1105455265}
-  - component: {fileID: 1105455264}
-  - component: {fileID: 1105455263}
-  m_Layer: 9
-  m_Name: Stain Decal - Puke(Clone)
-  m_TagString: Stain
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1105455262
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7499993
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6735784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4317182
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.49962437
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.50037545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49962437
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.50037533
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &1158175040 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 1158175039}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105455261}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.21837382, y: 0.67254215, z: 0.67254215, w: -0.21837378}
-  m_LocalPosition: {x: 0.21651411, y: -1.6499999, z: 3.0564992}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 660740984}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1105455263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105455261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b10af23b8fccd45a77984cf77f0ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stainType: 2
-  speedReductionMul: 0.1
-  speedIncreaseMul: 10
-  scaleAmount: 1.3
-  scaleTime: 20
---- !u!65 &1105455264
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105455261}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 128
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 9
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1105455265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105455261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0315c1dc74c135e41a2f69c0f5bd67f9, type: 2}
-  m_DrawDistance: 100
-  m_FadeScale: 1
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 1}
-  m_UVBias: {x: 0, y: 0}
-  m_DecalLayerMask: 4294967295
-  m_ScaleMode: 1
-  m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 0.2}
-  m_FadeFactor: 1
 --- !u!114 &1215206141 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 271976695413295031, guid: 920a5a60355817a4d978b1eaf5e286de, type: 3}
@@ -3142,6 +2650,84 @@ MonoBehaviour:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7912719795841026379, guid: 920a5a60355817a4d978b1eaf5e286de, type: 3}
   m_PrefabInstance: {fileID: 8190785951042110853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1250413126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5425596
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.118979216
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9438074
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000056255313
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000019699097
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.33049598
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &1250413127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 1250413126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1272843878
 PrefabInstance:
@@ -3797,6 +3383,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64f128d95ae5be24a868f0ec92120941, type: 3}
   m_PrefabInstance: {fileID: 1601877086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1631551114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.70521784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6500003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.36317468
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7043758
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7043759
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.062085755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.06208575
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &1631551115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 1631551114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1811701165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4149,6 +3813,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3025121394813321515, guid: a5eeba13924831d4eb4a408f32aa8c64, type: 3}
   m_PrefabInstance: {fileID: 1892563334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1904486493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9174635
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.501807
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.58184505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000003468067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000048476448
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.8132997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &1904486494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 1904486493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1957231492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4260,6 +4002,84 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.701, y: 3.5333624, z: 0.31185}
   m_Center: {x: 0.8504995, y: 1.7666812, z: 0.15592489}
+--- !u!1001 &1995442561
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 660740984}
+    m_Modifications:
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 883633998796723281, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2519135
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6500003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.33299673
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.20240945
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.20240948
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6775179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6775179
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799575166558985156, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878317157469028817, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+      propertyPath: m_Name
+      value: Stain Decal - Puke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+--- !u!4 &1995442562 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2743390319473374632, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  m_PrefabInstance: {fileID: 1995442561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100421725
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,11 +53,15 @@ public class Generator_Stain : MonoBehaviour
                 if (currDecals < maxDecals) {
                     // Debug.DrawRay(hit.point, hit.normal * 1f, Color.green, 5f);
 
-                    GameObject decalGO = Instantiate(
-                        damageDecalObject, 
-                        Vector3.zero, 
-                        Quaternion.identity
-                    );
+                    GameObject decalGO;
+                    
+                    #if UNITY_EDITOR
+                        // Instantiate as a prefab instance
+                        decalGO = (GameObject)PrefabUtility.InstantiatePrefab(damageDecalObject);
+                    Undo.RegisterCreatedObjectUndo(decalGO, "Spawn Decal");
+                    #else
+                        decalGO = Instantiate(damageDecalObject);
+                    #endif
 
                     if (spawnAsChild) {
                         decalGO.transform.SetParent(source);
