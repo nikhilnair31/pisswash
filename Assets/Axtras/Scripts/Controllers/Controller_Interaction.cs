@@ -52,14 +52,14 @@ public class Controller_Interaction : MonoBehaviour
             }
             else if (hit.transform.TryGetComponent(out Controller_Fountain fountain)) {
                 currentFountain = fountain;
-                fountain.ControlDrinking();
+                fountain.ControlDrinking(true);
             }
         }
         else if (Input.GetKeyUp(interactKey)) {
             if (currentDrink != null) {
             }
             if (currentFountain != null) {
-                currentFountain.ControlDrinking();
+                currentFountain.ControlDrinking(false);
                 currentFountain = null;
             }
         }

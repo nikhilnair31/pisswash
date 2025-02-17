@@ -544,8 +544,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2674905942562452776, guid: 82ba4fd20720e7e4c8705b808df556c7, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -649,6 +648,30 @@ PrefabInstance:
     - target: {fileID: 3055999709097880735, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
       propertyPath: m_Name
       value: Canvii
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5648085485636957800, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7848613683023286853, guid: 715ba2bd904d7dd4e8b1e31363f0f20f, type: 3}
       propertyPath: m_LocalPosition.x

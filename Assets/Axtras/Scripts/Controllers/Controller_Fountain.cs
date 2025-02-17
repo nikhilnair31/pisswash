@@ -6,6 +6,9 @@ public class Controller_Fountain : Controller_Interactables
     [Header("Hydration Settings")]
     [SerializeField] private bool isOn = false;
     [SerializeField] private float increaseHydrationRate = 2f;
+    
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip[] drinkClips;
     #endregion
 
     private void Update() {
@@ -19,7 +22,13 @@ public class Controller_Fountain : Controller_Interactables
         }
     }
 
-    public void ControlDrinking() {
-        isOn = !isOn;
+    public void ControlDrinking(bool active) {
+        isOn = active;
+        if (isOn) {
+            Helper.Instance.PlayRandAudioLoop(audioSource, drinkClips);
+        }
+        else {
+            audioSource.Stop();
+        }
     }
 }
