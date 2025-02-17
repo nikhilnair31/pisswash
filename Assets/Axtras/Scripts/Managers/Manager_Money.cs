@@ -25,10 +25,6 @@ public class Manager_Money : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start() {
-        UpdateMoney(initMoney);
-    }
-
     public void UpdateMoney(int amount) {
         currMoney += amount;
 

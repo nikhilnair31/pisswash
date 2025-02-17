@@ -24,10 +24,6 @@ public class Manager_SaveLoad : MonoBehaviour
         filePath = Application.persistentDataPath + "/game.json";
         Debug.Log($"Awake filePath: {filePath}");
     }
-
-    private void Start() {
-        LoadLevelData();
-    }
     
     public void Save(string plainText) {
         if (string.IsNullOrEmpty(plainText)) {
@@ -149,7 +145,7 @@ public class Manager_SaveLoad : MonoBehaviour
         Save(dataJson.ToString());
     }
     public void SaveStatData(string statKey, string type = "set", int val = 1) {
-        Debug.Log($"SaveStatData");
+        Debug.Log($"SaveStatData | statKey: {statKey} - type: {type} - val: {val}");
         
         var dataJson = JSON.Parse(Load()) as JSONObject;
         Debug.Log($"SaveStatData og dataJson: {dataJson}");
