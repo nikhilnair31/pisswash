@@ -1911,6 +1911,7 @@ MonoBehaviour:
   gameCanvasGO: {fileID: 8018118599849364614}
   dehydrationImage: {fileID: 650285625522230389}
   damageImage: {fileID: 6282495713075974146}
+  peePanelRectTrans: {fileID: 7420037523915339982}
   peeImage: {fileID: 5310494756434827315}
   lookedAt_Text: {fileID: 5170843495219236054}
   qteKey_Text: {fileID: 6957986258203452810}

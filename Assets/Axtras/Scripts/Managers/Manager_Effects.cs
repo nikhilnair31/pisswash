@@ -36,6 +36,7 @@ public class Manager_Effects : MonoBehaviour
     [SerializeField] private float currentVignette;
     [SerializeField] private float minVignette;
     [SerializeField] private float maxVignette;
+    [SerializeField] private float maxYellowAlpha = 0.1f;
     private int DistortionProperty = Shader.PropertyToID("_Blend");
     private CinemachineVolumeSettings postProcessVolume;
     private ColorAdjustments colorAdjustments;
@@ -212,7 +213,7 @@ public class Manager_Effects : MonoBehaviour
     #region Dehydration Effects
     public void UpdateDehydrationEffects(float dehydration) {
         Color tempColor = Color.yellow;
-        tempColor.a = Mathf.Lerp(0f, 0.5f, dehydration);
+        tempColor.a = Mathf.Lerp(0f, maxYellowAlpha, dehydration);
         
         var img = Manager_UI.Instance.GetDehydrationImageUI();
         img.color = tempColor;
@@ -223,6 +224,21 @@ public class Manager_Effects : MonoBehaviour
 
         var img = Manager_UI.Instance.GetDehydrationImageUI();
         img.color = tempColor;
+    }
+    
+    public void ShakeDehydrationEffect(float intensity) {
+        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();        
+        uiElement.DOComplete();
+        uiElement.DOShakePosition(0.5f, intensity * 10f, 20, 90, false, true);
+    }
+    public void ExplodeDehydrationEffect() {
+        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
+        uiElement.DOComplete();
+        uiElement.DOScale(Vector3.one * 3f, 0.2f)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() => {
+                uiElement.DOScale(Vector3.one, 0.2f).SetEase(Ease.InQuad);
+            });
     }
     #endregion
 

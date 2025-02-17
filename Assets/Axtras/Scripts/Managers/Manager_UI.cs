@@ -28,6 +28,7 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private GameObject gameCanvasGO;
     [SerializeField] private Image dehydrationImage;
     [SerializeField] private Image damageImage;
+    [SerializeField] private RectTransform peePanelRectTrans;
     [SerializeField] private Image peeImage;
     [SerializeField] private TMP_Text lookedAt_Text;
     [SerializeField] private TMP_Text qteKey_Text;
@@ -306,7 +307,10 @@ public class Manager_UI : MonoBehaviour
     public Image GetDamageImageUI() {
         return damageImage;
     }
-
+    public RectTransform GetPeeRectTransfUI() {
+        return peePanelRectTrans;
+    }
+    
     public void SetNextLevelEnabledUI(string score) {
         if (score == "S+" || score == "S" || score == "A" || score == "B") {
             next_LevelOver_Button.interactable = true;

@@ -137,6 +137,9 @@ public class Controller_Pee : MonoBehaviour
                 timeToKidneyStone += timeToKidneyStone * Time.deltaTime;
                 timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
                 Manager_Effects.Instance.UpdateDehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
+
+                float shakeIntensity = Mathf.Lerp(0.2f, 1.5f, timeToKidneyStone / maxTimeToKidneyStone);
+                Manager_Effects.Instance.ShakeDehydrationEffect(shakeIntensity);
             }
             
             if (timeToKidneyStone >= maxTimeToKidneyStone) {
@@ -145,6 +148,9 @@ public class Controller_Pee : MonoBehaviour
                 allowQTE = true;
                 GetRandKey();
 
+                // Stop shaking effect and trigger explosion effect
+                Manager_Effects.Instance.ExplodeDehydrationEffect();
+
                 qtePressCount = 0;
                 timeToKidneyStone = 0f;
                 stonesCurrentCount++;
@@ -152,6 +158,7 @@ public class Controller_Pee : MonoBehaviour
 
                 Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
                 Manager_SaveLoad.Instance.SaveStatData("totalKidneyStonesCreated", "add", 1);
+
                 // Kidney stone getting perm effects
                 Manager_Effects.Instance.SetGotStoneEffect();
             }
