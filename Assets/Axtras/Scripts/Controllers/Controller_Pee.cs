@@ -208,9 +208,11 @@ public class Controller_Pee : MonoBehaviour
         List<KeyCode> validKeyCodes = new ();
         foreach (KeyCode keyCode in keyCodes) {
             if (
-                (keyCode >= KeyCode.A && keyCode <= KeyCode.Z && keyCode != KeyCode.E && keyCode != KeyCode.F && keyCode != KeyCode.G) || 
-                (keyCode >= KeyCode.Alpha0 && keyCode <= KeyCode.Alpha9) || 
-                (keyCode >= KeyCode.F1 && keyCode <= KeyCode.F12)
+                keyCode >= KeyCode.A && keyCode <= KeyCode.Z && 
+                keyCode != KeyCode.E && 
+                keyCode != KeyCode.F && 
+                keyCode != KeyCode.W && keyCode != KeyCode.A && keyCode != KeyCode.S && keyCode != KeyCode.D && 
+                keyCode != KeyCode.G
             ) {
             validKeyCodes.Add(keyCode);
             }
