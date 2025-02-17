@@ -516,8 +516,9 @@ MonoBehaviour:
   addRigidbody: 0
   addMeshCollider: 0
   addBoxCollider: 0
-  showThisText: '[X] done?'
+  showThisText: '[X] - done cleaning?'
   showForTime: -1
+  rotationSpeed: 2
 --- !u!1 &5364300289940988327
 GameObject:
   m_ObjectHideFlags: 0

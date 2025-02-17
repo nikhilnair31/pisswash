@@ -233,11 +233,16 @@ public class Manager_UI : MonoBehaviour
         levelOver = true;
         inGame = false;
 
+        // Get rating
         var rating = Manager_Game.Instance.CalculateScoreLetter();
         var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
         SetScoreUI(rating);
         SetNextLevelEnabledUI(rating);
         Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, rating);
+        
+        // Add money gained
+        var money = Manager_Money.Instance.GetHasMoneyByRating(rating);
+        Manager_Money.Instance.UpdateMoney(money);
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);

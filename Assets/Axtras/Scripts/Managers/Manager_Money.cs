@@ -42,4 +42,16 @@ public class Manager_Money : MonoBehaviour
     public bool GetHasMoneyToBuy() {
         return currMoney > 0;
     }
+    public int GetHasMoneyByRating(string grade) {
+        int moneyGained = grade switch {
+            string n when n == "S+" => 35,
+            string n when n == "S" => 25,
+            string n when n == "A" => 15,
+            string n when n == "B" => 8,
+            string n when n == "C" => 5, 
+            string n when n == "D" => 3,
+            _ => 0
+        };
+        return moneyGained;
+    }
 }
