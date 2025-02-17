@@ -39,7 +39,8 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Level Over UI")]
     [SerializeField] private GameObject levelOverCanvasGO;
-    [SerializeField] private TMP_Text score_LevelOver_Text;
+    [SerializeField] private TMP_Text grade_LevelOver_Text;
+    [SerializeField] private TMP_Text stats_LevelOver_Text;
     [SerializeField] private Button retry_LevelOver_Button;
     [SerializeField] private Button next_LevelOver_Button;
     [SerializeField] private Button menu_LevelOver_Button;
@@ -234,15 +235,18 @@ public class Manager_UI : MonoBehaviour
         levelOver = true;
         inGame = false;
 
-        // Get rating
-        var rating = Manager_Game.Instance.CalculateScoreLetter();
+        // Get stats and rating
+        var (grade, stats) = Manager_Game.Instance.CalcStatAndGrade();
+        
+        // Set stats and grade for the level
         var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
-        SetScoreUI(rating);
-        SetNextLevelEnabledUI(rating);
-        Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, rating);
+        SetStatsUI(stats);
+        SetGradeUI(grade);
+        SetNextLevelEnabledUI(grade);
+        Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, grade);
         
         // Add money gained
-        var money = Manager_Money.Instance.GetHasMoneyByRating(rating);
+        var money = Manager_Money.Instance.GetHasMoneyByRating(grade);
         Manager_Money.Instance.UpdateMoney(money);
         
         levelOverCanvasGO.SetActive(true);
@@ -319,8 +323,11 @@ public class Manager_UI : MonoBehaviour
             next_LevelOver_Button.interactable = false;
         }
     }
-    public void SetScoreUI(string score) {
-        score_LevelOver_Text.text = score;
+    public void SetStatsUI(string stats) {
+        stats_LevelOver_Text.text = stats;
+    }
+    public void SetGradeUI(string score) {
+        grade_LevelOver_Text.text = score;
     }
     public void SetPeeAmountUI(float peeAmount) {
         peeImage.fillAmount = peeAmount;

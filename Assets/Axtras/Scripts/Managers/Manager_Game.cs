@@ -23,7 +23,7 @@ public class Manager_Game : MonoBehaviour
         Manager_UI.Instance.ShowMenu();
     }
 
-    public string CalculateScoreLetter() {
+    public (string grade, string stats) CalcStatAndGrade() {
         // Base Metrics
         var timeLeftPerc = Manager_Timer.Instance.GetTimeRemainingPerc();
         var stainPerc = Manager_Stains.Instance.GetStainCleanedPerc();
@@ -54,7 +54,7 @@ public class Manager_Game : MonoBehaviour
         finalScore = Mathf.Clamp(finalScore, 0f, 100f); // Keep within 0-100 range
 
         // Letter Grade
-        string grade = finalScore switch {
+        var grade = finalScore switch {
             float n when n >= 97 => "S+",
             float n when n >= 90 => "S",
             float n when n >= 80 => "A",
@@ -63,25 +63,26 @@ public class Manager_Game : MonoBehaviour
             float n when n >= 50 => "D",
             _ => "F"
         };
-        
-        Debug.Log(
-            $"timeLeftPerc: {timeLeftPerc}\n" +
-            $"stainPerc: {stainPerc}\n\n" +
-            $"stonesPassed: {stonesPassed}\n" +
-            $"stonesAcquired: {stonesAcquired}\n" +
-            $"slapTaken: {slapTaken}\n\n" +
-            $"stolenDrinks: {stolenDrinks}\n\n" +
-            $"baseScore: {baseScore}\n\n" +
-            $"stonePenalty: {stonePenalty}\n" +
-            $"slapPenalty: {slapPenalty}\n" +
-            $"totalPenalties: {totalPenalties}\n\n" +
-            $"stoneBonus: {stoneBonus}\n" +
-            $"stealMultiplier: {stealMultiplier}\n" +
-            $"perfectCleanBonus: {perfectCleanBonus}\n\n" +
-            $"finalScore: {finalScore}" +
-            $"grade: {grade}"
-        );
+       
+        var stats = 
+            $"% of Time Left: +{timeLeftPerc, -5}\n" +
+            $"% of Stains Cleaned: +{stainPerc, -5}\n\n" +
+            $"Kidney Stones Passed: +{stonesPassed, -5}\n" +
+            $"Kidney Stones Created: -{stonesAcquired, -5}\n" +
+            $"Slaps Taken: -{slapTaken, -5}\n\n" +
+            $"Drinks Stolen: +{stolenDrinks, -5}\n\n" +
+            $"Base Score: {baseScore, -5}\n\n" +
+            $"Kidney Stone Penalty: -{stonePenalty, -5}\n" +
+            $"Slap Penalty: -{slapPenalty, -5}\n" +
+            $"Total Penalties: -{totalPenalties, -5}\n\n" +
+            $"Kidney Stone Bonus: {stoneBonus, -5}\n" +
+            $"Stealing Multiplier: {stealMultiplier, -5}\n" +
+            $"Perfect Cleaning Bonus: {perfectCleanBonus, -5}\n\n" +
+            $"Final Score: {finalScore, -5}\n"
+        ;
 
-        return grade;
+        Debug.Log($"grade: {grade}\nstats:\n{stats}");
+
+        return (grade, stats);
     }
 }

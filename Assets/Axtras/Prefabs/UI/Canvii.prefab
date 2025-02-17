@@ -2088,7 +2088,8 @@ MonoBehaviour:
   money_Text: {fileID: 157272343305770121}
   inGame: 1
   levelOverCanvasGO: {fileID: 7562268842332081242}
-  score_LevelOver_Text: {fileID: 8327999418165541136}
+  grade_LevelOver_Text: {fileID: 8327999418165541136}
+  stats_LevelOver_Text: {fileID: 8408730366203158056}
   retry_LevelOver_Button: {fileID: 1275410607862791721}
   next_LevelOver_Button: {fileID: 5018690036751944072}
   menu_LevelOver_Button: {fileID: 8854266608489864139}
@@ -3170,7 +3171,7 @@ GameObject:
   - component: {fileID: 565395497294416416}
   - component: {fileID: 8327999418165541136}
   m_Layer: 5
-  m_Name: Score Text (TMP)
+  m_Name: GradeText (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
