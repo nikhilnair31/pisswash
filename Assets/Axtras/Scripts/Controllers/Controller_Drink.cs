@@ -81,20 +81,8 @@ public class Controller_Drink : Controller_Interactables
         stolen = true;
 
         // Check if owner sees player stealing
-        foreach (Controller_Drinker cd in ownerDrinkers) {
-            if (cd.GetCanSeePlayerStealing()) {
-                Manager_Effects.Instance.StartStunEffectsSeq(5f);
-                Manager_Drinks.Instance.SetStealSlap();
-                Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
-
-                if (cd.transform.TryGetComponent(out Generator_Stain gen)) {
-                    gen.SpawnDecalsWithConeRaycasts(
-                        source: cd.GetPlayerSeeSource(),
-                        spawnAsChild: false,
-                        coneAngle: 60f
-                    );
-                }
-            }
+        foreach (Controller_Drinker drinker in ownerDrinkers) {
+            drinker.CheckForPlayerStealing();
         }
 
         // Increase hydration

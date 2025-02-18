@@ -4,25 +4,51 @@ using UnityEngine;
 public class Controller_Drinker : Controller_Person 
 {
     #region Variables
+    private List<Controller_Drink> theirDrinks = new ();
+
+    [Header("Stealing Settings")]
     [SerializeField] private Transform seeFromTransform;
     [SerializeField] private float canSeeInRange = 5f;
     [SerializeField] private float canSeeInAngle = 110f;
-    private List<Controller_Drink> theirDrinks = new ();
+    
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip[] caughtClips;
     #endregion
 
     protected override void Start() {
         base.Start();
         
+        Debug.Log($"Controller_Drinker Start");
+        
         CheckForNearbyDrinks();
     }
 
     private void CheckForNearbyDrinks() {
+        Debug.Log($"CheckForNearbyDrinks");
         Collider[] colliders = Physics.OverlapSphere(seeFromTransform.position, canSeeInRange, LayerMask.GetMask("Interactable"));
+        Debug.Log($"colliders: {colliders.Length}");
         foreach (Collider col in colliders) {
+            Debug.Log($"col: {col.transform.name}");
             if (col.TryGetComponent(out Controller_Drink Drink)) {
                 theirDrinks.Add(Drink);
                 Drink.AddOwner(this);
             }
+        }
+    }
+
+    public void CheckForPlayerStealing() {
+        Manager_Effects.Instance.StartStunEffectsSeq(5f);
+        Manager_Drinks.Instance.SetStealSlap();
+        Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
+        
+        Helper.Instance.PlayRandAudio(audioSource, caughtClips);
+
+        if (transform.TryGetComponent(out Generator_Stain gen)) {
+            gen.SpawnDecalsWithConeRaycasts(
+                source: GetPlayerSeeSource(),
+                spawnAsChild: false,
+                coneAngle: 60f
+            );
         }
     }
     
@@ -42,8 +68,8 @@ public class Controller_Drinker : Controller_Person
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
-        foreach (Controller_Drink Drink in theirDrinks) {
-            Gizmos.DrawLine(seeFromTransform.position, Drink.transform.position);
+        foreach (Controller_Drink drink in theirDrinks) {
+            Gizmos.DrawLine(seeFromTransform.position, drink.transform.position);
         }
     }
 }
