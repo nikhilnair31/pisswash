@@ -13,6 +13,9 @@ public class Controller_Stain : MonoBehaviour
     [SerializeField] public Manager_Stains.StainType stainType;
     private Type_Stain selectedStain;
     
+    [Header("Money Properties")]
+    [SerializeField] public int moneyGainedOnClean = 3;
+    
     [Header("Audio Properties")]
     [SerializeField] public AudioSource audioSource;
     [SerializeField] private AudioClip[] cleanedClips;
@@ -46,9 +49,15 @@ public class Controller_Stain : MonoBehaviour
         decalProjector.fadeFactor -= selectedStain.fadeAmountPerCollision * fadeMul;
 
         if (decalProjector.fadeFactor <= 0f) {
+            // Make fully transparent
             decalProjector.fadeFactor = 0f;
+            // Play cleaned stain audio clip
             Helper.Instance.PlayRandAudio(audioSource, cleanedClips);
+            // Give me money
+            Manager_Money.Instance.UpdateMoney(moneyGainedOnClean);
+            // Save to data
             Manager_SaveLoad.Instance.SaveStatData("totalCleanedStains", "add", 1);
+            // Disable decal and collider
             decalProjector.enabled = false;
             boxCollider.enabled = false;
         }

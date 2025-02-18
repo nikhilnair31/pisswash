@@ -93,28 +93,6 @@ public class Manager_UI : MonoBehaviour
         }
     }
     
-    public void SetStatsText(JSONObject dataJson) {
-        var labelWidth = 25; // Adjust to fit your longest label
-
-        var statsStr =
-            $"{"Shifts Worked:".PadRight(labelWidth)} {dataJson["totalShiftWorked"] ?? 0}\n" +
-            $"{"Cleaned Stains:".PadRight(labelWidth)} {dataJson["totalCleanedStains"]}\n" +
-            $"{"Peed Amount:".PadRight(labelWidth)} {dataJson["peedAmount"]} fl oz\n" +
-            $"\n" +
-            $"{"Kidney Stones Created:".PadRight(labelWidth)} {dataJson["totalKidneyStonesCreated"]}\n" +
-            $"{"Kidney Stones Passed:".PadRight(labelWidth)} {dataJson["totalKidneyStonesPassed"]}\n" +
-            $"\n" +
-            $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"]}\n" +
-            $"\n" +
-            $"{"Drinks Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
-            $"{"Drinks Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
-            $"\n" +
-            $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"]}\n" +
-            $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"]}\n";
-
-        var statsText = statsContentPanelGO.GetComponent<TMP_Text>();
-        statsText.text = statsStr;
-    }
     public void SpawnLevelPanels(JSONObject dataJson) {
         var sceneDataList = dataJson["sceneDataList"].AsArray;
 
@@ -286,7 +264,11 @@ public class Manager_UI : MonoBehaviour
         menuCanvasGO.SetActive(false);
         levelOverCanvasGO.SetActive(false);
 
-        Manager_SaveLoad.Instance.LoadLevelData();
+        var data = Manager_SaveLoad.Instance.LoadLevelData();
+        SetStatsText(data);
+        SpawnLevelPanels(data);
+        Manager_Money.Instance.UpdateMoney(data["haveMoney"]);
+
         Manager_Scene.Instance.LoadSceneByName("M");
 
         yield return new WaitForSecondsRealtime(1f);
@@ -322,6 +304,28 @@ public class Manager_UI : MonoBehaviour
         else if (score == "C" || score == "D" || score == "F") {
             next_LevelOver_Button.interactable = false;
         }
+    }
+    public void SetStatsText(JSONObject dataJson) {
+        var labelWidth = 25; // Adjust to fit your longest label
+
+        var statsStr =
+            $"{"Shifts Worked:".PadRight(labelWidth)} {dataJson["toalShiftWorked"] ?? 0}\n" +
+            $"{"Cleaned Stains:".PadRight(labelWidth)} {dataJson["totalCleanedStains"]}\n" +
+            $"{"Peed Amount:".PadRight(labelWidth)} {dataJson["peedAmount"]} fl oz\n" +
+            $"\n" +
+            $"{"Kidney Stones Created:".PadRight(labelWidth)} {dataJson["totalKidneyStonesCreated"]}\n" +
+            $"{"Kidney Stones Passed:".PadRight(labelWidth)} {dataJson["totalKidneyStonesPassed"]}\n" +
+            $"\n" +
+            $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"]}\n" +
+            $"\n" +
+            $"{"Drinks Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
+            $"{"Drinks Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
+            $"\n" +
+            $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"]}\n" +
+            $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"]}\n";
+
+        var statsText = statsContentPanelGO.GetComponent<TMP_Text>();
+        statsText.text = statsStr;
     }
     public void SetStatsUI(string stats) {
         stats_LevelOver_Text.text = stats;

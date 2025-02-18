@@ -150,19 +150,19 @@ public class Manager_SaveLoad : MonoBehaviour
         var dataJson = JSON.Parse(Load()) as JSONObject;
         Debug.Log($"SaveStatData og dataJson: {dataJson}");
         
-        Debug.Log($"SaveStatData og toalShiftWorkedInt: {dataJson[statKey]}");
+        Debug.Log($"SaveStatData og {statKey}: {dataJson[statKey]}");
         if (type == "add") {
             dataJson[statKey] += val;
         }
         else if (type == "set") {
             dataJson[statKey] = val;
         }
-        Debug.Log($"SaveStatData new toalShiftWorkedInt: {dataJson[statKey]}");
+        Debug.Log($"SaveStatData new {statKey}: {dataJson[statKey]}");
 
         Save(dataJson.ToString());
     }
     
-    public void LoadLevelData() {
+    public JSONObject LoadLevelData() {
         string saveDatStr = Load();
         // Debug.Log($"saveDatStr: {saveDatStr}");
 
@@ -173,14 +173,12 @@ public class Manager_SaveLoad : MonoBehaviour
             Save(saveData);
         }
         else {
-            Debug.Log("Save data found. Loading save file...");
+            Debug.Log($"Save data found. Loading save file...\n{saveDatStr}");
             saveData = saveDatStr;
         }
         // Debug.Log($"saveData: {saveData}");
         
         JSONObject loadedGameData = JSON.Parse(saveData) as JSONObject;
-        
-        Manager_UI.Instance.SetStatsText(loadedGameData);
-        Manager_UI.Instance.SpawnLevelPanels(loadedGameData);
+        return loadedGameData;
     }
 }

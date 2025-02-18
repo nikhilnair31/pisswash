@@ -58,6 +58,8 @@ public class Controller_Drink : Controller_Interactables
 
             // Update money
             Manager_Money.Instance.UpdateMoney(-selectedDrink.buyCost);
+            // Update
+            Manager_SaveLoad.Instance.SaveStatData("spentMoney", "add", selectedDrink.buyCost);
             // Update drinks bought
             Manager_SaveLoad.Instance.SaveStatData("drinksBought", "add", 1);
 
