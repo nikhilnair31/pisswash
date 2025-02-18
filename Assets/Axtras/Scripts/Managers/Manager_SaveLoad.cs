@@ -145,19 +145,18 @@ public class Manager_SaveLoad : MonoBehaviour
         Save(dataJson.ToString());
     }
     public void SaveStatData(string statKey, string type = "set", int val = 1) {
-        Debug.Log($"SaveStatData | statKey: {statKey} - type: {type} - val: {val}");
+        // Debug.Log($"SaveStatData | statKey: {statKey} - type: {type} - val: {val}");
         
         var dataJson = JSON.Parse(Load()) as JSONObject;
-        Debug.Log($"SaveStatData og dataJson: {dataJson}");
         
-        Debug.Log($"SaveStatData og {statKey}: {dataJson[statKey]}");
+        // Debug.Log($"SaveStatData og {statKey}: {dataJson[statKey]}");
         if (type == "add") {
             dataJson[statKey] += val;
         }
         else if (type == "set") {
             dataJson[statKey] = val;
         }
-        Debug.Log($"SaveStatData new {statKey}: {dataJson[statKey]}");
+        // Debug.Log($"SaveStatData new {statKey}: {dataJson[statKey]}");
 
         Save(dataJson.ToString());
     }

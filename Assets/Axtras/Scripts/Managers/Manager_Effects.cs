@@ -82,11 +82,21 @@ public class Manager_Effects : MonoBehaviour
     #endregion
 
     #region Audio Effects
-    public void ApplyAllAudioSourcePitchShift(float perc) {
+    public void ApplyAllAudioSourcePitchShift(float mul, float duration) {
         var audioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        DOTween.Kill("AudioPitchShift");
+        var sequence = DOTween.Sequence().SetId("AudioPitchShift");
         foreach (var source in audioSources) {
-            source.pitch *= perc;
-            source.pitch = Mathf.Clamp(source.pitch, 0.6f, 1.1f);
+            float targetPitch = Mathf.Clamp(source.pitch * mul, 0.6f, 1.1f);
+            sequence.Join(
+                DOTween.To(() => source.pitch, x => source.pitch = x, targetPitch, duration)
+            );
+        }
+        sequence.AppendInterval(duration * 0.5f);
+        foreach (var source in audioSources) {
+            sequence.Join(
+                DOTween.To(() => source.pitch, x => source.pitch = x, 1f, duration)
+            );
         }
     }
     #endregion

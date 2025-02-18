@@ -66,7 +66,8 @@ public class Type_Drink_Mystery : Type_Drink
         // random reduction in all audio source's pitch
         if (Helper.Instance.TriggerBool(audioChangeChance))
             Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(
-                Helper.Instance.RandShiftVal(pitchShiftPerc)
+                Helper.Instance.RandShiftVal(pitchShiftPerc), 
+                Helper.Instance.RandShiftVal(duration)
             );
         // random visual values
         if (Helper.Instance.TriggerBool(visualsChangeChance))

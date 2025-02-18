@@ -31,7 +31,7 @@ public class Type_Drink_Whiskey : Type_Drink
         Manager_Effects.Instance.ApplyVisionDistortion(distortionMul, duration);
 
         // medium reduction in all audio source's pitch
-        Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(pitchShiftPerc);
+        Manager_Effects.Instance.ApplyAllAudioSourcePitchShift(pitchShiftPerc, duration);
         // increased visual saturation and vignette
         Manager_Effects.Instance.ApplySaturationAndVignette(saturationMul, vignetteMul, duration);
     }
