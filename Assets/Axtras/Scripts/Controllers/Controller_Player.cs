@@ -10,7 +10,6 @@ public class Controller_Player : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveDirection;
     private bool isMoving = false;
-    private bool shownTutorials = false;
     private float speedMul = 1f;
     private float camLocalY;
     private float xRotation = 0f;
@@ -33,6 +32,9 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] footstepClips;
     [SerializeField] private float footstepInterval = 0.5f;
+
+    [Header("Tutorial Settings")]
+    [SerializeField] private Type_Tutorial tutorialSO;
     #endregion
 
     private void Awake() {
@@ -49,8 +51,8 @@ public class Controller_Player : MonoBehaviour
 
         rb.freezeRotation = true;
         camLocalY = playerCamera.transform.position.y;
-        
-        PlayTutorial();
+
+        Manager_Tutorials.Instance.PlayTutorial();
     }
 
     private void Update() {
@@ -119,42 +121,6 @@ public class Controller_Player : MonoBehaviour
         }
         else {
             footstepTimer = 0f;
-        }
-    }
-    
-    private void PlayTutorial() {
-        if (shownTutorials) 
-            return;
- 
-        var check = PlayerPrefs.GetInt("Tutorials-ShowControls");
-        if (check == 1) {
-            shownTutorials = true;
-        }
-        else {
-            var sequence = DOTween.Sequence().SetId("Tutorials-ShowControls");
-            sequence
-            // Wait a second
-            .AppendInterval(1.0f)
-            .AppendCallback(() => {
-                // Pause time and enable cursor
-                Time.timeScale = 0f;
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-
-                // Flash modal
-                Manager_UI.Instance.SpawnModal(
-                    "Controls",
-                    "WASD to move. Mouse to look around.",
-                    "Next",
-                    "Skip",
-                    () => Debug.Log("Next."),
-                    () => Debug.Log("Skipped.")
-                );
-            })
-            // Mark it shown
-            .OnComplete(() => {
-                PlayerPrefs.SetInt("Tutorials-ShowControls", 1);
-            });
         }
     }
 

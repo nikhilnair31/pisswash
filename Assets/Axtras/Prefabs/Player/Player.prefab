@@ -306,6 +306,7 @@ MonoBehaviour:
   footstepClips:
   - {fileID: 8300000, guid: 211f07d8def4de44683433990c74d27e, type: 3}
   footstepInterval: 0.5
+  tutorialSO: {fileID: 11400000, guid: 23a15d36e52776544bc8e0fbc76984da, type: 2}
 --- !u!114 &4625156002949483831
 MonoBehaviour:
   m_ObjectHideFlags: 0

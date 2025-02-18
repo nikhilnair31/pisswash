@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6477836672978144596}
   - component: {fileID: 8873614650648273250}
   - component: {fileID: 3015770420369858612}
+  - component: {fileID: 5892149067978888924}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -383,3 +384,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5892149067978888924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313998068107604012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b19f12ec58fb44bad38edf5c3ec741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTutorial: {fileID: 11400000, guid: 23a15d36e52776544bc8e0fbc76984da, type: 2}

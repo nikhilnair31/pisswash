@@ -6,6 +6,7 @@ using System.Collections;
 using TMPro;
 using System;
 using SimpleJSON;
+using UnityEngine.Events;
 
 public class Manager_UI : MonoBehaviour 
 {
@@ -413,13 +414,13 @@ public class Manager_UI : MonoBehaviour
 
         var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
         yesButton.onClick.AddListener(() => {
-            onYesClicked.Invoke();
+            onYesClicked?.Invoke();
             Destroy(modalGO);
         });
 
         var noButton = modalButtons.transform.Find("No Button").GetComponent<Button>();
         noButton.onClick.AddListener(() => {
-            onNoClicked.Invoke();
+            onNoClicked?.Invoke();
             Destroy(modalGO);
         });
 
