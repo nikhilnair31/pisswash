@@ -13,8 +13,6 @@ public class Controller_Person : MonoBehaviour
     #endregion
 
     protected virtual void Start() {
-        Debug.Log($"Controller_Person Start");
-
         if (anim == null)
             TryGetComponent(out anim);
         if (rend == null)

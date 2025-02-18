@@ -73,6 +73,7 @@ public class Manager_UI : MonoBehaviour
             Destroy(gameObject);
     }
     
+    #region Initial
     private void Start() {
         SetupButtons();
     }
@@ -85,14 +86,44 @@ public class Manager_UI : MonoBehaviour
         retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
         next_LevelOver_Button?.onClick.AddListener(NextLevel);
         menu_LevelOver_Button?.onClick.AddListener(ShowMenu);
-    }
-     
+    } 
+    #endregion
+
+    #region Pause Related
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             PauseGame();
         }
     }
+    public void PauseGame() {
+        if (inGame && !inPause) {
+            inGame = false;
+            inPause = true;
+
+            gameCanvasGO.SetActive(false);
+            pauseCanvasGO.SetActive(true);
+            
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+
+            Time.timeScale = 0f;
+        }
+        else if (!inGame && inPause) {
+            inPause = false;
+            inGame = true;
+
+            gameCanvasGO.SetActive(true);
+            pauseCanvasGO.SetActive(false);
+            
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            Time.timeScale = 1f;
+        }
+    }
+    #endregion
     
+    #region General
     public void SpawnLevelPanels(JSONObject dataJson) {
         var sceneDataList = dataJson["sceneDataList"].AsArray;
 
@@ -183,33 +214,6 @@ public class Manager_UI : MonoBehaviour
         Cursor.visible = false;
 
         Time.timeScale = 1f;
-    }
-
-    public void PauseGame() {
-        if (inGame && !inPause) {
-            inGame = false;
-            inPause = true;
-
-            gameCanvasGO.SetActive(false);
-            pauseCanvasGO.SetActive(true);
-            
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-
-            Time.timeScale = 0f;
-        }
-        else if (!inGame && inPause) {
-            inPause = false;
-            inGame = true;
-
-            gameCanvasGO.SetActive(true);
-            pauseCanvasGO.SetActive(false);
-            
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-
-            Time.timeScale = 1f;
-        }
     }
 
     public void LevelOver() {
@@ -356,6 +360,7 @@ public class Manager_UI : MonoBehaviour
     public void SetKidneyStoneUI(int stoneCnt) {
         kidneyStone_Text.text = stoneCnt.ToString();
     }
+    #endregion
 
     #region Interaction Text
     public void SetShowText(string text) {

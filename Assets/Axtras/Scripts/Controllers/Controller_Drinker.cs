@@ -17,18 +17,13 @@ public class Controller_Drinker : Controller_Person
 
     protected override void Start() {
         base.Start();
-        
-        Debug.Log($"Controller_Drinker Start");
-        
+                
         CheckForNearbyDrinks();
     }
 
     private void CheckForNearbyDrinks() {
-        Debug.Log($"CheckForNearbyDrinks");
         Collider[] colliders = Physics.OverlapSphere(seeFromTransform.position, canSeeInRange, LayerMask.GetMask("Interactable"));
-        Debug.Log($"colliders: {colliders.Length}");
         foreach (Collider col in colliders) {
-            Debug.Log($"col: {col.transform.name}");
             if (col.TryGetComponent(out Controller_Drink Drink)) {
                 theirDrinks.Add(Drink);
                 Drink.AddOwner(this);
