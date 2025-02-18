@@ -396,4 +396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b19f12ec58fb44bad38edf5c3ec741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTutorial: {fileID: 11400000, guid: 23a15d36e52776544bc8e0fbc76984da, type: 2}
+  playerMoveLookTutorial: {fileID: 11400000, guid: 23a15d36e52776544bc8e0fbc76984da, type: 2}
+  playerPeeTutorial: {fileID: 11400000, guid: a0a0cc4012213514aa98f8c548b5bdc3, type: 2}
+  drinkTutorial: {fileID: 11400000, guid: b445954954a9626459fc4d7a0f29dc80, type: 2}

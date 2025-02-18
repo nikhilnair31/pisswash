@@ -10,7 +10,8 @@ public class Manager_Tutorials : MonoBehaviour
     private bool shownTutorials = false;
     
     [Header("Tutorial Settings")]
-    public Type_Tutorial playerTutorial;
+    public Type_Tutorial playerMoveLookTutorial;
+    public Type_Tutorial playerPeeTutorial;
     public Type_Tutorial drinkTutorial;
     #endregion
 
@@ -37,13 +38,9 @@ public class Manager_Tutorials : MonoBehaviour
             // Wait a second
             .AppendInterval(1.0f)
             .AppendCallback(() => {
-                // Pause time and enable cursor
-                Time.timeScale = 0f;
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-
                 // Flash modal
-                Manager_UI.Instance.SpawnModal(playerTutorial);
+                Manager_UI.Instance.PauseDuringModal(true);
+                Manager_UI.Instance.SpawnModal(playerMoveLookTutorial, OnYesClicked, null);
             })
             // Mark it shown
             .OnComplete(() => {
@@ -52,16 +49,10 @@ public class Manager_Tutorials : MonoBehaviour
         }
     }
     private void OnYesClicked() {
-        Debug.Log("Yes button pressed! Do something.");
-        // Call any function from a scene object
+        Manager_UI.Instance.SpawnModal(playerPeeTutorial, null, OnNoClicked);
     }
     private void OnNoClicked() {
-        Debug.Log("No button pressed! Do something else.");
-
-        // Unpause time and disable cursor
-        Time.timeScale = 1f;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Manager_UI.Instance.PauseDuringModal(false);
     }
     
     public bool GetIfShowingTutorials() {

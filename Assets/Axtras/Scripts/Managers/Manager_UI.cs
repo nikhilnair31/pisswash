@@ -7,6 +7,7 @@ using TMPro;
 using System;
 using SimpleJSON;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class Manager_UI : MonoBehaviour 
 {
@@ -394,7 +395,20 @@ public class Manager_UI : MonoBehaviour
     #endregion
 
     #region Modals
-    public void SpawnModal(Type_Tutorial tutorialSO) {
+    public void PauseDuringModal(bool active) {
+        if (active) {
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+        else {
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    public void SpawnModal(Type_Tutorial tutorialSO, Action yesAction, Action noAction) {
         GameObject modalGO = Instantiate(modalPrefab);
 
         var modalCanvas = GameObject.Find("Canvii/Modals Canvas");
@@ -403,30 +417,42 @@ public class Manager_UI : MonoBehaviour
         RectTransform modalRect = modalGO.GetComponent<RectTransform>();
         modalRect.anchoredPosition = new Vector2(0, 0);
 
+        modalGO.transform.localScale = Vector3.zero;
+        modalGO.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
+
         var modalText = modalGO.transform.Find("Modal Text");
+        var modalImages = modalGO.transform.Find("Modal Images");
         var modalButtons = modalGO.transform.Find("Modal Buttons");
 
         var titleText = modalText.transform.Find("Title Text").GetComponent<TMP_Text>();
         titleText.text = tutorialSO.titleStr;
-        
         var contentText = modalText.transform.Find("Content Text").GetComponent<TMP_Text>();
         contentText.text = tutorialSO.contentStr;
 
-        var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
-        yesButton.onClick.AddListener(() => {
-            tutorialSO.onYesClicked?.Invoke();
-            Destroy(modalGO);
+        var imageImage = modalImages.transform.Find("Image Image").GetComponent<Image>();
+        imageImage.sprite = tutorialSO.GetSprite();
+        var leftButton = modalImages.transform.Find("Left Button").GetComponent<Button>();
+        leftButton.onClick.AddListener(() => {
+            imageImage.sprite = tutorialSO.GetSprite(-1);
+        });
+        var rightButton = modalImages.transform.Find("Right Button").GetComponent<Button>();
+        rightButton.onClick.AddListener(() => {
+            imageImage.sprite = tutorialSO.GetSprite(+1);
         });
 
+        var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
+        yesButton.onClick.AddListener(() => {
+            yesAction?.Invoke();
+            modalGO.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.OutBack).OnComplete(() => Destroy(modalGO));
+        });
         var noButton = modalButtons.transform.Find("No Button").GetComponent<Button>();
         noButton.onClick.AddListener(() => {
-            tutorialSO.onNoClicked?.Invoke();
-            Destroy(modalGO);
+            noAction?.Invoke();
+            modalGO.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.OutBack).OnComplete(() => Destroy(modalGO));
         });
 
         var yesButtonText = yesButton.transform.Find("Yes Button Text").GetComponent<TMP_Text>();
         yesButtonText.text = tutorialSO.yesButtonStr;
-
         var noButtonText = noButton.transform.Find("No Button Text").GetComponent<TMP_Text>();
         noButtonText.text = tutorialSO.noButtonStr;
     }
