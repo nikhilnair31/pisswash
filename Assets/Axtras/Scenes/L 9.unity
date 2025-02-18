@@ -166,10 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &12939055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -262,10 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &23822671
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -358,10 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &26359423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -454,10 +451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &28628793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -550,10 +546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &29378996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -646,10 +641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &35117610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -866,10 +860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &61622435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1024,10 +1017,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &67172911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1120,10 +1112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &67852828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1216,10 +1207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &71676947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1312,10 +1302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &82368708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1408,10 +1397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &83354857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1504,10 +1492,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &94681044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1600,10 +1587,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &105311737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1696,10 +1682,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &118426856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1792,10 +1777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &128982532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1888,10 +1872,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &129964286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1984,10 +1967,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &131666225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2154,10 +2136,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &139708971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2250,10 +2231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &147621555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2346,10 +2326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &153226417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2574,10 +2553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &156520271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2709,10 +2687,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &167854993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2936,10 +2913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &193889585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3032,10 +3008,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &200455312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3128,10 +3103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &201358654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3286,10 +3260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &208003622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3382,10 +3355,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &224959404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3540,10 +3512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &229656230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3636,10 +3607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &236837366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3732,10 +3702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &241040657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3828,10 +3797,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &245069980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3924,10 +3892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &246381426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4020,10 +3987,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &251131495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4116,10 +4082,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &254632009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4243,10 +4208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &268978439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4401,10 +4365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &280723217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4497,10 +4460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &282766757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4655,10 +4617,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &291137230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4825,10 +4786,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &306263713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4921,10 +4881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &325421331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5022,7 +4981,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.80566037, g: 0.9779399, b: 1, a: 1}
-  m_Intensity: 300
+  m_Intensity: 200
   m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5064,7 +5023,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -5138,10 +5097,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &334839721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5234,10 +5192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &341916200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5489,6 +5446,7 @@ GameObject:
   - component: {fileID: 352379476}
   - component: {fileID: 352379475}
   - component: {fileID: 352379478}
+  - component: {fileID: 352379479}
   m_Layer: 3
   m_Name: Level
   m_TagString: Untagged
@@ -5589,6 +5547,103 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4384993486944752066, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+--- !u!82 &352379479
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352379474}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f7182f3c77fe644394b1db43d50f3a7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5f7182f3c77fe644394b1db43d50f3a7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 0.8
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &352391162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5698,10 +5753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &363499068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5794,10 +5848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &374153492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5930,10 +5983,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &385190935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6026,10 +6078,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &391046154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6122,10 +6173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &398596164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6218,10 +6268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &400151898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6314,10 +6363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &404936689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6410,10 +6458,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &408622274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6627,10 +6674,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &420766805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6723,10 +6769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &424340538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6852,10 +6897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &430058830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6948,10 +6992,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &445450723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7044,10 +7087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &451054629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7140,10 +7182,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &457402707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7380,7 +7421,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.55794764, g: 1, b: 0.53396225, a: 1}
-  m_Intensity: 30
+  m_Intensity: 20
   m_Range: 15.15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7422,7 +7463,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -7543,10 +7584,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &488246834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7701,10 +7741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &496753137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7859,10 +7898,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &508204096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8120,10 +8158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &517515696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8216,10 +8253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &525828605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8533,10 +8569,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &550668170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8629,10 +8664,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &552402177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8923,10 +8957,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &588929061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9050,10 +9083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &602876080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9146,10 +9178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &610203245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9242,10 +9273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &611779614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9343,10 +9373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &622799197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9439,10 +9468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &634346183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9671,10 +9699,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &664130957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9812,10 +9839,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &676204811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9908,10 +9934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &680435537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10004,10 +10029,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &686096729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10236,10 +10260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &727195125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10332,10 +10355,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &727269276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10490,10 +10512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &735491657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10586,10 +10607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &735776379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10682,10 +10702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &736244782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10852,10 +10871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &754753179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10948,10 +10966,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &758436218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11044,10 +11061,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &758851073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11140,10 +11156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &762565897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11236,10 +11251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &768406524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11332,10 +11346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &772301633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11428,10 +11441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &773287952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11524,10 +11536,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &777334667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11620,10 +11631,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &809008392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11716,10 +11726,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &811253026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11812,10 +11821,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &824560593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11976,10 +11984,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &838894463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12072,10 +12079,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &840553322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12225,10 +12231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &846844669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12383,10 +12388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &865627987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12479,10 +12483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &870100595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12580,7 +12583,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.5254902, b: 0.8621605, a: 1}
-  m_Intensity: 500
+  m_Intensity: 100
   m_Range: 50
   m_SpotAngle: 128.12445
   m_InnerSpotAngle: 81.83164
@@ -12622,7 +12625,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 0.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -12758,10 +12761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &891788482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12854,10 +12856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &892234406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12950,10 +12951,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &894121173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13046,10 +13046,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &894454535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13216,10 +13215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &902400434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13312,10 +13310,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &904199147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13408,10 +13405,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &904888534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13574,10 +13570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &907992657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13670,10 +13665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &909460266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13766,10 +13760,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &933584464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13932,10 +13925,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &951590596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14098,10 +14090,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &966366936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14382,10 +14373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &999074925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14556,10 +14546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1006721687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14804,10 +14793,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1029844460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14900,10 +14888,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1034890067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14996,10 +14983,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1068108576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15092,10 +15078,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1071272190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15188,10 +15173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1078791108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15284,10 +15268,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1078999026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15442,10 +15425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1087189451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15538,10 +15520,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1094028714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15716,7 +15697,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.80566037, g: 0.9779399, b: 1, a: 1}
-  m_Intensity: 30
+  m_Intensity: 20
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15758,7 +15739,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -15817,10 +15798,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1105976628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16107,10 +16087,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1148954318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16203,10 +16182,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1164796215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16299,10 +16277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1168004170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16395,10 +16372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1169653128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16491,10 +16467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1176862995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16587,10 +16562,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1189741605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16683,10 +16657,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1190464142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16853,10 +16826,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1196627458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17130,10 +17102,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1211456687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17288,10 +17259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1231956535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17384,10 +17354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1261535612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17480,10 +17449,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1264031788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17708,10 +17676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1279732912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17804,10 +17771,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1281182944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17979,10 +17945,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1283504638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18075,10 +18040,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1285545723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18171,10 +18135,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1286819433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18267,10 +18230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1296140290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18363,10 +18325,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1315814000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18459,10 +18420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1330969727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18555,10 +18515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1331253042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18651,10 +18610,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1342536455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18747,10 +18705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1353005611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18874,10 +18831,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1355495464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18970,10 +18926,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1361086527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19066,10 +19021,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1364642196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19162,10 +19116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1366357191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19258,10 +19211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1374673168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19354,10 +19306,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1382903350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19450,10 +19401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1384457523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19546,10 +19496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1385966452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19642,10 +19591,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1386635637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19738,10 +19686,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1392783559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19896,10 +19843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1401634167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19992,10 +19938,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1410082647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20088,10 +20033,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1413816478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20184,10 +20128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1443413735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20280,10 +20223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1445018907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20376,10 +20318,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1447052036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20612,10 +20553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1461176096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20778,10 +20718,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1479205155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20874,10 +20813,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1481459641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20970,10 +20908,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1487173447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21066,10 +21003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1487194927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21348,10 +21284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1497384226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21444,10 +21379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1499295884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21540,10 +21474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1499760977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21636,10 +21569,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1507631675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21789,10 +21721,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1518295011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21885,10 +21816,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1519752865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21981,10 +21911,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1529267087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22077,10 +22006,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1531291096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22173,10 +22101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1531608767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22347,10 +22274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1533251046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22443,10 +22369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1535953016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22679,10 +22604,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1555876265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22795,7 +22719,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7070579, b: 0.435849, a: 1}
-  m_Intensity: 30
+  m_Intensity: 20
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -22837,7 +22761,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 0.1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -22896,10 +22820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1569560083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23269,7 +23192,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.69809306, b: 0.39811313, a: 1}
-  m_Intensity: 500
+  m_Intensity: 100
   m_Range: 50
   m_SpotAngle: 128.12445
   m_InnerSpotAngle: 81.83164
@@ -23311,7 +23234,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 0.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -23427,10 +23350,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1616153238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23655,10 +23577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1625358214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23813,10 +23734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1638824855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23909,10 +23829,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1641849211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24079,10 +23998,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1650390184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24175,10 +24093,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1650396491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24271,10 +24188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1651619865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24367,10 +24283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1664611466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24541,10 +24456,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1668438433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24761,10 +24675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1688417230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24857,10 +24770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1689852757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24953,10 +24865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1693981045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25049,10 +24960,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1716565675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25269,10 +25179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1738276090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25505,10 +25414,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1758502881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25725,10 +25633,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1777380894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25821,10 +25728,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1794149574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26041,10 +25947,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1801194009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26280,10 +26185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1837614205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26376,10 +26280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1851389681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26492,7 +26395,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.5254902, g: 1, b: 0.5284043, a: 1}
-  m_Intensity: 500
+  m_Intensity: 100
   m_Range: 50
   m_SpotAngle: 128.12445
   m_InnerSpotAngle: 81.83164
@@ -26534,7 +26437,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 0.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -26593,10 +26496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1877921915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31463,10 +31365,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1919132095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31559,10 +31460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1945939216
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31655,10 +31555,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1958817864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31878,7 +31777,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.29917052, g: 0.27735847, b: 1, a: 1}
-  m_Intensity: 500
+  m_Intensity: 100
   m_Range: 50
   m_SpotAngle: 128.12445
   m_InnerSpotAngle: 81.83164
@@ -31920,7 +31819,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2
+  m_BounceIntensity: 0.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -31979,10 +31878,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2012425040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32359,10 +32257,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2042092583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32455,10 +32352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2047216538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32551,10 +32447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2047817406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32647,10 +32542,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2060550530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32743,10 +32637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2063359043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32839,10 +32732,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2085038743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33111,10 +33003,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2108042519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33314,10 +33205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2121007568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33472,10 +33362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2129831918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33568,10 +33457,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 2
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2143277516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33931,14 +33819,14 @@ SceneRoots:
   - {fileID: 1513475888}
   - {fileID: 845965838}
   - {fileID: 1211399122}
+  - {fileID: 593220083}
+  - {fileID: 352379477}
+  - {fileID: 536025922}
   - {fileID: 2100421726}
   - {fileID: 1609128223}
   - {fileID: 1820567279}
   - {fileID: 177752303}
-  - {fileID: 593220083}
-  - {fileID: 536025922}
   - {fileID: 1353065434}
-  - {fileID: 352379477}
   - {fileID: 988040658}
   - {fileID: 382139203}
   - {fileID: 1628491262}

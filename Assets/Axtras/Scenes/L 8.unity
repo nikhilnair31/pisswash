@@ -166,10 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &33479290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,6 +468,7 @@ GameObject:
   - component: {fileID: 352379476}
   - component: {fileID: 352379475}
   - component: {fileID: 352379478}
+  - component: {fileID: 352379479}
   m_Layer: 3
   m_Name: Level
   m_TagString: Untagged
@@ -569,6 +569,103 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6583524600076091625, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+--- !u!82 &352379479
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352379474}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f7182f3c77fe644394b1db43d50f3a7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5f7182f3c77fe644394b1db43d50f3a7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 0.8
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &382139202
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,10 +745,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &395930139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1529,10 +1625,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &857120550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1808,10 +1903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &887303454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2014,10 +2108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1067616392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2214,11 +2307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 237897383533916780, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.01753552
+      value: 0.017535781
       objectReference: {fileID: 0}
     - target: {fileID: 237897383533916780, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.00000037399562
       objectReference: {fileID: 0}
     - target: {fileID: 237897383533916780, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2226,7 +2319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 237897383533916780, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000006559313
       objectReference: {fileID: 0}
     - target: {fileID: 237897383533916780, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2301,10 +2394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1173055226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2564,10 +2656,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1450397497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2643,11 +2734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.01753551
+      value: 0.017535768
       objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.00000036214368
       objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2655,7 +2746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000006351443
       objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2730,10 +2821,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &1466959197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2805,11 +2895,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.017535461
+      value: 0.017535523
       objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.000000115885975
       objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2817,7 +2907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000000020324333
       objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3350,19 +3440,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4083338572394712123, guid: c61d0299f4803004e931c46d717483a8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.017535463
+      value: 0.016200656
       objectReference: {fileID: 0}
     - target: {fileID: 4083338572394712123, guid: c61d0299f4803004e931c46d717483a8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.0067104828
       objectReference: {fileID: 0}
     - target: {fileID: 4083338572394712123, guid: c61d0299f4803004e931c46d717483a8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99984634
+      value: 0.9237376
       objectReference: {fileID: 0}
     - target: {fileID: 4083338572394712123, guid: c61d0299f4803004e931c46d717483a8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.38262442
       objectReference: {fileID: 0}
     - target: {fileID: 4083338572394712123, guid: c61d0299f4803004e931c46d717483a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3525,6 +3615,7 @@ MonoBehaviour:
   showForTime: -1
   isOn: 0
   increaseHydrationRate: 10
+  drinkClips: []
 --- !u!65 &1636894822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3943,10 +4034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2069184181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4039,10 +4129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 1
-  speedReductionMul: 0.7
-  speedIncreaseMul: 10
-  scaleAmount: 2
-  scaleTime: 20
+  moneyGainedOnClean: 3
+  audioSource: {fileID: 0}
+  cleanedClips: []
 --- !u!65 &2084391316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4186,11 +4275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.01753551
+      value: 0.017535768
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.00000036214368
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4198,7 +4287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000006351443
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4483,14 +4572,14 @@ SceneRoots:
   - {fileID: 1513475888}
   - {fileID: 845965838}
   - {fileID: 1211399122}
+  - {fileID: 593220083}
+  - {fileID: 352379477}
+  - {fileID: 536025922}
   - {fileID: 2100421726}
   - {fileID: 1609128223}
   - {fileID: 1820567279}
   - {fileID: 177752303}
-  - {fileID: 593220083}
-  - {fileID: 536025922}
   - {fileID: 1353065434}
-  - {fileID: 352379477}
   - {fileID: 988040658}
   - {fileID: 382139203}
   - {fileID: 1628491262}
