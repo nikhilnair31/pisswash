@@ -6,6 +6,7 @@ public class Manager_Tutorials : MonoBehaviour
     #region Vars
     public static Manager_Tutorials Instance { get; private set; }
 
+    private bool showingTutorials = false;
     private bool shownTutorials = false;
     
     [Header("Tutorial Settings")]
@@ -21,14 +22,6 @@ public class Manager_Tutorials : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnYesClicked() {
-        Debug.Log("Yes button pressed! Do something.");
-        // Call any function from a scene object
-    }
-    private void OnNoClicked() {
-        Debug.Log("No button pressed! Do something else.");
-    } 
-    
     public void PlayTutorial() {
         if (shownTutorials) 
             return;
@@ -56,5 +49,21 @@ public class Manager_Tutorials : MonoBehaviour
                 PlayerPrefs.SetInt("Tutorials-ShowControls", 1);
             });
         }
+    }
+    private void OnYesClicked() {
+        Debug.Log("Yes button pressed! Do something.");
+        // Call any function from a scene object
+    }
+    private void OnNoClicked() {
+        Debug.Log("No button pressed! Do something else.");
+
+        // Unpause time and disable cursor
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    
+    public bool GetIfShowingTutorials() {
+        return showingTutorials;
     }
 }

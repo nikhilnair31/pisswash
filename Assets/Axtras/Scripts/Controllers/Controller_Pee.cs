@@ -64,6 +64,10 @@ public class Controller_Pee : MonoBehaviour
     }
     
     private void Update() {
+        var isShowingTutorials = Manager_Tutorials.Instance.GetIfShowingTutorials();
+        if (isShowingTutorials) 
+            return;
+            
         HandleControls();
         PeeLoop();
         DehydrationLoop();
