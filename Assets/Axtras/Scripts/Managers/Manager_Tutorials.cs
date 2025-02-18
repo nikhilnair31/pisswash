@@ -11,6 +11,7 @@ public class Manager_Tutorials : MonoBehaviour
     
     [Header("Tutorial Settings")]
     public Type_Tutorial playerTutorial;
+    public Type_Tutorial drinkTutorial;
     #endregion
 
     private void Awake() {
@@ -42,7 +43,7 @@ public class Manager_Tutorials : MonoBehaviour
                 Cursor.visible = true;
 
                 // Flash modal
-                playerTutorial.Show(OnYesClicked, OnNoClicked);
+                Manager_UI.Instance.SpawnModal(playerTutorial);
             })
             // Mark it shown
             .OnComplete(() => {

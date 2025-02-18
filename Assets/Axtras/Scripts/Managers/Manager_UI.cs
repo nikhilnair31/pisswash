@@ -394,7 +394,7 @@ public class Manager_UI : MonoBehaviour
     #endregion
 
     #region Modals
-    public void SpawnModal(string title, string content, string yesBtnTxt, string noBtnTxt, Action onYesClicked, Action onNoClicked) {
+    public void SpawnModal(Type_Tutorial tutorialSO) {
         GameObject modalGO = Instantiate(modalPrefab);
 
         var modalCanvas = GameObject.Find("Canvii/Modals Canvas");
@@ -407,28 +407,28 @@ public class Manager_UI : MonoBehaviour
         var modalButtons = modalGO.transform.Find("Modal Buttons");
 
         var titleText = modalText.transform.Find("Title Text").GetComponent<TMP_Text>();
-        titleText.text = title;
+        titleText.text = tutorialSO.titleStr;
         
         var contentText = modalText.transform.Find("Content Text").GetComponent<TMP_Text>();
-        contentText.text = content;
+        contentText.text = tutorialSO.contentStr;
 
         var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
         yesButton.onClick.AddListener(() => {
-            onYesClicked?.Invoke();
+            tutorialSO.onYesClicked?.Invoke();
             Destroy(modalGO);
         });
 
         var noButton = modalButtons.transform.Find("No Button").GetComponent<Button>();
         noButton.onClick.AddListener(() => {
-            onNoClicked?.Invoke();
+            tutorialSO.onNoClicked?.Invoke();
             Destroy(modalGO);
         });
 
         var yesButtonText = yesButton.transform.Find("Yes Button Text").GetComponent<TMP_Text>();
-        yesButtonText.text = yesBtnTxt;
+        yesButtonText.text = tutorialSO.yesButtonStr;
 
         var noButtonText = noButton.transform.Find("No Button Text").GetComponent<TMP_Text>();
-        noButtonText.text = noBtnTxt;
+        noButtonText.text = tutorialSO.noButtonStr;
     }
     #endregion
 }

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "Tutorial", menuName = "Scriptable Objects/Tutorial", order = 0)]
 public class Type_Tutorial : ScriptableObject 
@@ -8,28 +9,21 @@ public class Type_Tutorial : ScriptableObject
     [Header("Tutorial Settings")]
     [SerializeField] public string titleStr;
     [SerializeField] public string contentStr;
+    [SerializeField] public Sprite[] images;
     [SerializeField] public string yesButtonStr;
     [SerializeField] public string noButtonStr;
-    private Action yesAction;
-    private Action noAction;
+    [SerializeField] public Action onYesClicked;
+    [SerializeField] public Action onNoClicked;
+    private int currImgInd = 0;
     #endregion
 
-    public void Show(Action onYesClicked, Action onNoClicked) {
-        if (Manager_UI.Instance != null) {
-            yesAction = onYesClicked;
-            noAction = onNoClicked;
-
-            Manager_UI.Instance.SpawnModal(
-                titleStr,
-                contentStr,
-                yesButtonStr,
-                noButtonStr,
-                yesAction,
-                noAction
-            );
-        } 
-        else {
-            Debug.LogError("Manager_UI Instance not found! Make sure it exists in the scene.");
-        }
+    public Sprite GetSprite(int moveVal = 0) {
+        if (currImgInd + moveVal >= images.Length) 
+            currImgInd = 0;
+        else if (currImgInd + moveVal <= 0) 
+            currImgInd = images.Length - 1;
+        else 
+            currImgInd += moveVal;
+        return images[currImgInd];
     }
 }

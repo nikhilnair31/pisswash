@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b5bc2cdd46d1104babedd15b9d18bc8, type: 3}
-  m_Name: Player Tutorial
+  m_Name: Tutorial - Player Pee
   m_EditorClassIdentifier: 
-  titleStr: Controls
-  contentStr: WASD to move. Mouse to look around.
+  titleStr: Pee
+  contentStr: Left mouse click to pee on stains
+  images:
+  - {fileID: 21300000, guid: 805f523656d79ec4e873d0c461d747ca, type: 3}
   yesButtonStr: Next
-  noButtonStr: Skip
-  yesAction:
+  noButtonStr: Close
+  onYesClicked:
     m_PersistentCalls:
       m_Calls: []
-  noAction:
+  onNoClicked:
     m_PersistentCalls:
       m_Calls: []
