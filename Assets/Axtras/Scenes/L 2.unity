@@ -2629,14 +2629,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wet Floor (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1541982113843039317, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4344336138325388406, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 7254686894310366942, guid: e0a48732c3c05e04b996697b9581990f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.259985

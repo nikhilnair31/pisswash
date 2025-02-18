@@ -102,8 +102,13 @@ public class Manager_UI : MonoBehaviour
 
         for (int i = 0; i < sceneDataList.Count; i++) {
             JSONObject levelData = sceneDataList[i] as JSONObject;
+
             GameObject levelPanelGO = Instantiate(levelPanelPrefab);
-            levelPanelGO.transform.SetParent(levelContentPanelGO.transform);
+            
+            levelPanelGO.transform.SetParent(levelContentPanelGO.transform, false);
+            levelPanelGO.transform.localScale = Vector3.one;
+            levelPanelGO.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            
             levelPanelGO.GetComponent<Controller_LevelPanel>().Initialize(i, levelData);
         }
     }
@@ -135,7 +140,7 @@ public class Manager_UI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }   
     public void ShowStats() {
         statsContentPanelGO.SetActive(!statsContentPanelGO.activeSelf);
@@ -226,6 +231,9 @@ public class Manager_UI : MonoBehaviour
         // Add money gained
         var money = Manager_Money.Instance.GetHasMoneyByRating(grade);
         Manager_Money.Instance.UpdateMoney(money);
+
+        // Adjust timer
+        Manager_Timer.Instance.StopTimer(false);
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
@@ -281,7 +289,7 @@ public class Manager_UI : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
     }
 
     public Sprite GetRatingSprite(bool playable, bool unlocked) {

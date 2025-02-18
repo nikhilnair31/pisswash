@@ -33,7 +33,7 @@ public class Manager_Timer : MonoBehaviour
             Manager_UI.Instance.SetTimerUI(timer);
 
             if (timer <= 0f) {
-                StopTimer();
+                StopTimer(true);
                 Manager_UI.Instance.SetTimerUI(0f);
                 Manager_UI.Instance.LevelOver();
             }
@@ -44,9 +44,15 @@ public class Manager_Timer : MonoBehaviour
         isRunning = true;
         Helper.Instance.PlayRandAudioLoop(audioSource, countingDownClips);
     }
-    public void StopTimer() {
+    public void StopTimer(bool timeUp) {
         isRunning = false;
-        Helper.Instance.PlayRandAudio(audioSource, timeUpClips);
+
+        if (timeUp) {
+            Helper.Instance.PlayRandAudio(audioSource, timeUpClips);
+        }
+        else {
+            audioSource.Stop();
+        }
     }
     public void ResetTimer() {
         timer = 0f;
