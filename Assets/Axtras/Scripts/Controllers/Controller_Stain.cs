@@ -30,15 +30,23 @@ public class Controller_Stain : MonoBehaviour
     private void InitEffect() {
         selectedStain = null;
         switch (stainType) {
-            case Manager_Stains.StainType.Acid:
-                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Acid);
+            case Manager_Stains.StainType.Puke:
+                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Puke);
+                if (selectedStain is Type_Stain_Puke pukeStain) {
+                    transform.DOScale(transform.localScale * pukeStain.scaleAmount, pukeStain.scaleTime);
+                }
                 break;
             case Manager_Stains.StainType.Booze:
                 selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Booze);
+                if (selectedStain is Type_Stain_Booze boozeStain) {
+                    // Something
+                }
                 break;
-            case Manager_Stains.StainType.Puke:
-                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Puke);
-                // transform.DOScale(transform.localScale * scaleAmount, scaleTime);
+            case Manager_Stains.StainType.Acid:
+                selectedStain = Manager_Stains.Instance.stainTypesSO.FirstOrDefault(tb => tb.type == Manager_Stains.StainType.Acid);
+                if (selectedStain is Type_Stain_Acid acidStain) {
+                    // Something
+                }
                 break;
         }
     }
