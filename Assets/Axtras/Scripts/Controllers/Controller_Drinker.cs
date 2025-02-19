@@ -1,5 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Controller_Drinker : Controller_Person 
 {
@@ -11,6 +12,11 @@ public class Controller_Drinker : Controller_Person
     [SerializeField] private float canSeeInRange = 5f;
     [SerializeField] private float canSeeInAngle = 110f;
     
+    [Header("UI Settings")]
+    [SerializeField] private Image drinkerImage;
+    [SerializeField] private Sprite canSeeSprite;
+    [SerializeField] private Sprite cantSeeSprite;
+    
     [Header("Audio Settings")]
     [SerializeField] private AudioClip[] caughtClips;
     #endregion
@@ -20,7 +26,6 @@ public class Controller_Drinker : Controller_Person
                 
         CheckForNearbyDrinks();
     }
-
     private void CheckForNearbyDrinks() {
         Collider[] colliders = Physics.OverlapSphere(seeFromTransform.position, canSeeInRange, LayerMask.GetMask("Interactable"));
         foreach (Collider col in colliders) {
@@ -31,7 +36,27 @@ public class Controller_Drinker : Controller_Person
         }
     }
 
-    public void CheckForPlayerStealing() {
+    private void Update() {
+        CheckForPlayer();
+        CheckForPlayerStealing();
+    }
+    private void CheckForPlayer() {
+        if (GetCanSeePlayer()) {
+            drinkerImage.sprite = canSeeSprite;
+        }
+        else {
+            drinkerImage.sprite = cantSeeSprite;
+        }
+    }
+    private void CheckForPlayerStealing() {
+        foreach (Controller_Drink drink in theirDrinks) {
+            if (drink.GetIsStolen()) {
+                PlayerStole();
+                drink.RemoveOwner(this);
+            }
+        }
+    }
+    private void PlayerStole() {
         Manager_Effects.Instance.StartStunEffectsSeq(5f);
         Manager_Drinks.Instance.SetStealSlap();
         Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
@@ -47,7 +72,7 @@ public class Controller_Drinker : Controller_Person
         }
     }
     
-    public bool GetCanSeePlayerStealing() {
+    private bool GetCanSeePlayer() {
         if (!player) return false;
 
         Vector3 toPlayer = player.transform.position - seeFromTransform.position;
@@ -57,7 +82,7 @@ public class Controller_Drinker : Controller_Person
 
         return angle <= canSeeInAngle;
     }
-    public Transform GetPlayerSeeSource() {
+    private Transform GetPlayerSeeSource() {
         return seeFromTransform;
     }
 

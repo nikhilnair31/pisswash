@@ -80,11 +80,6 @@ public class Controller_Drink : Controller_Interactables
     private void StealDrink() {
         stolen = true;
 
-        // Check if owner sees player stealing
-        foreach (Controller_Drinker drinker in ownerDrinkers) {
-            drinker.CheckForPlayerStealing();
-        }
-
         // Increase hydration
         var isPeeFull = Controller_Pee.Instance.GetIsPeeFull();
         if (!isPeeFull)
@@ -104,5 +99,12 @@ public class Controller_Drink : Controller_Interactables
     public void AddOwner(Controller_Drinker cd) {
         canBeBought = false;
         ownerDrinkers.Add(cd);
+    }
+    public void RemoveOwner(Controller_Drinker cd) {
+        ownerDrinkers.Remove(cd);
+    }
+
+    public bool GetIsStolen() {
+        return stolen;
     }
 }
