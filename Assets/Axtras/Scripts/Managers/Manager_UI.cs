@@ -418,7 +418,7 @@ public class Manager_UI : MonoBehaviour
         modalRect.anchoredPosition = new Vector2(0, 0);
 
         modalGO.transform.localScale = Vector3.zero;
-        modalGO.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetUpdate(true);
+        modalGO.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InOutQuart).SetUpdate(true);
 
         var modalText = modalGO.transform.Find("Modal Text");
         var modalImages = modalGO.transform.Find("Modal Images");
@@ -443,12 +443,12 @@ public class Manager_UI : MonoBehaviour
         var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
         yesButton.onClick.AddListener(() => {
             yesAction?.Invoke();
-            modalGO.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.OutBack).OnComplete(() => Destroy(modalGO));
+            modalGO.transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InOutQuart).OnComplete(() => Destroy(modalGO));
         });
         var noButton = modalButtons.transform.Find("No Button").GetComponent<Button>();
         noButton.onClick.AddListener(() => {
             noAction?.Invoke();
-            modalGO.transform.DOScale(Vector3.zero, 0.5f).SetEase(Ease.OutBack).OnComplete(() => Destroy(modalGO));
+            modalGO.transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InOutQuart).OnComplete(() => Destroy(modalGO));
         });
 
         var yesButtonText = yesButton.transform.Find("Yes Button Text").GetComponent<TMP_Text>();

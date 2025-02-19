@@ -258,7 +258,6 @@ public class Manager_Effects : MonoBehaviour
 
         damageSequence = DOTween.Sequence()
             .OnStart(() => {
-                GetInitComponents();
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
                 Helper.Instance.PlayRandAudio(audioSource, damageClips);
@@ -297,7 +296,6 @@ public class Manager_Effects : MonoBehaviour
 
         stunSequence = DOTween.Sequence()
             .OnStart(() => {
-                GetInitComponents();
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
                 Helper.Instance.PlayRandAudio(audioSource, slapClips);
@@ -340,7 +338,6 @@ public class Manager_Effects : MonoBehaviour
 
         slipSequence = DOTween.Sequence()
             .OnStart(() => {
-                GetInitComponents();
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Helper.Instance.PlayRandAudio(audioSource, slipClips);
             })
