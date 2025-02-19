@@ -84,7 +84,8 @@ public class Controller_Interaction : MonoBehaviour
     private void CheckForInteractable() {
         if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, maxDistance, interactableLayer)) {
             if (hit.transform.TryGetComponent(out Controller_Interactables interactable)) {
-                var (text, duration) = interactable.ReturnInfo();
+                // Get info
+                var (text, duration) = interactable.GetInfo();
                 if (text != showTextStr) {
                     showTextStr = text;
                     Manager_Thoughts.Instance.ShowText(

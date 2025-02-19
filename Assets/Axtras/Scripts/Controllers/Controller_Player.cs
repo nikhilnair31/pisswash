@@ -34,7 +34,7 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private float footstepInterval = 0.5f;
 
     [Header("Tutorial Settings")]
-    [SerializeField] private Type_Tutorial tutorialSO;
+    [SerializeField] private string tutorialPlayerPrefsStr = "Tutorials-Player-MoveLook";
     #endregion
 
     private void Awake() {
@@ -52,7 +52,7 @@ public class Controller_Player : MonoBehaviour
         rb.freezeRotation = true;
         camLocalY = playerCamera.transform.position.y;
 
-        Manager_Tutorials.Instance.PlayTutorial();
+        Manager_Tutorials.Instance.PlayTutorial(tutorialPlayerPrefsStr);
     }
 
     private void Update() {

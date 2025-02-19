@@ -105,6 +105,7 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink'
   showForTime: -1
+  tutorialSO: {fileID: 11400000, guid: dac381a3fe34d6847b5d51f4b84eb40f, type: 2}
   isOn: 0
   increaseHydrationRate: 10
   drinkClips:

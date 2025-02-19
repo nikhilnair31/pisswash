@@ -58,7 +58,7 @@ public class Controller_Interactables : MonoBehaviour
         showThisText = newtext;
     }
 
-    public (string text, float duration) ReturnInfo() {
+    public (string text, float duration) GetInfo() {
         return new(showThisText, showForTime);
     }
 }

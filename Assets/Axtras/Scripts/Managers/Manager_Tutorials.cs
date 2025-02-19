@@ -7,7 +7,6 @@ public class Manager_Tutorials : MonoBehaviour
     public static Manager_Tutorials Instance { get; private set; }
 
     private bool showingTutorials = false;
-    private bool shownTutorials = false;
     
     [Header("Tutorial Settings")]
     public Type_Tutorial playerMoveLookTutorial;
@@ -24,16 +23,11 @@ public class Manager_Tutorials : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void PlayTutorial() {
-        if (shownTutorials) 
-            return;
- 
-        var check = PlayerPrefs.GetInt("Tutorials-ShowControls");
-        if (check == 1) {
-            shownTutorials = true;
-        }
-        else {
-            var sequence = DOTween.Sequence().SetId("Tutorials-ShowControls");
+    public void PlayTutorial(string key) {
+        Debug.Log($"PlayTutorial");
+        var check = PlayerPrefs.GetInt(key);
+        if (check != 1) {
+            var sequence = DOTween.Sequence().SetId(key);
             sequence
             // Wait a second
             .AppendInterval(1.0f)
@@ -44,7 +38,7 @@ public class Manager_Tutorials : MonoBehaviour
             })
             // Mark it shown
             .OnComplete(() => {
-                PlayerPrefs.SetInt("Tutorials-ShowControls", 1);
+                PlayerPrefs.SetInt(key, 1);
             });
         }
     }

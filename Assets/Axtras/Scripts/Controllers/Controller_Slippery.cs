@@ -49,7 +49,6 @@ public class Controller_Slippery : MonoBehaviour
     }
     
     private bool GetIsPlayer(Collider other) {
-        Debug.Log($"GetIsPlayer other name: {other.name}");
         if (other.CompareTag("Player")) {
             return true;
         }
