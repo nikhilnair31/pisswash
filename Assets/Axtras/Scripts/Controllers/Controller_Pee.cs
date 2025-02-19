@@ -84,7 +84,6 @@ public class Controller_Pee : MonoBehaviour
             isPeeing = false;
             peePS.Stop();
             peeAudioSource.Stop();
-            Manager_Effects.Instance.ResetDehydrationEffect();
             CalcPeeVol();
         }
 
@@ -142,26 +141,25 @@ public class Controller_Pee : MonoBehaviour
                 timeToKidneyStone += Time.deltaTime;
                 timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
                 var shakeIntensity = Mathf.Lerp(0.2f, 1.5f, timeToKidneyStone / maxTimeToKidneyStone);
+                var kidneyStonePerc = timeToKidneyStone / maxTimeToKidneyStone;
+                
+                Manager_Effects.Instance.UpdateDehydrationEffects(kidneyStonePerc);
+                Manager_Effects.Instance.ShakeDehydrationEffect(shakeIntensity);
                 
                 // Debug.Log($"DehydrationLoop\ntimeToKidneyStone: {timeToKidneyStone}\nshakeIntensity: {shakeIntensity}");
-                Manager_Effects.Instance.UpdateDehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
-                Manager_Effects.Instance.ShakeDehydrationEffect(shakeIntensity);
             }
             
             if (timeToKidneyStone >= maxTimeToKidneyStone) {
                 Debug.Log("Player got a kidney stone!");
 
                 allowQTE = true;
-                GetRandKey();
-
-                // Stop shaking effect and trigger explosion effect
-                Manager_Effects.Instance.ExplodeDehydrationEffect();
-
                 qtePressCount = 0;
                 timeToKidneyStone = 0f;
                 stonesCurrentCount++;
                 stonesAcquiredCount++;
 
+                GetRandKey();
+                Manager_Effects.Instance.ExplodeDehydrationEffect();
                 Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
                 Manager_SaveLoad.Instance.SaveStatData("totalKidneyStonesCreated", "add", 1);
 
