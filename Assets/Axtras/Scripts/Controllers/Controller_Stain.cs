@@ -60,7 +60,7 @@ public class Controller_Stain : MonoBehaviour
             // Make fully transparent
             decalProjector.fadeFactor = 0f;
             // Play cleaned stain audio clip
-            Helper.Instance.PlayRandAudio(audioSource, cleanedClips);
+            Manager_Audio.Instance.PlayRandAudio(audioSource, cleanedClips);
             // Give me money
             Manager_Money.Instance.UpdateMoney(moneyGainedOnClean);
             // Save to data

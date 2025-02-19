@@ -25,7 +25,7 @@ public class Controller_Fountain : Controller_Interactables
     public void ControlDrinking(bool active) {
         isOn = active;
         if (isOn) {
-            Helper.Instance.PlayRandAudioLoop(audioSource, drinkClips);
+            Manager_Audio.Instance.PlayRandAudioLoop(audioSource, drinkClips);
         }
         else {
             audioSource.Stop();

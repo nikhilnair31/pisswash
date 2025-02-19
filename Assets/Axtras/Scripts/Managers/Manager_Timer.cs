@@ -42,13 +42,13 @@ public class Manager_Timer : MonoBehaviour
 
     public void StartTimer() {
         isRunning = true;
-        Helper.Instance.PlayRandAudioLoop(audioSource, countingDownClips);
+        Manager_Audio.Instance.PlayRandAudioLoop(audioSource, countingDownClips);
     }
     public void StopTimer(bool timeUp) {
         isRunning = false;
 
         if (timeUp) {
-            Helper.Instance.PlayRandAudio(audioSource, timeUpClips);
+            Manager_Audio.Instance.PlayRandAudio(audioSource, timeUpClips);
         }
         else {
             audioSource.Stop();

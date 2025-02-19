@@ -20,6 +20,6 @@ public class Type_Drink : ScriptableObject
     public virtual void StartConsumptionEffect() {
         // Play drinking audio clip
         var peeAudioSource = Controller_Player.Instance.GetAudioSource();
-        Helper.Instance.PlayRandAudio(peeAudioSource, drinkClips);
+        Manager_Audio.Instance.PlayRandAudio(peeAudioSource, drinkClips);
     }
 }

@@ -12,25 +12,6 @@ public class Helper : MonoBehaviour
             Destroy(gameObject);
     }
 
-    #region Audio Related
-    public void PlayRandAudio(AudioSource source, AudioClip[] clips, bool randPitch = true) {
-        var clip = clips[Random.Range(0, clips.Length)];
-        source.clip = clip;
-        if (randPitch)
-            source.pitch = Random.Range(0.9f, 1.1f);
-        source.Play();
-    }
-    
-    public void PlayRandAudioLoop(AudioSource source, AudioClip[] clips, bool randPitch = true) {
-        var clip = clips[Random.Range(0, clips.Length)];
-        source.clip = clip;
-        if (randPitch)
-            source.pitch = Random.Range(0.9f, 1.1f);
-        source.loop = true;
-        source.Play();
-    }
-    #endregion
-    
     #region Random Related
     public bool TriggerBool(float chance) {
         return Random.Range(0f, 1f) >= chance;

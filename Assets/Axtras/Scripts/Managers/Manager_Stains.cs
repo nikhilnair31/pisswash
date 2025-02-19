@@ -1,14 +1,6 @@
-using System;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Rendering.Universal;
-
-[Serializable]
-public class Stain {
-    public Transform stainTransform;
-    // public DecalProjector stainDecal;
-    // public float opacityVal;
-}
 
 public class Manager_Stains : MonoBehaviour 
 {
