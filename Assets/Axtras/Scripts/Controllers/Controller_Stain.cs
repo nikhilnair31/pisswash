@@ -17,7 +17,6 @@ public class Controller_Stain : MonoBehaviour
     [SerializeField] public int moneyGainedOnClean = 3;
     
     [Header("Audio Properties")]
-    [SerializeField] public AudioSource audioSource;
     [SerializeField] private AudioClip[] cleanedClips;
     #endregion
 
@@ -60,7 +59,7 @@ public class Controller_Stain : MonoBehaviour
             // Make fully transparent
             decalProjector.fadeFactor = 0f;
             // Play cleaned stain audio clip
-            Manager_Audio.Instance.PlayRandAudio(audioSource, cleanedClips);
+            Manager_Audio.Instance.PlayAudioStain(cleanedClips);
             // Give me money
             Manager_Money.Instance.UpdateMoney(moneyGainedOnClean);
             // Save to data

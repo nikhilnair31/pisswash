@@ -84,6 +84,7 @@ public class Controller_Pee : MonoBehaviour
             isPeeing = false;
             peePS.Stop();
             peeAudioSource.Stop();
+            Manager_Effects.Instance.ResetDehydrationEffect();
             CalcPeeVol();
         }
 
@@ -138,11 +139,12 @@ public class Controller_Pee : MonoBehaviour
         if (isDehydrated) {
             // Start kidney stone timer if player is dehydrated and still peeing
             if (isPeeing) {
-                timeToKidneyStone += timeToKidneyStone * Time.deltaTime;
+                timeToKidneyStone += Time.deltaTime;
                 timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
+                var shakeIntensity = Mathf.Lerp(0.2f, 1.5f, timeToKidneyStone / maxTimeToKidneyStone);
+                
+                // Debug.Log($"DehydrationLoop\ntimeToKidneyStone: {timeToKidneyStone}\nshakeIntensity: {shakeIntensity}");
                 Manager_Effects.Instance.UpdateDehydrationEffects(timeToKidneyStone/maxTimeToKidneyStone);
-
-                float shakeIntensity = Mathf.Lerp(0.2f, 1.5f, timeToKidneyStone / maxTimeToKidneyStone);
                 Manager_Effects.Instance.ShakeDehydrationEffect(shakeIntensity);
             }
             

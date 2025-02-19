@@ -384,25 +384,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -688,25 +672,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2887,25 +2855,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3447,25 +3399,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3823,25 +3759,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3901,25 +3821,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4833,25 +4737,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5272,25 +5160,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5350,25 +5222,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5428,25 +5284,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6014,25 +5854,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6278,25 +6102,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6387,25 +6195,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6985,25 +6777,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8015,25 +7791,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2799575166558985156, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7878317157469028817, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
       propertyPath: m_Name
       value: Stain Decal - Booze
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9038457564660070355, guid: 14260df1e8a779a41af1d2893a089390, type: 3}
-      propertyPath: m_Size.y
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

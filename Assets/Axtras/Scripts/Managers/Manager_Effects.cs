@@ -237,17 +237,27 @@ public class Manager_Effects : MonoBehaviour
     }
     
     public void ShakeDehydrationEffect(float intensity) {
-        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();        
+        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
+
         uiElement.DOComplete();
-        uiElement.DOShakePosition(0.5f, intensity * 10f, 20, 90, false, true);
+
+        uiElement
+            .DOShakePosition(0.5f, intensity * 10f, 20, 90, false, true);
+    }
+    public void ResetDehydrationEffect() {
+        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
+        uiElement.DOComplete();
     }
     public void ExplodeDehydrationEffect() {
         var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
+
         uiElement.DOComplete();
-        uiElement.DOScale(Vector3.one * 3f, 0.2f)
-            .SetEase(Ease.OutQuad)
+        
+        uiElement
+            .DOScale(Vector3.one * 1.5f, 0.2f)
             .OnComplete(() => {
-                uiElement.DOScale(Vector3.one, 0.2f).SetEase(Ease.InQuad);
+                uiElement
+                    .DOScale(Vector3.one, 0.4f);
             });
     }
     #endregion

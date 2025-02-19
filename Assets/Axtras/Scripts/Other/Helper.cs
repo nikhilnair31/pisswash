@@ -5,6 +5,7 @@ using DG.Tweening;
 public class Helper : MonoBehaviour 
 {
     public static Helper Instance { get; private set; }
+    
     private void Awake() {
         if (Instance == null)
             Instance = this;
