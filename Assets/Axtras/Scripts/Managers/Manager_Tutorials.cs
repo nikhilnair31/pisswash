@@ -10,8 +10,8 @@ public class Manager_Tutorials : MonoBehaviour
     private bool showingTutorials = false;
 
     [Header("Tutorial Settings")]
-    public List<Type_Tutorial> tutorials;  // List of tutorials to go through
-    private int currentTutorialIndex = 0;  // To track the current tutorial
+    public List<Type_Tutorial> tutorials;
+    private int currentTutorialIndex = 0;
 
     #endregion
 
@@ -27,9 +27,9 @@ public class Manager_Tutorials : MonoBehaviour
     public void PlayTutorial(string key) {
         Debug.Log($"PlayTutorial");
 
-        // Check if the tutorial has been shown before
-        // var check = PlayerPrefs.GetInt(key);
-        // if (check != 1) {
+        // Check if in tutorial scene
+        var inTutorialMenu = Manager_Scene.Instance.GetCurrSceneName().Contains("T");
+        if (inTutorialMenu) {
             var sequence = DOTween.Sequence().SetId(key);
             sequence
             // Wait a second
@@ -43,28 +43,28 @@ public class Manager_Tutorials : MonoBehaviour
             .OnComplete(() => {
                 PlayerPrefs.SetInt(key, 1);
             });
-        // }
+        }
     }
 
     private void ShowTutorial(Type_Tutorial tutorial) {
-        Manager_UI.Instance.SpawnModal(tutorial, OnYesClicked, null);
+        Manager_UI.Instance.SpawnModal(tutorial, OnYesClicked, OnNoClicked);
     }
 
     private void OnYesClicked() {
-        // Move to next tutorial
         currentTutorialIndex++;
 
-        // If we have reached the end of the list, close the tutorial process
         if (currentTutorialIndex < tutorials.Count) {
             ShowTutorial(tutorials[currentTutorialIndex]);
-        } else {
-            Manager_UI.Instance.PauseDuringModal(false);  // End tutorials
-            currentTutorialIndex = 0;  // Reset the index for next time
+        } 
+        else {
+            Manager_UI.Instance.PauseDuringModal(false);
+            currentTutorialIndex = 0;
         }
     }
 
     private void OnNoClicked() {
         Manager_UI.Instance.PauseDuringModal(false);
+        currentTutorialIndex = 0;
     }
     
     public bool GetIfShowingTutorials() {
