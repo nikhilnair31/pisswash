@@ -13,9 +13,6 @@ public class Manager_Money : MonoBehaviour
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] moneyClips;
-
-    [Header("UI Settings")]
-    [SerializeField] private TMP_Text moneyText;
     #endregion  
 
     private void Awake() {
@@ -32,6 +29,8 @@ public class Manager_Money : MonoBehaviour
         Manager_UI.Instance.SetMoneyUI(currMoney);
         // Update current money and spent money
         Manager_SaveLoad.Instance.SaveStatData("haveMoney", "set", currMoney);
+
+        Debug.Log($"currMoney: {currMoney} | amount: {amount}");
     }
 
     public bool GetHasMoneyToBuy() {

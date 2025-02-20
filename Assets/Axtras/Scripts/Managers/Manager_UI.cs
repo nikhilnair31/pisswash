@@ -207,10 +207,11 @@ public class Manager_UI : MonoBehaviour
         loadingCanvasGO.SetActive(false);
         gameCanvasGO.SetActive(true);
 
-        // Manager_SaveLoad.Instance.SaveLevelUnlocked(sceneName);
+        var data = Manager_SaveLoad.Instance.LoadLevelData();
+        Manager_Money.Instance.UpdateMoney(data["haveMoney"]);
+
         Manager_Effects.Instance.ResetDehydrationEffects();
         Manager_Timer.Instance.StartTimer();
-        // Manager_Timeline.Instance.PlayCutscene_GameStart();
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -281,7 +282,6 @@ public class Manager_UI : MonoBehaviour
         var data = Manager_SaveLoad.Instance.LoadLevelData();
         SetStatsText(data);
         SpawnLevelPanels(data);
-        Manager_Money.Instance.UpdateMoney(data["haveMoney"]);
 
         Manager_Scene.Instance.LoadSceneByName("M");
 

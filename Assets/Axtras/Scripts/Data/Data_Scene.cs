@@ -9,7 +9,7 @@ public class Data_Scene {
 
     public Data_Scene() {
         name = "";
-        rating = "";
+        rating = "-";
         playable = true;
         unlocked = false;
     }
