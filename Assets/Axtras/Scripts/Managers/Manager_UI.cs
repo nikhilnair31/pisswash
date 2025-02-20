@@ -324,19 +324,19 @@ public class Manager_UI : MonoBehaviour
 
         var statsStr =
             $"{"Shifts Worked:".PadRight(labelWidth)} {dataJson["toalShiftWorked"] ?? 0}\n" +
-            $"{"Cleaned Stains:".PadRight(labelWidth)} {dataJson["totalCleanedStains"]}\n" +
-            $"{"Peed Amount:".PadRight(labelWidth)} {dataJson["peedAmount"]} fl oz\n" +
+            $"{"Cleaned Stains:".PadRight(labelWidth)} {dataJson["totalCleanedStains"] ?? 0}\n" +
+            $"{"Peed Amount:".PadRight(labelWidth)} {dataJson["peedAmount"] ?? 0} fl oz\n" +
             $"\n" +
-            $"{"Kidney Stones Created:".PadRight(labelWidth)} {dataJson["totalKidneyStonesCreated"]}\n" +
-            $"{"Kidney Stones Passed:".PadRight(labelWidth)} {dataJson["totalKidneyStonesPassed"]}\n" +
+            $"{"Kidney Stones Created:".PadRight(labelWidth)} {dataJson["totalKidneyStonesCreated"] ?? 0}\n" +
+            $"{"Kidney Stones Passed:".PadRight(labelWidth)} {dataJson["totalKidneyStonesPassed"] ?? 0}\n" +
             $"\n" +
-            $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"]}\n" +
+            $"{"Total Slaps:".PadRight(labelWidth)} {dataJson["totalSlaps"] ?? 0}\n" +
             $"\n" +
-            $"{"Drinks Bought:".PadRight(labelWidth)} {dataJson["bottlesBought"]}\n" +
-            $"{"Drinks Stolen:".PadRight(labelWidth)} {dataJson["bottlesStolen"]}\n" +
+            $"{"Drinks Bought:".PadRight(labelWidth)} {dataJson["drinksBought"] ?? 0}\n" +
+            $"{"Drinks Stolen:".PadRight(labelWidth)} {dataJson["drinksStolen"] ?? 0}\n" +
             $"\n" +
-            $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"]}\n" +
-            $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"]}\n";
+            $"{"Have Money:".PadRight(labelWidth)} ${dataJson["haveMoney"] ?? 0}\n" +
+            $"{"Spent Money:".PadRight(labelWidth)} ${dataJson["spentMoney"] ?? 0}\n";
 
         var statsText = statsContentPanelGO.GetComponent<TMP_Text>();
         statsText.text = statsStr;
