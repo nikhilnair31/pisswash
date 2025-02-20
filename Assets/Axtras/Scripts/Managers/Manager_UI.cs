@@ -435,10 +435,12 @@ public class Manager_UI : MonoBehaviour
         leftButton.onClick.AddListener(() => {
             imageImage.sprite = tutorialSO.GetSprite(-1);
         });
+        leftButton.gameObject.SetActive(tutorialSO.images.Length > 1);
         var rightButton = modalImages.transform.Find("Right Button").GetComponent<Button>();
         rightButton.onClick.AddListener(() => {
             imageImage.sprite = tutorialSO.GetSprite(+1);
         });
+        rightButton.gameObject.SetActive(tutorialSO.images.Length > 1);
 
         var yesButton = modalButtons.transform.Find("Yes Button").GetComponent<Button>();
         yesButton.onClick.AddListener(() => {

@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorials:
+  - {fileID: 11400000, guid: cc1b6b0273f99924b928ebfe30ea1343, type: 2}
   - {fileID: 11400000, guid: 23a15d36e52776544bc8e0fbc76984da, type: 2}
-  - {fileID: 11400000, guid: a0a0cc4012213514aa98f8c548b5bdc3, type: 2}
   - {fileID: 11400000, guid: c5948b2d9a47d964ebfb450a4738fb4e, type: 2}
-  - {fileID: 11400000, guid: 7ca0e17c74d9b6d429042fac1ea8afaa, type: 2}
+  - {fileID: 11400000, guid: 93f0a736cd21bc04a96c20cdba0278e4, type: 2}
+  - {fileID: 11400000, guid: 6934f9cf66d3fea448d7dda9f0b18ec9, type: 2}

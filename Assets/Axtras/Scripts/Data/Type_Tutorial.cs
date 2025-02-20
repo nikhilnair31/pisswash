@@ -8,7 +8,7 @@ public class Type_Tutorial : ScriptableObject
     #region Vars
     [Header("Tutorial Settings")]
     [SerializeField] public string titleStr;
-    [SerializeField] public string contentStr;
+    [SerializeField][TextArea(2, 4)] public string contentStr;
     [SerializeField] public Sprite[] images;
     [SerializeField] public string yesButtonStr;
     [SerializeField] public string noButtonStr;

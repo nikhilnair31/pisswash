@@ -28,7 +28,7 @@ public class Manager_Tutorials : MonoBehaviour
         Debug.Log($"PlayTutorial");
 
         // Check if in tutorial scene
-        var inTutorialMenu = Manager_Scene.Instance.GetCurrSceneName().Contains("T");
+        var inTutorialMenu = Manager_Scene.Instance.GetCurrSceneName().Contains("0");
         if (inTutorialMenu) {
             var sequence = DOTween.Sequence().SetId(key);
             sequence
