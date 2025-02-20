@@ -3,9 +3,8 @@ using UnityEngine;
 public class Controller_Person : MonoBehaviour 
 {
     #region Variables
-    [SerializeField] protected Animator anim;
     [SerializeField] protected AudioSource audioSource;
-    [SerializeField] protected SkinnedMeshRenderer rend;
+    [SerializeField] protected MeshRenderer rend;
     [SerializeField] protected GameObject player;
 
     [SerializeField] private Material[] skinMats;
@@ -13,8 +12,6 @@ public class Controller_Person : MonoBehaviour
     #endregion
 
     protected virtual void Start() {
-        if (anim == null)
-            TryGetComponent(out anim);
         if (rend == null)
             TryGetComponent(out rend);
         if (audioSource == null)

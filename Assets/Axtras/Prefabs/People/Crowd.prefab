@@ -97,10 +97,9 @@ GameObject:
   - component: {fileID: 4718933494843922324}
   - component: {fileID: 228644824143081971}
   - component: {fileID: 4268255469115962040}
-  - component: {fileID: 5111980672870129234}
   - component: {fileID: 4247878270001788987}
   - component: {fileID: 996481682810029695}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Crowd
   m_TagString: Drinker
   m_Icon: {fileID: 0}
@@ -173,28 +172,6 @@ CapsuleCollider:
   m_Height: 5.02999
   m_Direction: 1
   m_Center: {x: 0, y: 2.5285292, z: 0}
---- !u!95 &5111980672870129234
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8255347211946953923}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 193eac9089cdcc447ab3f56a05719ef8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &4247878270001788987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -304,9 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bf662740015634f89442763597bba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 5111980672870129234}
   audioSource: {fileID: 4247878270001788987}
-  rend: {fileID: 0}
+  rend: {fileID: 6714534400747622892}
   player: {fileID: 0}
   skinMats:
   - {fileID: 2100000, guid: 8e640642aaf747240809824fc148b119, type: 2}

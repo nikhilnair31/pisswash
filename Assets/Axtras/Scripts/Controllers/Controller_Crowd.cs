@@ -19,7 +19,5 @@ public class Controller_Crowd : Controller_Person
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.OutBounce)
             .SetDelay(Random.Range(0f, 1f));
-
-        anim.SetBool("IsDancing", true);
     }
 }

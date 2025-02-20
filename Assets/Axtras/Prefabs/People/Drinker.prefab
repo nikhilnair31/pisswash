@@ -379,9 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8f5a7492c7d4f4fa775c0c2bd50d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   audioSource: {fileID: 5829947705654887040}
-  rend: {fileID: 0}
+  rend: {fileID: 5016993294504850843}
   player: {fileID: 0}
   skinMats:
   - {fileID: 2100000, guid: 8e640642aaf747240809824fc148b119, type: 2}
