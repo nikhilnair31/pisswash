@@ -360,7 +360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &48388694
 BoxCollider:
@@ -455,7 +454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &73282641
 BoxCollider:
@@ -550,7 +548,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &77191785
 BoxCollider:
@@ -707,7 +704,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &96605700
 BoxCollider:
@@ -802,7 +798,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &119487913
 BoxCollider:
@@ -1133,7 +1128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &180220417
 BoxCollider:
@@ -1321,7 +1315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &262658496
 BoxCollider:
@@ -1416,7 +1409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &263516544
 BoxCollider:
@@ -1471,6 +1463,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8407935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.34826788
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3829098
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15860638
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.74
@@ -1812,6 +1820,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.08554115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.03543225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.919911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3810394
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.612012
@@ -1914,7 +1938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &318478832
 BoxCollider:
@@ -1969,6 +1992,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73528755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.30456594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.55937976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.23170261
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.24
@@ -2403,7 +2442,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &394601663
 BoxCollider:
@@ -2714,7 +2752,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &485726556
 BoxCollider:
@@ -2809,7 +2846,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &489025268
 BoxCollider:
@@ -2904,7 +2940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &496080750
 BoxCollider:
@@ -2999,7 +3034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &509943460
 BoxCollider:
@@ -3094,7 +3128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &520567515
 BoxCollider:
@@ -3261,6 +3294,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8407935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3482679
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38290977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.15860641
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.67
@@ -3407,7 +3456,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4397271591892970640, guid: 1406f85908e06c14eb9d3887654e14a7, type: 3}
       propertyPath: m_Name
-      value: Effects Manager
+      value: Manager - Effects
       objectReference: {fileID: 0}
     - target: {fileID: 9102424488129236232, guid: 1406f85908e06c14eb9d3887654e14a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3462,6 +3511,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.73528755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.30456594
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.55937976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.23170261
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2664924
@@ -3732,7 +3797,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &655649422
 BoxCollider:
@@ -3892,6 +3956,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.49321848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2042977
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.78121
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3235876
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.09
@@ -3994,7 +4074,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &701499355
 BoxCollider:
@@ -4089,7 +4168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &743100248
 BoxCollider:
@@ -4184,7 +4262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &746930089
 BoxCollider:
@@ -4349,7 +4426,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &755270367
 BoxCollider:
@@ -4444,7 +4520,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &766143370
 BoxCollider:
@@ -4499,6 +4574,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.16333222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06765435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.90932727
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.37665546
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8048372
@@ -4695,7 +4786,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &798511704
 BoxCollider:
@@ -4990,7 +5080,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &834255861
 BoxCollider:
@@ -5125,7 +5214,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 126628350309366823, guid: bb046d17b62e8e245a0e600f4b30d56a, type: 3}
       propertyPath: m_Name
-      value: Game Manager
+      value: Manager - Game
       objectReference: {fileID: 0}
     - target: {fileID: 8994695610831534222, guid: bb046d17b62e8e245a0e600f4b30d56a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5465,7 +5554,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &902865847
 BoxCollider:
@@ -5652,6 +5740,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.54771715
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22687171
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7440158
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3081813
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.23
@@ -5706,37 +5810,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
   m_PrefabInstance: {fileID: 982334907}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &988040657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 988040658}
-  m_Layer: 0
-  m_Name: ----------------------------------------
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &988040658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988040657}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &988190584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5996,7 +6069,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1055630561
 BoxCollider:
@@ -6153,7 +6225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1077178275
 BoxCollider:
@@ -6248,7 +6319,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1080260566
 BoxCollider:
@@ -6343,7 +6413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1087966471
 BoxCollider:
@@ -6578,7 +6647,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1126312126
 BoxCollider:
@@ -6930,7 +6998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1260105204
 BoxCollider:
@@ -7239,7 +7306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1311682009
 BoxCollider:
@@ -7565,6 +7631,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90830994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.37623414
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.168898
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.069959775
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.5
@@ -7667,7 +7749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1439192639
 BoxCollider:
@@ -7762,7 +7843,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1451106548
 BoxCollider:
@@ -7857,7 +7937,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1454136769
 BoxCollider:
@@ -8022,7 +8101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1460514904
 BoxCollider:
@@ -8319,7 +8397,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1499031926
 BoxCollider:
@@ -8414,7 +8491,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1513371968
 BoxCollider:
@@ -8471,7 +8547,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 783646616903374861, guid: c93884a63dc6c3c4e8733454caf69328, type: 3}
       propertyPath: m_Name
-      value: Save Manager
+      value: Manager - Save
       objectReference: {fileID: 0}
     - target: {fileID: 1180312589136665304, guid: c93884a63dc6c3c4e8733454caf69328, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8784,7 +8860,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1555609335
 BoxCollider:
@@ -9057,7 +9132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1606969000
 BoxCollider:
@@ -9209,7 +9283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1628161686
 BoxCollider:
@@ -9540,7 +9613,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1672304772
 BoxCollider:
@@ -9635,7 +9707,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1674619697
 BoxCollider:
@@ -9800,7 +9871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1684010082
 BoxCollider:
@@ -9965,7 +10035,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1701681746
 BoxCollider:
@@ -10130,7 +10199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1731441444
 BoxCollider:
@@ -10295,7 +10363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1819731842
 BoxCollider:
@@ -10525,7 +10592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1909343295
 BoxCollider:
@@ -10620,7 +10686,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1963600063
 BoxCollider:
@@ -10715,7 +10780,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1974685208
 BoxCollider:
@@ -10877,6 +10941,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.08554117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.03543224
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.919911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.3810394
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.38
@@ -10979,7 +11059,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2078702653
 BoxCollider:
@@ -11070,6 +11149,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3397296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14072049
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8591492
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.35587108
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.93
@@ -11134,7 +11229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2535955149212815853, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
       propertyPath: m_Name
-      value: Timer Manager
+      value: Manager - Timer
       objectReference: {fileID: 0}
     - target: {fileID: 4179192684586357610, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11259,6 +11354,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90669745
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3755662
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.17735052
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.073461
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.68573856
@@ -11492,15 +11603,14 @@ SceneRoots:
   - {fileID: 1513475888}
   - {fileID: 845965838}
   - {fileID: 1211399122}
-  - {fileID: 593220083}
-  - {fileID: 352379477}
-  - {fileID: 536025922}
   - {fileID: 2100421726}
   - {fileID: 1609128223}
   - {fileID: 1820567279}
   - {fileID: 177752303}
+  - {fileID: 593220083}
+  - {fileID: 352379477}
+  - {fileID: 536025922}
   - {fileID: 1353065434}
-  - {fileID: 988040658}
   - {fileID: 382139203}
   - {fileID: 1628491262}
   - {fileID: 259744669}

@@ -40,6 +40,9 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private bool allowQTE = false;
     private KeyCode qteKey;
 
+    [Header("Shlong Settings")]
+    [SerializeField] private GameObject shlongGO;
+
     [Header("Particle Settings")]
     [SerializeField] private ParticleSystem peePS;
 
@@ -76,14 +79,22 @@ public class Controller_Pee : MonoBehaviour
     private void HandleControls() {
         if (Input.GetMouseButtonDown(0)) {
             isPeeing = true;
+            
             peeStartTime = Time.time;
+            
             peePS.Play();
             peeAudioSource.Play();
+
+            shlongGO.SetActive(true);
         }
         else if (Input.GetMouseButtonUp(0)) {
             isPeeing = false;
+            
             peePS.Stop();
             peeAudioSource.Stop();
+            
+            shlongGO.SetActive(false);
+
             CalcPeeVol();
         }
 

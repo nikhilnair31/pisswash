@@ -167,7 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &12939055
 BoxCollider:
@@ -262,7 +261,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &23822671
 BoxCollider:
@@ -357,7 +355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &26359423
 BoxCollider:
@@ -452,7 +449,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &28628793
 BoxCollider:
@@ -547,7 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &29378996
 BoxCollider:
@@ -642,7 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &35117610
 BoxCollider:
@@ -861,7 +855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &61622435
 BoxCollider:
@@ -1018,7 +1011,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &67172911
 BoxCollider:
@@ -1113,7 +1105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &67852828
 BoxCollider:
@@ -1208,7 +1199,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &71676947
 BoxCollider:
@@ -1303,7 +1293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &82368708
 BoxCollider:
@@ -1398,7 +1387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &83354857
 BoxCollider:
@@ -1493,7 +1481,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &94681044
 BoxCollider:
@@ -1588,7 +1575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &105311737
 BoxCollider:
@@ -1683,7 +1669,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &118426856
 BoxCollider:
@@ -1778,7 +1763,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &128982532
 BoxCollider:
@@ -1873,7 +1857,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &129964286
 BoxCollider:
@@ -1968,7 +1951,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &131666225
 BoxCollider:
@@ -2137,7 +2119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &139708971
 BoxCollider:
@@ -2232,7 +2213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &147621555
 BoxCollider:
@@ -2327,7 +2307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &153226417
 BoxCollider:
@@ -2554,7 +2533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &156520271
 BoxCollider:
@@ -2688,7 +2666,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &167854993
 BoxCollider:
@@ -2914,7 +2891,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &193889585
 BoxCollider:
@@ -3009,7 +2985,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &200455312
 BoxCollider:
@@ -3104,7 +3079,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &201358654
 BoxCollider:
@@ -3261,7 +3235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &208003622
 BoxCollider:
@@ -3356,7 +3329,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &224959404
 BoxCollider:
@@ -3513,7 +3485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &229656230
 BoxCollider:
@@ -3608,7 +3579,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &236837366
 BoxCollider:
@@ -3703,7 +3673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &241040657
 BoxCollider:
@@ -3798,7 +3767,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &245069980
 BoxCollider:
@@ -3893,7 +3861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &246381426
 BoxCollider:
@@ -3988,7 +3955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &251131495
 BoxCollider:
@@ -4083,7 +4049,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &254632009
 BoxCollider:
@@ -4209,7 +4174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &268978439
 BoxCollider:
@@ -4264,6 +4228,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80945855
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.33528873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44534272
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.184467
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.87802696
@@ -4366,7 +4346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &280723217
 BoxCollider:
@@ -4461,7 +4440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &282766757
 BoxCollider:
@@ -4618,7 +4596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &291137230
 BoxCollider:
@@ -4787,7 +4764,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &306263713
 BoxCollider:
@@ -4882,7 +4858,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &325421331
 BoxCollider:
@@ -5098,7 +5073,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &334839721
 BoxCollider:
@@ -5193,7 +5167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &341916200
 BoxCollider:
@@ -5652,6 +5625,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8094587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.33528864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44534284
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.18446693
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.521974
@@ -5754,7 +5743,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &363499068
 BoxCollider:
@@ -5849,7 +5837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &374153492
 BoxCollider:
@@ -5984,7 +5971,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &385190935
 BoxCollider:
@@ -6079,7 +6065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &391046154
 BoxCollider:
@@ -6174,7 +6159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &398596164
 BoxCollider:
@@ -6269,7 +6253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &400151898
 BoxCollider:
@@ -6364,7 +6347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &404936689
 BoxCollider:
@@ -6459,7 +6441,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &408622274
 BoxCollider:
@@ -6675,7 +6656,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &420766805
 BoxCollider:
@@ -6770,7 +6750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &424340538
 BoxCollider:
@@ -6898,7 +6877,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &430058830
 BoxCollider:
@@ -6993,7 +6971,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &445450723
 BoxCollider:
@@ -7088,7 +7065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &451054629
 BoxCollider:
@@ -7183,7 +7159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &457402707
 BoxCollider:
@@ -7585,7 +7560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &488246834
 BoxCollider:
@@ -7742,7 +7716,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &496753137
 BoxCollider:
@@ -7797,6 +7770,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80945873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.33528864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44534263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.18446708
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4780273
@@ -7899,7 +7888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &508204096
 BoxCollider:
@@ -8159,7 +8147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &517515696
 BoxCollider:
@@ -8254,7 +8241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &525828605
 BoxCollider:
@@ -8570,7 +8556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &550668170
 BoxCollider:
@@ -8665,7 +8650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &552402177
 BoxCollider:
@@ -8794,6 +8778,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5471902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22665368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.74440336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.30834183
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.14014244
@@ -8958,7 +8958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &588929061
 BoxCollider:
@@ -9084,7 +9083,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &602876080
 BoxCollider:
@@ -9179,7 +9177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &610203245
 BoxCollider:
@@ -9274,7 +9271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &611779614
 BoxCollider:
@@ -9374,7 +9370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &622799197
 BoxCollider:
@@ -9469,7 +9464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &634346183
 BoxCollider:
@@ -9524,6 +9518,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.846082
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.35045853
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.37107798
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.15370537
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.43814
@@ -9700,7 +9710,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &664130957
 BoxCollider:
@@ -9840,7 +9849,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &676204811
 BoxCollider:
@@ -9935,7 +9943,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &680435537
 BoxCollider:
@@ -10030,7 +10037,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &686096729
 BoxCollider:
@@ -10261,7 +10267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &727195125
 BoxCollider:
@@ -10356,7 +10361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &727269276
 BoxCollider:
@@ -10513,7 +10517,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &735491657
 BoxCollider:
@@ -10608,7 +10611,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &735776379
 BoxCollider:
@@ -10703,7 +10705,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &736244782
 BoxCollider:
@@ -10872,7 +10873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &754753179
 BoxCollider:
@@ -10967,7 +10967,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &758436218
 BoxCollider:
@@ -11062,7 +11061,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &758851073
 BoxCollider:
@@ -11157,7 +11155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &762565897
 BoxCollider:
@@ -11252,7 +11249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &768406524
 BoxCollider:
@@ -11347,7 +11343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &772301633
 BoxCollider:
@@ -11442,7 +11437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &773287952
 BoxCollider:
@@ -11537,7 +11531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &777334667
 BoxCollider:
@@ -11632,7 +11625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &809008392
 BoxCollider:
@@ -11727,7 +11719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &811253026
 BoxCollider:
@@ -11822,7 +11813,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &824560593
 BoxCollider:
@@ -11985,7 +11975,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &838894463
 BoxCollider:
@@ -12080,7 +12069,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &840553322
 BoxCollider:
@@ -12137,7 +12125,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 126628350309366823, guid: bb046d17b62e8e245a0e600f4b30d56a, type: 3}
       propertyPath: m_Name
-      value: Game Manager
+      value: Manager - Game
       objectReference: {fileID: 0}
     - target: {fileID: 8994695610831534222, guid: bb046d17b62e8e245a0e600f4b30d56a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12232,7 +12220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &846844669
 BoxCollider:
@@ -12389,7 +12376,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &865627987
 BoxCollider:
@@ -12484,7 +12470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &870100595
 BoxCollider:
@@ -12762,7 +12747,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &891788482
 BoxCollider:
@@ -12857,7 +12841,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &892234406
 BoxCollider:
@@ -12952,7 +12935,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &894121173
 BoxCollider:
@@ -13047,7 +13029,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &894454535
 BoxCollider:
@@ -13216,7 +13197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &902400434
 BoxCollider:
@@ -13311,7 +13291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &904199147
 BoxCollider:
@@ -13406,7 +13385,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &904888534
 BoxCollider:
@@ -13571,7 +13549,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &907992657
 BoxCollider:
@@ -13666,7 +13643,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &909460266
 BoxCollider:
@@ -13761,7 +13737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &933584464
 BoxCollider:
@@ -13926,7 +13901,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &951590596
 BoxCollider:
@@ -14091,7 +14065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &966366936
 BoxCollider:
@@ -14374,7 +14347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &999074925
 BoxCollider:
@@ -14547,7 +14519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1006721687
 BoxCollider:
@@ -14794,7 +14765,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1029844460
 BoxCollider:
@@ -14889,7 +14859,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1034890067
 BoxCollider:
@@ -14984,7 +14953,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1068108576
 BoxCollider:
@@ -15079,7 +15047,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1071272190
 BoxCollider:
@@ -15174,7 +15141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1078791108
 BoxCollider:
@@ -15269,7 +15235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1078999026
 BoxCollider:
@@ -15426,7 +15391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1087189451
 BoxCollider:
@@ -15521,7 +15485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1094028714
 BoxCollider:
@@ -15799,7 +15762,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1105976628
 BoxCollider:
@@ -15916,6 +15878,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.54719025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22665359
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.74440336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.30834174
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.859858
@@ -16088,7 +16066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1148954318
 BoxCollider:
@@ -16183,7 +16160,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1164796215
 BoxCollider:
@@ -16278,7 +16254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1168004170
 BoxCollider:
@@ -16373,7 +16348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1169653128
 BoxCollider:
@@ -16468,7 +16442,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1176862995
 BoxCollider:
@@ -16563,7 +16536,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1189741605
 BoxCollider:
@@ -16658,7 +16630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1190464142
 BoxCollider:
@@ -16827,7 +16798,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1196627458
 BoxCollider:
@@ -17103,7 +17073,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1211456687
 BoxCollider:
@@ -17260,7 +17229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1231956535
 BoxCollider:
@@ -17355,7 +17323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1261535612
 BoxCollider:
@@ -17450,7 +17417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1264031788
 BoxCollider:
@@ -17677,7 +17643,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1279732912
 BoxCollider:
@@ -17772,7 +17737,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1281182944
 BoxCollider:
@@ -17946,7 +17910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1283504638
 BoxCollider:
@@ -18041,7 +18004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1285545723
 BoxCollider:
@@ -18136,7 +18098,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1286819433
 BoxCollider:
@@ -18231,7 +18192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1296140290
 BoxCollider:
@@ -18326,7 +18286,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1315814000
 BoxCollider:
@@ -18421,7 +18380,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1330969727
 BoxCollider:
@@ -18516,7 +18474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1331253042
 BoxCollider:
@@ -18668,7 +18625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1342536455
 BoxCollider:
@@ -18763,7 +18719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1353005611
 BoxCollider:
@@ -18810,37 +18765,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0}
   m_Size: {x: 2, y: 2, z: 0.2}
   m_FadeFactor: 1
---- !u!1 &1353065433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1353065434}
-  m_Layer: 0
-  m_Name: ----------------------------------------
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1353065434
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353065433}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355495461
 GameObject:
   m_ObjectHideFlags: 0
@@ -18889,7 +18813,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1355495464
 BoxCollider:
@@ -18984,7 +18907,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1361086527
 BoxCollider:
@@ -19079,7 +19001,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1364642196
 BoxCollider:
@@ -19174,7 +19095,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1366357191
 BoxCollider:
@@ -19269,7 +19189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1374673168
 BoxCollider:
@@ -19364,7 +19283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1382903350
 BoxCollider:
@@ -19459,7 +19377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1384457523
 BoxCollider:
@@ -19554,7 +19471,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1385966452
 BoxCollider:
@@ -19649,7 +19565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1386635637
 BoxCollider:
@@ -19744,7 +19659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1392783559
 BoxCollider:
@@ -19901,7 +19815,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1401634167
 BoxCollider:
@@ -19996,7 +19909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1410082647
 BoxCollider:
@@ -20091,7 +20003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1413816478
 BoxCollider:
@@ -20148,7 +20059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2535955149212815853, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
       propertyPath: m_Name
-      value: Timer Manager
+      value: Manager - Timer
       objectReference: {fileID: 0}
     - target: {fileID: 4179192684586357610, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20243,7 +20154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1443413735
 BoxCollider:
@@ -20338,7 +20248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1445018907
 BoxCollider:
@@ -20433,7 +20342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1447052036
 BoxCollider:
@@ -20668,7 +20576,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1461176096
 BoxCollider:
@@ -20833,7 +20740,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1479205155
 BoxCollider:
@@ -20928,7 +20834,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1481459641
 BoxCollider:
@@ -21023,7 +20928,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1487173447
 BoxCollider:
@@ -21118,7 +21022,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1487194927
 BoxCollider:
@@ -21399,7 +21302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1497384226
 BoxCollider:
@@ -21494,7 +21396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1499295884
 BoxCollider:
@@ -21589,7 +21490,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1499760977
 BoxCollider:
@@ -21684,7 +21584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1507631675
 BoxCollider:
@@ -21741,7 +21640,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 783646616903374861, guid: c93884a63dc6c3c4e8733454caf69328, type: 3}
       propertyPath: m_Name
-      value: Save Manager
+      value: Manager - Save
       objectReference: {fileID: 0}
     - target: {fileID: 1180312589136665304, guid: c93884a63dc6c3c4e8733454caf69328, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21836,7 +21735,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1518295011
 BoxCollider:
@@ -21931,7 +21829,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1519752865
 BoxCollider:
@@ -22026,7 +21923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1529267087
 BoxCollider:
@@ -22121,7 +22017,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1531291096
 BoxCollider:
@@ -22216,7 +22111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1531608767
 BoxCollider:
@@ -22389,7 +22283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1533251046
 BoxCollider:
@@ -22484,7 +22377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1535953016
 BoxCollider:
@@ -22719,7 +22611,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1555876265
 BoxCollider:
@@ -22935,7 +22826,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1569560083
 BoxCollider:
@@ -23047,6 +22937,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.54719037
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22665349
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.74440324
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.30834177
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.1598577
@@ -23522,7 +23428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1616153238
 BoxCollider:
@@ -23749,7 +23654,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1625358214
 BoxCollider:
@@ -23906,7 +23810,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1638824855
 BoxCollider:
@@ -24001,7 +23904,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1641849211
 BoxCollider:
@@ -24170,7 +24072,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1650390184
 BoxCollider:
@@ -24265,7 +24166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1650396491
 BoxCollider:
@@ -24360,7 +24260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1651619865
 BoxCollider:
@@ -24455,7 +24354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1664611466
 BoxCollider:
@@ -24628,7 +24526,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1668438433
 BoxCollider:
@@ -24847,7 +24744,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1688417230
 BoxCollider:
@@ -24942,7 +24838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1689852757
 BoxCollider:
@@ -25037,7 +24932,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1693981045
 BoxCollider:
@@ -25132,7 +25026,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1716565675
 BoxCollider:
@@ -25187,6 +25080,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80945873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.33528864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.44534278
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.18446696
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.3219733
@@ -25351,7 +25260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1738276090
 BoxCollider:
@@ -25586,7 +25494,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1758502881
 BoxCollider:
@@ -25805,7 +25712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1777380894
 BoxCollider:
@@ -25900,7 +25806,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1794149574
 BoxCollider:
@@ -26119,7 +26024,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1801194009
 BoxCollider:
@@ -26341,7 +26245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1837614205
 BoxCollider:
@@ -26436,7 +26339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1851389681
 BoxCollider:
@@ -26652,7 +26554,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1877921915
 BoxCollider:
@@ -31521,7 +31422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1919132095
 BoxCollider:
@@ -31616,7 +31516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1945939216
 BoxCollider:
@@ -31711,7 +31610,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &1958817864
 BoxCollider:
@@ -31830,7 +31728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4397271591892970640, guid: 1406f85908e06c14eb9d3887654e14a7, type: 3}
       propertyPath: m_Name
-      value: Effects Manager
+      value: Manager - Effects
       objectReference: {fileID: 0}
     - target: {fileID: 9102424488129236232, guid: 1406f85908e06c14eb9d3887654e14a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32091,7 +31989,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2012425040
 BoxCollider:
@@ -32470,7 +32367,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2042092583
 BoxCollider:
@@ -32565,7 +32461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2047216538
 BoxCollider:
@@ -32660,7 +32555,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2047817406
 BoxCollider:
@@ -32755,7 +32649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2060550530
 BoxCollider:
@@ -32850,7 +32743,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2063359043
 BoxCollider:
@@ -32945,7 +32837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2085038743
 BoxCollider:
@@ -33216,7 +33107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 1
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2108042519
 BoxCollider:
@@ -33418,7 +33308,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2121007568
 BoxCollider:
@@ -33575,7 +33464,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 0
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2129831918
 BoxCollider:
@@ -33670,7 +33558,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stainType: 2
   moneyGainedOnClean: 3
-  audioSource: {fileID: 0}
   cleanedClips: []
 --- !u!65 &2143277516
 BoxCollider:
@@ -33725,6 +33612,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 382139203}
     m_Modifications:
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.79040825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.32739782
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.47833902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880909960674185972, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.19813432
+      objectReference: {fileID: 0}
     - target: {fileID: 2743179663925139655, guid: a5020107462ff1c42bc0258a514da4f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.655881
@@ -34015,14 +33918,13 @@ SceneRoots:
   - {fileID: 1513475888}
   - {fileID: 845965838}
   - {fileID: 1211399122}
-  - {fileID: 593220083}
-  - {fileID: 352379477}
-  - {fileID: 536025922}
   - {fileID: 2100421726}
   - {fileID: 1609128223}
   - {fileID: 1820567279}
   - {fileID: 177752303}
-  - {fileID: 1353065434}
+  - {fileID: 593220083}
+  - {fileID: 352379477}
+  - {fileID: 536025922}
   - {fileID: 988040658}
   - {fileID: 382139203}
   - {fileID: 1628491262}
