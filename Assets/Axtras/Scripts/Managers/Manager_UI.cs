@@ -68,8 +68,8 @@ public class Manager_UI : MonoBehaviour
 
     private void Awake() {
         if (Instance == null){
-            Instance = this;
             DontDestroyOnLoad(gameObject);
+            Instance = this;
         }
         else
             Destroy(gameObject);

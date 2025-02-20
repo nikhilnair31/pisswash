@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public class Manager_Tutorials : MonoBehaviour 
 {
@@ -7,11 +8,11 @@ public class Manager_Tutorials : MonoBehaviour
     public static Manager_Tutorials Instance { get; private set; }
 
     private bool showingTutorials = false;
-    
+
     [Header("Tutorial Settings")]
-    public Type_Tutorial playerMoveLookTutorial;
-    public Type_Tutorial playerPeeTutorial;
-    public Type_Tutorial drinkTutorial;
+    public List<Type_Tutorial> tutorials;  // List of tutorials to go through
+    private int currentTutorialIndex = 0;  // To track the current tutorial
+
     #endregion
 
     private void Awake() {
@@ -25,8 +26,10 @@ public class Manager_Tutorials : MonoBehaviour
 
     public void PlayTutorial(string key) {
         Debug.Log($"PlayTutorial");
-        var check = PlayerPrefs.GetInt(key);
-        if (check != 1) {
+
+        // Check if the tutorial has been shown before
+        // var check = PlayerPrefs.GetInt(key);
+        // if (check != 1) {
             var sequence = DOTween.Sequence().SetId(key);
             sequence
             // Wait a second
@@ -34,17 +37,32 @@ public class Manager_Tutorials : MonoBehaviour
             .AppendCallback(() => {
                 // Flash modal
                 Manager_UI.Instance.PauseDuringModal(true);
-                Manager_UI.Instance.SpawnModal(playerMoveLookTutorial, OnYesClicked, null);
+                ShowTutorial(tutorials[currentTutorialIndex]);
             })
             // Mark it shown
             .OnComplete(() => {
                 PlayerPrefs.SetInt(key, 1);
             });
+        // }
+    }
+
+    private void ShowTutorial(Type_Tutorial tutorial) {
+        Manager_UI.Instance.SpawnModal(tutorial, OnYesClicked, null);
+    }
+
+    private void OnYesClicked() {
+        // Move to next tutorial
+        currentTutorialIndex++;
+
+        // If we have reached the end of the list, close the tutorial process
+        if (currentTutorialIndex < tutorials.Count) {
+            ShowTutorial(tutorials[currentTutorialIndex]);
+        } else {
+            Manager_UI.Instance.PauseDuringModal(false);  // End tutorials
+            currentTutorialIndex = 0;  // Reset the index for next time
         }
     }
-    private void OnYesClicked() {
-        Manager_UI.Instance.SpawnModal(playerPeeTutorial, null, OnNoClicked);
-    }
+
     private void OnNoClicked() {
         Manager_UI.Instance.PauseDuringModal(false);
     }

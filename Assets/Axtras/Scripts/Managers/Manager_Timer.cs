@@ -11,9 +11,10 @@ public class Manager_Timer : MonoBehaviour
     private bool isRunning = false;
 
     [Header("Audio Settings")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip[] countingDownClips;
-    [SerializeField] private AudioClip[] timeUpClips;
+    [SerializeField] private AudioClip countingDownClip;
+    [SerializeField] private AudioClip levelStartClip;
+    [SerializeField] private AudioClip levelOverClip;
+    [SerializeField] private AudioClip timeUpClip;
     #endregion
 
     private void Awake() {
@@ -42,16 +43,17 @@ public class Manager_Timer : MonoBehaviour
 
     public void StartTimer() {
         isRunning = true;
-        Manager_Audio.Instance.PlayRandAudioLoop(audioSource, countingDownClips);
+        Manager_Audio.Instance.PlayAudioTimer(countingDownClip);
+        Manager_Audio.Instance.PlayAudioLevel(levelStartClip);
     }
     public void StopTimer(bool timeUp) {
         isRunning = false;
 
         if (timeUp) {
-            Manager_Audio.Instance.PlayRandAudio(audioSource, timeUpClips);
+            Manager_Audio.Instance.PlayAudioLevel(timeUpClip);
         }
         else {
-            audioSource.Stop();
+            Manager_Audio.Instance.StopAudioLevel();
         }
     }
     public void ResetTimer() {

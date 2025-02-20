@@ -49,10 +49,12 @@ public class Controller_Drinker : Controller_Person
         }
     }
     private void CheckForPlayerStealing() {
-        foreach (Controller_Drink drink in theirDrinks) {
+        var newDrinks = new List<Controller_Drink>(theirDrinks);
+        foreach (Controller_Drink drink in newDrinks) {
             if (drink.GetIsStolen()) {
                 PlayerStole();
                 drink.RemoveOwner(this);
+                theirDrinks.Remove(drink);
             }
         }
     }
@@ -78,7 +80,7 @@ public class Controller_Drinker : Controller_Person
         Vector3 toPlayer = player.transform.position - seeFromTransform.position;
         toPlayer.y = 0;
         float angle = Vector3.Angle(seeFromTransform.forward, toPlayer);
-        Debug.Log($"Angle: {angle}");
+        // Debug.Log($"Angle: {angle}");
 
         return angle <= canSeeInAngle;
     }

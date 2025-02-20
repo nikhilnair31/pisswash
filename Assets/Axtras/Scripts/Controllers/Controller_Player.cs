@@ -19,9 +19,7 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private bool canMove = true;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float sprintSpeed = 8f;
-    [SerializeField] private float crouchSpeed = 2.5f;
     [SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float crouchHeight = 1f;
 
     [Header("Mouse Settings")]
     [SerializeField] private bool canLook = true;
@@ -83,22 +81,12 @@ public class Controller_Player : MonoBehaviour
 
         isMoving = moveDirection.magnitude > 0;
 
-        if (Input.GetKey(KeyCode.LeftControl)) {
-            rb.linearVelocity = new (
-                moveDirection.x * crouchSpeed * speedMul, 
-                rb.linearVelocity.y, 
-                moveDirection.z * crouchSpeed * speedMul
-            );
-            playerCamera.DOMoveY(camLocalY - crouchHeight, 0.2f);
-        } 
-        else {
-            rb.linearVelocity = new (
-                moveDirection.x * moveSpeed * speedMul, 
-                rb.linearVelocity.y, 
-                moveDirection.z * moveSpeed * speedMul
-            );
-            playerCamera.DOMoveY(camLocalY, 0.2f);
-        }
+        rb.linearVelocity = new (
+            moveDirection.x * moveSpeed * speedMul, 
+            rb.linearVelocity.y, 
+            moveDirection.z * moveSpeed * speedMul
+        );
+        playerCamera.DOMoveY(camLocalY, 0.2f);
 
         if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
@@ -107,8 +95,6 @@ public class Controller_Player : MonoBehaviour
                 moveDirection.z * sprintSpeed * speedMul
             );
         }
-
-        rb.AddForce(Vector3.up * gravity);
     }
 
     private void PlayFootsteps() {
