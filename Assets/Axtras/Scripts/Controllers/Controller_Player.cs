@@ -101,7 +101,7 @@ public class Controller_Player : MonoBehaviour
         if (isMoving) {
             footstepTimer += Time.deltaTime;
             if (footstepTimer >= footstepInterval) {
-                Manager_Audio.Instance.PlayRandAudio(audioSource, footstepClips);
+                Manager_Audio.Instance.PlayAudio(audioSource, footstepClips);
                 footstepTimer = 0f;
             }
         }

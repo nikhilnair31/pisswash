@@ -266,7 +266,7 @@ public class Manager_Effects : MonoBehaviour
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
-                Manager_Audio.Instance.PlayRandAudio(audioSource, damageClips);
+                Manager_Audio.Instance.PlayAudio(audioSource, damageClips);
             })
             .Join(
                 cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
@@ -304,11 +304,11 @@ public class Manager_Effects : MonoBehaviour
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);
                 Manager_UI.Instance.GetDamageImageUI().color = Color.red;
-                Manager_Audio.Instance.PlayRandAudio(audioSource, slapClips);
+                Manager_Audio.Instance.PlayAudio(audioSource, slapClips);
             })
             .AppendInterval(0.5f)
             .AppendCallback(() => {
-                Manager_Audio.Instance.PlayRandAudio(audioSource, earsRingingClips);
+                Manager_Audio.Instance.PlayAudio(audioSource, earsRingingClips);
             })
             .Join(
                 cam?.transform.DOShakePosition(time, 1f, 10, 90, false, true)
@@ -345,7 +345,7 @@ public class Manager_Effects : MonoBehaviour
         slipSequence = DOTween.Sequence()
             .OnStart(() => {
                 Controller_Player.Instance.SetCanMoveAndLook(false);
-                Manager_Audio.Instance.PlayRandAudio(audioSource, slipClips);
+                Manager_Audio.Instance.PlayAudio(audioSource, slipClips);
             })
             .Join(
                 cam?.transform

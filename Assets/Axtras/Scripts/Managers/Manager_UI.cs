@@ -377,7 +377,7 @@ public class Manager_UI : MonoBehaviour
         for (int lettersDisplayed = 0; lettersDisplayed <= text.Length; lettersDisplayed++) {
             lookedAt_Text.maxVisibleCharacters = lettersDisplayed;
 
-            Manager_Audio.Instance.PlayRandAudio(source, clips);
+            Manager_Audio.Instance.PlayAudio(source, clips);
 
             yield return new WaitForSeconds(speed);
         }

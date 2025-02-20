@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 5804706505664357103}
   m_Layer: 8
   m_Name: Drinker
-  m_TagString: Drinker
+  m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +283,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -327,7 +327,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -379,7 +379,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8f5a7492c7d4f4fa775c0c2bd50d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 5829947705654887040}
   rend: {fileID: 5016993294504850843}
   player: {fileID: 0}
   skinMats:
@@ -387,6 +386,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 258bef0101ccb0f44a7a1dfe8c69853d, type: 2}
   - {fileID: 2100000, guid: 641ebb209c5b5a64c97e6152e25704eb, type: 2}
   - {fileID: 2100000, guid: 85884bddcbeab7f4898a79d253160d27, type: 2}
+  audioSource: {fileID: 5829947705654887040}
+  ewwClips:
+  - {fileID: 8300000, guid: 9260ebeda5c7f5f419f5cfe5a481d1ca, type: 3}
   seeFromTransform: {fileID: 7582972772823129458}
   canSeeInRange: 2.5
   canSeeInAngle: 80

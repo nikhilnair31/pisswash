@@ -42,7 +42,7 @@ public class Manager_Audio : MonoBehaviour
     }
     
     public void PlayAudioStain(AudioClip[] clips) {
-        PlayRandAudio(stainAudioSource, clips);
+        PlayAudio(stainAudioSource, clips);
     }
     
     public void PlayAudioLevel(AudioClip clip) {
@@ -59,26 +59,19 @@ public class Manager_Audio : MonoBehaviour
         timerAudioSource.Stop();
     }
     
-    private void PlayAudio(AudioSource source, AudioClip clip, bool loop = false, bool randPitch = true) {
+    public void PlayAudio(AudioSource source, AudioClip clip, bool loop = false, bool randPitch = true) {
         source.clip = clip;
         source.loop = loop;
         if (randPitch)
             source.pitch = GetRandPitchVal();
         source.Play();
     }
-    public void PlayRandAudio(AudioSource source, AudioClip[] clips, bool randPitch = true) {
+    public void PlayAudio(AudioSource source, AudioClip[] clips, bool loop = false, bool randPitch = true) {
         var clip = clips[Random.Range(0, clips.Length)];
         source.clip = clip;
         if (randPitch)
             source.pitch = GetRandPitchVal();
-        source.Play();
-    }
-    public void PlayRandAudioLoop(AudioSource source, AudioClip[] clips, bool randPitch = true) {
-        var clip = clips[Random.Range(0, clips.Length)];
-        source.clip = clip;
-        if (randPitch)
-            source.pitch = GetRandPitchVal();
-        source.loop = true;
+        source.loop = loop;
         source.Play();
     }
     

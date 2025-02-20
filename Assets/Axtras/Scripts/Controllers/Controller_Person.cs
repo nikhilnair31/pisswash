@@ -3,12 +3,15 @@ using UnityEngine;
 public class Controller_Person : MonoBehaviour 
 {
     #region Variables
-    [SerializeField] protected AudioSource audioSource;
     [SerializeField] protected MeshRenderer rend;
     [SerializeField] protected GameObject player;
 
     [SerializeField] private Material[] skinMats;
     protected Material mat;
+
+    [Header("Audio Settings")]
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] private AudioClip[] ewwClips;
     #endregion
 
     protected virtual void Start() {
@@ -21,5 +24,10 @@ public class Controller_Person : MonoBehaviour
         
         int randInd = Random.Range(0, skinMats.Length);
         rend.sharedMaterial = skinMats[randInd];
+    }
+
+    public void AddPeedOnSound() {
+        // Play eww audio clip
+        Manager_Audio.Instance.PlayAudio(audioSource, ewwClips);
     }
 }

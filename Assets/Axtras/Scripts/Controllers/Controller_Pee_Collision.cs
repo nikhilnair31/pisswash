@@ -10,5 +10,10 @@ public class Controller_Pee_Collision : MonoBehaviour
                 controllerStain.FadeOutAndDisable();
             }
         }
+        if (other.CompareTag("Person")) {
+            if (other.TryGetComponent(out Controller_Person person)) {
+                person.AddPeedOnSound();
+            }
+        }
     }  
 }

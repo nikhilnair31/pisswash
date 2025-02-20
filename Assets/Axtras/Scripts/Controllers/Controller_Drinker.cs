@@ -63,7 +63,7 @@ public class Controller_Drinker : Controller_Person
         Manager_Drinks.Instance.SetStealSlap();
         Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
         
-        Manager_Audio.Instance.PlayRandAudio(audioSource, caughtClips);
+        Manager_Audio.Instance.PlayAudio(audioSource, caughtClips);
 
         if (transform.TryGetComponent(out Generator_Stain gen)) {
             gen.SpawnDecalsWithConeRaycasts(
