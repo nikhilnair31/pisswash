@@ -11,6 +11,7 @@ public class Manager_Timer : MonoBehaviour
     private bool isRunning = false;
 
     [Header("Audio Settings")]
+    [SerializeField] private AudioSource timerAudioSource;
     [SerializeField] private AudioClip countingDownClip;
     [SerializeField] private AudioClip levelStartClip;
     [SerializeField] private AudioClip levelOverClip;
@@ -43,21 +44,29 @@ public class Manager_Timer : MonoBehaviour
 
     public void StartTimer() {
         isRunning = true;
-        Manager_Audio.Instance.PlayAudioTimer(countingDownClip);
-        Manager_Audio.Instance.PlayAudioLevel(levelStartClip);
+
+        timerAudioSource.pitch = 1f;
+        timerAudioSource.clip = countingDownClip;
+        timerAudioSource.loop = true;
+        timerAudioSource.Play();
     }
     public void StopTimer(bool timeUp) {
         isRunning = false;
 
         if (timeUp) {
-            Manager_Audio.Instance.PlayAudioLevel(timeUpClip);
+            timerAudioSource.pitch = 1f;
+            timerAudioSource.clip = timeUpClip;
+            timerAudioSource.loop = false;
+            timerAudioSource.Play();
         }
         else {
-            Manager_Audio.Instance.StopAudioLevel();
+            timerAudioSource.Stop();
         }
     }
     public void ResetTimer() {
         timer = 0f;
+        
+        timerAudioSource.Stop();
     }
     
     public void AddTimerAmt(float val) {

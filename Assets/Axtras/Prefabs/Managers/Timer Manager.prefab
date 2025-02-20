@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 60
+  timerAudioSource: {fileID: 5392126344906117476}
   countingDownClip: {fileID: 8300000, guid: df2a9253450b83249a1b6c616a78db43, type: 3}
   levelStartClip: {fileID: 8300000, guid: bff03ba8c8006fb45999969484b10f05, type: 3}
   levelOverClip: {fileID: 8300000, guid: 5d62f5dfb1c8d794b8b1b28468c17af3, type: 3}

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Manager_Audio : MonoBehaviour 
@@ -44,21 +45,31 @@ public class Manager_Audio : MonoBehaviour
     public void PlayAudioStain(AudioClip[] clips) {
         PlayAudio(stainAudioSource, clips);
     }
-    
-    public void PlayAudioLevel(AudioClip clip) {
-        PlayAudio(levelAudioSource, clip, false);
-    }
-    public void StopAudioLevel() {
-        levelAudioSource.Stop();
-    }
 
-    public void PlayAudioTimer(AudioClip clip) {
-        PlayAudio(timerAudioSource, clip, true, false);
+    public void PlayAudioTimer(AudioClip clip, float maxTime) {
+        var fadeTween = timerAudioSource
+            .DOFade(1f, maxTime);
+        fadeTween
+            .OnStart(() => {
+                timerAudioSource.clip = clip;
+                timerAudioSource.loop = true;
+                timerAudioSource.volume = 0.5f;
+            })
+            .OnComplete(() => {
+                StopAudioTimer();
+            });
     }
     public void StopAudioTimer() {
         timerAudioSource.Stop();
     }
     
+    public void PlayAudio(AudioClip clip, bool loop = false, bool randPitch = true) {
+        levelAudioSource.clip = clip;
+        levelAudioSource.loop = loop;
+        if (randPitch)
+            levelAudioSource.pitch = GetRandPitchVal();
+        levelAudioSource.Play();
+    }
     public void PlayAudio(AudioSource source, AudioClip clip, bool loop = false, bool randPitch = true) {
         source.clip = clip;
         source.loop = loop;
@@ -75,7 +86,7 @@ public class Manager_Audio : MonoBehaviour
         source.Play();
     }
     
-    private float GetRandPitchVal() {
+    public float GetRandPitchVal() {
         return Random.Range(randMinMaxPitch.x, randMinMaxPitch.y);
     }
 }

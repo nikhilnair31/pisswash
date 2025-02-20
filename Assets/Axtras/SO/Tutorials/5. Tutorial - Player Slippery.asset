@@ -15,6 +15,7 @@ MonoBehaviour:
   titleStr: Careful around the environment!
   contentStr: Watch out for slippery items that can stun you too!
   images:
-  - {fileID: 21300000, guid: 67e2f2e0669adaa4bbc7d08eb7061ab3, type: 3}
+  - {fileID: 21300000, guid: 8047077078fd9a048b02946ad4882169, type: 3}
+  - {fileID: 21300000, guid: 6a74bec391a16cc4ab3413e976bdc60c, type: 3}
   yesButtonStr: Done!
   noButtonStr: Done!

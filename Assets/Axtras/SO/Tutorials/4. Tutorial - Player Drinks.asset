@@ -17,7 +17,8 @@ MonoBehaviour:
     around. If someone is next to with an eye icon they will slap and stun you if
     you steal their drink.
   images:
-  - {fileID: 21300000, guid: 557351968da13fa4baac678e6427d269, type: 3}
-  - {fileID: 21300000, guid: 2a3b008e7f494e342ab6c8994df1bd48, type: 3}
+  - {fileID: 21300000, guid: 60a2e7333ded1064f90bd7700a83f146, type: 3}
+  - {fileID: 21300000, guid: 6f6a92a76649c1d4f841e61743acb441, type: 3}
+  - {fileID: 21300000, guid: 6b53d5f1fc91e43449ddcf00f3056ec2, type: 3}
   yesButtonStr: Next
   noButtonStr: Close
