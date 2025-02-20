@@ -360,6 +360,92 @@ MonoBehaviour:
   peeAudioSource: {fileID: 4053408983384847906}
   peeClips:
   - {fileID: 8300000, guid: b95dc688b8e1f4e4badad1b8c58747d4, type: 3}
+--- !u!1 &2907633371697046736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2527132411295350378}
+  - component: {fileID: 1494621254390231503}
+  - component: {fileID: 3699990034649007365}
+  m_Layer: 0
+  m_Name: Shlong
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2527132411295350378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907633371697046736}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000013572757, y: 0.2588198, z: 0.96592563, w: -0.000000035842984}
+  m_LocalPosition: {x: 0.030000355, y: -0.3384819, z: 0.2216227}
+  m_LocalScale: {x: 3.3333337, y: 1.1764703, z: 1.0526319}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6503143868116069518}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 180}
+--- !u!33 &1494621254390231503
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907633371697046736}
+  m_Mesh: {fileID: 59628673309720909, guid: b41f1878c463e2b45a44c423c541dcc2, type: 3}
+--- !u!23 &3699990034649007365
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907633371697046736}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -2609809028551464901, guid: 9d050aad967932f4aa506f9c3e87c4ca, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3806000757064224311
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,14 +5365,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4845335330976759503}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.38268277, y: -0, z: -0, w: 0.9238798}
-  m_LocalPosition: {x: 0, y: -2.1000001, z: 0.3000002}
+  m_LocalRotation: {x: -0.59404355, y: -4.920508e-13, z: -1.7763566e-13, w: 0.8044329}
+  m_LocalPosition: {x: -0, y: -1.614, z: 1.507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8208012417068755823}
   m_Father: {fileID: 5725219954086246380}
-  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -72.889, y: 0, z: 0}
 --- !u!198 &7912719795841026379
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -5423,7 +5509,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7
+      scalar: 6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6230,7 +6316,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -6242,21 +6328,21 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0
-          outSlope: 1
+          inSlope: 0.058473174
+          outSlope: 0.058473174
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0.49011832
         - serializedVersion: 3
-          time: 1
+          time: 0.20021111
           value: 1
-          inSlope: 1
+          inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -9046,7 +9132,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 521
+      m_Bits: 777
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -10034,7 +10120,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 012f82b9035ba1e4c921411680f02e02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10208,12 +10294,12 @@ GameObject:
   - component: {fileID: 3199608053265970023}
   - component: {fileID: 6884062100275144802}
   m_Layer: 0
-  m_Name: Shlong
+  m_Name: Censor Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6503143868116069518
 Transform:
   m_ObjectHideFlags: 0
@@ -10223,10 +10309,11 @@ Transform:
   m_GameObject: {fileID: 6938719838707595584}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 2.3270266e-13, z: 1.8385287e-13, w: 0.9238795}
-  m_LocalPosition: {x: -0.0000040552136, y: -1.1318897, z: 1.7136958}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
+  m_LocalPosition: {x: -0.009, y: -0.849, z: 1.714}
+  m_LocalScale: {x: 0.3, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2527132411295350378}
   m_Father: {fileID: 5725219954086246380}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!33 &3199608053265970023

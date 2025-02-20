@@ -287,6 +287,7 @@
     "m_OutputNode": {
         "m_Id": ""
     },
+    "m_SubDatas": [],
     "m_ActiveTargets": [
         {
             "m_Id": "545ebe09d0f84456969703e92bc07ac1"
@@ -339,8 +340,8 @@
     "m_ObjectId": "0ab166736037497a936477d020af8969",
     "m_Title": "Pixelize UV",
     "m_Position": {
-        "x": -411.7035827636719,
-        "y": 174.74066162109376
+        "x": -412.0,
+        "y": 173.5999755859375
     }
 }
 
@@ -708,6 +709,7 @@
     "m_AlphaClip": false,
     "m_CastShadows": false,
     "m_ReceiveShadows": true,
+    "m_DisableTint": false,
     "m_AdditionalMotionVectorMode": 0,
     "m_AlembicMotionVectors": false,
     "m_SupportsLODCrossFade": false,
@@ -982,8 +984,8 @@
     "m_ObjectId": "8a8d568fcca446729afdd1fcce595f74",
     "m_Title": "Pixel Size",
     "m_Position": {
-        "x": -413.2592468261719,
-        "y": -104.74072265625
+        "x": -413.5999755859375,
+        "y": -105.60003662109375
     }
 }
 
@@ -1242,8 +1244,8 @@
     "m_ObjectId": "a6b637702bd14fdebee94ab74099e7f9",
     "m_Title": "Screen dimensions",
     "m_Position": {
-        "x": -1175.9998779296875,
-        "y": -107.33334350585938
+        "x": -1176.0,
+        "y": -108.0001220703125
     }
 }
 
@@ -1553,10 +1555,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -514.3703002929688,
-            "y": 49.77778625488281,
-            "width": 121.33331298828125,
-            "height": 34.22221374511719
+            "x": -551.2000732421875,
+            "y": 50.40000534057617,
+            "width": 120.80001831054688,
+            "height": 33.59999465942383
         }
     },
     "m_Slots": [
