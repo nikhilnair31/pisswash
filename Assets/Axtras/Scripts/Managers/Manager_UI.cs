@@ -312,10 +312,10 @@ public class Manager_UI : MonoBehaviour
     }
     
     public void SetNextLevelEnabledUI(string score) {
-        if (score == "S+" || score == "S" || score == "A" || score == "B") {
+        if (score != "F") {
             next_LevelOver_Button.interactable = true;
         }
-        else if (score == "C" || score == "D" || score == "F") {
+        else {
             next_LevelOver_Button.interactable = false;
         }
     }

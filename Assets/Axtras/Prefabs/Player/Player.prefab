@@ -297,9 +297,7 @@ MonoBehaviour:
   canMove: 1
   moveSpeed: 10
   sprintSpeed: 10
-  crouchSpeed: 2.5
   gravity: -9.81
-  crouchHeight: 1
   canLook: 1
   mouseSensitivity: 100
   playerCamera: {fileID: 5725219954086246380}
@@ -343,19 +341,19 @@ MonoBehaviour:
   isPeeing: 0
   maxPeeAmount: 100
   currPeeAmount: 0
-  peeEmptyRate: 100
-  peeDurationForMaxEffect: 10
-  minFadeMul: 0.1
-  maxFadeMul: 1.5
+  peeEmptyRate: 8
+  peeDurationForMaxEffect: 12
+  minFadeMul: 0.3
+  maxFadeMul: 2
   isDehydrated: 0
   stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0
   timeToKidneyStone: 0
-  maxTimeToKidneyStone: 5
+  maxTimeToKidneyStone: 7
   isHydrating: 0
   qtePressCount: 0
-  qteRequiredPresses: 5
+  qteRequiredPresses: 7
   allowQTE: 0
   shlongGO: {fileID: 6938719838707595584}
   peePS: {fileID: 7912719795841026379}

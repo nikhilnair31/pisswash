@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Stains - Puke
   m_EditorClassIdentifier: 
   type: 2
-  fadeAmountPerCollision: 0.1
+  fadeAmountPerCollision: 0.12
+  scaleAmount: 1.2
+  scaleTime: 5
