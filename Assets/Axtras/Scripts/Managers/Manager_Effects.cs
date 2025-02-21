@@ -50,6 +50,16 @@ public class Manager_Effects : MonoBehaviour
     [SerializeField] private float minMovementMultiplier = 0.5f;
     [SerializeField] private float maxMovementMultiplier = 1.5f;
     private float currentMovementMultiplier = 1f;
+
+    [Header("Stone Settings")]
+    [SerializeField] private float peeAmtChange_GotStone = -15f;
+    [SerializeField] private float peeAmtChange_PassStone = 5f;
+    [SerializeField] private float peeRateMul_GotStone = 0.75f;
+    [SerializeField] private float peeRateMul_PassStone = 1.4f;
+    [SerializeField] private float moveSpeedMul_GotStone = 0.7f;
+    [SerializeField] private float moveSpeedMul_PassStone = 1.1f;
+    [SerializeField] private float effectDuration_GotStone = -1f;
+    [SerializeField] private float effectDuration_PassStone = 3f;
     #endregion
 
     private void Awake() {
@@ -181,9 +191,10 @@ public class Manager_Effects : MonoBehaviour
         
         kidneyStoneEffectCoroutine = StartCoroutine(
             StoneEffectCoroutine(
-                -15f, 
-                0.75f, 
-                -1f
+                peeAmtChange_GotStone, 
+                peeRateMul_GotStone, 
+                moveSpeedMul_GotStone,
+                effectDuration_GotStone
         ));
     }
     public void SetPassStoneEffect() {
@@ -192,13 +203,14 @@ public class Manager_Effects : MonoBehaviour
         
         kidneyStonePassBoostCoroutine = StartCoroutine(
             StoneEffectCoroutine(
-                5f, 
-                1.4f, 
-                3f
+                peeAmtChange_PassStone, 
+                peeRateMul_PassStone, 
+                moveSpeedMul_PassStone,
+                effectDuration_PassStone
             )
         );
     }
-    private IEnumerator StoneEffectCoroutine(float peeAmountChange, float rateMul, float duration) {
+    private IEnumerator StoneEffectCoroutine(float peeAmountChange, float peeRateMul, float moveSpeedMul, float duration) {
         // var main = peePS.main;
         var emission = peePS.emission;
         var maxPeeAmount = Controller_Pee.Instance.GetMaxPeeAmount();
@@ -206,10 +218,8 @@ public class Manager_Effects : MonoBehaviour
         // Apply changes and clamp values
         maxPeeAmount = Mathf.Clamp(maxPeeAmount + peeAmountChange, 0f, 150f);
         Controller_Pee.Instance.SetMaxPeeAmount(maxPeeAmount);
-        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(rateMul, 0.1f, 1.3f));
-
-        // main.gravityModifier = Mathf.Clamp(main.gravityModifier.constant * rateMul, 0.2f, 2.5f);
-        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant * rateMul, 5, 150);
+        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant * peeRateMul, 5, 150);
+        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(moveSpeedMul, 0.1f, 1.3f));
 
         if (duration == -1f) yield break;
 
@@ -218,10 +228,8 @@ public class Manager_Effects : MonoBehaviour
         // Revert changes after duration
         maxPeeAmount = Mathf.Clamp(maxPeeAmount - peeAmountChange, 0f, 150f);
         Controller_Pee.Instance.SetMaxPeeAmount(maxPeeAmount);
-        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(1 / rateMul, 0.1f, 1.3f));
-
-        // main.gravityModifier = Mathf.Clamp(main.gravityModifier.constant / rateMul, 0.2f, 2.5f);
-        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / rateMul, 5, 150);
+        emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / peeRateMul, 5, 150);
+        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(1 / moveSpeedMul, 0.1f, 1.3f));
     }
     #endregion
 
