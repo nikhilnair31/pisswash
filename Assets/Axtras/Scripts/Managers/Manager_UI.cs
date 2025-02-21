@@ -46,7 +46,7 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Button retry_LevelOver_Button;
     [SerializeField] private Button next_LevelOver_Button;
     [SerializeField] private Button menu_LevelOver_Button;
-    [SerializeField] public bool levelOver = false;
+    [SerializeField] public bool inLevelOver = false;
 
     [Header("Level Over UI")]
     [SerializeField] private GameObject gameCompletedCanvasGO;
@@ -107,7 +107,7 @@ public class Manager_UI : MonoBehaviour
         }
     }
     public void PauseGame() {
-        if (inGame && !inPause) {
+        if (inGame && !inPause && !inMenu) {
             inGame = false;
             inPause = true;
 
@@ -122,7 +122,7 @@ public class Manager_UI : MonoBehaviour
 
             Time.timeScale = 0f;
         }
-        else if (!inGame && inPause) {
+        else if (!inGame && inPause && !inMenu) {
             inPause = false;
             inGame = true;
 
@@ -208,6 +208,8 @@ public class Manager_UI : MonoBehaviour
         Debug.Log("StartGameCoroutine");
 
         inMenu = false;
+        inPause = false;
+        inLevelOver = false;
 
         menuCanvasGO.SetActive(false);
         levelOverCanvasGO.SetActive(false);
@@ -239,8 +241,10 @@ public class Manager_UI : MonoBehaviour
     public void LevelOver() {
         Debug.Log($"LevelOver");
 
-        levelOver = true;
         inGame = false;
+        inPause = false;
+        inMenu = false;
+        inLevelOver = true;
 
         // Get stats and rating
         var (grade, stats) = Manager_Game.Instance.CalcStatAndGrade();
@@ -323,6 +327,8 @@ public class Manager_UI : MonoBehaviour
         Debug.Log($"StartMenuCoroutine");
 
         inGame = false;
+        inPause = false;
+        inLevelOver = false;
 
         loadingCanvasGO.SetActive(true);
         menuCanvasGO.SetActive(false);

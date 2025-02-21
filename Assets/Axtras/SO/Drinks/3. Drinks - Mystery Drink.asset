@@ -29,10 +29,10 @@ MonoBehaviour:
   audioChangeChance: 0.5
   pitchShiftPerc: 0.5
   moneyChangeChance: 0.5
-  moneyAmt: 10
+  moneyAmt: 20
   timeChangeChance: 0.5
-  timeAmt: 10
+  timeAmt: 6
   slipChangeChance: 0.5
-  slipTimeAmt: 10
+  slipTimeAmt: 5
   stunChangeChance: 0.5
-  stunTimeAmt: 10
+  stunTimeAmt: 4
