@@ -37,7 +37,7 @@ public class Manager_Game : MonoBehaviour
         var stolenDrinks = Manager_Drinks.Instance.GetDrinksStolenCount();
 
         // Calculations
-        var baseScore = (stainPerc * 0.5f) + (Mathf.Pow(timeLeftPerc, 0.5f) * 20f); 
+        var baseScore = (stainPerc * 0.75f) + (Mathf.Pow(Mathf.Max(timeLeftPerc, 0.0001f), 0.5f) * 5f); 
         
         // Penalties
         var stonePenalty = stonesAcquired * 2f; // -X% per stone risked

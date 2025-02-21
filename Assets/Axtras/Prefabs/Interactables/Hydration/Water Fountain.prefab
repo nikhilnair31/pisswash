@@ -107,7 +107,7 @@ MonoBehaviour:
   showThisText: '[E] drink'
   showForTime: -1
   isOn: 0
-  increaseHydrationRate: 10
+  increaseHydrationRate: 5
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
 --- !u!64 &2744955276047843049

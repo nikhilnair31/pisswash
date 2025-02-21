@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: 3. Drinks - Mystery Drink
   m_EditorClassIdentifier: 
   type: 2
-  incrHydrationAmt: 10
+  incrHydrationAmt: 40
   buyCost: 15
   drinkClips:
   - {fileID: 8300000, guid: d8b87e3a32979b34297af565a9b1cdce, type: 3}
   duration: 6
   randPerc: 0.2
+  hydrationChangeChance: 0.5
+  movementChangeChance: 0.5
   speedReducMul: 0.7
-  distortionAmt: 0.03
-  saturationAmt: 30
-  vignetteAmt: 0.3
+  visualsChangeChance: 0.5
+  distortionMul: 1.3
+  saturationMul: 1.3
+  vignetteMul: 1.3
+  audioChangeChance: 0.5
   pitchShiftPerc: 0.5
+  moneyChangeChance: 0.5
+  moneyAmt: 10
+  timeChangeChance: 0.5
+  timeAmt: 10
+  slipChangeChance: 0.5
+  slipTimeAmt: 10
+  stunChangeChance: 0.5
+  stunTimeAmt: 10

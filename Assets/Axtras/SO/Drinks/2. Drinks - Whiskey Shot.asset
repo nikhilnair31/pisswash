@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 2. Drinks - Whiskey Shot
   m_EditorClassIdentifier: 
   type: 1
-  incrHydrationAmt: 10
+  incrHydrationAmt: 20
   buyCost: 7
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
   duration: 6
   speedReducMul: 0.8
-  distortionAmt: 0.02
-  saturationAmt: 15
-  vignetteAmt: 0.15
+  distortionMul: 1.2
+  saturationMul: 1.2
+  vignetteMul: 1.2
   pitchShiftPerc: 0.8

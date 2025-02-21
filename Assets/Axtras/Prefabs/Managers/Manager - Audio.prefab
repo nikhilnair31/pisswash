@@ -49,10 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3680818db93c5d14ab08f5bf45c407d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalSnapshot: {fileID: -8936400941625891562, guid: a4f21894238a39840baec869d24731c8, type: 2}
+  muffledSnapshot: {fileID: 24500006, guid: a4f21894238a39840baec869d24731c8, type: 2}
   barAudioSource: {fileID: 3797116596091283321}
   barClip: {fileID: 8300000, guid: 8dc460beb4659e44ca86f0b8aac51109, type: 3}
   talkingAudioSource: {fileID: 3751307679683888443}
   talkingClip: {fileID: 8300000, guid: 5f7182f3c77fe644394b1db43d50f3a7, type: 3}
+  transitionTime: 1
   stainAudioSource: {fileID: 1121729193005521729}
   randMinMaxPitch: {x: 0.8, y: 1.2}
   levelAudioSource: {fileID: 2060456395670449350}
@@ -66,12 +69,12 @@ AudioSource:
   m_GameObject: {fileID: 4736275614094529045}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a4f21894238a39840baec869d24731c8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
-  m_Pitch: 0.8
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -163,12 +166,12 @@ AudioSource:
   m_GameObject: {fileID: 4736275614094529045}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a4f21894238a39840baec869d24731c8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
-  m_Pitch: 0.8
+  m_Volume: 1
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0

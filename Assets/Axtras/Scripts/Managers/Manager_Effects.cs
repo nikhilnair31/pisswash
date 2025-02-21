@@ -177,7 +177,7 @@ public class Manager_Effects : MonoBehaviour
         kidneyStoneEffectCoroutine = StartCoroutine(
             StoneEffectCoroutine(
                 -15f, 
-                0.8f, 
+                0.75f, 
                 -1f
         ));
     }

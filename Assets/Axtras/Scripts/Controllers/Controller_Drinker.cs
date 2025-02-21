@@ -12,6 +12,9 @@ public class Controller_Drinker : Controller_Person
     [SerializeField] private float canSeeInRange = 5f;
     [SerializeField] private float canSeeInAngle = 110f;
     
+    [Header("Stun Settings")]
+    [SerializeField] private float stunTimeAmt = 3f;
+    
     [Header("UI Settings")]
     [SerializeField] private Image drinkerImage;
     [SerializeField] private Sprite canSeeSprite;
@@ -59,7 +62,7 @@ public class Controller_Drinker : Controller_Person
         }
     }
     private void PlayerStole() {
-        Manager_Effects.Instance.StartStunEffectsSeq(5f);
+        Manager_Effects.Instance.StartStunEffectsSeq(stunTimeAmt);
         Manager_Drinks.Instance.SetStealSlap();
         Manager_SaveLoad.Instance.SaveStatData("totalSlaps", "add", 1);
         

@@ -18,5 +18,7 @@ public class Controller_Boss : Controller_Interactables
 
     public void FinshRound() {
         Manager_UI.Instance.LevelOver();
+        // Stop timer
+        Manager_Timer.Instance.StopTimer(false);
     }
 }

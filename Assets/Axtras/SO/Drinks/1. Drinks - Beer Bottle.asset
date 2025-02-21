@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1. Drinks - Beer Bottle
   m_EditorClassIdentifier: 
   type: 0
-  incrHydrationAmt: 10
+  incrHydrationAmt: 15
   buyCost: 3
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}

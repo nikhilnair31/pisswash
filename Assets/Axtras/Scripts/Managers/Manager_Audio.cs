@@ -1,5 +1,6 @@
-using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Audio;
+using DG.Tweening;
 
 public class Manager_Audio : MonoBehaviour 
 {
@@ -7,10 +8,13 @@ public class Manager_Audio : MonoBehaviour
     public static Manager_Audio Instance { get; private set; }
     
     [Header("Ambient Settings")]
+    [SerializeField] private AudioMixerSnapshot normalSnapshot;
+    [SerializeField] private AudioMixerSnapshot muffledSnapshot;
     [SerializeField] private AudioSource barAudioSource;
     [SerializeField] private AudioClip barClip;
     [SerializeField] private AudioSource talkingAudioSource;
     [SerializeField] private AudioClip talkingClip;
+    [SerializeField] private float transitionTime = 1f;
     
     [Header("Stain Settings")]
     [SerializeField] private AudioSource stainAudioSource;
@@ -40,6 +44,14 @@ public class Manager_Audio : MonoBehaviour
 
         talkingAudioSource.clip = talkingClip;
         talkingAudioSource.Play();
+    }
+    public void ControlAudioAmbient(bool inMenu) {
+        if (inMenu) {
+            muffledSnapshot.TransitionTo(transitionTime);
+        }
+        else {
+            normalSnapshot.TransitionTo(transitionTime);
+        }
     }
     
     public void PlayAudioStain(AudioClip[] clips) {

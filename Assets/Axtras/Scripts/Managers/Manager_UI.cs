@@ -111,6 +111,9 @@ public class Manager_UI : MonoBehaviour
             gameCanvasGO.SetActive(false);
             pauseCanvasGO.SetActive(true);
             
+            Manager_Timer.Instance.StopTimer(false);
+            Manager_Audio.Instance.ControlAudioAmbient(true);
+            
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
 
@@ -122,6 +125,9 @@ public class Manager_UI : MonoBehaviour
 
             gameCanvasGO.SetActive(true);
             pauseCanvasGO.SetActive(false);
+            
+            Manager_Timer.Instance.StartTimer();
+            Manager_Audio.Instance.ControlAudioAmbient(false);
             
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -219,6 +225,8 @@ public class Manager_UI : MonoBehaviour
         Manager_Effects.Instance.ResetDehydrationEffects();
         Manager_Timer.Instance.StartTimer();
         
+        Manager_Audio.Instance.ControlAudioAmbient(false);
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -240,6 +248,8 @@ public class Manager_UI : MonoBehaviour
         SetGradeUI(grade);
         SetNextLevelEnabledUI(grade);
         Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, grade);
+        
+        Manager_Audio.Instance.ControlAudioAmbient(true);
         
         // Add money gained
         var money = Manager_Money.Instance.GetHasMoneyByRating(grade);
@@ -313,6 +323,8 @@ public class Manager_UI : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         inMenu = true;
+        
+        Manager_Audio.Instance.ControlAudioAmbient(true);
 
         loadingCanvasGO.SetActive(false); 
         menuCanvasGO.SetActive(true);
