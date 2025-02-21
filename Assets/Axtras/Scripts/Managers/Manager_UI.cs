@@ -48,6 +48,10 @@ public class Manager_UI : MonoBehaviour
     [SerializeField] private Button menu_LevelOver_Button;
     [SerializeField] public bool levelOver = false;
 
+    [Header("Level Over UI")]
+    [SerializeField] private GameObject gameCompletedCanvasGO;
+    [SerializeField] private Button menu_GameCompleted_Button;
+
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseCanvasGO;
     [SerializeField] public bool inPause = false;
@@ -88,6 +92,8 @@ public class Manager_UI : MonoBehaviour
         retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
         next_LevelOver_Button?.onClick.AddListener(NextLevel);
         menu_LevelOver_Button?.onClick.AddListener(ShowMenu);
+
+        menu_GameCompleted_Button?.onClick.AddListener(ShowMenu);
     } 
     #endregion
 
