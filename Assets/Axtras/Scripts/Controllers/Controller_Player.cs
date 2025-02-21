@@ -11,7 +11,6 @@ public class Controller_Player : MonoBehaviour
     private Vector3 moveDirection;
     private bool isMoving = false;
     private float speedMul = 1f;
-    private float camLocalY;
     private float xRotation = 0f;
     private float footstepTimer = 0f;
 
@@ -48,7 +47,6 @@ public class Controller_Player : MonoBehaviour
         }
 
         rb.freezeRotation = true;
-        camLocalY = playerCamera.transform.position.y;
 
         Manager_Tutorials.Instance.PlayTutorial(tutorialPlayerPrefsStr);
     }
@@ -86,7 +84,6 @@ public class Controller_Player : MonoBehaviour
             rb.linearVelocity.y, 
             moveDirection.z * moveSpeed * speedMul
         );
-        playerCamera.DOMoveY(camLocalY, 0.2f);
 
         if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl)) {
             rb.linearVelocity = new (
