@@ -341,16 +341,16 @@ MonoBehaviour:
   isPeeing: 0
   maxPeeAmount: 100
   currPeeAmount: 0
-  peeEmptyRate: 8
-  peeDurationForMaxEffect: 12
-  minFadeMul: 0.3
-  maxFadeMul: 2
+  peeEmptyRate: 12
+  peeDurationForMaxEffect: 8
+  minFadeMul: 0.2
+  maxFadeMul: 1.4
   isDehydrated: 0
   stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0
   timeToKidneyStone: 0
-  maxTimeToKidneyStone: 7
+  maxTimeToKidneyStone: 5
   isHydrating: 0
   qtePressCount: 0
   qteRequiredPresses: 7
@@ -10299,7 +10299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6503143868116069518
 Transform:
   m_ObjectHideFlags: 0

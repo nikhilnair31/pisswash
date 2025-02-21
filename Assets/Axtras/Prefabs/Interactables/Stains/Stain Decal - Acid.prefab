@@ -190,6 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stainType: 0
-  audioSource: {fileID: -7907017898178825599, guid: b3a25ab00162c514691ef7ff4c364413, type: 3}
+  moneyGainedOnClean: 1
   cleanedClips:
   - {fileID: 8300000, guid: d8b87e3a32979b34297af565a9b1cdce, type: 3}

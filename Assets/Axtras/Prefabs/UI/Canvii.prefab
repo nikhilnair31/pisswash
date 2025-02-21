@@ -2232,6 +2232,8 @@ MonoBehaviour:
   next_LevelOver_Button: {fileID: 5018690036751944072}
   menu_LevelOver_Button: {fileID: 8854266608489864139}
   levelOver: 0
+  gameCompletedCanvasGO: {fileID: 0}
+  menu_GameCompleted_Button: {fileID: 0}
   pauseCanvasGO: {fileID: 3737618163730052990}
   inPause: 0
   loadingCanvasGO: {fileID: 2204788348710984529}
@@ -3106,10 +3108,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6387276185047840599}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 500, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4262180335771067243
 CanvasRenderer:
@@ -5317,10 +5319,10 @@ RectTransform:
   - {fileID: 8067274694466693751}
   m_Father: {fileID: 1215420817147804876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -80}
-  m_SizeDelta: {x: 500, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7203693160159311020
 CanvasRenderer:
@@ -5820,7 +5822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4873022703701498847
 RectTransform:
   m_ObjectHideFlags: 0

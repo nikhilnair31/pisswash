@@ -37,7 +37,7 @@ public class Manager_Game : MonoBehaviour
         var stolenDrinks = Manager_Drinks.Instance.GetDrinksStolenCount();
 
         // Calculations
-        var baseScore = (timeLeftPerc * 0.4f) + (stainPerc * 0.6f);
+        var baseScore = (stainPerc * 0.5f) + (Mathf.Pow(timeLeftPerc, 0.5f) * 20f); 
         
         // Penalties
         var stonePenalty = stonesAcquired * 2f; // -X% per stone risked
@@ -55,12 +55,12 @@ public class Manager_Game : MonoBehaviour
 
         // Letter Grade
         var grade = finalScore switch {
-            float n when n >= 97 => "S+",
-            float n when n >= 90 => "S",
-            float n when n >= 80 => "A",
-            float n when n >= 70 => "B",
-            float n when n >= 60 => "C", 
-            float n when n >= 50 => "D",
+            float n when n >= 95 => "S+",
+            float n when n >= 80 => "S",
+            float n when n >= 70 => "A",
+            float n when n >= 60 => "B",
+            float n when n >= 55 => "C", 
+            float n when n >= 40 => "D",
             _ => "F"
         };
        

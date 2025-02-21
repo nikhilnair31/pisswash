@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7140853537731081408}
   - component: {fileID: 2848961534674576701}
   - component: {fileID: 8499739627892536610}
-  m_Layer: 0
+  - component: {fileID: 2744955276047843049}
+  m_Layer: 6
   m_Name: Water Fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211939564867578460}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000018402934, y: 0.70710677, z: 0.7071068, w: 0.0000018924475}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -22.580002, y: 0, z: -19.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -65,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dce4e5c79a14a474aa9d55e2938606f0, type: 2}
+  - {fileID: 2100000, guid: 3269c3b8b1ba8454f9f8c9f084b2f2a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,8 +106,29 @@ MonoBehaviour:
   addBoxCollider: 1
   showThisText: '[E] drink'
   showForTime: -1
-  tutorialSO: {fileID: 11400000, guid: dac381a3fe34d6847b5d51f4b84eb40f, type: 2}
   isOn: 0
   increaseHydrationRate: 10
   drinkClips:
   - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
+--- !u!64 &2744955276047843049
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211939564867578460}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6425030180975425945, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
