@@ -53,7 +53,7 @@ MonoBehaviour:
   slipClips:
   - {fileID: 8300000, guid: 5d62f5dfb1c8d794b8b1b28468c17af3, type: 3}
   damageClips:
-  - {fileID: 8300000, guid: 6e767aff4ebdfd44587865e201b97498, type: 3}
+  - {fileID: 8300000, guid: 92d71a0e5fc10e7498499309e6f741df, type: 3}
   visionDistortionMaterial: {fileID: 2100000, guid: 53651c41970d31442a59c120a2f59eff, type: 2}
   currentDistortionIntensity: 0.01
   minDistortion: 0
