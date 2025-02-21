@@ -118,7 +118,7 @@ public class Manager_SaveLoad : MonoBehaviour
         return JsonUtility.ToJson(gameData);
     }
 
-    public void SaveLevelUnlocked(string scenename, string rating = "") {
+    public void SaveLevelUnlocked(string scenename, string rating = "-") {
         var dataStr = Load();
         
         var dataJson = JSON.Parse(dataStr) as JSONObject;

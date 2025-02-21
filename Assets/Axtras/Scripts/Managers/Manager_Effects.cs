@@ -354,7 +354,7 @@ public class Manager_Effects : MonoBehaviour
             .Join(
                 Controller_Player.Instance.transform
                     .DORotate(new Vector3(0, 360, 0), time, RotateMode.FastBeyond360)
-                    .SetLoops(Mathf.CeilToInt(time / 0.9f), LoopType.Incremental)
+                    .SetLoops(Mathf.CeilToInt(time / 1.5f), LoopType.Incremental)
             )
             .OnComplete(() => {
                 StopSlipEffectsSeq();

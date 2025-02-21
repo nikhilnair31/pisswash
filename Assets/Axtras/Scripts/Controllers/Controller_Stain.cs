@@ -55,7 +55,7 @@ public class Controller_Stain : MonoBehaviour
 
         decalProjector.fadeFactor -= selectedStain.fadeAmountPerCollision * fadeMul;
 
-        if (decalProjector.fadeFactor <= 0f) {
+        if (decalProjector.fadeFactor <= 0.2f) {
             // Make fully transparent
             decalProjector.fadeFactor = 0f;
             // Play cleaned stain audio clip

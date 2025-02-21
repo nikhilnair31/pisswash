@@ -54,6 +54,7 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseCanvasGO;
+    [SerializeField] private Button backToMenu_Pause_Button;
     [SerializeField] public bool inPause = false;
 
     [Header("Loading UI")]
@@ -88,6 +89,8 @@ public class Manager_UI : MonoBehaviour
         backToMenu_Menu_Button?.onClick.AddListener(HideSelection);
         stats_Menu_Button?.onClick.AddListener(ShowStats);
         exitGame_Menu_Button?.onClick.AddListener(ExitGame);
+
+        backToMenu_Pause_Button?.onClick.AddListener(ShowMenu);
 
         retry_LevelOver_Button?.onClick.AddListener(RetryLevel);
         next_LevelOver_Button?.onClick.AddListener(NextLevel);
@@ -244,10 +247,11 @@ public class Manager_UI : MonoBehaviour
         
         // Set stats and grade for the level
         var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
+        var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
         SetStatsUI(stats);
         SetGradeUI(grade);
         SetNextLevelEnabledUI(grade);
-        Manager_SaveLoad.Instance.SaveLevelUnlocked(currSceneName, grade);
+        Manager_SaveLoad.Instance.SaveLevelUnlocked(nextSceneName);
         
         Manager_Audio.Instance.ControlAudioAmbient(true);
         
@@ -310,8 +314,9 @@ public class Manager_UI : MonoBehaviour
         inGame = false;
 
         loadingCanvasGO.SetActive(true);
-        gameCanvasGO.SetActive(false);
         menuCanvasGO.SetActive(false);
+        gameCanvasGO.SetActive(false);
+        pauseCanvasGO.SetActive(false);
         levelOverCanvasGO.SetActive(false);
 
         var data = Manager_SaveLoad.Instance.LoadLevelData();
