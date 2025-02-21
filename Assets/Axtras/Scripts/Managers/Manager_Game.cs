@@ -20,7 +20,7 @@ public class Manager_Game : MonoBehaviour
     }
     
     private void Start() {
-        Manager_UI.Instance.ShowMenu();
+        Manager_UI.Instance?.ShowMenu();
     }
 
     public (string grade, string stats) CalcStatAndGrade() {

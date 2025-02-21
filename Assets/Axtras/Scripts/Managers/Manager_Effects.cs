@@ -264,20 +264,22 @@ public class Manager_Effects : MonoBehaviour
 
         damageSequence = DOTween.Sequence()
             .OnStart(() => {
-                Controller_Player.Instance.SetCanMoveAndLook(false);
-                Manager_UI.Instance.GetDamageImageUI().color = Color.red;
-                Manager_Audio.Instance.PlayAudio(audioSource, damageClips);
+                Controller_Player.Instance?.SetCanMoveAndLook(false);
+                Manager_Audio.Instance?.PlayAudio(audioSource, damageClips);
+                var damageImage = Manager_UI.Instance.GetDamageImageUI();
+                if (damageImage != null)
+                    damageImage.color = Color.red;
             })
             .Join(
                 cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetDamageImageUI().DOFade(1f, 0.05f)
+                Manager_UI.Instance?.GetDamageImageUI().DOFade(1f, 0.05f)
             )
             .Insert(
                 0f,
-                Manager_UI.Instance.GetDamageImageUI().DOFade(0f, time)
+                Manager_UI.Instance?.GetDamageImageUI().DOFade(0f, time)
             )
             .OnComplete(() => {
                 StopDamageEffectsSeq();
@@ -287,9 +289,12 @@ public class Manager_Effects : MonoBehaviour
         damageSequence.Kill();
         damageSequence = null;
 
-        var damageImageColor = Manager_UI.Instance.GetDamageImageUI().color;
-        damageImageColor.a = 0f;
-        Manager_UI.Instance.GetDamageImageUI().color = damageImageColor;
+        var damageImage = Manager_UI.Instance.GetDamageImageUI();
+        if (damageImage != null) {
+            var damageImageColor = damageImage.color;
+            damageImageColor.a = 0f;
+            damageImage.color = damageImageColor;
+        }
 
         Controller_Player.Instance.SetCanMoveAndLook(true);
         audioSource.Stop();

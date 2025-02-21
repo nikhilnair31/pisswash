@@ -61,9 +61,9 @@ public class Controller_Pee : MonoBehaviour
     private void Start() {
         currPeeAmount = maxPeeAmount;
 
-        Manager_UI.Instance.SetPeeAmountUI(currPeeAmount / maxPeeAmount);
-        Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
-        Manager_UI.Instance.SetQTEKeyUI("");
+        Manager_UI.Instance?.SetPeeAmountUI(currPeeAmount / maxPeeAmount);
+        Manager_UI.Instance?.SetKidneyStoneUI(stonesCurrentCount);
+        Manager_UI.Instance?.SetQTEKeyUI("");
     }
     
     private void Update() {
@@ -126,7 +126,7 @@ public class Controller_Pee : MonoBehaviour
             peeDuration = 0f;
         }
 
-        Manager_UI.Instance.SetPeeAmountUI(peePerc);
+        Manager_UI.Instance?.SetPeeAmountUI(peePerc);
     }
     public void AddPeeAmount(float amount) {
         currPeeAmount += amount;

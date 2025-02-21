@@ -86,7 +86,7 @@ public class Manager_Thoughts : MonoBehaviour
             currentText = string.Empty;
             currentShowTime = 0f;
             
-            Manager_UI.Instance.ClearShowText();
+            Manager_UI.Instance?.ClearShowText();
         }
     }
 

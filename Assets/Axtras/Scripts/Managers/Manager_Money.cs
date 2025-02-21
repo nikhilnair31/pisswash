@@ -29,8 +29,6 @@ public class Manager_Money : MonoBehaviour
         Manager_UI.Instance.SetMoneyUI(currMoney);
         // Update current money and spent money
         Manager_SaveLoad.Instance.SaveStatData("haveMoney", "set", currMoney);
-
-        Debug.Log($"currMoney: {currMoney} | amount: {amount}");
     }
 
     public bool GetHasMoneyToBuy() {
