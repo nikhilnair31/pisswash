@@ -219,7 +219,8 @@ public class Manager_Effects : MonoBehaviour
         maxPeeAmount = Mathf.Clamp(maxPeeAmount + peeAmountChange, 0f, 150f);
         Controller_Pee.Instance.SetMaxPeeAmount(maxPeeAmount);
         emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant * peeRateMul, 5, 150);
-        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(moveSpeedMul, 0.1f, 1.3f));
+        currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * moveSpeedMul, minMovementMultiplier, maxMovementMultiplier);
+        Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
 
         if (duration == -1f) yield break;
 
@@ -229,7 +230,8 @@ public class Manager_Effects : MonoBehaviour
         maxPeeAmount = Mathf.Clamp(maxPeeAmount - peeAmountChange, 0f, 150f);
         Controller_Pee.Instance.SetMaxPeeAmount(maxPeeAmount);
         emission.rateOverTime = Mathf.Clamp(emission.rateOverTime.constant / peeRateMul, 5, 150);
-        Controller_Player.Instance.SetSpeedMoveAndLook(Mathf.Clamp(1 / moveSpeedMul, 0.1f, 1.3f));
+        currentMovementMultiplier = 1f;
+        Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
     }
     #endregion
 

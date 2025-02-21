@@ -351,9 +351,10 @@ MonoBehaviour:
   stonesPassedCount: 0
   timeToKidneyStone: 0
   maxTimeToKidneyStone: 5
+  kidneyStonePerc: 0
   isHydrating: 0
   qtePressCount: 0
-  qteRequiredPresses: 7
+  qteRequiredPresses: 4
   allowQTE: 0
   shlongGO: {fileID: 6938719838707595584}
   peePS: {fileID: 7912719795841026379}

@@ -65,8 +65,16 @@ MonoBehaviour:
   minVignette: 0
   maxVignette: 0.3
   maxYellowAlpha: 0.1
-  minMovementMultiplier: 0.5
-  maxMovementMultiplier: 1.5
+  minMovementMultiplier: 0.2
+  maxMovementMultiplier: 1.3
+  peeAmtChange_GotStone: -15
+  peeAmtChange_PassStone: 5
+  peeRateMul_GotStone: 0.75
+  peeRateMul_PassStone: 1.4
+  moveSpeedMul_GotStone: 0.8
+  moveSpeedMul_PassStone: 1.05
+  effectDuration_GotStone: -1
+  effectDuration_PassStone: 3
 --- !u!82 &2104159745562381888
 AudioSource:
   m_ObjectHideFlags: 0
