@@ -32,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Axtras/Scenes/L 7.unity
     guid: 70ea7db6aa0a05d449d5e225ce8cb1e2
+  - enabled: 1
+    path: Assets/Axtras/Scenes/L 8.unity
+    guid: 418a8d1cea1dbe34d988d3cb4ac52ce9
+  - enabled: 1
+    path: Assets/Axtras/Scenes/L 9.unity
+    guid: 4b7cb290cc044ac43b6e1a6acb6ce016
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -85,4 +85,8 @@ public class Manager_Game : MonoBehaviour
 
         return (grade, stats);
     }
+    
+    public bool GetIfNextLevelUnlocked(string grade) {
+        return grade != "F";
+    }
 }

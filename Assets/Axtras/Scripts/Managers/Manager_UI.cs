@@ -250,8 +250,17 @@ public class Manager_UI : MonoBehaviour
         var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
         SetStatsUI(stats);
         SetGradeUI(grade);
-        SetNextLevelEnabledUI(grade);
-        Manager_SaveLoad.Instance.SaveLevelUnlocked(nextSceneName);
+
+        Manager_SaveLoad.Instance.SaveLevelGrade(currSceneName, grade);
+        
+        var isNextUnlocked = Manager_Game.Instance.GetIfNextLevelUnlocked(grade);
+        if (isNextUnlocked) {
+            next_LevelOver_Button.interactable = true;
+            Manager_SaveLoad.Instance.SaveLevelUnlock(nextSceneName);
+        }
+        else {
+            next_LevelOver_Button.interactable = false;
+        }
         
         Manager_Audio.Instance.ControlAudioAmbient(true);
         
@@ -278,12 +287,14 @@ public class Manager_UI : MonoBehaviour
 
         var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
         var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
+        Debug.Log($"currSceneName: {currSceneName}\nnextSceneName: {nextSceneName}");
 
         if (nextSceneName == "Done") {
             GameCompleted();
             return;
         }
         else {
+            Manager_SaveLoad.Instance.SaveLevelUnlock(nextSceneName);
             StartGame(nextSceneName);
         }
     }
@@ -318,6 +329,7 @@ public class Manager_UI : MonoBehaviour
         gameCanvasGO.SetActive(false);
         pauseCanvasGO.SetActive(false);
         levelOverCanvasGO.SetActive(false);
+        gameCompletedCanvasGO.SetActive(false);
 
         var data = Manager_SaveLoad.Instance.LoadLevelData();
         SetStatsText(data);
@@ -352,15 +364,7 @@ public class Manager_UI : MonoBehaviour
     public RectTransform GetPeeRectTransfUI() {
         return peePanelRectTrans;
     }
-    
-    public void SetNextLevelEnabledUI(string score) {
-        if (score != "F") {
-            next_LevelOver_Button.interactable = true;
-        }
-        else {
-            next_LevelOver_Button.interactable = false;
-        }
-    }
+
     public void SetStatsText(JSONObject dataJson) {
         var labelWidth = 25; // Adjust to fit your longest label
 

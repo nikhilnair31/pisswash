@@ -118,14 +118,36 @@ public class Manager_SaveLoad : MonoBehaviour
         return JsonUtility.ToJson(gameData);
     }
 
-    public void SaveLevelUnlocked(string scenename, string rating = "-") {
+    public void SaveLevelGrade(string scenename, string rating = "-") {
+        var dataStr = Load();
+        
+        var dataJson = JSON.Parse(dataStr) as JSONObject;
+        Debug.Log($"SaveLevelGrade og dataJson: {dataJson}");
+        
+        var sceneDataList = dataJson["sceneDataList"].AsArray;
+
+        for (int i = 0; i < sceneDataList.Count; i++) {
+            JSONObject levelData = sceneDataList[i] as JSONObject;
+            Debug.Log($"levelData: {levelData}");
+
+            if (levelData["name"] == scenename) {
+                levelData["rating"] = rating;
+                break;
+            }
+        }
+
+        dataJson["sceneDataList"] = sceneDataList;
+        Debug.Log($"SaveLevelGrade new dataJson: {dataJson}");
+
+        Save(dataJson.ToString());
+    }
+    public void SaveLevelUnlock(string scenename) {
         var dataStr = Load();
         
         var dataJson = JSON.Parse(dataStr) as JSONObject;
         Debug.Log($"SaveLevelUnlocked og dataJson: {dataJson}");
         
         var sceneDataList = dataJson["sceneDataList"].AsArray;
-        Debug.Log($"SaveLevelUnlocked og sceneDataList: {sceneDataList}");
 
         for (int i = 0; i < sceneDataList.Count; i++) {
             JSONObject levelData = sceneDataList[i] as JSONObject;
@@ -133,11 +155,9 @@ public class Manager_SaveLoad : MonoBehaviour
 
             if (levelData["name"] == scenename) {
                 levelData["unlocked"] = true;
-                levelData["rating"] = rating;
                 break;
             }
         }
-        Debug.Log($"SaveLevelUnlocked new sceneDataList: {sceneDataList}");
 
         dataJson["sceneDataList"] = sceneDataList;
         Debug.Log($"SaveLevelUnlocked new dataJson: {dataJson}");
