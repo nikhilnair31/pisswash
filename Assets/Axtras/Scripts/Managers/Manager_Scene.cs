@@ -26,9 +26,11 @@ public class Manager_Scene : MonoBehaviour
     public string GetNextSceneName(string currentSceneName) {
         var sceneNameList = GetSceneStrArr();
         var currentSceneIndex = System.Array.IndexOf(sceneNameList, currentSceneName);
-        var nextSceneIndex = currentSceneIndex + 1;
-        
-        return sceneNameList[nextSceneIndex];
+
+        if (currentSceneIndex == sceneNameList.Length - 1)
+            return "Done";
+        else
+            return sceneNameList[currentSceneIndex + 1];
     }
     public string[] GetSceneStrArr() {
         var sceneNumber = SceneManager.sceneCountInBuildSettings;

@@ -264,7 +264,29 @@ public class Manager_UI : MonoBehaviour
 
         var currSceneName = Manager_Scene.Instance.GetCurrSceneName();
         var nextSceneName = Manager_Scene.Instance.GetNextSceneName(currSceneName);
-        StartGame(nextSceneName);
+
+        if (nextSceneName == "Done") {
+            GameCompleted();
+            return;
+        }
+        else {
+            StartGame(nextSceneName);
+        }
+    }
+    
+    private void GameCompleted() {
+        Debug.Log($"GameCompleted");
+
+        inGame = false;
+
+        gameCanvasGO.SetActive(false);
+        levelOverCanvasGO.SetActive(false);
+        gameCompletedCanvasGO.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+
+        Time.timeScale = 0f;
     }
     
     public void ShowMenu() {
