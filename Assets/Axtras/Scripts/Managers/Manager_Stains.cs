@@ -34,7 +34,6 @@ public class Manager_Stains : MonoBehaviour
 
     public float GetStainCleanedPerc() {
         int allStainCnt = allStainTransforms.Count;
-        Debug.Log($"allStainCnt: {allStainCnt}");
         int cleanedStainCnt = 0;
         
         foreach (var stain in allStainTransforms) {
@@ -44,10 +43,9 @@ public class Manager_Stains : MonoBehaviour
                 }
             }
         }
-        Debug.Log($"cleanedStainCnt: {cleanedStainCnt}");
 
         var perc = (float)cleanedStainCnt / allStainCnt * 100f;
-        Debug.Log($"perc: {perc}");
+        Debug.Log($"allStainCnt: {allStainCnt}\ncleanedStainCnt: {cleanedStainCnt}\nperc: {perc}");
 
         return perc;
     }

@@ -38,6 +38,8 @@ public class Manager_Effects : MonoBehaviour
     [SerializeField] private float maxVignette;
     [SerializeField] private float maxYellowAlpha = 0.1f;
     private int DistortionProperty = Shader.PropertyToID("_Blend");
+    private RectTransform bladderImageRectTransf;
+    private Vector2 bladderImageOrigPos;
     private CinemachineVolumeSettings postProcessVolume;
     private ColorAdjustments colorAdjustments;
     private LensDistortion lensDistortion;
@@ -59,25 +61,28 @@ public class Manager_Effects : MonoBehaviour
     
     #region Init
     private void Start() {
-        GetInitComponents();
-        GetVolumeEffects();
+        Init();
         ResetVisualEffects();
     }
-    private void GetInitComponents() {
+    private void Init() {
         if(cam == null) 
             cam = FindAnyObjectByType<CinemachineCamera>();
         if(playerGO == null) 
             playerGO = GameObject.FindWithTag("Player");
         if(peePS == null && playerGO != null) 
             peePS = playerGO.GetComponentInChildren<ParticleSystem>();
-    }
-    private void GetVolumeEffects() {
+            
         cam?.TryGetComponent(out postProcessVolume);
         
         postProcessVolume?.Profile.TryGet(out colorAdjustments);
         postProcessVolume?.Profile.TryGet(out lensDistortion);
         postProcessVolume?.Profile.TryGet(out splitToning);
         postProcessVolume?.Profile.TryGet(out vignette);
+        
+        if (bladderImageRectTransf == null) {
+            bladderImageRectTransf = Manager_UI.Instance?.GetPeeRectTransfUI();
+            bladderImageOrigPos = bladderImageRectTransf.anchoredPosition;
+        }
     }
     #endregion
 
@@ -236,23 +241,23 @@ public class Manager_Effects : MonoBehaviour
         img.color = tempColor;
     }
     
-    public void ShakeDehydrationEffect(float intensity) {
-        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
-
-        // uiElement.DOComplete();
-
-        uiElement
-            .DOShakePosition(0.05f, intensity * 10f, 20, 90, false, true);
+    public void ShakeDehydrationEffect(float kidneyStonePerc) {
+        if (bladderImageRectTransf == null) return;
+        
+        var intensity = Mathf.Lerp(0.1f, 0.3f, kidneyStonePerc);
+        bladderImageRectTransf
+            .DOShakePosition(0.05f, intensity * 5f, 10, 90, false, true)
+            .OnStepComplete(() => bladderImageRectTransf.anchoredPosition = bladderImageOrigPos);
     }
     public void ExplodeDehydrationEffect() {
-        var uiElement = Manager_UI.Instance.GetPeeRectTransfUI();
-
-        uiElement.DOComplete();
+        if (bladderImageRectTransf == null) return;
+    
+        bladderImageRectTransf.DOComplete();
         
-        uiElement
+        bladderImageRectTransf
             .DOScale(Vector3.one * 2f, 0.2f)
             .OnComplete(() => {
-                uiElement
+                bladderImageRectTransf
                     .DOScale(Vector3.one, 0.4f);
             });
     }

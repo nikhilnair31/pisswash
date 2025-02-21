@@ -11,7 +11,7 @@ public class Controller_Fountain : Controller_Interactables
     [SerializeField] private AudioClip[] drinkClips;
     #endregion
 
-    private void Update() {
+    private void FixedUpdate() {
         if (isOn) {
             if (!Controller_Pee.Instance.GetIsPeeFull()) {
                 Controller_Pee.Instance.AddPeeAmount(increaseHydrationRate * Time.deltaTime);

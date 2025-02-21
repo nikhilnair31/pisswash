@@ -30,6 +30,7 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private int stonesPassedCount = 0;
     [SerializeField] private float timeToKidneyStone = 0f;
     [SerializeField] private float maxTimeToKidneyStone = 10f;
+    [SerializeField] private float kidneyStonePerc = 0f;
 
     [Header("Hydration Settings")]
     [SerializeField] private bool isHydrating = false;
@@ -150,12 +151,11 @@ public class Controller_Pee : MonoBehaviour
             // Start kidney stone timer if player is dehydrated and still peeing
             if (isPeeing) {
                 timeToKidneyStone += Time.deltaTime;
-                timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0.5f, maxTimeToKidneyStone);
-                var shakeIntensity = Mathf.Lerp(0.2f, 1.5f, timeToKidneyStone / maxTimeToKidneyStone);
-                var kidneyStonePerc = timeToKidneyStone / maxTimeToKidneyStone;
+                timeToKidneyStone = Mathf.Clamp(timeToKidneyStone, 0f, maxTimeToKidneyStone);
+                kidneyStonePerc = timeToKidneyStone / maxTimeToKidneyStone;
                 
-                Manager_Effects.Instance.UpdateDehydrationEffects(kidneyStonePerc);
-                Manager_Effects.Instance.ShakeDehydrationEffect(shakeIntensity);
+                Manager_Effects.Instance?.UpdateDehydrationEffects(kidneyStonePerc);
+                Manager_Effects.Instance?.ShakeDehydrationEffect(kidneyStonePerc);
                 
                 // Debug.Log($"DehydrationLoop\ntimeToKidneyStone: {timeToKidneyStone}\nshakeIntensity: {shakeIntensity}");
             }
@@ -170,12 +170,12 @@ public class Controller_Pee : MonoBehaviour
                 stonesAcquiredCount++;
 
                 GetRandKey();
-                Manager_Effects.Instance.ExplodeDehydrationEffect();
-                Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
-                Manager_SaveLoad.Instance.SaveStatData("totalKidneyStonesCreated", "add", 1);
+                Manager_Effects.Instance?.ExplodeDehydrationEffect();
+                Manager_UI.Instance?.SetKidneyStoneUI(stonesCurrentCount);
+                Manager_SaveLoad.Instance?.SaveStatData("totalKidneyStonesCreated", "add", 1);
 
                 // Kidney stone getting perm effects
-                Manager_Effects.Instance.SetGotStoneEffect();
+                Manager_Effects.Instance?.SetGotStoneEffect();
             }
         }
     }
