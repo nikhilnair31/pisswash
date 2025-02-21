@@ -441,16 +441,18 @@ public class Manager_UI : MonoBehaviour
     #endregion
 
     #region Modals
-    public void PauseDuringModal(bool active) {
+    public void DuringModal(bool active) {
         if (active) {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
+            Manager_Audio.Instance.ControlAudioAmbient(true);
         }
         else {
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            Manager_Audio.Instance.ControlAudioAmbient(false);
         }
     }
 

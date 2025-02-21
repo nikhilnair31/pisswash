@@ -165,6 +165,7 @@ public class Controller_Pee : MonoBehaviour
 
                 allowQTE = true;
                 qtePressCount = 0;
+                qteRequiredPresses++;
                 timeToKidneyStone = 0f;
                 stonesCurrentCount++;
                 stonesAcquiredCount++;
@@ -197,6 +198,7 @@ public class Controller_Pee : MonoBehaviour
         stonesCurrentCount--;
         stonesPassedCount++;
         
+        GetRandKey();
         Manager_SaveLoad.Instance.SaveStatData("totalKidneyStonesPassed", "add", 1);
         Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
 

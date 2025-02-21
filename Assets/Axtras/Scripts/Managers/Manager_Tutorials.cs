@@ -36,7 +36,7 @@ public class Manager_Tutorials : MonoBehaviour
             .AppendInterval(1.0f)
             .AppendCallback(() => {
                 // Flash modal
-                Manager_UI.Instance.PauseDuringModal(true);
+                Manager_UI.Instance.DuringModal(true);
                 ShowTutorial(tutorials[currentTutorialIndex]);
             })
             // Mark it shown
@@ -57,13 +57,13 @@ public class Manager_Tutorials : MonoBehaviour
             ShowTutorial(tutorials[currentTutorialIndex]);
         } 
         else {
-            Manager_UI.Instance.PauseDuringModal(false);
+            Manager_UI.Instance.DuringModal(false);
             currentTutorialIndex = 0;
         }
     }
 
     private void OnNoClicked() {
-        Manager_UI.Instance.PauseDuringModal(false);
+        Manager_UI.Instance.DuringModal(false);
         currentTutorialIndex = 0;
     }
     
