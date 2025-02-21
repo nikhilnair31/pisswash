@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class Manager_Timer : MonoBehaviour 
 {
@@ -45,10 +46,16 @@ public class Manager_Timer : MonoBehaviour
     public void StartTimer() {
         isRunning = true;
 
-        timerAudioSource.pitch = 1f;
         timerAudioSource.clip = countingDownClip;
+        timerAudioSource.volume = 0.1f;
         timerAudioSource.loop = true;
         timerAudioSource.Play();
+
+        timerAudioSource
+            .DOFade(1f, maxTime)
+            .OnComplete(() => {
+                timerAudioSource.Stop();
+            });
     }
     public void StopTimer(bool timeUp) {
         isRunning = false;
@@ -59,7 +66,7 @@ public class Manager_Timer : MonoBehaviour
             timerAudioSource.loop = true;
             timerAudioSource.Play();
 
-            DG.Tweening.DOVirtual.DelayedCall(3f, () => {
+            DOVirtual.DelayedCall(3f, () => {
                 timerAudioSource.Stop();
             });
         }
@@ -67,7 +74,7 @@ public class Manager_Timer : MonoBehaviour
             timerAudioSource.Stop();
         }
     }
-    
+
     public void AddTimerAmt(float val) {
         timer += val;
     }
