@@ -40,7 +40,7 @@ public class Controller_Slippery : MonoBehaviour
         }
     }
     private void StopSippery(Collider player) {
-        Manager_Effects.Instance.StopSlipEffectsSeq();
+        // Manager_Effects.Instance.StopSlipEffectsSeq();
     }
 
     private IEnumerator EnableColliderAfterDelay(float delay) {
