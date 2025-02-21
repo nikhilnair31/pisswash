@@ -24,6 +24,7 @@ public class Controller_Player : MonoBehaviour
     [SerializeField] private bool canLook = true;
     [SerializeField] private float mouseSensitivity = 100f;
     [SerializeField] private Transform playerCamera;
+    private Vector3 initialCamLocalPos;
 
     [Header("Audio Settings")]
     [SerializeField] private AudioSource audioSource;
@@ -45,6 +46,8 @@ public class Controller_Player : MonoBehaviour
         if (transform.TryGetComponent(out Rigidbody rgb)) {
             rb = rgb;
         }
+        if (playerCamera != null)
+            initialCamLocalPos = playerCamera.localPosition;
 
         rb.freezeRotation = true;
 
@@ -55,6 +58,10 @@ public class Controller_Player : MonoBehaviour
         HandleMouseLook();
         HandleMovement();
         PlayFootsteps();
+    }
+    private void LateUpdate() {
+        if (playerCamera != null)
+            playerCamera.localPosition = initialCamLocalPos;
     }
 
     private void HandleMouseLook() {
