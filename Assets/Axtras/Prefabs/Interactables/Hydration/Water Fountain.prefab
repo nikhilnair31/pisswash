@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1597525141297010425}
   - component: {fileID: 7140853537731081408}
   - component: {fileID: 2848961534674576701}
-  - component: {fileID: 8499739627892536610}
   - component: {fileID: 2744955276047843049}
+  - component: {fileID: 8499739627892536610}
   m_Layer: 6
   m_Name: Water Fountain
   m_TagString: Untagged
@@ -88,28 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8499739627892536610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211939564867578460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9025b60f4a8e24da56289a1a32d90b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addAudioSource: 1
-  addRigidbody: 0
-  addMeshCollider: 0
-  addBoxCollider: 1
-  showThisText: '[E] drink'
-  showForTime: -1
-  isOn: 0
-  increaseHydrationRate: 5
-  drinkClips:
-  - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
 --- !u!64 &2744955276047843049
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -132,3 +110,25 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6425030180975425945, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+--- !u!114 &8499739627892536610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211939564867578460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9025b60f4a8e24da56289a1a32d90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addAudioSource: 1
+  addRigidbody: 0
+  addMeshCollider: 0
+  addBoxCollider: 1
+  showThisText: '[E] drink'
+  showForTime: -1
+  isOn: 0
+  increaseHydrationRate: 7
+  drinkClips:
+  - {fileID: 8300000, guid: 0a882b920f4cef8499b94ee1b8abee93, type: 3}
