@@ -11,12 +11,12 @@ public class Controller_Slippery : MonoBehaviour
     #endregion
 
     private void OnTriggerEnter(Collider other) {
-        if (GetIsPlayer(other)) {
+        if (Helper.Instance.GetIsPlayer(other)) {
             StartSippery(other);
         }
     } 
     private void OnTriggerStay(Collider other) {
-        if (GetIsPlayer(other)) {
+        if (Helper.Instance.GetIsPlayer(other)) {
             stayTime += Time.deltaTime;
             if (stayTime >= maxStayTime) {
                 stayTime = 0f;
@@ -25,7 +25,7 @@ public class Controller_Slippery : MonoBehaviour
         }
     }
     private void OnTriggerExit(Collider other) {
-        if (GetIsPlayer(other)) {
+        if (Helper.Instance.GetIsPlayer(other)) {
             StopSippery(other);
         }        
     }
@@ -47,11 +47,4 @@ public class Controller_Slippery : MonoBehaviour
         yield return new WaitForSeconds(delay);
         GetComponent<Collider>().enabled = true;
     }
-    
-    private bool GetIsPlayer(Collider other) {
-        if (other.CompareTag("Player")) {
-            return true;
-        }
-        return false;
-    } 
 }

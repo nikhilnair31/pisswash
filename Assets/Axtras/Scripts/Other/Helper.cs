@@ -13,6 +13,19 @@ public class Helper : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public bool GetIsPlayer(Collider other) {
+        if (other.CompareTag("Player")) {
+            return true;
+        }
+        return false;
+    }
+    public bool GetIsPlayer(Collision other) {
+        if (other.transform.CompareTag("Player")) {
+            return true;
+        }
+        return false;
+    } 
+
     #region Random Related
     public bool TriggerBool(float chance) {
         return Random.Range(0f, 1f) >= chance;

@@ -71,12 +71,16 @@ public class Controller_Stain : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        StainEffect();
+        if (Helper.Instance.GetIsPlayer(other)) {
+            StainEffect();
+        }
     }
     private void OnCollisionExit(Collision other) {
-        StainEffect();
+        // StainEffect();
     }
     private void StainEffect() {
+        Debug.Log($"StainEffect started from {transform.parent.name}");
+
         selectedStain.StartInteractionEffect();
     }
 }
