@@ -56,17 +56,16 @@ public class Manager_Timer : MonoBehaviour
         if (timeUp) {
             timerAudioSource.pitch = 1f;
             timerAudioSource.clip = timeUpClip;
-            timerAudioSource.loop = false;
+            timerAudioSource.loop = true;
             timerAudioSource.Play();
+
+            DG.Tweening.DOVirtual.DelayedCall(3f, () => {
+                timerAudioSource.Stop();
+            });
         }
         else {
             timerAudioSource.Stop();
         }
-    }
-    public void ResetTimer() {
-        timer = 0f;
-        
-        timerAudioSource.Stop();
     }
     
     public void AddTimerAmt(float val) {

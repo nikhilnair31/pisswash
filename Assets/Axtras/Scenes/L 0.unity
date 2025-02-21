@@ -3481,6 +3481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1954271518521632096, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
+      propertyPath: maxTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2535955149212815853, guid: 7fe58ee26f11a734b8e44b9890d8a2df, type: 3}
       propertyPath: m_Name
       value: Manager - Timer

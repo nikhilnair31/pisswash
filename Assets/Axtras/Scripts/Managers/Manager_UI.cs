@@ -238,9 +238,6 @@ public class Manager_UI : MonoBehaviour
         // Add money gained
         var money = Manager_Money.Instance.GetHasMoneyByRating(grade);
         Manager_Money.Instance.UpdateMoney(money);
-
-        // Adjust timer
-        Manager_Timer.Instance.StopTimer(false);
         
         levelOverCanvasGO.SetActive(true);
         gameCanvasGO.SetActive(false);
@@ -289,7 +286,7 @@ public class Manager_UI : MonoBehaviour
 
         inMenu = true;
 
-        loadingCanvasGO.SetActive(false);
+        loadingCanvasGO.SetActive(false); 
         menuCanvasGO.SetActive(true);
 
         Cursor.lockState = CursorLockMode.Confined;
