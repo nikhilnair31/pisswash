@@ -105,6 +105,13 @@ public class Controller_Interaction : MonoBehaviour
         );
     }
 
+    public string GetInteractKey() {
+        return interactKey.ToString();
+    }
+    public string GetStealKey() {
+        return stealKey.ToString();
+    }
+
     private void OnDrawGizmos() {
         // Only draw the Gizmos if the ray has hit something
         if (hit.collider != null) {

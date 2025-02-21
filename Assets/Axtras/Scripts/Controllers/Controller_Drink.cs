@@ -17,13 +17,14 @@ public class Controller_Drink : Controller_Interactables
     private Type_Drink selectedDrink;
 
     private readonly List<Controller_Drinker> ownerDrinkers = new ();
-    private readonly string notEnoughMoneyStr = "Can't buy!";
+    private readonly string deniedStr = "nope";
     #endregion
 
     private void Start() {
         InitDrink();
     }
     private void InitDrink() {
+        // Get the selected drink
         selectedDrink = null;
         switch (drinkType) {
             case Manager_Drinks.DrinkType.Beer:
@@ -35,6 +36,19 @@ public class Controller_Drink : Controller_Interactables
             case Manager_Drinks.DrinkType.Mystery:
                 selectedDrink = Manager_Drinks.Instance.drinkTypesSO.FirstOrDefault(tb => tb.type == Manager_Drinks.DrinkType.Mystery);
                 break;
+        }
+
+        // Update text based on buyable/stealable
+        var interactKey = Controller_Interaction.Instance.GetInteractKey();
+        var stealKey = Controller_Interaction.Instance.GetStealKey();
+        if (canBeBought && canBeStolen) {
+            showThisText = $"[{interactKey}] buy\n[{stealKey}] steal";
+        }
+        else if (canBeBought && !canBeStolen) {
+            showThisText = $"[{interactKey}] buy";
+        }
+        else if (!canBeBought && canBeStolen) {
+            showThisText = $"[{stealKey}] steal";
         }
     }
 
@@ -71,7 +85,7 @@ public class Controller_Drink : Controller_Interactables
         else {
             // Show not enough money text
             Manager_Thoughts.Instance.ShowText(
-                notEnoughMoneyStr, 
+                deniedStr, 
                 1f,
                 Manager_Thoughts.TextPriority.Player
             );
