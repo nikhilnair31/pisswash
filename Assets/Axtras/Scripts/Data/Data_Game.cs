@@ -23,8 +23,8 @@ public class Data_Game
     public int totalKidneyStonesCreated;
     public int totalKidneyStonesPassed;
     public int totalSlaps;
-    public int bottlesBought;
-    public int bottlesStolen;
+    public int drinksBought;
+    public int drinksStolen;
     public int haveMoney;
     public int spentMoney;
     public float peedAmount;
@@ -43,8 +43,8 @@ public class Data_Game
         totalKidneyStonesCreated = 0;
         totalKidneyStonesPassed = 0;
         totalSlaps = 0;
-        bottlesBought = 0;
-        bottlesStolen = 0;
+        drinksBought = 0;
+        drinksStolen = 0;
         haveMoney = 0;
         spentMoney = 0;
         peedAmount = 0f;

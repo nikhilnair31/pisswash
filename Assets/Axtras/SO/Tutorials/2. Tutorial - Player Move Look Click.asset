@@ -15,6 +15,6 @@ MonoBehaviour:
   titleStr: Controls
   contentStr: WASD to move. Mouse to look around. Left mouse click to pee.
   images:
-  - {fileID: 21300000, guid: a5c08c04fddffd34a86ff4f2d3e99a85, type: 3}
+  - {fileID: 21300000, guid: 628132a62390e0d458f52f4b59e6a64b, type: 3}
   yesButtonStr: Next
   noButtonStr: Close

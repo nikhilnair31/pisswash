@@ -429,6 +429,7 @@ public class Manager_UI : MonoBehaviour
         var contentText = modalText.transform.Find("Content Text").GetComponent<TMP_Text>();
         contentText.text = tutorialSO.contentStr;
 
+        modalImages.gameObject.SetActive(tutorialSO.images.Length > 0);
         var imageImage = modalImages.transform.Find("Image Image").GetComponent<Image>();
         imageImage.sprite = tutorialSO.GetSprite();
         var leftButton = modalImages.transform.Find("Left Button").GetComponent<Button>();
