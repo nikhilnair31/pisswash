@@ -346,6 +346,7 @@ MonoBehaviour:
   minFadeMul: 0.2
   maxFadeMul: 1.4
   isDehydrated: 0
+  stoneGO: {fileID: 9028189273221060077, guid: 3d6bde67c33d2354e8fae20ee511d558, type: 3}
   stonesCurrentCount: 0
   stonesAcquiredCount: 0
   stonesPassedCount: 0
@@ -361,6 +362,8 @@ MonoBehaviour:
   peeAudioSource: {fileID: 4053408983384847906}
   peeClips:
   - {fileID: 8300000, guid: b95dc688b8e1f4e4badad1b8c58747d4, type: 3}
+  passClips:
+  - {fileID: 8300000, guid: 36997ef2a58fe0d48981dffe7b5322de, type: 3}
 --- !u!1 &2907633371697046736
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +404,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2907633371697046736}
-  m_Mesh: {fileID: 59628673309720909, guid: b41f1878c463e2b45a44c423c541dcc2, type: 3}
+  m_Mesh: {fileID: -121076978130530312, guid: b41f1878c463e2b45a44c423c541dcc2, type: 3}
 --- !u!23 &3699990034649007365
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class Controller_Pee : MonoBehaviour
     [SerializeField] private bool isDehydrated = false;
 
     [Header("Stones Settings")]
+    [SerializeField] private GameObject stoneGO;
     [SerializeField] private int stonesCurrentCount = 0;
     [SerializeField] private int stonesAcquiredCount = 0;
     [SerializeField] private int stonesPassedCount = 0;
@@ -50,6 +51,7 @@ public class Controller_Pee : MonoBehaviour
     [Header("Audio Settings")]
     [SerializeField] private AudioSource peeAudioSource;
     [SerializeField] private AudioClip[] peeClips;
+    [SerializeField] private AudioClip[] passClips;
     #endregion
 
     private void Awake() {
@@ -197,10 +199,13 @@ public class Controller_Pee : MonoBehaviour
         qtePressCount = 0;
         stonesCurrentCount--;
         stonesPassedCount++;
-        
+
+        SpawnAndShootStone();
         GetRandKey();
+
         Manager_SaveLoad.Instance.SaveStatData("totalKidneyStonesPassed", "add", 1);
         Manager_UI.Instance.SetKidneyStoneUI(stonesCurrentCount);
+        Manager_Audio.Instance.PlayAudio(peeAudioSource, passClips);
 
         // Allow QTE to pass kidney stone again
         if (stonesCurrentCount <= 0) {
@@ -210,6 +215,12 @@ public class Controller_Pee : MonoBehaviour
 
         // Kidney stone passing temp boost
         Manager_Effects.Instance.SetPassStoneEffect();
+    }
+    private void SpawnAndShootStone() {
+        var stoneInst = Instantiate(stoneGO, peePS.transform.position, Quaternion.identity);
+        if (stoneInst.TryGetComponent(out Rigidbody rb)) {
+            rb.AddForce(peePS.transform.forward * 10f, ForceMode.Impulse);
+        }
     }
 
     private void CalcPeeVol() {

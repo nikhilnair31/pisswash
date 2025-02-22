@@ -450,7 +450,7 @@ public class Manager_UI : MonoBehaviour
     }   
     #endregion
 
-    #region Modals
+    #region Spawnables
     public void DuringModal(bool active) {
         if (active) {
             Time.timeScale = 0f;
