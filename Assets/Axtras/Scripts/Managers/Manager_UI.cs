@@ -227,7 +227,10 @@ public class Manager_UI : MonoBehaviour
         var data = Manager_SaveLoad.Instance.LoadLevelData();
         Manager_Money.Instance.UpdateMoney(data["haveMoney"]);
 
+        Manager_Effects.Instance.ResetVisualEffects();
+        Manager_Effects.Instance.ResetMovementEffects();
         Manager_Effects.Instance.ResetDehydrationEffects();
+
         Manager_Timer.Instance.StartTimer();
         
         Manager_Audio.Instance.ControlAudioAmbient(false);
@@ -483,6 +486,7 @@ public class Manager_UI : MonoBehaviour
         var contentText = modalText.transform.Find("Content Text").GetComponent<TMP_Text>();
         contentText.text = tutorialSO.contentStr;
 
+        tutorialSO.SetSpriteIndex(0);
         modalImages.gameObject.SetActive(tutorialSO.images.Length > 0);
         var imageImage = modalImages.transform.Find("Image Image").GetComponent<Image>();
         imageImage.sprite = tutorialSO.GetSprite();

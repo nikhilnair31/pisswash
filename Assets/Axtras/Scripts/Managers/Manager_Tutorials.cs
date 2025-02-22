@@ -47,6 +47,8 @@ public class Manager_Tutorials : MonoBehaviour
     }
 
     private void ShowTutorial(Type_Tutorial tutorial) {
+        Debug.Log($"ShowTutorial | tutorial: {tutorial.name}");
+        
         Manager_UI.Instance.SpawnModal(tutorial, OnYesClicked, OnNoClicked);
     }
 

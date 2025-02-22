@@ -118,6 +118,8 @@ public class Manager_Effects : MonoBehaviour
 
     #region Visual Effects
     public void ResetVisualEffects() {
+        Debug.Log($"ResetVisualEffects");
+
         if (vignette != null)
             vignette.intensity.value = 0f;
         if (lensDistortion != null)
@@ -152,6 +154,8 @@ public class Manager_Effects : MonoBehaviour
     }
 
     public void ApplyVisionDistortion(float mul, float duration) {
+        Debug.Log($"ApplyVisionDistortion");
+        
         currentDistortionIntensity = Mathf.Clamp(currentDistortionIntensity * mul, minDistortion, maxDistortion);
 
         DOTween.Kill("VisionDistortion");
@@ -167,6 +171,10 @@ public class Manager_Effects : MonoBehaviour
     #endregion
     
     #region Movement Effects
+    public void ResetMovementEffects() {
+        currentMovementMultiplier = 1f;
+    }
+
     public void ApplyMovementMultiplier(float mul, float duration) {
         currentMovementMultiplier = Mathf.Clamp(currentMovementMultiplier * mul, minMovementMultiplier, maxMovementMultiplier);
         Controller_Player.Instance.SetSpeedMoveAndLook(currentMovementMultiplier);
@@ -331,7 +339,7 @@ public class Manager_Effects : MonoBehaviour
                 Manager_Audio.Instance.PlayAudio(audioSource, earsRingingClips);
             })
             .Join(
-                cam?.transform.DOShakePosition(time, 1f, 10, 90, false, true)
+                cam.transform.DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Insert(
                 0f,
@@ -368,7 +376,7 @@ public class Manager_Effects : MonoBehaviour
                 Manager_Audio.Instance.PlayAudio(audioSource, slipClips);
             })
             .Join(
-                cam?.transform
+                cam.transform
                     .DOShakePosition(time, 1f, 10, 90, false, true)
             )
             .Join(

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5bc2cdd46d1104babedd15b9d18bc8, type: 3}
+  m_Name: 1. Tutorial - Game
+  m_EditorClassIdentifier: 
+  titleStr: Welcome to Pisswash!
+  contentStr: 'You''re a janitor. Bars are messy. Your job? Pee on the stains to
+    clean them!
+
+
+    Each level, clean stains, beat the clock, and score better
+    than ''F'' to move on!
+
+
+    Get ready to Pisswash!'
+  images:
+  - {fileID: 21300000, guid: b5f644c7aa09bf5438c237ffe1ed94d6, type: 3}
+  yesButtonStr: Next
+  noButtonStr: Close
