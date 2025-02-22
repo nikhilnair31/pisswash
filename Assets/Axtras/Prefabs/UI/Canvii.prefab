@@ -2239,6 +2239,7 @@ MonoBehaviour:
   inPause: 0
   loadingCanvasGO: {fileID: 2204788348710984529}
   modalPrefab: {fileID: 8929907945440621439, guid: 7d2d99cdb55ea6246970b848ccb14bf7, type: 3}
+  moneyPrefab: {fileID: 2021039591029783783, guid: 0b8e771c274facf418466d90e2578d2b, type: 3}
   levelPanelPrefab: {fileID: 2037075541256336919, guid: cd7573906712d76448d241588242da01, type: 3}
   lockedSprite: {fileID: 21300000, guid: 705736b1a4b8f3640b33bc3ed677c3be, type: 3}
   unlockedSprite: {fileID: 21300000, guid: a491810d38654884cbde6a6360f6efa0, type: 3}

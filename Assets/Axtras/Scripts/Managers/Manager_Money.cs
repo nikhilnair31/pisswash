@@ -25,6 +25,9 @@ public class Manager_Money : MonoBehaviour
     public void UpdateMoney(int amount) {
         currMoney += amount;
 
+        // Spawn text
+        var moneyTtx = amount > 0 ? "+" + amount.ToString() : "-" + amount.ToString();
+        Manager_UI.Instance.SpawnMoney(moneyTtx);
         // Update money amount in UI
         Manager_UI.Instance.SetMoneyUI(currMoney);
         // Update current money and spent money

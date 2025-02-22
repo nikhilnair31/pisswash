@@ -62,6 +62,7 @@ public class Manager_UI : MonoBehaviour
 
     [Header("Modals")]
     [SerializeField] private GameObject modalPrefab;
+    [SerializeField] private GameObject moneyPrefab;
 
     [Header("Level Panels")]
     [SerializeField] private GameObject levelPanelPrefab;
@@ -516,6 +517,33 @@ public class Manager_UI : MonoBehaviour
         yesButtonText.text = tutorialSO.yesButtonStr;
         var noButtonText = noButton.transform.Find("No Button Text").GetComponent<TMP_Text>();
         noButtonText.text = tutorialSO.noButtonStr;
+    }
+    
+    public void SpawnMoney(string moneyTxt) {
+        GameObject moneyGO = Instantiate(moneyPrefab);
+
+        var modalCanvas = GameObject.Find("Canvii/Modals Canvas");
+        moneyGO.transform.SetParent(modalCanvas.transform);
+
+        RectTransform moneyRect = moneyGO.GetComponent<RectTransform>();
+        moneyRect.anchoredPosition = new Vector2(40, 40); // Start position
+
+        moneyGO.transform.localScale = Vector3.one;
+
+        var moneyPanel = moneyGO.transform.Find("Money Panel");
+        var moneyText = moneyPanel.transform.Find("Title Text").GetComponent<TMP_Text>();
+        moneyText.text = moneyTxt;
+
+        // Tween move up and fade out
+        var fadeTime = 2f;
+        moneyRect
+            .DOAnchorPosY(150, fadeTime)
+            .SetEase(Ease.OutQuad);
+        // CanvasGroup canvasGroup = moneyGO.AddComponent<CanvasGroup>();
+        moneyText
+            .DOFade(0, fadeTime)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() => Destroy(moneyGO));
     }
     #endregion
 }
