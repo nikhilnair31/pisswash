@@ -1535,7 +1535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5622,6 +5622,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeBought
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle (4)
@@ -9062,7 +9066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9381,7 +9385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10168,6 +10172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeBought
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle (3)
@@ -10808,6 +10816,10 @@ PrefabInstance:
     - target: {fileID: 3425695554157690890, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
       propertyPath: m_Name
       value: Mystery Drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 5564101591786185001, guid: 9be2153aefb6d1842b806e88e8d05d13, type: 3}
+      propertyPath: canBeBought
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11998,6 +12010,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeBought
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle (1)
@@ -12513,6 +12529,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 540985869}
     m_Modifications:
+    - target: {fileID: 1958196083751836230, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
+      propertyPath: canBeBought
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3461837485188984884, guid: 93c54896ffadd1d46b1d0b2513d7ecaa, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6999999
@@ -13755,7 +13775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9188179943943288007, guid: c1aa6ec39d7f01548b66943d357d5604, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17658,6 +17678,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeBought
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle (2)
@@ -19021,6 +19045,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeBought
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}

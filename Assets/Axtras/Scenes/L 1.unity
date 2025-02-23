@@ -743,6 +743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeStolen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle (1)
@@ -4258,6 +4262,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeStolen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_Name
       value: Beer Bottle
@@ -5118,6 +5126,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeStolen
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
@@ -6106,6 +6118,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeStolen
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
@@ -7104,6 +7120,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1213664651231594048, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599493772267286498, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}
+      propertyPath: canBeStolen
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2936154363686212793, guid: 46c50d566c3385c4196ccad0550a0e03, type: 3}

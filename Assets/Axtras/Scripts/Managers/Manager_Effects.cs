@@ -83,7 +83,6 @@ public class Manager_Effects : MonoBehaviour
             peePS = playerGO.GetComponentInChildren<ParticleSystem>();
             
         cam?.TryGetComponent(out postProcessVolume);
-        
         postProcessVolume?.Profile.TryGet(out colorAdjustments);
         postProcessVolume?.Profile.TryGet(out lensDistortion);
         postProcessVolume?.Profile.TryGet(out splitToning);

@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 1597525141297010425}
   - component: {fileID: 7140853537731081408}
   - component: {fileID: 2848961534674576701}
-  - component: {fileID: 2744955276047843049}
+  - component: {fileID: 1410549750329129990}
   - component: {fileID: 8499739627892536610}
   m_Layer: 6
   m_Name: Water Fountain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1597525141297010425
 Transform:
@@ -89,8 +89,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2744955276047843049
-MeshCollider:
+--- !u!136 &1410549750329129990
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,10 +107,11 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6425030180975425945, guid: 8356809d510e6494597dcfa1309c728c, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.43
+  m_Height: 2.41
+  m_Direction: 2
+  m_Center: {x: -0.000000029802294, y: -0.00000001190878, z: 0.19979489}
 --- !u!114 &8499739627892536610
 MonoBehaviour:
   m_ObjectHideFlags: 0
